@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Make this run on your machine
 
-Just clone this repository on to your local drive. Open the command prompt in 'IIITR-IEEE-Website/frontend/' directory and run the command:
+Just clone this repository on to your local drive. Open the command prompt in 'IIITR-IEEE-Website/' directory and run the command:
 
 `npm install`
 
