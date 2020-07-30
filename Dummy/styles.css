@@ -1,0 +1,9 @@
+body
+{
+    font:'Roboto';
+}
+
+nav{
+    display:flex;
+    justify-content: space-around;
+}
