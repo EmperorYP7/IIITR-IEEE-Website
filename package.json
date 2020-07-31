@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "server": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "frontend": "npm start --prefix frontend",
+    "dev" : "concurrently \"npm run server\" \"npm run frontend\""
   },
   "repository": {
     "type": "git",
@@ -18,9 +20,11 @@
   },
   "homepage": "https://github.com/EmperorYP7/IIITR-IEEE-Website#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
     "concurrently": "^5.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.26"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
