@@ -14,6 +14,7 @@ Wait till all dependencies are installed.
 3. `npm install`
 
 Wait till all dependencies are installed.
+
 4. `npm cd ..`
 
 5. `npm run dev`
