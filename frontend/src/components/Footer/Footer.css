@@ -1,0 +1,21 @@
+.footer{
+    background-color: #3B3A4A;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+    color: #ddd;
+}
+hr { display: block; 
+    width:100%;
+    overflow: hidden; 
+    border-style: inset; 
+    border-width: 1px;
+}
+#connect hr {
+    width:70%
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color: #ddd;
+}
