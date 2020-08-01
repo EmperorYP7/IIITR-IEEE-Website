@@ -14,13 +14,14 @@ Wait till all dependencies are installed.
 3. `npm install`
 
 Wait till all dependencies are installed.
+4. `npm cd ..`
 
-4. `npm run dev`
+5. `npm run dev`
 
 This will run the Express server at `localhost:5000` and the React development server
 at `localhost:3000` concurrently. API calls will be directed to and from port 5000.
 
-5. Enjoy!
+6. Enjoy!
 
 Yea I know its all hyped up, but for now the back-end is not at all in working condition.
 So, go ahead and tinker with the frontend! :smile:
