@@ -1,6 +1,11 @@
-.cover-img{
+/* .cover-img{
   margin: 50px;
 
 height: 30%;
 width: 100%;
+} */
+.intro{
+margin: 80px 30px 0 20px; 
+
+text-align: justify;
 }

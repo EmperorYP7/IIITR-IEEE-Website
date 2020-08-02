@@ -11,13 +11,17 @@ color: #f0f0f0;
 border-width: 5px;
 width:20%;
 }
+
 .jumbotron{
 background-color: #ffffff;
 }
 
 .body{
   height: auto;
+
 }
-.deck{
-margin: 30px 50px;
+.deck-box{
+  margin: 30px 30px 30px 30px;
+margin-bottom: 30px;
+
 }
