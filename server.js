@@ -1,8 +1,13 @@
-const express = require("express");
-
+require('dotenv').config();
+const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
+const port = 4000;
 
-const port = 5000;
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+const db = mongoose.connection;
+db.on('error', (error) => console.log(error));
+db.once('open', () => console.log('Connected to MongoDB!'));
 
 app.get('/api/cards', (req, res) => {
     const cards = [
@@ -25,6 +30,6 @@ app.get('/api/cards', (req, res) => {
     res.json(cards);
 })
 
-app.listen(port, () => {
+app.listen(4000, () => {
     console.log(`Server started on port : ${port}`)
 });
