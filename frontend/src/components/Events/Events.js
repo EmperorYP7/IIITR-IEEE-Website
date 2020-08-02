@@ -60,7 +60,7 @@ class Events extends Component {
                 <div className="card w-75">
                     <div className="card-body">
                         <h5 className="card-title">Present Events</h5>
-                        <p className="card-text">
+                        <div className="card-text"><div>
                         {this.state.present.map(post =>{return(<div>
                                 <div className="card w-100">
                                     <div className="card-body">
@@ -68,12 +68,12 @@ class Events extends Component {
                                             Title: {post.Title}<br/><br/>
                                             Date: {post.Date}<br/><br/>
                                             Details: {post.Details} <br/><br/>
-                                            <button className= "btn btn-success" onClick="location.href=' this.state.formfor '; ">Register</button>
+                                            <a className= "btn btn-success" href={post.Form} >Register</a>
                                         </p>
                                     </div>
                                 </div><br/>
                         </div>);})}        
-                        </p>
+                        </div></div>
                     </div>
                 </div><br/>
 
@@ -81,7 +81,7 @@ class Events extends Component {
                 <div className="card w-75">
                     <div className="card-body">
                         <h5 className="card-title">Upcoming Events</h5>
-                        <p className="card-text">
+                        <div className="card-text"><div>
                         {this.state.upcoming.map(post =>{return(<div>
                                 <div className="card w-100">
                                     <div className="card-body">
@@ -89,12 +89,12 @@ class Events extends Component {
                                             Title: {post.Title}<br/><br/>
                                             Date: {post.Date}<br/><br/>
                                             Details: {post.Details} <br/><br/>
-                                            <button className= "btn btn-success" onClick="location.href=' this.state.formfor '; ">Register</button>
+                                            <a className= "btn btn-success" href={post.Form}>Register</a>
                                         </p>
                                     </div>
                                 </div><br/>
                         </div>);})}
-                        </p>
+                        </div></div>
                     </div>
                 </div><br/>
 
@@ -102,7 +102,7 @@ class Events extends Component {
                 <div className="card w-75">
                     <div className="card-body">
                         <h5 className="card-title">Past Events</h5>
-                        <p className="card-text">
+                        <div className="card-text"><div>
                         {this.state.past.map(post =>{return(<div>
                                 <div className="card w-100">
                                     <div className="card-body">
@@ -110,12 +110,12 @@ class Events extends Component {
                                             Title: {post.Title}<br/><br/>
                                             Date: {post.Date}<br/><br/>
                                             Details: {post.Details} <br/><br/>
-                                            <button className= "btn btn-success" onClick="location.href=' this.state.formfor '; ">Register</button>
+                                            <a className= "btn btn-success" href={post.Form}>Register</a>
                                         </p>
                                     </div>
                                 </div><br/>
                         </div>);})}
-                        </p>
+                        </div></div>
                     </div>
                 
                 </div><br/>
