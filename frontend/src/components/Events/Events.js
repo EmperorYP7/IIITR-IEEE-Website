@@ -60,7 +60,7 @@ class Events extends Component {
                 <div className="card w-75">
                     <div className="card-body">
                         <h5 className="card-title">Present Events</h5>
-                        <div className="card-text"><div>
+                        <div className="card-text">
                         {this.state.present.map(post =>{return(<div>
                                 <div className="card w-100">
                                     <div className="card-body">
@@ -73,7 +73,7 @@ class Events extends Component {
                                     </div>
                                 </div><br/>
                         </div>);})}        
-                        </div></div>
+                        </div>
                     </div>
                 </div><br/>
 
@@ -81,7 +81,7 @@ class Events extends Component {
                 <div className="card w-75">
                     <div className="card-body">
                         <h5 className="card-title">Upcoming Events</h5>
-                        <div className="card-text"><div>
+                        <div className="card-text">
                         {this.state.upcoming.map(post =>{return(<div>
                                 <div className="card w-100">
                                     <div className="card-body">
@@ -94,7 +94,7 @@ class Events extends Component {
                                     </div>
                                 </div><br/>
                         </div>);})}
-                        </div></div>
+                        </div>
                     </div>
                 </div><br/>
 
@@ -102,7 +102,7 @@ class Events extends Component {
                 <div className="card w-75">
                     <div className="card-body">
                         <h5 className="card-title">Past Events</h5>
-                        <div className="card-text"><div>
+                        <div className="card-text">
                         {this.state.past.map(post =>{return(<div>
                                 <div className="card w-100">
                                     <div className="card-body">
@@ -115,7 +115,7 @@ class Events extends Component {
                                     </div>
                                 </div><br/>
                         </div>);})}
-                        </div></div>
+                        </div>
                     </div>
                 
                 </div><br/>
