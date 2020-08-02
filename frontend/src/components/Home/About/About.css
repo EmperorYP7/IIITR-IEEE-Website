@@ -15,21 +15,9 @@ width:20%;
 background-color: #ffffff;
 }
 
-.card-img-top{
-height:100px;
-width:100%;
+.body{
+  height: auto;
 }
-.card{
-height:520px;
-text-align: justify;
-}
-
-.ieee{
-  height:200px;
-  width:420px;
-
-}
-#card-column{
-  padding: 100px;
-  text-align: center;
+.deck{
+margin: 30px 50px;
 }
