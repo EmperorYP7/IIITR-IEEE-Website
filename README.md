@@ -15,11 +15,11 @@ Wait till all dependencies are installed.
 
 Wait till all dependencies are installed.
 
-4. `npm cd ..`
+4. `cd ..`
 
 5. `npm run dev`
 
-This will run the Express server at `localhost:5000` and the React development server
+This will run the Express server at `localhost:4000` and the React development server
 at `localhost:3000` concurrently. API calls will be directed to and from port 5000.
 
 6. Enjoy!
@@ -30,3 +30,5 @@ So, go ahead and tinker with the frontend! :smile:
 P.s. added React routing. Please style it because the Navbar is ugly af.
 
 ## Note the Navbar is transparent already.
+
+package.json is the file which contains information about dependencies.
