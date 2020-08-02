@@ -10,36 +10,40 @@ class Events extends Component {
     this.state={
         present:[{  'Title': 'Random Event 1',
                     'Date': '20-20-2020',
-                    'Details': 'Sabko aana hai matlab aana hai. Sabse parade karwaaya jaayega.'
+                    'Details': 'Sabko aana hai matlab aana hai. Sabse parade karwaaya jaayega.',
+                    'Form': 'https://form link 1'
                 },
                 {
                     'Title': 'Random Event 2',
                     'Date': '10-10-2020',
-                    'Details': 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur '                       
+                    'Details': 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur ',                    
+                    'Form' : 'https://form link 2'
                 },
                 {
                     'Title': 'Random Event 3',
                     ' Date':'30-30-3030',
-                    'Details': 'Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum '
-                                            
+                    'Details': 'Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ',
+                    'Form' : 'https://form link 3'                        
                 }],
         upcoming:[
                     'None'
                 ],
         past:[{  'Title': 'Random Event 1',
                     'Date': '20-20-2020',
-                    'Details': 'Sabko aana hai matlab aana hai. Sabse parade karwaaya jaayega.'
+                    'Details': 'Sabko aana hai matlab aana hai. Sabse parade karwaaya jaayega.',
+                    'Form' : 'https://form link 4'
                 },
                 {
                     'Title': 'Random Event 2',
                     'Date': '10-10-2020',
-                    'Details': 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur '                       
+                    'Details': 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur ',                       
+                    'Form' : 'https://form link 5'
                 },
                 {
                     'Title': 'Random Event 3',
                     ' Date':'30-30-3030',
-                    'Details': 'Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum '
-                                            
+                    'Details': 'Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ',
+                    'Form' : 'https://form link 6'        
                 }]
             }
     };
@@ -47,7 +51,7 @@ class Events extends Component {
         return (
             <React.Fragment>
                 {
-                    console.log(this.state.present[0].Title,'\n', this.state.present[0].Date,'\n', this.state.present[0].Details)
+                    console.log(this.state.present[0].Title,'\n', this.state.present[0].Date,'\n', this.state.present[0].Details,'\n',this.state.present[0].form)
                 }
                 <div className="card w-75">
                     <div className="card-body">
@@ -59,7 +63,7 @@ class Events extends Component {
                                             Title: Random Event 1<br/><br/>
                                             Date: 20-20-2020<br/><br/>
                                             Details: Sabko aana hai matlab aana hai. Sabse parade karwaaya jaayega. <br/><br/>
-                                            <button className= "btn btn-success" onClick="location.href=''">Register</button>
+                                            <button className= "btn btn-success" onClick="location.href=' this.state.formfor '; ">Register</button>
                                         </p>
                                     </div>
                                 </div><br/>
@@ -70,7 +74,7 @@ class Events extends Component {
                                             Date: 10-10-2020<br/><br/>
                                             Details: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur 
                                             <br/><br/>
-                                            <button className= "btn btn-success" onClick="location.href=''">Register</button>
+                                            <button className= "btn btn-success" onClick="location.href=' this.state.formfor '; ">Register</button>
                                         </p>
                                     </div>
                                 </div><br/>
@@ -82,13 +86,15 @@ class Events extends Component {
                                             Details: Lorem ipsum dolor sit amet, consectetur adi
                                             piscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
                                             <br/><br/>
-                                            <button className= "btn btn-success" onClick="location.href=''">Register</button>
+                                            <button className= "btn btn-success" onClick="location.href=' this.state.formfor '; ">Register</button>
                                         </p>
                                     </div>
                                 </div><br/>
                         </p>
                     </div>
                 </div><br/>
+                {console.log(this.state.upcoming[0].Title,'\n', this.state.upcoming[0].Date,'\n', this.state.upcoming[0].Details,'\n',this.state.upcoming[0].form)}
+
                 <div className="card w-75">
                     <div className="card-body">
                         <h5 className="card-title">Upcoming Events</h5>
@@ -97,7 +103,8 @@ class Events extends Component {
                         </p>
                     </div>
                 </div><br/>
-                
+                {console.log(this.state.past[0].Title,'\n', this.state.past[0].Date,'\n', this.state.past[0].Details,'\n',this.state.past[0].form)}
+
                 <div className="card w-75">
                     <div className="card-body">
                         <h5 className="card-title">Past Events</h5>
@@ -109,7 +116,7 @@ class Events extends Component {
                                             Date: 20-20-2020<br/><br/>
                                             Details: Sabko aana hai matlab aana hai. Sabse parade karwaaya jaayega. 
                                             <br/><br/>
-                                            <button className= "btn btn-success" onClick="location.href=''">Register</button>
+                                            <button className= "btn btn-success" onClick="location.href=' this.state.formfor '; ">Register</button>
                                         </p>
                                     </div>
                                 </div><br/>
@@ -120,7 +127,7 @@ class Events extends Component {
                                             Date: 10-10-2020<br/><br/>
                                             Details: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur 
                                             <br/><br/>
-                                            <button className= "btn btn-success" onClick="location.href=''">Register</button>
+                                            <button className= "btn btn-success" onClick="location.href=' this.state.formfor '; ">Register</button>
                                         </p>
                                     </div>
                                 </div><br/>
@@ -131,7 +138,7 @@ class Events extends Component {
                                             Date: 30-30-3030<br/><br/>
                                             Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
                                             <br/><br/>
-                                            <button className= "btn btn-success" onClick="location.href=''">Register</button>
+                                            <button className= "btn btn-success" onClick="location.href=' this.state.formfor '; ">Register</button>
                                         </p>
                                     </div>
                                 </div><br/>
