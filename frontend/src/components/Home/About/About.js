@@ -1,41 +1,68 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.css';
-class About extends Component {
+import logo from './ieee.jpg'
+class About extends React.Component {
 
-    constructor()
-    {
-        super();
-        this.state = {
-            cards : []
-        }
-    }
+render () {
 
-    componentDidMount()
-    {
-        fetch('/api/cards')
-            .then(res => res.json())
-            .then(cards => this.setState({cards}));
-    }
-    
-    render() {
-        return (
-            <div>
-                <section>
-                    <div className="mb-5 container-fluid"><h2>About IEEE</h2></div>
-                    <div className="row container-fluid">
-                        {this.state.cards.map(card =>
-                            <div className="col-lg-4 col-md-4 col-sm-12 mb-4" key={card.id}>
-                            <div><h3>{card.topic}</h3></div>
-                            <div>{card.description}</div>
-                            <a href={card.link}><button className="btn btn-primary mt-3">{card.buttontxt}</button></a>
-                        </div>
-                        )}
-                    </div>
-                </section>
-            </div>
-        );
-    }
+return (
+
+<div>
+
+<hr className="hori-line"/>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+
+    <p class="lead"><span className="about"> " Student Branch </span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      </p>
+  </div>
+
+</div>
+<hr className="hori-line"/>
+
+<section id="card-column">
+
+ <div class="row">
+ <div class="card-col col-lg-6 col-md-6">
+   <div class="card rounded-lg ">
+     <div class="card-header ">
+   <img src={logo} className="ieee" alt="logo"/>
+     </div>
+     <div class="card-body">
+       <p>" Student Branch  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</p>
+
+     </div>
+   </div>
+ </div>
+
+   <div class="card-col col-lg-6 col-md-6">
+     <div class="card">
+       <div class="card-header">
+         <img src={logo} className="ieee" alt="logo"/>
+       </div>
+       <div class="card-body">
+         <p>" Student Branch  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."</p>
+
+       </div>
+     </div>
+   </div>
+</div>
+</section>
+<hr className="hori-line"/>
+
+
+</div>
+
+
+
+
+);
+
+
+
+}
 }
 
 export default About;

@@ -1,6 +1,11 @@
 .nav-item:hover{
-    background-color: #EEEEEE;
-    border-radius: 4px;
-    border-bottom: 5px;
-    border-color: lightgreen;
+    /* background-color: #3B3A4A; */
+
+    /* border-color: lightgreen; */
+}
+.nav-item{
+color: #1EBAD6;
+}
+.navbar{
+margin: 20px;
 }

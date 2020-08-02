@@ -7,7 +7,7 @@ import Society from './Society/Society';
 
 
 class Home extends Component {
-    
+
     state = { clicked : false }
 
     render() {

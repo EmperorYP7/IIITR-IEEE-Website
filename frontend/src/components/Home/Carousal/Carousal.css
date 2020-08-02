@@ -1,0 +1,13 @@
+ .image{
+
+width:60%;
+margin: 180px auto 100px auto;
+}
+.hori-line{
+border:none;
+margin: 100px auto;
+border-top-style: dotted;
+color: #f0f0f0;
+border-width: 5px;
+width:20%;
+}
