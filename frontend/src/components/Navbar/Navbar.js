@@ -7,15 +7,15 @@ class Navbar extends Component {
     render() {
         return (
             <div>
-                <nav class="navbar navbar-expand-sm navbar-light">
-                <div class="container">
-                    <a class="navbar-brand" href="/" ><strong>IEEE STUDENT SB RANCHI </strong> </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
-                        <span class="navbar-toggler-icon"></span>
+                <nav className="navbar navbar-expand-sm navbar-light">
+                <div className="container">
+                    <a className="navbar-brand" href="/" ><strong>IEEE STUDENT SB RANCHI </strong> </a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
 
-            <div class="collapse navbar-collapse" id="navbar1">
-                     <ul class="navbar-nav ml-auto">
+            <div className="collapse navbar-collapse" id="navbar1">
+                     <ul className="navbar-nav ml-auto">
                      <ul className="navbar-nav mr-auto">
                                      <Link to ="/">
                                          <li className="nav-item mr-3">Home</li>

@@ -11,15 +11,15 @@ class LandingPage extends Component {
 
 <div className="col-lg-6 col-md-12">
   <svg width="500" height="500">
-   <circle cx="250" cy="250" r="200" stroke="#1EBAD6" stroke-width="2" fill="white" />
+   <circle cx="250" cy="250" r="200" stroke="#1EBAD6" strokeWidth="2" fill="white" />
      Sorry, your browser does not support inline SVG.
-   <text fill="#000000" font-size="30" font-family="Roboto"
+   <text fill="#000000" fontSize="30" fontFamily="Roboto"
      x="220" y="210">IEEE
   </text>
-   <text fill="#000000" font-size="30" font-family="Roboto"
+   <text fill="#000000" fontSize="30" fontFamily="Roboto"
      x="150" y="250"> Student Branch
   </text>
-  <text fill="#1EBAD6" font-size="20" font-family="Roboto"
+  <text fill="#1EBAD6" fontSize="20" fontFamily="Roboto"
      x="190" y="290"> IIIT RANCHI
   </text>
  </svg>
