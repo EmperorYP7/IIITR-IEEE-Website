@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const fileUpload = require('express-fileupload');
 const app = express();
 const mongoose = require('mongoose');
 const port = 4000;
@@ -8,6 +9,13 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTo
 const db = mongoose.connection;
 db.on('error', (error) => console.log(error));
 db.once('open', () => console.log('Connected to MongoDB!'));
+
+app.use(fileUpload());
+app.use(express.json());
+
+const adminRouter = require('./routes/Admin');
+app.use('/admin', adminRouter);
+
 
 // app.get('/api/cards', (req, res) => {
 //     const cards = [
@@ -30,6 +38,6 @@ db.once('open', () => console.log('Connected to MongoDB!'));
 //     res.json(cards);
 // })
 
-app.listen(4000, () => {
+app.listen(port, () => {
     console.log(`Server started on port : ${port}`)
 });

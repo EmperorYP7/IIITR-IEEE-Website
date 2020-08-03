@@ -6,11 +6,16 @@
 
 .navbar-brand {
     font-family: 'Montserrat';
-
 }
 
 .nav-item:hover{
     color: #1ebad6;
+}
+
+.active{
+    color: #1ebad6;
+    transition: ease 1s;
+    font-size: 1.1em;
 }
 
 .bg-nmg {
@@ -21,10 +26,3 @@
 #navLink {
     text-decoration: none;
 }
-
-.active {
-    color: #1ebad6;
-}
-
-
-
