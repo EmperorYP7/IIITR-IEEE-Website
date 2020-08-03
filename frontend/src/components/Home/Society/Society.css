@@ -1,0 +1,28 @@
+.img{
+height: 250px;
+width: auto;
+text-align: center;
+}
+.deck{
+margin: 30px 30px 300px 30px;;
+}
+.content{
+width: 1000px;
+}
+
+#popover-basic{
+height: auto;
+width: auto;
+}
+.button{
+background-color: #1EBAD6;
+border-color: #1EBAD6;
+outline: #1EBAD6;
+}
+.button:hover{
+background-color: #3B3A4A;
+}
+.button:active{
+background-color: #3B3A4A;
+
+}
