@@ -28,7 +28,7 @@ span {
 #up {
     position: absolute;bottom: 0px; right: 0px;
 }
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .addr {
       margin-top: 30px;
   }
