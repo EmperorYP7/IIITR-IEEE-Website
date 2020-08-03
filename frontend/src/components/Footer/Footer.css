@@ -5,13 +5,13 @@
     color: #ddd;
 }
 hr { display: block; 
-    width:100%;
+    width:60%;
     overflow: hidden; 
     border-style: inset; 
     border-width: 1px;
 }
-#connect hr {
-    width:70%
+.col-10 hr {
+    width:80%
 }
 
 address{
@@ -19,7 +19,21 @@ address{
     margin:0px;
     color: #ddd;
 }
-
+#dev {
+    position: absolute;bottom: 0px; left: 0px;
+}
+span {
+    font-size:x-small;
+}
+#up {
+    position: absolute;bottom: 0px; right: 0px;
+}
+@media (max-width: 576px) {
+  .addr {
+      margin-top: 30px;
+  }
+    
+  } 
 /* .bg-nmg {
     background-color: #f2f2f4;
 } */
