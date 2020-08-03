@@ -1,27 +1,36 @@
 .about{
 font-size: 2.2rem;
 color: #1EBAD6;
-
-}
-.hori-line{
-border:none;
-margin: 100px auto;
-border-top-style: dotted;
-color: #f0f0f0;
-border-width: 5px;
-width:20%;
+font-family: 'Roboto Slab';
 }
 
-.jumbotron{
-background-color: #ffffff;
+.lead {
+  margin-top: 50px;
+  font-family: 'Montserrat';
+  color: #3b3a4a;
+  text-align: justify;
 }
+
+.bg-nmg {
+  background-color: #f2f2f4;
+}
+
+
 
 .body{
+  background: #ffffff;
   height: auto;
+  font-family: 'Montserrat';
+  color: #3b3a4a;
+  
 
 }
 .deck-box{
-  margin: 30px 30px 30px 30px;
-margin-bottom: 30px;
+  margin: auto;
+  background-color: #f2f2f4;
+}
 
+.cart-title {
+  font-family: 'Roboto Slab';
+  color: #3b3a4a;
 }

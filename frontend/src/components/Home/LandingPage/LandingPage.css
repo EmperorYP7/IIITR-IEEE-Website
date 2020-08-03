@@ -22,7 +22,8 @@
 }
 
 .about-content {
-  margin-top: 0;
+  margin-top: 30px;
+  padding-top: 50px;
   text-align: justify;
   color: #3b3a4a;
   font-size: 20px;

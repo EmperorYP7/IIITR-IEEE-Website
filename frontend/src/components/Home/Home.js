@@ -4,6 +4,8 @@ import LandingPage from './LandingPage/LandingPage';
 import About from './About/About';
 import Carousal from './Carousal/Carousal';
 import Society from './Society/Society';
+import './Home.css';
+
 
 
 class Home extends Component {
@@ -12,7 +14,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container-fluid bg-nmg">
                 <LandingPage />
                 <About />
                 <Carousal />

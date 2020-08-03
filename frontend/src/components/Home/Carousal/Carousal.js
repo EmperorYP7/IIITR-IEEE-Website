@@ -9,46 +9,43 @@ class Carousal extends React.Component {
 
     render() {
         return (
-            <div >
+          <div className="container-fluid bg-nmg">
             <Carousel className="image">
-  <Carousel.Item >
-    <img
-      className="d-block w-100"
-      src={Mountain}
-      alt="First slide"
-    />
-    <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={Laptop}
-      alt="Third slide"
-    />
-    <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={Circle}
-      alt="Third slide"
-    />
-    <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>
-<hr className="hori-line"/>
-
-            </div>
+              <Carousel.Item >
+                <img
+                  className="d-block w-100"
+                  src={Mountain}
+                  alt="First slide"
+                />
+                <Carousel.Caption>
+                  <h3>First slide label</h3>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={Laptop}
+                alt="Third slide"
+              />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src={Circle}
+                alt="Third slide"
+              />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
+          </div>
         );
     }
 }

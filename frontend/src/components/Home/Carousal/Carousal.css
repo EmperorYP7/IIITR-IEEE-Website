@@ -3,11 +3,16 @@
 width:60%;
 margin: 120px auto 100px auto;
 }
-.hori-line{
+/* .hori-line{
 border:none;
 margin: 100px auto;
 border-top-style: dotted;
 color: #f0f0f0;
 border-width: 5px;
 width:20%;
+} */
+
+.bg-nmg {
+  background-color: #f2f2f4;
 }
+

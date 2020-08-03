@@ -34,7 +34,7 @@ class Society extends React.Component {
 
 
         return (
-            <div>
+            <div className="container-fluid bg-nmg mx-0 my-0">
           <CardColumns className="deck">
 
               <Card>
@@ -56,7 +56,7 @@ class Society extends React.Component {
                             <Card.Title>Card title</Card.Title>
                             <Card.Text>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,{' '}
-                            .{' '}
+                            {' '}
                             </Card.Text>
                             </Card.Body>
                             <Card.Footer>
