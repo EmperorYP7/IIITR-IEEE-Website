@@ -1,6 +1,38 @@
-.cover-img{
-  margin: 50px;
-
-height: 30%;
-width: 100%;
+.image-lander {
+  image-resolution: 100%;
+  margin: 40px;
 }
+
+.bg-nmg {
+  background-color: #f2f2f4;
+}
+
+.head-quote {
+  font-size: 70px;
+  color: #1ebad6;
+  font-family: 'Roboto Slab';
+  font-weight: 600;
+}
+
+.about-head {
+  font-size: 50px;
+  color: #1ebad6;
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+}
+
+.about-content {
+  margin-top: 0;
+  text-align: justify;
+  color: #3b3a4a;
+  font-size: 20px;
+  font-family: 'Montserrat';
+}
+
+.toggle-down {
+  color: #1ebad6;
+  font-size: 100px;
+  font-family: 'Montserrat';
+}
+
+

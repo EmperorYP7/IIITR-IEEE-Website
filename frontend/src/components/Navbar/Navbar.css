@@ -1,11 +1,30 @@
-.nav-item:hover{
-    /* background-color: #3B3A4A; */
+.nav-item {
+    color: #3b3a4a;
+    font-family: 'Montserrat';
 
-    /* border-color: lightgreen; */
 }
-.nav-item{
-color: #1EBAD6;
+
+.navbar-brand {
+    font-family: 'Montserrat';
+
 }
-.navbar{
-margin: 20px;
+
+.nav-item:hover{
+    color: #1ebad6;
 }
+
+.bg-nmg {
+    background-color: #f2f2f4;
+}
+
+
+#navLink {
+    text-decoration: none;
+}
+
+.active {
+    color: #1ebad6;
+}
+
+
+
