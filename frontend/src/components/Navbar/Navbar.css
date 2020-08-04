@@ -1,3 +1,7 @@
+*{
+    scroll-behavior: smooth;
+}
+
 .nav-item {
     color: #3b3a4a;
     font-family: 'Montserrat';

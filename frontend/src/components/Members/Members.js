@@ -17,7 +17,7 @@ class Members extends Component {
                 <div className="col-9 col-md-6 col-lg-5">
                    <div className="card ">
                        
-                       <img className="card-img-top" src={Pandey} alt="Yash pandey"></img>
+                       <img className="card-img-top" src= {Pandey} alt="Yash pandey"></img>
                        <div className="img-overlay col-12 hide">
                        <a className=" btn text-white" href="#"><i className="fab fa-linkedin fa-2x"></i></a>
                         <a className=" btn text-white" href="#"><i className="fab fa-github-square fa-2x"></i></a>

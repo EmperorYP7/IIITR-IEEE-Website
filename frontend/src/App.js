@@ -20,6 +20,7 @@ function App() {
           <Route path="/gallery" component={Gallery} />
           <Route path="/members" component={Members} />
           <Route path="/resources" component={Resources} />
+          <Route path="/admin" component={Admin} />
         </Switch>
       </Router>
       <Footer />
