@@ -10,8 +10,8 @@ hr { display: block;
     border-style: inset; 
     border-width: 1px;
 }
-.col-10 hr {
-    width:80%
+.col-sm-10 hr {
+    width:100%
 }
 
 address{

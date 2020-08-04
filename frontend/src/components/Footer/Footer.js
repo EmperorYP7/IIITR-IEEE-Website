@@ -40,15 +40,15 @@ class Footer extends Component {
         </div>
         <div className="container-fluid">
             <div className="row justify-content-center mt-5 pt-3"> 
-                <div  className="col-1 ">
+                <div  className="col-2 col-sm-1 ">
                     <a id="dev" className=" btn text-white " href="#"><i className="fas fa-laptop-code fa-2x"></i><span>Developers</span></a>
                  </div>   
                     
-                 <div className="col-10 text-center">
+                 <div className="col-6 col-sm-10 text-center">
                      <hr></hr>
                      <p>Web Team IIITRanchi © Copyright 2020 </p>
                  </div>
-                 <div className="col-1">
+                 <div className="col-2 col-sm-1">
                     <a id="up" className=" btn text-white " href="#"><i className="fas fa-chevron-circle-up fa-2x"></i><br></br><span>Back to Top</span></a>
                 </div>
             </div>
