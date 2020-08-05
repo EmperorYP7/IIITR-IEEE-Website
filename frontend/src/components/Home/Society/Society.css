@@ -4,7 +4,7 @@ width: auto;
 text-align: center;
 }
 .deck{
-margin: 30px 30px 300px 30px;;
+margin: 30px 30px 30px 30px;;
 }
 .content{
 width: 100px;
@@ -34,3 +34,20 @@ background-color: #3B3A4A;
 .bg-nmg {
   background-color: #f2f2f4;
 }
+
+.box {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  
+}
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+
+.close:hover {background: #bbb;}

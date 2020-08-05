@@ -11,74 +11,73 @@ import Button from 'react-bootstrap/Button';
 import pikachu from './images/pikachu.png';
 import vaporeon from './images/vaporeon.png';
 import eeve from './images/eeve.jpg';
+import {CARDS} from './societycards';
 
-
-const popover = (
-  <Popover id="popover-basic" >
-    <Popover.Title as="h3">Student Chapter</Popover.Title>
-    <Popover.Content >
-      when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </Popover.Content>
-  </Popover>
-);
-
-const Example = () => (
-  <OverlayTrigger trigger="click" placement="bottom" className="content" overlay={popover}>
-  <Button variant="dark" className="button">Read More</Button>
-
-  </OverlayTrigger>
-);
 class Society extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+       selectedSociety: null,
+       cards : CARDS
+    }
+}
+societySelect(id) {
+    this.setState({ selectedSociety: id});
+}
 
+  rendersociety(card){
+    if(card !=null){
+      return (
+        <div className="col-12">
+           <h3>Student Chapter </h3>
+          <p>
+            {card.fulldescription}
+           
+         </p>
+        </div>
+       );
+    }
+    else {
+      return(
+        <div></div>
+      );
+    }
+   }
+   
     render() {
+      
+  
+      const Example = (card) => (
+        <Button variant="dark"  onClick={() => this.societySelect(card)} className="button">Read More</Button>);
 
-
+        const show = this.state.cards.map((card) => {
+          return (
+              
+               <Card>
+                <Card.Img variant="top" className="img" src={card.image} />
+                <Card.Body>
+          <Card.Title>{card.name}</Card.Title>
+                  <Card.Text>
+                    {card.shortdescription}{' '}
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer>
+        <small className="text-muted">
+          <Button variant="dark"  onClick={() => this.societySelect(card)} className="button">Read More</Button></small>
+                </Card.Footer>
+              </Card>
+            
+          );
+      });
         return (
             <div className="container-fluid bg-nmg mx-0 my-0">
           <CardColumns className="deck">
 
-              <Card>
-                <Card.Img variant="top" className="img" src={pikachu} />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,{' '}
-                  </Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                  <small className="text-muted"> <Example/></small>
-                </Card.Footer>
-              </Card>
-
-              <Card>
-                  <Card.Img variant="top" className="img" src={vaporeon} />
-                        <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,{' '}
-                            {' '}
-                            </Card.Text>
-                            </Card.Body>
-                            <Card.Footer>
-                            <small className="text-muted"><Example /> </small>
-                            </Card.Footer>
-              </Card>
-
-
-              <Card>
-                <Card.Img variant="top" className="img" src={eeve} />
-                      <Card.Body>
-                            <Card.Title>Card title</Card.Title>
-                            <Card.Text>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,{' '}
-                            {' '}
-                            </Card.Text>
-                      </Card.Body>
-                      <Card.Footer>
-                        <small className="text-muted"><Example /></small>
-                      </Card.Footer>
-            </Card>
+              {show}
 </CardColumns>
+<div className="box mb-5">
+{this.rendersociety(this.state.selectedSociety)}
+</div>
 
             </div>
         );
