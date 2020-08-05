@@ -2,41 +2,24 @@ require('dotenv').config();
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const app = express();
+const cors = require('cors');
 const mongoose = require('mongoose');
 const port = 4000;
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, createIndexes: true });
 const db = mongoose.connection;
 db.on('error', (error) => console.log(error));
 db.once('open', () => console.log('Connected to MongoDB!'));
 
 app.use(fileUpload());
 app.use(express.json());
+app.use(cors());
 
 const adminRouter = require('./routes/Admin');
 app.use('/admin', adminRouter);
 
-
-// app.get('/api/cards', (req, res) => {
-//     const cards = [
-//         {
-//             id: 1,
-//             topic: "IEEE",
-//             description: "IEEE is the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity.",
-//             buttontxt : "Learn more",
-//             link: "https://www.ieee.org/about/index.html"
-//         },
-//         {
-//             id: 2,
-//             topic: "Student Branch",
-//             description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis optio cumque eum provident quam quibusdam officiis eligendi, numquam commodi beatae distinctio, reprehenderit consequatur autem dolorem libero sit, qui impedit dignissimos.",
-//             buttontxt: "View Details",
-//             link : "https://students.ieee.org/student-branches-introduction/"
-//         }
-//     ];
-//
-//     res.json(cards);
-// })
+const apiRouter = require('./routes/data/EventData');
+app.use('/api/eventdata', apiRouter);
 
 app.listen(port, () => {
     console.log(`Server started on port : ${port}`)

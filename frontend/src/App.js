@@ -6,6 +6,7 @@ import Events from './components/Events/Events';
 import Gallery from './components/Gallery/Gallery';
 import Members from './components/Members/Members';
 import Resources from './components/Resources/Resources';
+import Admin from './components/Admin/Admin';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -20,9 +21,10 @@ function App() {
           <Route path="/gallery" component={Gallery} />
           <Route path="/members" component={Members} />
           <Route path="/resources" component={Resources} />
+          <Route path="/admin" component={Admin} />
         </Switch>
-      </Router>
       <Footer />
+      </Router>
     </div>
   );
 }
