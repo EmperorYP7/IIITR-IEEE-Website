@@ -16,3 +16,10 @@ width:20%;
   background-color: #f2f2f4;
 }
 
+@media(max-width: 600px){
+  .image{
+
+ width:100%;
+ margin: 120px auto 100px auto;
+ }
+}
