@@ -18,6 +18,7 @@
       
 .card-img-top:hover + .hide {
     visibility: visible;
+    transition: ease 0.5s;
   }
 .hide:hover {
     visibility: visible;
