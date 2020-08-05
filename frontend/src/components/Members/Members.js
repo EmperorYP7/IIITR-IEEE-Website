@@ -19,10 +19,10 @@ class Members extends Component {
                        
                        <img className="card-img-top" src= {Pandey} alt="Yash pandey"></img>
                        <div className="img-overlay col-12 hide">
-                       <a className=" btn text-white" href="#"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-white" href="#"><i className="fab fa-github-square fa-2x"></i></a>
-                        <a className=" btn text-white" href="#"><i className="fas fa-envelope fa-2x"></i></a>
-                        <a className=" btn text-white" href="#"><i className="fab fa-instagram fa-2x"></i></a>
+                       <a className=" btn text-white" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fab fa-github-square fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fas fa-envelope fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fab fa-instagram fa-2x"></i></a>
                        </div>
                        <div className="card-body">
                            <h3 className="card-title">Yash Pandey</h3>
@@ -36,10 +36,10 @@ class Members extends Component {
                        
                    <img className="card-img-top" src={Pandey} alt="Yash pandey"></img>
                        <div className="img-overlay col-12 hide">
-                       <a className=" btn text-white" href="#"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-white" href="#"><i className="fab fa-github-square fa-2x"></i></a>
-                        <a className=" btn text-white" href="#"><i className="fas fa-envelope fa-2x"></i></a>
-                        <a className=" btn text-white" href="#"><i className="fab fa-instagram fa-2x"></i></a>
+                       <a className=" btn text-white" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fab fa-github-square fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fas fa-envelope fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fab fa-instagram fa-2x"></i></a>
                        </div>
                        <div className="card-body">
                        <h3 className="card-title">Yash Pandey</h3>

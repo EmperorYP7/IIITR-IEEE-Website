@@ -15,10 +15,10 @@ class Footer extends Component {
                 <div className="col-12 col-md-6 ">
                     <div className="text-center ">
                         <h5>Connect with us</h5><hr></hr>
-                        <a className=" btn text-white" href="#"><i className="fab fa-facebook-square fa-2x"></i></a>
-                        <a className=" btn text-white" href="#"><i className="fab fa-twitter-square fa-2x"></i></a>
-                        <a className=" btn text-white" href="#"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-white" href="#"><i className="fab fa-instagram fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fab fa-facebook-square fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fab fa-twitter-square fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fab fa-instagram fa-2x"></i></a>
                         <a className=" btn text-white" href="mailto:iiitranchi@contact.info"><i className="fas fa-envelope fa-2x"></i></a>
                     </div>
                 </div>            
@@ -42,17 +42,17 @@ class Footer extends Component {
         <div className="container-fluid">
             <div className="row justify-content-center mt-5 pt-3"> 
                 <div  className="col-2 col-sm-1 ">
-                    <a id="dev" className=" btn text-white " href="#"><i className="fas fa-laptop-code fa-2x"></i><span>Developers</span></a>
+                    <a id="dev" className=" btn text-white " href="https://"><i className="fas fa-laptop-code fa-2x"></i><span>Developers</span></a>
                  </div>   
                     
                  <div className="col-6 col-sm-10 text-center">
                      <hr></hr>
                      <Link to="/admin">
-                        <p>Web Team IIITRanchi © Copyright 2020 </p>
+                        <p className="text-white">Web Team IIITRanchi © Copyright 2020 </p>
                      </Link>
                  </div>
                  <div className="col-2 col-sm-1">
-                    <a id="up" className=" btn text-white " href="#"><i className="fas fa-chevron-circle-up fa-2x"></i><br></br><span>Back to Top</span></a>
+                    <a id="up" className=" btn text-white " href="https://"><i className="fas fa-chevron-circle-up fa-2x"></i><br></br><span>Back to Top</span></a>
                 </div>
             </div>
            </div>
