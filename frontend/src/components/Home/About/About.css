@@ -14,23 +14,37 @@ font-family: 'Roboto Slab';
 .bg-nmg {
   background-color: #f2f2f4;
 }
+.hori-line{
+border:none;
+margin: 100px auto;
+border-top-style: dotted;
+color: #fff;
+border-width: 5px;
+width:20%;
+}
 
-
-
+/*
 .body{
   background: #ffffff;
   height: auto;
   font-family: 'Roboto';
   color: #3b3a4a;
-  
 
+
+} */
+.deck-card{
+text-align: center;
 }
 .deck-box{
   margin: auto;
+text-align: justify;
   background-color: #f2f2f4;
 }
 
 .cart-title {
   font-family: 'Roboto Slab';
   color: #3b3a4a;
+}
+.post{
+
 }

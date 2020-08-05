@@ -3,9 +3,12 @@
     margin: 10px auto 40px auto;
     overflow: hidden;
 }
+/* .deck{
 
+margin: 30px 100px;
+} */
 .img-overlay {
-    
+
     left: auto;
     right:auto;
     bottom:45px;
@@ -15,7 +18,7 @@
 .hide {
     visibility: hidden;
   }
-      
+
 .card-img-top:hover + .hide {
     visibility: visible;
     transition: ease 0.5s;

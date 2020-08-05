@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './About.css';
 import logo from './ieee.jpg';
 import Card from 'react-bootstrap/Card';
@@ -11,18 +11,23 @@ render () {
 return (
 
 
-<div className="container-fluid bg-nmg">
-<div className="jumbotron jumbotron-fluid bg-nmg">
-  <div className="container-fluid">
 
-    <p className="lead"><span className="about"> " Student Branch </span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      </p>
-  </div>
+  <div class="jumbotron jumbotron-fluid bg-nmg">
+    <div class="container" >
 
-</div>
+      <p class="lead"><span className="about"> " Student Branch </span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        </p>
+    </div>
 
-<div className="container-fluid bg-nmg">
-  
+
+    <hr className="hori-line"/>
+
+<div className=" bg-nmg">
+
+
+
+
+
 <CardDeck className="deck-box">
   <Card>
     <Card.Img variant="top" src={logo} />
@@ -33,7 +38,6 @@ return (
       </Card.Text>
     </Card.Body>
     {/* <Card.Footer className="bg-info">
-
     </Card.Footer> */}
   </Card>
   <Card>
@@ -45,13 +49,21 @@ return (
       </Card.Text>
     </Card.Body>
     {/* <Card.Footer>
-
     </Card.Footer> */}
   </Card>
 
 </CardDeck>
+
 </div>
+
+
+
 </div>
+
+
+
+
+
 
 
 
