@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 
 class Footer extends Component {
@@ -46,7 +47,9 @@ class Footer extends Component {
                     
                  <div className="col-6 col-sm-10 text-center">
                      <hr></hr>
-                     <p>Web Team IIITRanchi © Copyright 2020 </p>
+                     <Link to="/admin">
+                        <p>Web Team IIITRanchi © Copyright 2020 </p>
+                     </Link>
                  </div>
                  <div className="col-2 col-sm-1">
                     <a id="up" className=" btn text-white " href="#"><i className="fas fa-chevron-circle-up fa-2x"></i><br></br><span>Back to Top</span></a>

@@ -1,32 +1,45 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Events.css';
+import Axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class Events extends Component {
     
+    state = {
+        events: []
+    }
+
+    componentDidMount()
+    {
+        Axios.get(`/api/eventdata`)
+            .then(res => {
+                this.setState({ events : res.events });
+                console.log(res.events);
+            })
+            .catch(err => console.log(err));
+    }
+
+
     render() {
         return (
-            <React.Fragment>
-                <div className="card w-75">
-                    <div className="card-body">
-                        <h5 className="card-title">Present Events</h5>
-                        <div className="card-text">
-                        {this.state.present.map(post =>{return(<div>
-                                <div className="card w-100">
-                                    <div className="card-body">
-                                        <p className="card-text">
-                                            Title: {post.Title}<br/><br/>
-                                            Date: {post.Date}<br/><br/>
-                                            Details: {post.Details} <br/><br/>
-                                            <a className= "btn btn-success" href={post.Form} >Register</a>
-                                        </p>
-                                    </div>
-                                </div><br/>
-                        </div>);})}        
-                        </div>
-                    </div>
-                </div><br/>
-            </React.Fragment>                    
+            <div className="container row">
+                <ul>
+                    {this.state.events.map( event => 
+                        <li className="col-11">
+                            <div className="card">
+                                <div className="card-body" id={event.id}>
+                                    <h5 className="card-title">{event.title}</h5>
+                                    <p className="card-text">{event.shortDescription}</p>
+                                    <Link to={`/events/${event.slug}`}>
+                                        <a className="btn btn-primary">Read More</a>
+                                    </Link>
+                                </div>
+                                </div>
+                        </li>
+                    )};
+                </ul>
+            </div>
         );
     }
 }

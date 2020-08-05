@@ -4,15 +4,18 @@ const slugify = require('slugify');
 const eventSchema = new mongoose.Schema({
     title: {
         required: true,
-        type: String
+        type: String,
+        trim: true
     },
     description: {
         required: false,
-        type: String
+        type: String,
+        trim: true
     },
     shortDescription: {
         required: true,
-        type: String
+        type: String,
+        trim: true
     },
     createdAt: {
         type: Date,
@@ -22,13 +25,10 @@ const eventSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    gCalenderlink: {
-        type: String,
-        required: false
-    },
     location : {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     slug: {
         type: String,

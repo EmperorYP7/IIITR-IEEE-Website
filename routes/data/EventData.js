@@ -1,18 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const Event = require('../../models/Events/Event');
+const Event = require('../../models/Events/Event.model');
 
-router.get('/', (req, res) => {
-    
-})
+router.get('/', async (req, res) => {
+    const events = await Event.find().sort({ createdAt: 'desc' });
+    res.json(events);
+});
 
 router.get('/new', (req, res) => {
-    res.send({ event: new Event() });
+    const event = new Event();
+    res.json(event);
 });
 
 router.delete('/:id', async (req, res) => {
     await Event.findByIdAndDelete(req.params.id);
-    res.redirect({ msg: 'Successful!'});
+    res.send({ msg: 'Successful!'});
 });
 
 router.put('/:slug', async (req, res, next) => {
@@ -20,10 +22,25 @@ router.put('/:slug', async (req, res, next) => {
     next();
 }, eventCreate());
 
-router.put('/', async (req, res, next) =>{
-    req.event = new Event();
-    next();
-}, eventCreate());
+router.post('/', async (req, res) =>{
+    const title = req.body.title;
+    const description = req.body.description;
+    const shortDescription = req.body.shortDescription;
+    const eventDate = Date.parse(req.body.eventDate);
+    const location = req.body.location;
+
+    const newEvent = new Event({
+        title,
+        description,
+        shortDescription,
+        eventDate,
+        location
+    })
+
+    newEvent.save()
+        .then(() => res.json('Event added!'))
+        .catch((err => res.status(400).json('Error: '+ err)));
+});
 
 function eventCreate()
 {
@@ -32,8 +49,7 @@ function eventCreate()
         event.title = req.body.title;
         event.description = req.body.description;
         event.shortDescription = req.body.shortDescription;
-        event.eventDate = req.body.eventDate;
-        event.gCalenderlink = req.body.gCalenderlink;
+        event.eventDate = Date.parse(req.body.eventDate);
         event.location = req.body.location;
         try {
             event = await event.save();

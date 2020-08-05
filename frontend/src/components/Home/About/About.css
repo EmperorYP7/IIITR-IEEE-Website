@@ -6,7 +6,7 @@ font-family: 'Roboto Slab';
 
 .lead {
   margin-top: 50px;
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
   color: #3b3a4a;
   text-align: justify;
 }
@@ -20,7 +20,7 @@ font-family: 'Roboto Slab';
 .body{
   background: #ffffff;
   height: auto;
-  font-family: 'Montserrat';
+  font-family: 'Roboto';
   color: #3b3a4a;
   
 

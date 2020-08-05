@@ -4,7 +4,7 @@
 
 .nav-item {
     color: #3b3a4a;
-    font-family: 'Montserrat';
+    font-family: 'Roboto';
 
 }
 
@@ -19,7 +19,7 @@
 .active{
     color: #1ebad6;
     transition: ease 1s;
-    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .bg-nmg {
@@ -29,4 +29,5 @@
 
 #navLink {
     text-decoration: none;
+    font-size: 1.1em;
 }
