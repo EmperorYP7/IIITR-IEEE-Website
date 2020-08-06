@@ -1,11 +1,11 @@
 .about{
-font-size: 2.2rem;
+font-size: 2.0rem;
 color: #1EBAD6;
 font-family: 'Roboto Slab';
+text-align: center;
 }
 
 .lead {
-  margin-top: 50px;
   font-family: 'Roboto';
   color: #3b3a4a;
   text-align: justify;
@@ -45,6 +45,55 @@ text-align: justify;
   font-family: 'Roboto Slab';
   color: #3b3a4a;
 }
-.post{
+/* .post{
 
+} */
+.box {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 30px;
+  width:100%;
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+  
+}
+.row {
+  display: flex;
+}
+.noticeboard {
+background-color: #3b3a4a;
+}
+li {
+  font-size: 1rem;
+  padding:5px;
+  
+}
+a {
+  color: #fff;
+}
+.text-danger {
+  font-size: 1rem;
+}
+.text-lg {
+  font-size: 2rem;
+}
+.bg-darkblue {
+  background-color: #004a99;
+  padding: 50px 60px 100px 60px;
+}
+.mx-4 {
+  background-color: #00458f;
+  color: #fff;
+
+}
+.fas {
+  color: #cdf0f7;
+}
+.card-title {
+  font-weight: 1000;
+}
+.full {
+  width: 90%;
 }
