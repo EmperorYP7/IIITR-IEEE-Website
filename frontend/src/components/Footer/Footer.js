@@ -52,7 +52,7 @@ class Footer extends Component {
                      </Link>
                  </div>
                  <div className="col-2 col-sm-1">
-                    <a id="up" className=" btn text-white " href="https://"><i className="fas fa-chevron-circle-up fa-2x"></i><br></br><span>Back to Top</span></a>
+                    <a id="up" className=" btn text-white " href="#scrollup"><i className="fas fa-chevron-circle-up fa-2x"></i><br></br><span>Back to Top</span></a>
                 </div>
             </div>
            </div>

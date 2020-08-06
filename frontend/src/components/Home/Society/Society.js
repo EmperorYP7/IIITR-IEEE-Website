@@ -22,12 +22,14 @@ societySelect(id) {
   rendersociety(card){
     if(card !=null){
       return (
+        <div className="box mb-5">
         <div className="col-12">
            <h3>Student Chapter </h3>
           <p>
             {card.fulldescription}
            
          </p>
+        </div>
         </div>
        );
     }
@@ -66,9 +68,9 @@ societySelect(id) {
 
               {show}
 </CardColumns>
-<div className="box mb-5">
+
 {this.rendersociety(this.state.selectedSociety)}
-</div>
+
 
             </div>
         );

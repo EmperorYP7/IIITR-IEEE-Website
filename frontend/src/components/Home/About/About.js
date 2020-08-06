@@ -49,9 +49,9 @@ return (
  
   <Card className="px-3 py-3 mx-4 mt-5 text-center">
     {/* <Card.Img variant="top" src={logo} /> */}
-    <span className="text-center"><i class="fas fa-puzzle-piece fa-5x"></i></span>
+    <span className="text-center"><i class="fas fa-puzzle-piece fa-5x icon-lightblue"></i></span>
     <Card.Body className="body">
-      <Card.Title className="cart-title text-white"><span class="text-lg">WHAT</span> is IEEE ?</Card.Title>
+      <Card.Title className="cart-title text-white bold"><span class="text-lg">WHAT</span> is IEEE ?</Card.Title>
       <Card.Text >
         Institute of Electrical and Electronics Engineers
         Institute of Electrical and Electronics Engineers
@@ -64,9 +64,9 @@ return (
   </Card>
   <Card className="px-3 py-3 mx-4 mt-5 text-center">
     {/* <Card.Img variant="top" src={logo} /> */}
-    <span className="text-center"><i class="fas fa-tasks fa-5x"></i></span>
+    <span className="text-center"><i class="fas fa-tasks fa-5x icon-lightblue"></i></span>
     <Card.Body className="body">
-      <Card.Title className="cart-title text-white "><span class="text-lg">WHY</span> is IEEE ?</Card.Title>
+      <Card.Title className="cart-title text-white bold "><span class="text-lg">WHY</span> is IEEE ?</Card.Title>
       <Card.Text>
       Institute of Electrical and Electronics Engineers
         Institute of Electrical and Electronics Engineers
@@ -79,9 +79,9 @@ return (
   </Card>
   <Card className="px-3 py-3 mx-4 mt-5 text-center">
     {/* <Card.Img variant="top" src={logo} /> */}
-    <span className="text-center"><i class="fas fa-university fa-5x"></i></span>
+    <span className="text-center"><i class="fas fa-university fa-5x icon-lightblue"></i></span>
     <Card.Body className="body">
-      <Card.Title className="cart-title text-white"><span class="text-lg">BENEFITS</span> of IEEESB </Card.Title>
+      <Card.Title className="cart-title text-white bold"><span class="text-lg">BENEFITS</span> of IEEESB </Card.Title>
       <Card.Text>
       Institute of Electrical and Electronics Engineers
         Institute of Electrical and Electronics Engineers
