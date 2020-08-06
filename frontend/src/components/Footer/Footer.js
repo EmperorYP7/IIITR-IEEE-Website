@@ -40,7 +40,7 @@ class Footer extends Component {
             </div>
         </div>
         <div className="container-fluid">
-            <div className="row justify-content-center mt-5 pt-3"> 
+            <div className="row justify-content-center mt-5 mb-0 pt-3"> 
                 <div  className="col-2 col-sm-1 ">
                     <a id="dev" className=" btn text-white " href="https://"><i className="fas fa-laptop-code fa-2x"></i><span>Developers</span></a>
                  </div>   

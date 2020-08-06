@@ -7,7 +7,7 @@ class LandingPage extends Component {
     render() {
         return (
             <div >
-                <div className="row landercard">
+                <div className="row landercard leaves my-0">
                     <div className="col-lg-6 col-md-12">
                         <img  src={landercard} className="img-fluid" alt="Logo"></img>
                     </div>

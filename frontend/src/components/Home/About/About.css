@@ -1,3 +1,4 @@
+
 .about{
 font-size: 2.0rem;
 color: #1EBAD6;
@@ -61,16 +62,17 @@ text-align: justify;
 }
 .row {
   display: flex;
+  
 }
 .noticeboard {
 background-color: #3b3a4a;
+z-index: 2;
 }
-li {
+.noticeboard li {
   font-size: 1rem;
   padding:5px;
-  
 }
-a {
+.noticeboard a {
   color: #fff;
 }
 .text-danger {
@@ -96,4 +98,8 @@ a {
 }
 .full {
   width: 90%;
+}
+
+.boxup {
+  background-color: #fff;
 }
