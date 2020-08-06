@@ -13,8 +13,9 @@ router.get('/new', (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-    await Event.findByIdAndDelete(req.params.id);
-    res.send({ msg: 'Successful!'});
+    await Event.findByIdAndDelete(req.params.id)
+                .then(response => res.json("Success"))
+                .catch(err => res.json(err));
 });
 
 router.put('/:slug', async (req, res, next) => {
@@ -22,20 +23,20 @@ router.put('/:slug', async (req, res, next) => {
     next();
 }, eventCreate());
 
-router.post('/', async (req, res) =>{
-    const title = req.body.title;
-    const description = req.body.description;
-    const shortDescription = req.body.shortDescription;
-    const eventDate = Date.parse(req.body.eventDate);
-    const location = req.body.location;
+router.get('/:slug', async (req, res) => {
+    const event = await Event.findOne({ slug: req.params.slug })
+                            .then(response => { res.json(response) })
+                            .catch(error => { res.json("Error")});
+});
 
-    const newEvent = new Event({
-        title,
-        description,
-        shortDescription,
-        eventDate,
-        location
-    })
+router.post('/', async (req, res) =>{
+    const newEvent = new Event();
+
+    newEvent.title = req.body.title;
+    newEvent.description = req.body.description;
+    newEvent.shortDescription = req.body.shortDescription;
+    newEvent.eventDate = Date.parse(req.body.eventDate);
+    newEvent.location = req.body.location;
 
     newEvent.save()
         .then(() => res.json('Event added!'))
@@ -51,13 +52,12 @@ function eventCreate()
         event.shortDescription = req.body.shortDescription;
         event.eventDate = Date.parse(req.body.eventDate);
         event.location = req.body.location;
-        try {
-            event = await event.save();
-            res.send({slug: event.slug});
-        } catch(err) {
-            console.log(err);
-            res.send({ error: err });
-        }
+        await event.save()
+            .then(() =>  res.json(event))
+            .catch(err => {
+                    console.log(err);
+                    res.json(err);
+                });
     };
 }
 
