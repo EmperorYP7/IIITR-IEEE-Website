@@ -4,13 +4,7 @@ import './Society.css';
 // import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Popover from 'react-bootstrap/Popover';
 import Button from 'react-bootstrap/Button';
-
-import pikachu from './images/pikachu.png';
-import vaporeon from './images/vaporeon.png';
-import eeve from './images/eeve.jpg';
 import {CARDS} from './societycards';
 
 class Society extends React.Component {
