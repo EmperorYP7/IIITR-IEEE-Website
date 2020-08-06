@@ -40,9 +40,6 @@ societySelect(id) {
    
     render() {
       
-  
-      const Example = (card) => (
-        <Button variant="dark"  onClick={() => this.societySelect(card)} className="button">Read More</Button>);
 
         const show = this.state.cards.map((card) => {
           return (
