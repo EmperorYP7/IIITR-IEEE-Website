@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Events.css';
-import Axios from 'axios';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 class EventList extends Component {
     
-    state = {
-        events: []
+    constructor(props)
+    {
+        super(props);
+
+        this.state = { events : [] };
     }
 
     componentDidMount()
     {
-       
+       axios.get(`/api/eventdata/`)
+            .then(res => {
+                this.setState({ events: res.data });
+            })
+            .catch(err => console.log("Error" + err));
     }
 
 
@@ -21,18 +28,18 @@ class EventList extends Component {
             <div className="container row">
                 <ul>
                     {this.state.events.map( event => 
-                        <li className="col-11">
+                        <li className="col-11" key={event._id}>
                             <div className="card">
-                                <div className="card-body" id={event.id}>
+                                <div className="card-body">
                                     <h5 className="card-title">{event.title}</h5>
                                     <p className="card-text">{event.shortDescription}</p>
                                     <Link to={`/events/${event.slug}`}>
-                                        <a className="btn btn-primary">Read More</a>
+                                        <button className="btn btn-primary">Read More</button>
                                     </Link>
                                 </div>
-                                </div>
+                            </div>
                         </li>
-                    )};
+                    )}
                 </ul>
             </div>
         );
