@@ -4,7 +4,7 @@ width: auto;
 text-align: center;
 }
 .deck{
-margin: 30px 30px 30px 30px;;
+margin: 30px 30px 70px 30px;
 }
 .content{
 width: 100px;
@@ -16,6 +16,7 @@ width: auto;
 }
 
 .button{
+
 background-color: #1EBAD6;
 border-color: #1EBAD6;
 outline: #1EBAD6;
@@ -24,9 +25,8 @@ outline: #1EBAD6;
 .button:hover{
 background-color: #3B3A4A;
 }
-
 .button:active{
-background-color: #3B3A4A;
+background-color:#1EBAD6;
 }
 
 
@@ -39,7 +39,7 @@ background-color: #3B3A4A;
   border-style: solid;
   border-width: 2px;
   border-color: black;
-  
+
 }
 .close {
   cursor: pointer;

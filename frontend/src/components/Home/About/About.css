@@ -58,11 +58,11 @@ text-align: justify;
   height: 100%;
   padding: 20px;
   overflow: auto;
-  
+
 }
 .row {
   display: flex;
-  
+
 }
 .noticeboard {
 background-color: #3b3a4a;
