@@ -1,7 +1,7 @@
 img {
 margin:20px 0;
-
 }
+
 .landercard{
 text-align: center;
 }
@@ -51,6 +51,7 @@ text-align: center;
   height: 100%; 
   
   /* Center and scale the image nicely */
+    background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
