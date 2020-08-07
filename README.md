@@ -2,7 +2,7 @@
 
 Run the following command sequentially to get a proper setup.
 
-1. Open the command prompt or terminal in the main directory of the repository.
+1. Open the command prompt or terminal in the root directory of the repository.
 Then run the command :
 
 `npm install` 
@@ -17,12 +17,18 @@ Wait till all dependencies are installed.
 
 4. `cd ..`
 
-5. `npm run dev`
+5. `cd backend` (same for the backend)
+
+6. `npm install`
+
+Wait till all dependencies are installed.
+
+7. `cd ..` and then `npm run dev`
 
 This will run the Express server at `localhost:4000` and the React development server
 at `localhost:3000` concurrently. API calls will be directed to and from port 5000.
 
-6. Enjoy!
+8. Enjoy!
 
 Yea I know its all hyped up, but for now the back-end is not at all in working condition.
 So, go ahead and tinker with the frontend! :smile:

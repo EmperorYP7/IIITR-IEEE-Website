@@ -32,6 +32,7 @@ class EventList extends Component {
                             <div className="card">
                                 <div className="card-body">
                                     <h5 className="card-title">{event.title}</h5>
+                                    <h6> {event.eventDate.substring(0,10)} </h6>
                                     <p className="card-text">{event.shortDescription}</p>
                                     <Link to={`/events/${event.slug}`}>
                                         <button className="btn btn-primary">Read More</button>

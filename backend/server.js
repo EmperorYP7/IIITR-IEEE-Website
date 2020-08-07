@@ -4,7 +4,7 @@ const fileUpload = require('express-fileupload');
 const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
-const port = 4000;
+const port = 5000 || process.env.PORT;
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
@@ -18,7 +18,7 @@ app.use(cors());
 const adminRouter = require('./routes/Admin');
 app.use('/admin', adminRouter);
 
-const apiRouter = require('./routes/data/EventData');
+const apiRouter = require('./routes/data/EventRoute');
 app.use('/api/eventdata', apiRouter);
 
 app.listen(port, () => {
