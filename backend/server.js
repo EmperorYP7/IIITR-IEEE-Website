@@ -18,8 +18,11 @@ app.use(cors());
 const adminRouter = require('./routes/Admin');
 app.use('/admin', adminRouter);
 
-const apiRouter = require('./routes/data/EventRoute');
-app.use('/api/eventdata', apiRouter);
+const eventRouter = require('./routes/data/EventRoute');
+app.use('/api/eventdata', eventRouter);
+
+const memberRouter = require('./routes/data/MemberRoute');
+app.use('/api/memberdata', memberRouter);
 
 app.listen(port, () => {
     console.log(`Server started on port : ${port}`)

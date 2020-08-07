@@ -1,58 +1,67 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Members.css';
+import axios from 'axios';
+import Card from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns';
+import Button from 'react-bootstrap/Button';
+// import { Link } from 'react-router-dom';
 import Pandey from './images/pandey.jpeg';
 
 class Members extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = { members: [] };
+    }
+    componentDidMount() {
+        axios.get(`/api/memberdata`)
+            .then(res => {
+                this.setState({ members: res.data });
+            })
+            .catch(err => console.log("Error" + err));
+    }
+
     render() {
+        const showMember = this.state.members.map((member) => {
+            return (
+                <Card>
+                    <Card.Img variant="top" className="img" src={Pandey} />
+                    <div className="img-overlay col-12 hide">
+                        <a className=" btn text-white" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fab fa-github-square fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fas fa-envelope fa-2x"></i></a>
+                        <a className=" btn text-white" href="https://"><i className="fab fa-instagram fa-2x"></i></a>
+                    </div>  
+                    <Card.Body>
+                        <Card.Title>{member.name}</Card.Title>
+                        <Card.Subtitle className="text-muted">{member.designation}</Card.Subtitle>
+                        <Card.Text>
+                        {member.shortDescription}{' '}
+                        </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                        <small className="text-muted">
+                        <Button className="button">Read More</Button> {/* Link needs to be added*/}
+                        </small>
+                    </Card.Footer>
+                </Card>
+      
+            );
+        });
         return (
-            <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
                 <div className="container">
                     <div className="row justify-content-center">
-                    <div className="col-12 text-center mt-5">
-                    <h2>Member Type 1</h2>
-                    <hr></hr>
-                </div>
-                <div className="col-9 col-md-6 col-lg-5">
-                   <div className="card ">
-
-                       <img className="card-img-top" src= {Pandey} alt="Yash pandey"></img>
-                       <div className="img-overlay col-12 hide">
-                       <a className=" btn text-white" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-white" href="https://"><i className="fab fa-github-square fa-2x"></i></a>
-                        <a className=" btn text-white" href="https://"><i className="fas fa-envelope fa-2x"></i></a>
-                        <a className=" btn text-white" href="https://"><i className="fab fa-instagram fa-2x"></i></a>
-                       </div>
-                       <div className="card-body">
-                           <h3 className="card-title">Yash Pandey</h3>
-                           <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                           lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum etc etc etc .</p>
-                       </div>
-                   </div>
-                </div>
-                <div className="col-9 col-md-6 col-lg-5">
-                   <div className="card">
-
-                   <img className="card-img-top" src={Pandey} alt="Yash pandey"></img>
-                       <div className="img-overlay col-12 hide">
-                       <a className=" btn text-white" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-white" href="https://"><i className="fab fa-github-square fa-2x"></i></a>
-                        <a className=" btn text-white" href="https://"><i className="fas fa-envelope fa-2x"></i></a>
-                        <a className=" btn text-white" href="https://"><i className="fab fa-instagram fa-2x"></i></a>
-                       </div>
-                       <div className="card-body">
-                       <h3 className="card-title">Yash Pandey</h3>
-                           <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                           lorep ipsum lorep ipsum lorep ipsum lorep ipsum lorep ipsum etc etc etc .</p>
-                       </div>
-                   </div>
-                </div>
+                        <div className="col-12 text-center mt-5">
+                            <h2>Member Type 1</h2>
+                            <hr></hr>
+                        </div>
+                        <CardColumns className="deck">
+                            {showMember}
+                        </CardColumns>
                     </div>
                 </div>
-
-            </div>
-
         );
     }
 }

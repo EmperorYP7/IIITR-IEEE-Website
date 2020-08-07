@@ -5,7 +5,7 @@ import './Society.css';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Button from 'react-bootstrap/Button';
-import {CARDS} from './societycards';
+import { CARDS } from './societycards';
 
 
 class Society extends React.Component {
@@ -13,74 +13,74 @@ class Society extends React.Component {
     super(props);
     this.state = {
 
-       selectedSociety: null,
-       cards : CARDS
+      selectedSociety: null,
+      cards: CARDS
     }
-}
+  }
 
 
-societySelect(id) {
-    this.setState({ selectedSociety: id});
-}
+  societySelect(id) {
+    this.setState({ selectedSociety: id });
+  }
 
-  rendersociety(card){
-    if(card !=null){
+  rendersociety(card) {
+    if (card != null) {
       return (
         <div className="box mb-5">
-        <div className="col-lg-12 col-md-12">
-           <h3>{card.name} </h3>
-          <p>
+          <div className="col-lg-12 col-md-12">
+            <h3>{card.name} </h3>
+            <p>
 
-            {card.fulldescription}
+              {card.fulldescription}
 
-         </p>
+            </p>
+          </div>
         </div>
-        </div>
-       );
-    }
-    else {
-      return(
-<div> </div>
       );
     }
-   }
+    else {
+      return (
+        <div> </div>
+      );
+    }
+  }
 
-    render() {
+  render() {
 
 
-        const show = this.state.cards.map((card) => {
-          return (
+    const show = this.state.cards.map((card) => {
+      return (
 
-               <Card>
-                <Card.Img variant="top" className="img" src={card.image} />
-                <Card.Body>
-          <Card.Title>{card.name}</Card.Title>
-                  <Card.Text>
-                    {card.shortdescription}{' '}
-                  </Card.Text>
-                </Card.Body>
-                <Card.Footer>
-        <small className="text-muted">
-          <Button   variant="dark" onMouseEnter={() => this.societySelect(card)}
-          onMouseLeave={() =>this.societySelect(null)} className="button">Read More</Button>
-      </small>
-                </Card.Footer>
-              </Card>
+        <Card>
+          <Card.Img variant="top" className="img" src={card.image} />
+          <Card.Body>
+            <Card.Title>{card.name}</Card.Title>
+            <Card.Text>
+              {card.shortdescription}{' '}
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted">
+              <Button variant="dark" onMouseEnter={() => this.societySelect(card)}
+                onMouseLeave={() => this.societySelect(null)} className="button">Read More</Button>
+            </small>
+          </Card.Footer>
+        </Card>
 
-          );
-      });
-        return (
+      );
+    });
+    return (
 
-            <div className="container-fluid bg-nmg mx-0 my-0" >
-          <CardColumns className="deck">
+      <div className="container-fluid bg-nmg mx-0 my-0" >
+        <CardColumns className="deck">
 
-              {show}
-</CardColumns>
+          {show}
+        </CardColumns>
 
         {this.rendersociety(this.state.selectedSociety)}
-            </div>
-        );
-    }
+      </div>
+    );
+  }
 }
 
 export default Society;

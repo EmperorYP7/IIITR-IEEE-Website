@@ -26,3 +26,6 @@ margin: 30px 100px;
 .hide:hover {
     visibility: visible;
   }
+.listgroup{
+  list-style-type: none;
+}
