@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Events.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 

@@ -14,7 +14,8 @@
     "url": "git+https://github.com/EmperorYP7/IIITR-IEEE-Website.git"
   },
   "dependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^5.2.0",
+    "react-transition-group": "^4.4.1"
   },
   "author": "\"WebDev Team IIITR\"",
   "license": "MIT",
