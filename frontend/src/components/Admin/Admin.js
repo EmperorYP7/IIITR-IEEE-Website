@@ -8,7 +8,7 @@ class Admin extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-nmg">
+            <div className="container bg-nmg">
                 <Events/>
                 <hr/>
                 <Members/>
