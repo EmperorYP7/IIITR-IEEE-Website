@@ -6,3 +6,7 @@
     -webkit-transition-duration: 0.7s; /* Safari */
     transition-duration: 0.7s;
 }
+.tab-pane{
+  font-size: 13pt;
+  color: black;
+}
