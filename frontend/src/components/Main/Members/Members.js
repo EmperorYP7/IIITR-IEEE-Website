@@ -26,7 +26,7 @@ class Members extends Component {
     render() {
         const showMember = this.state.members.map((member) => {
             return (
-                <div className="col-12 col-md-5">
+                <div >
                 <Card>
                     <Card.Img variant="top" className="img" src={Pandey} />
                     <div className="img-overlay col-12 hide">
@@ -34,8 +34,8 @@ class Members extends Component {
                         <a className=" btn text-white" href="https://"><i className="fab fa-github-square fa-2x"></i></a>
                         <a className=" btn text-white" href="https://"><i className="fas fa-envelope fa-2x"></i></a>
                         <a className=" btn text-white" href="https://"><i className="fab fa-instagram fa-2x"></i></a>
-                    </div>  
-                    <Card.Body>
+                    </div>
+                    <Card.Body className="card-body">
                         <Card.Title>{member.name}</Card.Title>
                         <Card.Subtitle className="text-muted">{member.designation}</Card.Subtitle>
                         <Card.Text>
@@ -49,7 +49,7 @@ class Members extends Component {
                     </Card.Footer>
                 </Card>
                 </div>
-      
+
             );
         });
         return (
