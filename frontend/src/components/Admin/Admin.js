@@ -58,9 +58,9 @@ class Admin extends React.Component {
 
     render() {
         return (
-            <div className="container row">
+            <div className="container align-self-center">
                 <div className="display-4 align-content-center">Create New Event</div>
-                <form className="col-6 align-content-center" onSubmit={this.handleSubmit}>
+                <form className="col-6 align-content-center my-2" onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="title">Title</label>
                         <input type="text" required={true} className="form-control" name="title" onChange={this.changeHandler} placeholder="Example input placeholder" value= {this.state.title} />
@@ -75,13 +75,13 @@ class Admin extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="eventDate">Event Date</label>
-                        <DatePicker selected={this.state.eventDate} onChange={this.onChangeDate} />
+                        <DatePicker selected={this.state.eventDate} className="mx-4" onChange={date => this.setState({ eventDate: date })} />
                     </div>
                     <div>
                     <label htmlFor="eventDate">Location</label>
                         <input type="text" required={true} className="form-control" name="location" onChange={this.changeHandler} value={this.state.location} placeholder="Another input placeholder" />
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary my-4">Submit</button>
                 </form>
             </div>
         );
