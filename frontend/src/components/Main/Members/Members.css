@@ -29,3 +29,6 @@ margin: 30px 100px;
 .listgroup{
   list-style-type: none;
 }
+.card {
+  width:100%;
+}

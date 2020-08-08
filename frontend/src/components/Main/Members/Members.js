@@ -26,6 +26,7 @@ class Members extends Component {
     render() {
         const showMember = this.state.members.map((member) => {
             return (
+                <div className="col-12 col-sm-5">
                 <Card>
                     <Card.Img variant="top" className="img" src={Pandey} />
                     <div className="img-overlay col-12 hide">
@@ -47,6 +48,7 @@ class Members extends Component {
                         </small>
                     </Card.Footer>
                 </Card>
+                </div>
       
             );
         });
@@ -57,9 +59,11 @@ class Members extends Component {
                             <h2>Member Type 1</h2>
                             <hr></hr>
                         </div>
-                        <CardColumns className="deck">
+                        <div className="col-12">
+                        <CardColumns className="card-group row justify-content-center">
                             {showMember}
                         </CardColumns>
+                        </div>
                     </div>
                 </div>
         );
