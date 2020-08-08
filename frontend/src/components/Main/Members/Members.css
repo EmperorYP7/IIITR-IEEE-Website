@@ -1,7 +1,13 @@
 .card {
     width: 100%;
-    margin: 10px auto 40px auto;
+    margin: 10px auto 10px auto;
     overflow: hidden;
+}
+.card-body{
+padding-top: 10px;
+}
+.img{
+margin: 0;
 }
 /* .deck{
 
@@ -11,7 +17,7 @@ margin: 30px 100px;
 
     left: auto;
     right:auto;
-    bottom:45px;
+    bottom:48px;
     background-color: rgba(0,0,0,0.5);
     text-align: center;
 }
@@ -28,7 +34,4 @@ margin: 30px 100px;
   }
 .listgroup{
   list-style-type: none;
-}
-.card {
-  width:100%;
 }
