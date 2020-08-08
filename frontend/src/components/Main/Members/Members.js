@@ -26,7 +26,7 @@ class Members extends Component {
     render() {
         const showMember = this.state.members.map((member) => {
             return (
-                <div className="col-12 col-sm-5">
+                <div className="col-12 col-md-5">
                 <Card>
                     <Card.Img variant="top" className="img" src={Pandey} />
                     <div className="img-overlay col-12 hide">
