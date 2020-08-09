@@ -15,11 +15,13 @@ function Main() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/events" component={EventList} />
-          <Route path="/gallery" component={Gallery} />
-          <Route path="/members" component={Members} />
-          <Route path="/resources" component={Resources} />
+          <div className="render">
+            <Route path="/" exact component={Home} />
+            <Route path="/events" component={EventList} />
+            <Route path="/gallery" component={Gallery} />
+            <Route path="/members" component={Members} />
+            <Route path="/resources" component={Resources} />
+          </div>
         </Switch>
       <Footer />
       </Router>
