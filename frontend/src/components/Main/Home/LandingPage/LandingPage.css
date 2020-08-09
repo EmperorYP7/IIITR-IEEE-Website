@@ -42,9 +42,10 @@ text-align: center;
 .leaves {
   /* The image used */
   background-image: url("./leaves.jpeg");
+  /* background-image: url("./background.jpg"); */
 
   /* Add the blur effect */
-  /* filter: blur(8px);
+   /* filter: blur(8px); 
   -webkit-filter: blur(8px); */
 
   /* Full height */
