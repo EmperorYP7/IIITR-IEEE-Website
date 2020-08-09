@@ -84,7 +84,7 @@ z-index: 2;
 }
 .bg-darkblue {
   /*background-color: #004a99;
-  padding: 50px 60px 100px 60px;*/
+  padding: 50px 60px 100px 60px;        changed here too for parallax*/
   background-image: url("./leaves.jpeg");
   height: 100%;
   background-attachment: fixed;
@@ -97,7 +97,7 @@ z-index: 2;
 .bg {
   background-color: #00458f;
   color: #fff;
-  opacity: 80%;
+  opacity: 80%; /*Changed here*/
 
 }
 .icon-lightblue {
