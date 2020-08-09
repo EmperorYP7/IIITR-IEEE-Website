@@ -169,10 +169,34 @@ margin: auto auto;
 		height: 300px;
 	}
 	.landercard {
-		padding:40px 0px;
+		padding:40px 0 40px 12px;
 	}
 	.front , .back {
 		top:-7px;
 		left: -7px;
 	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation:portrait)
+{
+  .outer-outer-ring {
+   width:314px;
+   height: 314px;
+ }
+ .outer-ring {
+   width:294px;
+   height:294px;
+ }
+ .circle-container,.circle, .front , .back {
+   width: 274px;
+   height: 274px;
+ }
+ .landercard {
+   padding:40px 2px 40px 12px;
+ }
+ .front , .back {
+   top:-7px;
+   left: -7px;
+ }
 }
