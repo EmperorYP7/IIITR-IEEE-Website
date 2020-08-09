@@ -40,9 +40,9 @@ return (
   <hr></hr>
   </div>
 
-<div className="row mt-0"> 
+<div div= "AboutUs" className="row mt-0" > 
 <CardDeck className="deck-box bg-darkblue">
-  <div className="col-12 text-center text-white">
+  <div className="col-12 text-center text-white" >
   <h3>About Us</h3><hr></hr>
   </div>
   <div className="col-12 col-md-4">
