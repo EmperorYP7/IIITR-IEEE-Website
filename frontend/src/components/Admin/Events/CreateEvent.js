@@ -14,7 +14,9 @@ class CreateEvent extends React.Component {
             description: '',
             shortDescription: '',
             eventDate: new Date(),
-            location: ''
+            location: '',
+            gmaps: '',
+            gcalender: ''
         };
     }
     componentDidMount() {
@@ -29,7 +31,9 @@ class CreateEvent extends React.Component {
             description: this.state.description,
             shortDescription: this.state.shortDescription,
             eventDate: this.state.eventDate,
-            location: this.state.location
+            location: this.state.location,
+            gcalender: this.state.gcalender,
+            gmaps: this.state.gmaps
         }
         console.log(event);
         axios.post(`/api/eventdata/`, event)
@@ -80,6 +84,14 @@ class CreateEvent extends React.Component {
                     <div>
                         <label htmlFor="eventDate">Location</label>
                         <input type="text" required={true} className="form-control" name="location" onChange={this.changeHandler} value={this.state.location} placeholder="Another input placeholder" />
+                    </div>
+                    <div>
+                        <label htmlFor="gcalender">Google Calender Link</label>
+                        <input type="text" required={true} className="form-control" name="gcalender" onChange={this.changeHandler} value={this.state.gcalender} placeholder="Another input placeholder" />
+                    </div>
+                    <div>
+                        <label htmlFor="gmaps">Google Maps embed link</label>
+                        <input type="text" required={true} className="form-control" name="gmaps" onChange={this.changeHandler} value={this.state.gmaps} placeholder="Another input placeholder" />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>

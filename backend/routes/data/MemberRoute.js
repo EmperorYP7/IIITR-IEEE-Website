@@ -7,10 +7,6 @@ router.get('/', async (req, res) => {
     res.json(members);
 });
 
-// router.get('/new', (req, res) => {
-//     const member = new Member();
-//     res.json(member);
-// });
 
 router.delete('/:id', async (req, res) => {
     await Member.findByIdAndDelete(req.params.id)
@@ -18,16 +14,6 @@ router.delete('/:id', async (req, res) => {
                 .catch(err => res.json(err));
 });
 
-// router.put('/:slug', async (req, res, next) => {
-//     req.event = await Member.findOne({ slug: req.params.slug });
-//     next();
-// }, eventCreate());
-
-// router.get('/:slug', async (req, res) => {
-//     const event = await Event.findOne({ slug: req.params.slug })
-//                             .then(response => { res.json(response) })
-//                             .catch(error => { res.json("Error")});
-// });
 
 router.post('/', async (req, res) =>{
     const newMember = new Member();
@@ -35,28 +21,14 @@ router.post('/', async (req, res) =>{
     newMember.name = req.body.name;
     newMember.designation = req.body.designation;
     newMember.shortDescription = req.body.shortDescription;
+    newMember.linkedinLink = req.body.linkedinLink;
+    newMember.githubLink = req.body.githubLink;
+    newMember.emailid = req.body.emailid;
+    newMember.facebookLink = req.body.facebookLink;
 
     newMember.save()
         .then(() => res.json('Member added!'))
         .catch((err => res.status(400).json('Error: '+ err)));
 });
-
-// function eventCreate()
-// {
-//     return async (req, res) => {
-//         let event = req.event;
-//         event.title = req.body.title;
-//         event.description = req.body.description;
-//         event.shortDescription = req.body.shortDescription;
-//         event.eventDate = Date.parse(req.body.eventDate);
-//         event.location = req.body.location;
-//         await event.save()
-//             .then(() =>  res.json(event))
-//             .catch(err => {
-//                     console.log(err);
-//                     res.json(err);
-//                 });
-//     };
-// }
 
 module.exports = router;

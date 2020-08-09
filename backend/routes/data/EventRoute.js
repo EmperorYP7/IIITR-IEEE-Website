@@ -37,6 +37,8 @@ router.post('/', async (req, res) =>{
     newEvent.shortDescription = req.body.shortDescription;
     newEvent.eventDate = Date.parse(req.body.eventDate);
     newEvent.location = req.body.location;
+    newEvent.gcalender = req.body.gcalender;
+    newEvent.gmaps = req.body.gmaps;
 
     newEvent.save()
         .then(() => res.json('Event added!'))

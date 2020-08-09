@@ -32,6 +32,10 @@ class CreateMember extends React.Component {
                     name: '',
                     designation: '',
                     shortDescription: '',
+                    linkedinLink: '',
+                    facebookLink: '',
+                    emailid: '',
+                    githubLink: ''
                 });
                 this.props.UpdateState();
                 alert("Event Created");
@@ -64,6 +68,22 @@ class CreateMember extends React.Component {
                     <div className="form-group">
                         <label htmlFor="shortDescription">Short Description</label>
                         <input type="text" required={true} className="form-control" name="shortDescription" onChange={this.changeHandler} value={this.state.shortDescription} placeholder="Describe briefly" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="linkedinLink">LinkedIn Link</label>
+                        <input type="text" required={true} className="form-control" name="linkedinLink" onChange={this.changeHandler} value={this.state.linkedinLink} placeholder="Describe briefly" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="githubLink">GitHub Link</label>
+                        <input type="text" required={true} className="form-control" name="githubLink" onChange={this.changeHandler} value={this.state.githubLink} placeholder="Describe briefly" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="emailid">Email ID</label>
+                        <input type="text" required={true} className="form-control" name="emailid" onChange={this.changeHandler} value={this.state.emailid} placeholder="Describe briefly" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="facebookLink">Facebook Link</label>
+                        <input type="text" required={true} className="form-control" name="facebookLink" onChange={this.changeHandler} value={this.state.facebookLink} placeholder="Describe briefly" />
                     </div>
                     <button type="submit" className="btn btn-primary">Add Member</button>
                 </form>

@@ -29,6 +29,10 @@ class EventList extends Component {
             <div className="container row">
                 <ul>
                     {this.state.events.map( event => 
+                        <div>
+                        <Switch>
+                            <Route path={`/events/${event.slug}`} event={event} component={Event} />
+                        </Switch>
                         <li className="col-11" key={event._id}>
                             <div className="card">
                                 <div className="card-body">
@@ -38,12 +42,10 @@ class EventList extends Component {
                                     <Link to={`/events/${event.slug}`}>
                                         <button className="btn btn-primary">Read More</button>
                                     </Link>
-                                    <Switch>
-                                        <Route path={`/events/${event.slug}`} event={event} component={Event} />
-                                    </Switch>
                                 </div>
                             </div>
                         </li>
+                        </div>
                     )}
                 </ul>
             </div>

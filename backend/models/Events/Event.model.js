@@ -30,6 +30,14 @@ const eventSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    gcalender : {
+        type: String,
+        trim: true
+    },
+    gmaps : {
+        type: String,
+        trim: true
+    },
     slug: {
         type: String,
         required: true,

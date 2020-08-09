@@ -30,10 +30,10 @@ class Members extends Component {
                 <Card>
                     <Card.Img variant="top" className="img" src={Pandey} />
                     <div className="img-overlay col-12 hide">
-                        <a className=" btn text-white" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-white" href="https://"><i className="fab fa-github-square fa-2x"></i></a>
-                        <a className=" btn text-white" href="https://"><i className="fas fa-envelope fa-2x"></i></a>
-                        <a className=" btn text-white" href="https://"><i className="fab fa-instagram fa-2x"></i></a>
+                        <a className=" btn text-white" href={member.linkedinLink} target="_blank"><i className="fab fa-linkedin fa-2x"></i></a>
+                        <a className=" btn text-white" href={member.githubLink} target="_blank"><i className="fab fa-github-square fa-2x"></i></a>
+                        <a className=" btn text-white" href={member.emailid} target="_blank"><i className="fas fa-envelope fa-2x"></i></a>
+                        <a className=" btn text-white" href={member.facebookLink} target="_blank"><i className="fab fa-instagram fa-2x"></i></a>
                     </div>
                     <Card.Body className="card-body">
                         <Card.Title>{member.name}</Card.Title>

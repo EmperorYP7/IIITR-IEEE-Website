@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// const slugify = require('slugify');
 
 const memberSchema = new mongoose.Schema({
     name: {
@@ -17,18 +16,26 @@ const memberSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    // slug: {
-    //     type: String,
-    //     required: true,
-    //     unique: true
-    // }
+    linkedinLink: {
+        required: true,
+        type: String,
+        trim: true
+    },
+    githubLink: {
+        required: true,
+        type: String,
+        trim: true
+    },
+    facebookLink: {
+        required: true,
+        type: String,
+        trim: true
+    },
+    emailid: {
+        required: true,
+        type: String,
+        trim: true
+    }
 });
-
-// eventSchema.pre('validate', function (next) {
-//     if (this.title) {
-//         this.slug = slugify(this.title, { lower: true, strict: true })
-//     }
-//     next();
-// })
   
 module.exports = new mongoose.model('Member', memberSchema);

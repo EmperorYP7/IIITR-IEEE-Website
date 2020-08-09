@@ -1,22 +1,28 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Event(event)
+function Event(props)
 {   
     return (
         <div className="conatiner">
             <div className="row">
                 <div className="col-12 display-2">
-                    {event.title}
+                    {props.event.title}
                 </div>
                 <div className="col-12 text-body">
-                    {event.eventDate}
+                    {props.event.eventDate}
                 </div>
                 <div className="col-12 text">
-                    {event.description}
+                    {props.event.description}
                 </div>
                 <div>
-                    {event.location}
+                    {props.event.location}
+                </div>
+                <div>
+                    <a target="_blank" href={props.event.gcalender}><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
+                </div>
+                <div>
+                    <iframe src={props.event.gmaps} width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>
