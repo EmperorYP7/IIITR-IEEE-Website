@@ -38,7 +38,7 @@ text-align: center;
 }
 .deck-box{
   margin: auto;
-text-align: justify;
+  text-align: justify;
   background-color: #f2f2f4;
 }
 
@@ -85,7 +85,7 @@ z-index: 2;
   background-color: #004a99;
   padding: 50px 60px 100px 60px;
 }
-.mx-4 {
+.bg {
   background-color: #00458f;
   color: #fff;
 
@@ -102,4 +102,12 @@ z-index: 2;
 
 .boxup {
   background-color: #fff;
+}
+@media(max-width:576px) {
+  .row .deck-box .card {
+    margin:0px 0px 0px 0px;
+  }
+  .row .deck-box {
+    padding: 10px;
+  }
 }
