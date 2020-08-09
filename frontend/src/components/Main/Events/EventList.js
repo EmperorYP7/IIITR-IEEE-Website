@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Events.css';
 import Event from './Event';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -40,7 +39,7 @@ class EventList extends Component {
                                         <button className="btn btn-primary">Read More</button>
                                     </Link>
                                     <Switch>
-                                        <Route exact path={`/events/${event.slug}`} event={event} component={Event} />
+                                        <Route path={`/events/${event.slug}`} event={event} component={Event} />
                                     </Switch>
                                 </div>
                             </div>
