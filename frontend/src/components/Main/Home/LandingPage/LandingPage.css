@@ -102,8 +102,8 @@ margin-left: auto auto;
 	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
 	backface-visibility: hidden;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0px;
+	left: 0px;
 }
 
 .front {
@@ -113,7 +113,7 @@ margin: auto auto;
 }
 
 .front-logo {
-	width: 60%;
+	width: 100%;
 	display: block;
 	margin: auto auto;
 }
@@ -127,7 +127,7 @@ margin: auto auto;
 }
 
 .back-logo {
-	width: 60%;
+	width: 100%;
 	display: block;
 	margin: auto auto;
 }
@@ -154,4 +154,49 @@ margin: auto auto;
 	height: 460px;
 	background-color: rgba(255,255,255,0);
 	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+@media(max-width:576px) {
+	.outer-outer-ring {
+		width:340px;
+		height: 340px;
+	}
+	.outer-ring {
+		width:320px;
+		height:320px;
+	}
+	.circle-container,.circle, .front , .back {
+		width: 300px;
+		height: 300px;
+	}
+	.landercard {
+		padding:40px 0 40px 12px;
+	}
+	.front , .back {
+		top:-7px;
+		left: -7px;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation:portrait)
+{
+  .outer-outer-ring {
+   width:314px;
+   height: 314px;
+ }
+ .outer-ring {
+   width:294px;
+   height:294px;
+ }
+ .circle-container,.circle, .front , .back {
+   width: 274px;
+   height: 274px;
+ }
+ .landercard {
+   padding:40px 2px 40px 12px;
+ }
+ .front , .back {
+   top:-7px;
+   left: -7px;
+ }
 }

@@ -9,17 +9,16 @@ class CreateEvent extends React.Component {
         super(props);
         this.changeHandler = this.changeHandler.bind(this);
         this.handleEventSubmit = this.handleEventSubmit.bind(this);
-        
         this.state = {
             title: '',
             description: '',
             shortDescription: '',
-            eventDate: new Date(),
+            eventDate: new Date().toLocaleString(),
             location: ''
-        }
+        };
     }
     componentDidMount() {
-        
+
     }
 
     handleEventSubmit = (e) => {
