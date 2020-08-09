@@ -45,8 +45,8 @@ return (
   <div className="col-12 text-center text-white">
   <h3>About Us</h3><hr></hr>
   </div>
- 
-  <Card className="px-3 py-3 mx-4 mt-5 text-center">
+  <div className="col-12 col-md-4">
+  <Card className="px-3 py-3 mt-5 text-center bg">
     {/* <Card.Img variant="top" src={logo} /> */}
     <span className="text-center"><i class="fas fa-puzzle-piece fa-5x icon-lightblue"></i></span>
     <Card.Body className="body">
@@ -61,7 +61,9 @@ return (
     {/* <Card.Footer className="bg-info">
     </Card.Footer> */}
   </Card>
-  <Card className="px-3 py-3 mx-4 mt-5 text-center">
+  </div>
+  <div className="col-12 col-md-4">
+  <Card className="px-3 py-3 mt-5 text-center bg ">
     {/* <Card.Img variant="top" src={logo} /> */}
     <span className="text-center"><i class="fas fa-tasks fa-5x icon-lightblue"></i></span>
     <Card.Body className="body">
@@ -76,7 +78,9 @@ return (
     {/* <Card.Footer>
     </Card.Footer> */}
   </Card>
-  <Card className="px-3 py-3 mx-4 mt-5 text-center">
+  </div>
+  <div className="col-12 col-md-4">
+  <Card className="px-3 py-3 mt-5 text-center bg">
     {/* <Card.Img variant="top" src={logo} /> */}
     <span className="text-center"><i class="fas fa-university fa-5x icon-lightblue"></i></span>
     <Card.Body className="body">
@@ -91,6 +95,7 @@ return (
     {/* <Card.Footer className="bg-info">
     </Card.Footer> */}
   </Card>
+  </div>
 </CardDeck>
 
 </div>

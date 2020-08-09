@@ -30,7 +30,7 @@ class LandingPage extends Component {
           <div className="col-12 col-lg-7">
             <div className="title text-white">
               <h1>IEEE IIIT Ranchi<br></br>
-              Student Branch</h1>
+              Student Branch </h1>
             </div>
 
           </div>
