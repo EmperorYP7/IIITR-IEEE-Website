@@ -13,7 +13,7 @@ class CreateEvent extends React.Component {
             title: '',
             description: '',
             shortDescription: '',
-            eventDate: new Date().toLocaleString(),
+            eventDate: new Date(),
             location: ''
         };
     }
