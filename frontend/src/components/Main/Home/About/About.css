@@ -6,6 +6,7 @@ font-family: 'Roboto Slab';
 text-align: center;
 }
 
+
 .lead {
   font-family: 'Roboto';
   color: #3b3a4a;
@@ -82,12 +83,21 @@ z-index: 2;
   font-size: 2rem;
 }
 .bg-darkblue {
-  background-color: #004a99;
-  padding: 50px 60px 100px 60px;
+  /*background-color: #004a99;
+  padding: 50px 60px 100px 60px;*/
+  background-image: url("./leaves.jpeg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding:60px 60px;
+
 }
 .bg {
   background-color: #00458f;
   color: #fff;
+  opacity: 80%;
 
 }
 .icon-lightblue {
