@@ -85,7 +85,7 @@ z-index: 2;
 .bg-darkblue {
   /*background-color: #004a99;
   padding: 50px 60px 100px 60px;        changed here too for parallax*/
-  background-image: url("./leaves.jpeg");
+  background-image: url("./chip22.png");
   height: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -95,11 +95,16 @@ z-index: 2;
 
 }
 .bg {
-  background-color: #00458f;
+  background-color: rgba(0,0, 0, 0.5);
   color: #fff;
-  opacity: 80%; /*Changed here*/
+  /* opacity: 80%;  */
+  /*Changed here*/
 
 }
+.bg:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+ 
 .icon-lightblue {
   color: #cdf0f7;
 }
@@ -119,5 +124,46 @@ z-index: 2;
   }
   .row .deck-box {
     padding: 10px;
+  }
+}
+.pad {
+  overflow: hidden;
+}
+.scroll-up {
+  position: relative;
+  -moz-animation: marquee 10s linear infinite;
+  -webkit-animation: marquee 10s linear infinite;
+  animation: marquee 10s linear infinite;
+}
+.scroll-up:hover {
+  animation-play-state: paused;
+}
+
+@-moz-keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+@-webkit-keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+@keyframes marquee {
+  0% {
+    -moz-transform: translate(0, 100%);
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+  }
+  100% {
+    -moz-transform: translate(0, 100%);
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, -100%);
   }
 }
