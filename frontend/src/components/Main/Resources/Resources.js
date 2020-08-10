@@ -21,12 +21,12 @@ class Resources extends Component {
   <div class="col-8 col-sm-9">
     <div class="tab-content" id="v-pills-tabContent">
       <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><ul>
-        <li>Some random Ground breaking discovery<br/><a href="#"> research paper</a><br/><br/></li>
-        <li>Binod has been found in IIITR<br/><a href="#"> research paper</a><br/><br/></li>
-        <li>Somebody accidentally built JARVIS learning ML<br/><a href="#"> research paper</a><br/><br/></li>
-        <li>Some random Ground breaking discovery<br/><a href="#"> research paper</a><br/><br/></li>
-        <li>Binod has been found in IIITR<br/><a href="#"> research paper</a><br/><br/></li>
-        <li>Somebody accidentally built JARVIS learning ML<br/><a href="#"> research paper</a><br/><br/></li>
+        <li>Some random Ground breaking discovery<br/><a href="https://"> research paper</a><br/><br/></li>
+        <li>Binod has been found in IIITR<br/><a href="https://"> research paper</a><br/><br/></li>
+        <li>Somebody accidentally built JARVIS learning ML<br/><a href="https://"> research paper</a><br/><br/></li>
+        <li>Some random Ground breaking discovery<br/><a href="https://"> research paper</a><br/><br/></li>
+        <li>Binod has been found in IIITR<br/><a href="https://"> research paper</a><br/><br/></li>
+        <li>Somebody accidentally built JARVIS learning ML<br/><a href="https://"> research paper</a><br/><br/></li>
         </ul></div>
       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><ul>
         <li>14th annual meet at Shimla point.<br/><br/></li>
@@ -38,23 +38,23 @@ class Resources extends Component {
         <li>2nd Official SB meet under IEEE<br/><br/></li>
         <li>Anti AI takeover summit organised .</li></ul><br/><br/></div>
       <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><ul>
-        <li><a href="#">Hackathon organised by IEEE SB</a><br/><br/></li>
-        <li><a href="#">Coding competition organised by computer society , IEEE SB</a><br/><br/></li>
-        <li><a href="#">Anti AI takeover summit organised in which AI took over us.</a><br/><br/></li>
-        <li><a href="#">Some random event took place, IDK short of ideas</a><br/><br/></li>
-        <li><a href="#">Hackathon organised by IEEE SB</a><br/><br/></li>
-        <li><a href="#">Coding competition organised by computer society , IEEE SB</a><br/><br/></li>
-        <li><a href="#">Anti AI takeover summit organised in which AI took over us.</a><br/><br/></li>
-        <li><a href="#">Some random event took place, IDK short of ideas</a><br/><br/></li></ul></div>
+        <li><a href="https://">Hackathon organised by IEEE SB</a><br/><br/></li>
+        <li><a href="https://">Coding competition organised by computer society , IEEE SB</a><br/><br/></li>
+        <li><a href="https://">Anti AI takeover summit organised in which AI took over us.</a><br/><br/></li>
+        <li><a href="https://">Some random event took place, IDK short of ideas</a><br/><br/></li>
+        <li><a href="https://">Hackathon organised by IEEE SB</a><br/><br/></li>
+        <li><a href="https://">Coding competition organised by computer society , IEEE SB</a><br/><br/></li>
+        <li><a href="https://">Anti AI takeover summit organised in which AI took over us.</a><br/><br/></li>
+        <li><a href="https://">Some random event took place, IDK short of ideas</a><br/><br/></li></ul></div>
       <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"><ul>
-        <li><a href="#">IEEE</a><br/><br/></li>
-        <li><a href="#">IEEE SB</a><br/><br/></li>
-        <li><a href="#">IEEE Xplore</a><br/><br/></li>
-        <li><a href="#">IEEE link</a><br/><br/></li>
-        <li><a href="#">IEEE link</a><br/><br/></li>
-        <li><a href="#">IEEE link</a><br/><br/></li>
-        <li><a href="#">IIIT Ranchi</a><br/><br/></li>
-        <li><a href="#">Home</a><br/><br/></li></ul></div>
+        <li><a href="https://">IEEE</a><br/><br/></li>
+        <li><a href="https://">IEEE SB</a><br/><br/></li>
+        <li><a href="https://">IEEE Xplore</a><br/><br/></li>
+        <li><a href="https://">IEEE link</a><br/><br/></li>
+        <li><a href="https://">IEEE link</a><br/><br/></li>
+        <li><a href="https://">IEEE link</a><br/><br/></li>
+        <li><a href="https://">IIIT Ranchi</a><br/><br/></li>
+        <li><a href="https://">Home</a><br/><br/></li></ul></div>
     </div>
   
 </div>

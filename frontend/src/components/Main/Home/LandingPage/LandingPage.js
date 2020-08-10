@@ -10,17 +10,17 @@ class LandingPage extends Component {
         return (
           <div className="row landercard leaves mb-0 mt-5" id="parallax">
           <div className="col-12 col-lg-5">
-          <div class="circle-container">
-          	<div class="outer-ring"></div>
+          <div className="circle-container">
+          	<div className="outer-ring"></div>
 
-          	<div class="outer-outer-ring"></div>
+          	<div className="outer-outer-ring"></div>
 
-          	<div class="circle">
-          		<div class="front ">
+          	<div className="circle">
+          		<div className="front ">
               <img  src={landercard} className="img-fluid front-logo"  alt="Logo"></img>
 
           		</div>
-          		<div class="back ">
+          		<div className="back ">
               <img  src={iiitlogo} className="img-fluid back-logo"  alt="Logo"></img>
 
           		</div>

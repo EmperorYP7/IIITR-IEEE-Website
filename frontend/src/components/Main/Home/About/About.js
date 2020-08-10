@@ -23,7 +23,8 @@ return (
       <div className="col-12 col-sm-4 pt-3">
         <div className="box noticeboard morespacing">
           <h3 className="about">Notice</h3><hr></hr>
-          <ul className="text-white">
+          <div className="col-12 pad">
+          <ul className="text-white scroll-up">
           <li><a href="https://">IEEE in Development<span className="text-danger">[New]</span></a></li>
           <li><a href="https://">IEEE in Development<span className="text-danger">[New]</span></a></li>
           <li><a href="https://">IEEE in Development<span className="text-danger">[New]</span></a></li>
@@ -34,15 +35,16 @@ return (
           <li><a href="https://">Work in Progress</a></li>
           <li><a href="https://">We Can and We will!</a></li>
           </ul>
+          </div>
         </div>
       </div>
 
   <hr></hr>
   </div>
 
-<div div= "AboutUs" className="row mt-0" > 
+<div className="row mt-0"> 
 <CardDeck className="deck-box bg-darkblue">
-  <div className="col-12 text-center text-white" >
+  <div className="col-12 text-center text-white">
   <h3>About Us</h3><hr></hr>
   </div>
   <div className="col-12 col-md-4">
