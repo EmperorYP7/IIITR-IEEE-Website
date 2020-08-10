@@ -3,6 +3,7 @@ import './Main.css';
 import Navbar from './Navbar/Navbar';
 import Home from './Home/Home';
 import EventList from './Events/EventList';
+import Event from './Events/Event';
 import Gallery from './Gallery/Gallery';
 import Members from './Members/Members';
 import Resources from './Resources/Resources';
@@ -14,15 +15,16 @@ function Main() {
     <div className="App">
       <Router>
         <Navbar />
-        <Switch>
           <div className="render">
+        <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/events" component={EventList} />
+            <Route path="/events" exact component={EventList} />
+            <Route path="/events/:slug" exact component={Event} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/members" component={Members} />
             <Route path="/resources" component={Resources} />
-          </div>
         </Switch>
+          </div>
       <Footer />
       </Router>
     </div>

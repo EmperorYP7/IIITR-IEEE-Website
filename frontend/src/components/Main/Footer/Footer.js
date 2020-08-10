@@ -11,27 +11,27 @@ class Footer extends Component {
         return (
             <div>
                 {/* <!-- Modal --> */}
-<div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog modal-xl">
     <div className="modal-content">
       <div className="modal-header">
         <h5 className="col-12 modal-title text-center" id="exampleModalLabel">DEVELOPERS</h5>
         <button type="button" className="close text-center" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><i class="fas fa-times fa-2x"></i></span>
+          <span aria-hidden="true"><i className="fas fa-times fa-2x"></i></span>
         </button>
       </div>
       <div className="modal-body">
         <div className="container">
-        <div class="row row-content justify-content-center"> 
+        <div className="row row-content justify-content-center"> 
             <div className="col-12 text-center"><h2>Full Stack</h2><hr></hr></div> 
-            <div class="col-12 col-lg-6">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center small-image"
+            <div className="col-12 col-lg-6">
+                <div className="media">
+                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
                             src={tushar} alt="YASH PANDEY"></img>
-                    <div class="media-body">
-                        <h2 class="mt-2">YASH PANDEY
+                    <div className="media-body">
+                        <h2 className="mt-2">YASH PANDEY
                         </h2>
-                        <p class="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
+                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
                         <br></br>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-github fa-2x"></i></a>
@@ -39,14 +39,14 @@ class Footer extends Component {
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 my-">
-            <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center small-image"
+            <div className="col-12 col-lg-6 my-">
+            <div className="media">
+                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
                             src={tushar} alt="YASH PANDEY"></img>
-                    <div class="media-body">
-                        <h2 class="mt-2">YASH PANDEY
+                    <div className="media-body">
+                        <h2 className="mt-2">YASH PANDEY
                         </h2>
-                        <p class="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
+                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
                         <br></br>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-github fa-2x"></i></a>
@@ -55,16 +55,16 @@ class Footer extends Component {
                 </div>
             </div>
         </div>
-        <div class="row row-content justify-content-center"> 
+        <div className="row row-content justify-content-center"> 
             <div className="col-12 text-center"><h2>Front-End</h2><hr></hr></div> 
-            <div class="col-12  col-lg-6 my-3">
-            <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center small-image"
+            <div className="col-12  col-lg-6 my-3">
+            <div className="media">
+                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
                             src={tushar} alt="YASH PANDEY"></img>
-                    <div class="media-body">
-                        <h2 class="mt-2">YASH PANDEY
+                    <div className="media-body">
+                        <h2 className="mt-2">YASH PANDEY
                         </h2>
-                        <p class="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
+                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
                         <br></br>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-github fa-2x"></i></a>
@@ -72,14 +72,14 @@ class Footer extends Component {
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 my-3">
-            <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center small-image"
+            <div className="col-12 col-lg-6 my-3">
+            <div className="media">
+                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
                             src={tushar} alt="YASH PANDEY"></img>
-                    <div class="media-body">
-                        <h2 class="mt-2">YASH PANDEY
+                    <div className="media-body">
+                        <h2 className="mt-2">YASH PANDEY
                         </h2>
-                        <p class="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
+                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
                         <br></br>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-github fa-2x"></i></a>
@@ -88,16 +88,16 @@ class Footer extends Component {
                 </div>
             </div>
         </div>
-        <div class="row row-content align-items-center"> 
+        <div className="row row-content align-items-center"> 
             <div className="col-12 text-center"><h2>Back-end</h2><hr></hr></div> 
-            <div class="col-12  col-lg-6">
-            <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center small-image"
+            <div className="col-12  col-lg-6">
+            <div className="media">
+                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
                             src={tushar} alt="YASH PANDEY"></img>
-                    <div class="media-body">
-                        <h2 class="mt-2">YASH PANDEY
+                    <div className="media-body">
+                        <h2 className="mt-2">YASH PANDEY
                         </h2>
-                        <p class="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
+                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
                         <br></br>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-github fa-2x"></i></a>
@@ -105,14 +105,14 @@ class Footer extends Component {
                     </div>
             </div>
             </div>
-            <div class="col-12 col-lg-6">
-            <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center small-image"
+            <div className="col-12 col-lg-6">
+            <div className="media">
+                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
                             src={tushar} alt="YASH PANDEY"></img>
-                    <div class="media-body">
-                        <h2 class="mt-2">YASH PANDEY
+                    <div className="media-body">
+                        <h2 className="mt-2">YASH PANDEY
                         </h2>
-                        <p class="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
+                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
                         <br></br>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
                         <a className=" btn text-dark" href="https://"><i className="fab fa-github fa-2x"></i></a>
