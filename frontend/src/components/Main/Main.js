@@ -19,7 +19,7 @@ function Main() {
         <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/events" exact component={EventList} />
-            <Route path="/events/:slug" exact component={Event} />
+            <Route path="/events/:slug" exact urlString ={"/events/:slug"} component={Event} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/members" component={Members} />
             <Route path="/resources" component={Resources} />

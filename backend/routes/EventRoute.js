@@ -25,7 +25,7 @@ router.put('/:slug', async (req, res, next) => {
 
 router.get('/:slug', async (req, res) => {
     const event = await Event.findOne({ slug: req.params.slug })
-                            .then(response => { console.log("Response: " + response); res.json(response); })
+                            .then(response => { res.json(response); })
                             .catch(error => { res.json("Error: "+ error)});
 });
 

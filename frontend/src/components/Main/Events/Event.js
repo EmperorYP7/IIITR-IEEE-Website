@@ -23,11 +23,13 @@ class Event extends Component {
 
     componentDidMount()
     {
-        axios.get(`/api/eventdata/:slug`)
+        const string = this.props.location.pathname;
+        const slug = string.substring(8)
+        axios.get(`/api/eventdata/${slug}`)
             .then(res => {
                 console.log("Event Axios Response");
-                console.log(res);
-                // this.setState({ event: res.data });
+                console.log(res.data);
+                this.setState({ event: res.data });
             })
             .catch(err => console.log("Error : " + err));
     }   
@@ -35,7 +37,7 @@ class Event extends Component {
     render(){
         return (
             <div className="container">
-                hello
+            hello
                 {/* <div className="row">
                     <div className="col-12 display-2">
                         {this.state.event.title}
