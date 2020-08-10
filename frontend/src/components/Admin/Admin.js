@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Events from './Events/Events';
-import Members from './Members/Members';
 import Login from './login/login';
 import './Admin.css';
 

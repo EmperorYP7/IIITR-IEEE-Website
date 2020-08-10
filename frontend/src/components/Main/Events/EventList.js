@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Event from './Event';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { BrowserRouter as Switch, Route } from 'react-router-dom';
 
 class EventList extends Component {
     
@@ -23,28 +21,24 @@ class EventList extends Component {
             .catch(err => console.log("Error" + err));
     }
 
-
     render() {
         return (
             <div className="container row">
                 <ul>
                     {this.state.events.map( event => 
-                        <div>
-                        <Switch>
-                            <Route path={`/events/${event.slug}`} event={event} component={Event} />
-                        </Switch>
-                        <li className="col-11" key={event._id}>
-                            <div className="card">
-                                <div className="card-body">
-                                    <h5 className="card-title">{event.title}</h5>
-                                    <h6> {event.eventDate.substring(0,10)} </h6>
-                                    <p className="card-text">{event.shortDescription}</p>
-                                    <Link to={`/events/${event.slug}`}>
-                                        <button className="btn btn-primary">Read More</button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </li>
+                        <div key={event._id}>
+                            <li className="col-11" >
+                                <div className="card">
+                                    <div className="card-body">
+                                        <h5 className="card-title">{event.title}</h5>
+                                        <h6> {event.eventDate.substring(0,10)} </h6>
+                                        <p className="card-text">{event.shortDescription}</p>
+                                        <Link to={`/events/${event.slug}`}>
+                                            <button className="btn btn-primary">Read More</button>
+                                        </Link>
+                                    </div>
+                                </div> 
+                            </li>
                         </div>
                     )}
                 </ul>
