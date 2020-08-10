@@ -28,6 +28,18 @@ span {
 #up {
     position: absolute;bottom: 0px; right: 0px;
 }
+.small-image{
+    widows: 200px;
+    height: 200px;
+}
+.close {
+    top: 42px;
+    right: 17px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    
+}
 @media (max-width: 767px) {
   .addr {
       margin-top: 30px;
