@@ -1,9 +1,11 @@
 *{
     scroll-behavior: smooth;
 }
-
+.navbar{
+color: #fff;
+}
 .nav-item {
-    color: #3b3a4a;
+  color: #e4e3e3;
     font-family: 'Roboto';
 
 }
@@ -22,8 +24,8 @@
     font-weight: bold;
 }
 
-.bg-nmg {
-    background-color: #f2f2f400;
+.bg {
+    background-color: #fff;
 }
 
 

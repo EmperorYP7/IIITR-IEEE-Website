@@ -19,7 +19,7 @@ class Login extends Component {
             auth : 0
         }
     }
-    
+
     login = (e) => {e.preventDefault();
         var md5   = require("blueimp-md5");
         //console.log(this.state.user,this.state.user1,this.state.pass,this.state.pass1);
@@ -37,10 +37,10 @@ class Login extends Component {
             ReactDOM.render(<h1>Wrong Username or Password</h1>, document.getElementById('FillHere1'));
         }
         console.log("SUCCESS",this.state.auth);
-        
+
     }
     componentDidMount() {
-        
+
     }
     data(){
         if(this.state.auth === 1){
@@ -71,7 +71,7 @@ class Login extends Component {
                     </div>
                     <button type="submit" className="btn btn-primary">Log In</button>
                 </form>
-                
+
             </div>
             <div id="FillHere1">.</div>
             <div id="FillHere2">.</div>

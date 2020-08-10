@@ -3,6 +3,7 @@ margin:20px 0;
 }
 
 .landercard{
+
 text-align: center;
 }
 
@@ -43,10 +44,9 @@ text-align: center;
   /* The image used */
   /* background-image: url("./leaves.jpeg"); */
   /* background-image: url("./background.jpg"); */
-  background-image: url("./chip22.png");
-
+  background-image: url("./nasa.jpg");
   /* Add the blur effect */
-   /* filter: blur(8px); 
+   /* filter: blur(8px);
   -webkit-filter: blur(8px); */
 
   /* Full height */
@@ -57,7 +57,8 @@ text-align: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding:60px 60px;
+  padding:140px 60px 100px 60px;
+
 }
 
 
@@ -168,12 +169,14 @@ margin: auto auto;
   padding-top:90px;
   padding-bottom: 90px;
   text-align: right;
+  font-family: 'Open Sans', sans-serif;
+
 }
 /* .title h1 {
 	display: inline-block;
 	transition: 1s;
   } */
-   
+
   .title h1 {
 	transform: skewX( -10deg ) translateX( 10px );
 	cursor: pointer;
