@@ -1,7 +1,9 @@
 *{
     scroll-behavior: smooth;
 }
-
+.navbar{
+color: #fff;
+}
 .nav-item {
     color: #3b3a4a;
     font-family: 'Roboto';

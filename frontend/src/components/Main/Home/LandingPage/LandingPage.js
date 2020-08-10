@@ -8,7 +8,7 @@ class LandingPage extends Component {
 
     render() {
         return (
-          <div className="row landercard leaves mb-0 mt-5" id="parallax">
+          <div className="row landercard leaves mb-0 mt-0" id="parallax">
           <div className="col-12 col-lg-5">
           <div class="circle-container">
           	<div class="outer-ring"></div>
