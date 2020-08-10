@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Event = require('../../models/Events/Event.model');
+const Event = require('../models/Events/Event.model');
 
 router.get('/', async (req, res) => {
     const events = await Event.find().sort({ createdAt: 'desc' });

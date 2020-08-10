@@ -15,13 +15,10 @@ app.use(fileUpload());
 app.use(express.json());
 app.use(cors());
 
-const adminRouter = require('./routes/Admin');
-app.use('/admin', adminRouter);
-
-const eventRouter = require('./routes/data/EventRoute');
+const eventRouter = require('./routes/EventRoute');
 app.use('/api/eventdata', eventRouter);
 
-const memberRouter = require('./routes/data/MemberRoute');
+const memberRouter = require('./routes/MemberRoute');
 app.use('/api/memberdata', memberRouter);
 
 app.listen(port, () => {

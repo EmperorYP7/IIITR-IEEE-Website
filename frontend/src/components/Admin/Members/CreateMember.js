@@ -25,6 +25,10 @@ class CreateMember extends React.Component {
             name: this.state.name,
             designation: this.state.designation,
             shortDescription: this.state.shortDescription,
+            linkedinLink: this.state.linkedinLink,
+            facebookLink: this.state.facebookLink,
+            emailid: this.state.emailid,
+            githubLink: this.state.githubLink
         }
         axios.post(`/api/memberdata/`, member)
             .then(res => {
@@ -47,7 +51,6 @@ class CreateMember extends React.Component {
 
     changeHandler = (e) => {
         this.setState({
-            ...this.state,
             [e.target.name]: e.target.value
         });
     }

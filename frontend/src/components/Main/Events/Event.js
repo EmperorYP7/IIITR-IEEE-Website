@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Event(props)
-{   
+{
     return (
         <div className="conatiner">
             <div className="row">
