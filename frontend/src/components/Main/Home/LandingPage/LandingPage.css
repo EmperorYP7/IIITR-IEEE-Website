@@ -94,7 +94,7 @@ text-align: center;
 
 .circle {
   text-align: center;
-margin-left: auto auto;
+margin-left: auto ;
 	position: relative;
 	width: 400px;
 	height: 400px;
@@ -144,7 +144,7 @@ margin: auto auto;
 	width: 440px;
 	height: 440px;
 	background-color: rgba(255,255,255,0);
-	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
 .outer-outer-ring {
@@ -156,20 +156,22 @@ margin: auto auto;
 	width: 460px;
 	height: 460px;
 	background-color: rgba(255,255,255,0);
-	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 .title{
-	text-align: right;
+	text-align: justify;
 }
 .title h1  {
   color: #fff;
   font-weight:700;
   font-size:80px;
-  margin: auto;
-  padding-top:90px;
-  padding-bottom: 90px;
+  /* margin: auto; */
+padding-top: 60px;
+padding-bottom: 40px;
+padding-left: 40px;
+padding-right: 40px;
+
   text-align: right;
-  font-family: 'Open Sans', sans-serif;
 
 }
 /* .title h1 {
@@ -177,10 +179,13 @@ margin: auto auto;
 	transition: 1s;
   } */
 
-  .title h1 {
-	transform: skewX( -10deg ) translateX( 10px );
-	cursor: pointer;
-  }
+.letter{
+font-size: 4.5rem;
+color: #ebecf1;
+font-family: 'Londrina Outline', cursive;
+
+
+}
 
  @media (min-width: 992px) and (max-width: 1199px){
 	 .title h1 {
