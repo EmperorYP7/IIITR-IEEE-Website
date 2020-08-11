@@ -1,5 +1,10 @@
+.resources-header{
+padding-top: 80px;
+color: #fff;
+margin-bottom: 50px;
+}
 .row  {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 50px;
 }
 .fade {
@@ -9,4 +14,27 @@
 .tab-pane{
   font-size: 13pt;
   color: black;
+}
+a{
+  color: #dfd3c3;
+}
+.tab-content{
+padding-left: 80px;
+  font-family: 'Montserrat';
+
+font-size: 1.1rem;
+}
+.resource-link:hover{
+color:#c7b198;
+}
+li{
+color: #f9f9f9;
+}
+.aria-selected{
+  background-color:#c7b198;
+}
+
+.nav-pills .nav-link.active{
+  background-color: #c7b198;
+  padding: 10px 10px;
 }

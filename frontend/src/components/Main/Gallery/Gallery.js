@@ -11,14 +11,14 @@ class Members extends Component {
 
     render() {
         return (<div>
-        
+
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-12 text-center mt-5">
+                        <div className="col-12 text-center album1-header">
                             <h2>Album1</h2>
                             <hr></hr>
                         </div>
-                    </div> 
+                    </div>
                     </div>
                     <div id = "scroller">
                         <div className = "slide">
@@ -39,7 +39,7 @@ class Members extends Component {
                         <div className = "slide">
                             <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
                         </div>
-                        
+
                     </div>
 
 
@@ -49,7 +49,7 @@ class Members extends Component {
                             <h2>Album2</h2>
                             <hr></hr>
                         </div>
-                    </div> 
+                    </div>
                     </div>
                     <div id = "scroller">
                         <div className = "slide">
@@ -115,7 +115,7 @@ class Members extends Component {
                             <h2>Album3</h2>
                             <hr></hr>
                         </div>
-                    </div> 
+                    </div>
                     </div>
                     <div id = "scroller">
                         <div className = "slide">

@@ -44,7 +44,7 @@ class Members extends Component {
                     </Card.Body>
                     <Card.Footer>
                         <small className="text-muted">
-                        <Button className="button">Read More</Button> {/* Link needs to be added*/}
+                        <Button className="button ">Read More</Button> {/* Link needs to be added*/}
                         </small>
                     </Card.Footer>
                 </Card>
@@ -55,7 +55,7 @@ class Members extends Component {
         return (
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-12 text-center mt-5">
+                        <div className="col-12 text-center member-header">
                             <h2>Member Type 1</h2>
                             <hr></hr>
                         </div>
