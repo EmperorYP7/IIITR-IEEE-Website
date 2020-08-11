@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 class EventList extends Component {
-    
+
     constructor(props)
     {
         super(props);
@@ -23,9 +23,11 @@ class EventList extends Component {
 
     render() {
         return (
+
             <div className="container row">
+
                 <ul>
-                    {this.state.events.map( event => 
+                    {this.state.events.map( event =>
                         <div key={event._id}>
                             <li className="col-11" >
                                 <div className="card">
@@ -37,7 +39,7 @@ class EventList extends Component {
                                             <button className="btn btn-primary">Read More</button>
                                         </Link>
                                     </div>
-                                </div> 
+                                </div>
                             </li>
                         </div>
                     )}

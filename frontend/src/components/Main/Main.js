@@ -8,6 +8,7 @@ import Gallery from './Gallery/Gallery';
 import Members from './Members/Members';
 import Resources from './Resources/Resources';
 import Footer from './Footer/Footer';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function Main() {
@@ -15,6 +16,7 @@ function Main() {
     <div className="App">
       <Router>
         <Navbar />
+
           <div className="render">
         <Switch>
             <Route path="/" exact component={Home} />

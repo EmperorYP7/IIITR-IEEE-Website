@@ -164,12 +164,11 @@ margin: auto auto;
 .title h1  {
   color: #fff;
   font-weight:700;
-  font-size:80px;
+  font-size:4rem;
   /* margin: auto; */
-padding-top: 60px;
-padding-bottom: 40px;
-padding-left: 40px;
-padding-right: 40px;
+  font-family: 'Recursive', sans-serif;
+padding: 60px 40px 50px 40px;
+
 
   text-align: right;
 
@@ -179,13 +178,7 @@ padding-right: 40px;
 	transition: 1s;
   } */
 
-.letter{
-font-size: 4.5rem;
-color: #ebecf1;
-font-family: 'Londrina Outline', cursive;
 
-
-}
 
  @media (min-width: 992px) and (max-width: 1199px){
 	 .title h1 {
