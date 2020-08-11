@@ -14,7 +14,7 @@ class Members extends Component {
 
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-12 text-center album1-header">
+                        <div className="col-12 text-center album-header">
                             <h2>Album1</h2>
                             <hr></hr>
                         </div>
@@ -45,7 +45,7 @@ class Members extends Component {
 
                     <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-12 text-center mt-5">
+                        <div className="col-12 text-center album-header">
                             <h2>Album2</h2>
                             <hr></hr>
                         </div>
@@ -111,7 +111,7 @@ class Members extends Component {
 
                     <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-12 text-center mt-5">
+                        <div className="col-12 text-center album-header">
                             <h2>Album3</h2>
                             <hr></hr>
                         </div>

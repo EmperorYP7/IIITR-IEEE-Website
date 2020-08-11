@@ -25,9 +25,11 @@
 /* <<<<<<< HEAD */
     height: 3px;
   }
-.album1-header{
+
+.album-header{
 padding-top: 80px;
 margin-bottom: 50px;
+color: #fff;
 }
 /* ======= */
     /* height: 5px;
