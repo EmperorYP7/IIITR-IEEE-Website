@@ -21,7 +21,7 @@ class Login extends Component {
     }
 
     login = (e) => {e.preventDefault();
-        var md5   = require("blueimp-md5");
+        const md5   = require("blueimp-md5");
         //console.log(this.state.user,this.state.user1,this.state.pass,this.state.pass1);
         //console.log((this.state.pass1).localeCompare( (this.state.pass)));
         this.state.user = md5(this.state.user);
