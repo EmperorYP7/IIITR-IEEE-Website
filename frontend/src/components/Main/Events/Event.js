@@ -36,14 +36,9 @@ class Event extends Component {
 
     render(){
         return (
-            <div className="container">
-            hello
-                {/* <div className="row">
+             <div className="row">
                     <div className="col-12 display-2">
                         {this.state.event.title}
-                    </div>
-                    <div className="col-12 text-body">
-                        {this.state.event.eventDate}
                     </div>
                     <div className="col-12 text">
                         {this.state.event.description}
@@ -52,12 +47,11 @@ class Event extends Component {
                         {this.state.event.location}
                     </div>
                     <div>
-                        <a target="_blank" href={this.state.event.gcalender}><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
+                        <a target="_blank" href={`${this.state.event.gcalender}`}><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
                     </div>
                     <div>
-                        <iframe src={this.state.event.gmaps} width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe src={this.state.event.gmaps} width="600" height="450" frameborder="0" style={{border:0}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
-                </div> */}
             </div>
         );
     }

@@ -44,7 +44,9 @@ class CreateEvent extends React.Component {
                     description: '',
                     shortDescription: '',
                     eventDate: new Date(),
-                    location: ''
+                    location: '',
+                    gcalender: '',
+                    gmaps: ''
                 });
                 this.props.UpdateState();
                 alert("Event Created");
