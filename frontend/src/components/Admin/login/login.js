@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './login.css'
+import './login.css';
 import ReactDOM from 'react-dom';
 import Events from '../Events/Events';
 import Members from '../Members/Members';
