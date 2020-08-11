@@ -7,17 +7,20 @@ class Event extends Component {
     constructor(props)
     {
         super(props);
+        this.ExtractDate = this.ExtractDate.bind(this);
 
         this.state = {
             event: {
                 title: '',
                 description: '',
                 shortDescription: '',
-                eventDate: new Date(),
+                eventDate: '',
                 location: '',
                 gcalender: '',
                 gmaps: ''
-            }
+            },
+            Dinaank : '',
+            Time: ''
         };
     }
 
@@ -27,12 +30,34 @@ class Event extends Component {
         const slug = string.substring(8)
         axios.get(`/api/eventdata/${slug}`)
             .then(res => {
-                console.log("Event Axios Response");
-                console.log(res.data);
-                this.setState({ event: res.data });
+                this.setState({
+                    ...this.state,
+                    event: res.data 
+                });
+                this.ExtractDate();
             })
             .catch(err => console.log("Error : " + err));
     }   
+
+    ExtractDate() {
+            const completeDate = new Date(this.state.event.eventDate);
+            console.log(completeDate)
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const day =  days[completeDate.getDay()];
+            const date = completeDate.getDate();
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const month = months[completeDate.getMonth()];
+            console.log(month)
+            const year = completeDate.getFullYear();
+            
+            const hour = completeDate.getHours();
+            const minute = completeDate.getMinutes();
+
+            this.setState({
+                Dinaank : "Date: " +day+ ", " +date+ " " +month+ ", " +year,
+                Time : "Time: "+hour+":"+minute
+            })
+    }
 
     render(){
         return (
@@ -42,6 +67,10 @@ class Event extends Component {
                     </div>
                     <div className="col-12 text">
                         {this.state.event.description}
+                    </div>
+                    <div className="col-12 text-body">
+                        <p>{this.state.Dinaank}</p>
+                        <p>{this.state.Time}</p>     
                     </div>
                     <div>
                         {this.state.event.location}

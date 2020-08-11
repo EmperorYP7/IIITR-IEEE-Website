@@ -9,6 +9,7 @@ class CreateEvent extends React.Component {
         super(props);
         this.changeHandler = this.changeHandler.bind(this);
         this.handleEventSubmit = this.handleEventSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.state = {
             title: '',
             description: '',
@@ -62,6 +63,12 @@ class CreateEvent extends React.Component {
         });
     }
 
+    handleChange = date => {
+        this.setState({
+          evnetDate: date
+        });
+      };
+
     render() {
         return (
             <div className="col-lg-6 col-md-12">
@@ -81,7 +88,8 @@ class CreateEvent extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="eventDate">Event Date</label>
-                        <DatePicker selected={this.state.eventDate} onChange={date => this.setState({eventDate : date})} />
+                        {/* <DatePicker selected={this.state.eventDate} onChange={this.handleChange} showTimeSelect dateFormat="Pp"/> */}
+                        <DatePicker selected={this.state.eventDate} onChange={date => this.setState({eventDate : date})} showTimeSelect dateFormat="Pp" />
                     </div>
                     <div>
                         <label htmlFor="eventDate">Location</label>
