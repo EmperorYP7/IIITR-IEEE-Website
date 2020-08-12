@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
+import ImageUploader from './ImageUploader';
 import "react-datepicker/dist/react-datepicker.css";
 
 class CreateEvent extends React.Component {
@@ -102,6 +103,9 @@ class CreateEvent extends React.Component {
                     <div>
                         <label htmlFor="gmaps">Google Maps embed link</label>
                         <input type="text" required={true} className="form-control" name="gmaps" onChange={this.changeHandler} value={this.state.gmaps} placeholder="Another input placeholder" />
+                    </div>
+                    <div className='container mt-4'>
+                        <ImageUploader />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
