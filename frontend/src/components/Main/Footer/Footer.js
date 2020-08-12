@@ -162,7 +162,7 @@ class Footer extends Component {
         <div className="container-fluid">
             <div className="row justify-content-center mt-5 mb-0 pt-3"> 
                 <div  className="col-2 col-sm-1 ">
-                    <a id="dev" className=" btn text-white " data-toggle="modal" data-target="#exampleModal"><i className="fas fa-laptop-code fa-2x"></i><span>Developers</span></a>
+                    <button id="dev" className=" btn text-white " data-toggle="modal" data-target="#exampleModal"><i className="fas fa-laptop-code fa-2x"></i><span>Developers</span></button>
                  </div>   
                     
                  <div className="col-6 col-sm-10 text-center">
