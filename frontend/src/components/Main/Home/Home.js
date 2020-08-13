@@ -14,7 +14,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-nmg">
+            <div className="container-fluid">
                 <LandingPage />
                 <About />
                 <Carousal />

@@ -9,7 +9,7 @@ class Carousal extends React.Component {
 
     render() {
         return (
-          <div className="container-fluid bg-nmg">
+          <div className="container-fluid  ">
             <Carousel className="image">
               <Carousel.Item >
                 <img

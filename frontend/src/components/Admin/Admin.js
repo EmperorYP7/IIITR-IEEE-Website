@@ -7,11 +7,11 @@ class Admin extends Component {
 
     render() {
         return (
-            <div className="container bg-nmg">
-                
+            <div className="container">
+
                 <Login/>
         {/*console.log(this.props)*/}
-                
+
             </div>
         );
     }
