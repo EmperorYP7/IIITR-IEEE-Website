@@ -15,8 +15,8 @@ app.use(cors());
 
 //-------------API Routes--------------
 
-//const eventRouter = require('./routes/EventRoute');
-//app.use('/api/eventdata', eventRouter);
+const eventRouter = require('./routes/EventRoute');
+app.use('/api/eventdata', eventRouter);
 
 const memberRouter = require('./routes/MemberRoute');
 app.use('/api/memberdata', memberRouter);
