@@ -37,7 +37,7 @@ const storage5 = multer.diskStorage({
 });
 
 const upload5 = multer({ storage: storage5 })
-router.post('/home/carousal', upload5.single('image'), (req, res) => {
+router.post('/home/carousal', upload5.single('carousal'), (req, res) => {
   try {
     res.send(req.file);
   }catch(err) {
@@ -51,7 +51,11 @@ const storage6 = multer.diskStorage({
 });
 
 const upload6 = multer({ storage: storage6 })
+<<<<<<< HEAD
 router.post('/gallery', upload6.array('image'), (req, res) => {
+=======
+router.post('/gallery', upload6.array('gallery'), (req, res) => {
+>>>>>>> 76c30b28d04bae1faf665bc60ea13174afa7d1b2
   try {
     res.send(req.file);
   }catch(err) {
