@@ -13,7 +13,7 @@ return (
 
 
   <div><hr className="full"></hr>
-    <div className="row bg-nmg  my-0" >
+    <div className="row    my-0" >
       <div className="col-12 col-sm-8  pt-3 ">
         <div className="box boxup">
         <p className="lead"><div className="about text-center">Student Branch </div><hr></hr> An IEEE Student Branch provides opportunities to meet and learn from fellow IEEE Student and Graduate Student Members and engage with professional IEEE members locally. An active IEEE Student Branch can be one of the most positive elements of your academic career, offering programs, activities, and professional networking opportunities that build critical skills outside of the classroom. IEEE currently has Student Branches at thousands of universities and colleges in hundreds of countries throughout the world.
@@ -42,7 +42,7 @@ return (
   <hr></hr>
   </div>
 
-<div className="row mt-0"> 
+<div className="row mt-0">
 <CardDeck className="deck-box bg-darkblue">
   <div className="col-12 text-center text-white">
   <h3>About Us</h3><hr></hr>

@@ -12,9 +12,7 @@ border-width: 5px;
 width:20%;
 } */
 
-.bg-nmg {
-  background-color: #f2f2f4;
-}
+
 
 @media(max-width: 600px){
   .image{
