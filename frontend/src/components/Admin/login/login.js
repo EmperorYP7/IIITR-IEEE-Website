@@ -60,7 +60,8 @@ class Login extends Component {
     }
 
     render() {
-        return (<div>
+        return (
+        <div>
             <div className="col-lg-6 col-md-12">
                 <div className="display-4 align-content-center">Admin Login</div><br/><br/>
                 <form className="col-6 align-content-center" onSubmit={this.login}>
@@ -74,14 +75,13 @@ class Login extends Component {
                     </div>
                     <button type="submit" className="btn btn-primary">Log In</button>
                 </form>
-
             </div>
-            <div id="FillHere1">.</div>
-            <div id="FillHere2">.</div>
-                <div id="FillHere3">.</div>
-                <div id="FillHere4">.</div>
+            <div id="FillHere1"></div>
+            <div id="FillHere2"></div>
+            <div id="FillHere3"></div>
+            <div id="FillHere4"></div>
 
-                </div>
+        </div>
         );
     }
 }

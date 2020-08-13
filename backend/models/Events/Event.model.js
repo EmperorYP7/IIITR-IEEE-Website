@@ -38,6 +38,10 @@ const eventSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
+    imgPath: {
+        type: String,
+        trim:true
+    },
     slug: {
         type: String,
         required: true,
