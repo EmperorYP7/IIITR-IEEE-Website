@@ -22,7 +22,7 @@ const storage4 = multer.diskStorage({
 });
 
 const upload4 = multer({ storage: storage4 })
-router.post('/notice', upload3.single('pdf'), (req, res) => {
+router.post('/notice', upload3.single('notice'), (req, res) => {
 try {
   res.send(req.file);
 }catch(err) {
