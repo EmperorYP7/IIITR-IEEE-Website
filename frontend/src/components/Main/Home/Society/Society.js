@@ -52,18 +52,19 @@ class Society extends React.Component {
       return (
 
         <Card>
+          
           <Card.Img variant="top" className="img" src={card.image} />
-          <Card.Body>
+          <div class="overlay">
+    <div class="text"><Card.Body>
             <Card.Title>{card.name}</Card.Title>
             <Card.Text>
               {card.shortdescription}{' '}
             </Card.Text>
-          </Card.Body>
+          </Card.Body></div>
+  </div>
+          
           <Card.Footer>
-            <small className="text-muted">
-              <Button variant="dark" onMouseEnter={() => this.societySelect(card)}
-                onMouseLeave={() => this.societySelect(null)} className="button">Read More</Button>
-            </small>
+          <Card.Title>{card.name}</Card.Title>
           </Card.Footer>
         </Card>
 
@@ -72,6 +73,7 @@ class Society extends React.Component {
     return (
 
       <div className="container-fluid bg-nmg mx-0 my-0" >
+        <h2 className="text-center">Societies under IEEESB</h2><hr></hr>
         <CardColumns className="deck">
 
           {show}
