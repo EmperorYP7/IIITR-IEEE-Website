@@ -11,7 +11,6 @@ const db = mongoose.connection;
 db.on('error', (error) => console.log(error));
 db.once('open', () => console.log('Connected to MongoDB!'));
 
-//app.use(fileUpload());
 app.use(express.json());
 app.use(cors());
 
@@ -27,11 +26,11 @@ app.use('/api/memberdata', memberRouter);
 
 //-----------------Upload Routes--------------------
 
-//const imageRouter = require('./routes/data/ImageRoute');
-//app.use('/upload/image', imageRouter);
-const imageRouter = require('./routes/imagerouter');
+const imageRouter = require('./routes/data/ImageRoute');
 app.use('/upload/image', imageRouter);
 
+const pdfRouter = require('./routes/data/PdfRouter');
+app.use('/upload/pdf', pdfRouter);
 
 //--------------------------------------------------
 app.listen(port, () => {

@@ -48,7 +48,8 @@ class CreateEvent extends React.Component {
                     eventDate: new Date(),
                     location: '',
                     gcalender: '',
-                    gmaps: ''
+                    gmaps: '',
+                    imgPath: ''
                 });
                 this.props.UpdateState();
                 alert("Event Created");
@@ -74,6 +75,7 @@ class CreateEvent extends React.Component {
         return (
             <div className="col-lg-6 col-md-12">
                 <div className="display-4 align-content-center">Create New Event</div>
+                <ImageUploader />
                 <form className="col-6 align-content-center" onSubmit={this.handleEventSubmit}>
                     <div className="form-group">
                         <label htmlFor="title">Title</label>
@@ -105,7 +107,6 @@ class CreateEvent extends React.Component {
                         <input type="text" required={true} className="form-control" name="gmaps" onChange={this.changeHandler} value={this.state.gmaps} placeholder="Another input placeholder" />
                     </div>
                     <div className='container mt-4'>
-                        <ImageUploader />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
