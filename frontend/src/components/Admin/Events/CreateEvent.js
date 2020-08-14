@@ -106,10 +106,11 @@ class CreateEvent extends React.Component {
                         <label htmlFor="gmaps">Google Maps embed link</label>
                         <input type="text" required={true} className="form-control" name="gmaps" onChange={this.changeHandler} value={this.state.gmaps} placeholder="Another input placeholder" />
                     </div>
-                    <div className='container mt-4'>
-                    </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
+                <div className='container mt-4'>
+                        <ImageUploader />
+                </div>
             </div>
         );
     }
