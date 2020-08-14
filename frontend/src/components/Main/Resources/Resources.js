@@ -6,10 +6,10 @@ class Resources extends Component {
 
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 text-center"><h2>RESOURCES</h2><hr></hr></div>
-                    
+            <div className="container ">
+                <div className="row resources-container">
+                    <div className="col-12 resources-header text-center"><h2>RESOURCES</h2><hr></hr></div>
+
   <div className="col-4 col-sm-3">
     <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <a className="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><b>RESEARCH</b></a>

@@ -1,7 +1,10 @@
 .resources-header{
-padding-top: 80px;
-color: #fff;
-margin-bottom: 50px;
+padding-top: 100px;
+color: #222831;
+margin-bottom: 100px;
+}
+.resources-container{
+margin-bottom: 150px;
 }
 .row  {
     margin-top: 0px;
@@ -16,7 +19,7 @@ margin-bottom: 50px;
   color: black;
 }
 a{
-  color: #dfd3c3;
+  color: #4f8a8b;
 }
 .tab-content{
 padding-left: 80px;
@@ -25,16 +28,16 @@ padding-left: 80px;
 font-size: 1.1rem;
 }
 .resource-link:hover{
-color:#c7b198;
+color:#4f8a8b;
 }
 li{
-color: #f9f9f9;
+color: #222831;
 }
 .aria-selected{
-  background-color:#c7b198;
+  background-color:#4f8a8b;
 }
 
 .nav-pills .nav-link.active{
-  background-color: #c7b198;
+  background-color: #4f8a8b;
   padding: 10px 10px;
 }

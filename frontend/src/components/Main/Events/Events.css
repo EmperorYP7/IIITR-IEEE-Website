@@ -8,9 +8,11 @@ padding: 40px;
 
 
 .card-title{
+  color: #1b262c;
 
 font-size: 2rem;
-margin-left: 10px;
+margin-top: 10px;
+margin-left: 0;
 margin-bottom: 20px;
 font-weight: bold;
 font-family: 'Roboto Slab';
@@ -26,28 +28,34 @@ font-size: 1.1rem;
 margin-bottom: 10px;
 }
 .cards{
+  text-align: justify;
+
   margin-top: 40px;
   margin-bottom: 40px;
 }
 .event-card{
 
 
-  background-color: #FFFAFA;
+  background-color: #fff;
 /*
 border-style: groove;
 border-width: thick; */
 }
-
+.event-button{
+background-color: #0099cc;
+border-color: #0099cc;
+}
 .event-header{
 
 margin-top: 0px;
-margin-bottom: 100px;
+margin-bottom: 50px;
 padding-top: 100px;
 color: #000;
 
 }
 .event-logo{
-margin: 10px 30px 10px 5px;
+margin: 10px 5px 10px 0;
+color: #000;
 }
 .header{
 padding-top: auto;

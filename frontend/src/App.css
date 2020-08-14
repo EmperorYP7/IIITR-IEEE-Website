@@ -20,7 +20,16 @@
   }
 
 .App{
-  background-color: #FFFFFF;
-  /* margin-left: 80px;
-margin-right: 80px; */
+
+ background-color: #FFFFFF;
+  margin-left: 80px;
+margin-right: 80px;
+}
+ @media(max-width:600px){
+   .App{
+
+    background-color: #FFFFFF;
+     margin-left: 0;
+   margin-right: 0;
+   }
 }
