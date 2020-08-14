@@ -27,19 +27,19 @@ class EventList extends Component {
 
             <div >
             <div className="col-12 text-center event-header">
-  <hr className="style2"></hr>
+  <hr ></hr>
                 <h2 className="header "> Events</h2>
-                  <hr className="style2"></hr>
+                  <hr ></hr>
             </div>
 
-<div  className="box-bg">
-        <div className="event-bckgrnd">
 
-                <div >
+
+<div className="event-box" >
+
                     {this.state.events.map( event =>
                         <div key={event._id}>
-                            <div className="col-11 list" >
-                                <div   id="tv" className="card event-card">
+                                    <div className="cards" >
+                                <div   className="card event-card">
                                     <div className="card-body event-card-body">
 
                                         <h5 className="card-title"> <i class="fas fa-3x event-logo fa-calendar-check"></i>{event.title}</h5>
@@ -50,14 +50,13 @@ class EventList extends Component {
                                         </Link>
                                     </div>
                                 </div>
-                            </div>
+</div>
                         </div>
                     )}
-                </div>
+
 
 </div>
 </div>
-            </div>
         );
     }
 }
