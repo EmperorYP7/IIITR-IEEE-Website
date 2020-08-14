@@ -8,14 +8,14 @@ const ImageUploader = () => {
   const [filename, setFilename] = useState('Choose File');
   const [uploadedFile, setUploadedFile] = useState({});
   const [message, setMessage] = useState('');
-  const [uploadPercentage, setUploadPercentage] = useState(0);
+  const [uploadPercentage, setUploadPercentage] = useState(1);
 
   const onChange = e => {
     setFile(e.target.files[0]);
     setFilename(e.target.files[0].name);
   };
 
-  const onSubmit = async e => {
+  const onSubmit = async e => {  
     e.preventDefault();
     const formData = new FormData();
     formData.append('file', file);
