@@ -25,9 +25,7 @@ app.use('/api/memberdata', memberRouter);
 
 //-----------------Upload Routes--------------------
 
-//const imageRouter = require('./routes/data/ImageRoute');
-//app.use('/upload/image', imageRouter);
-const imageRouter = require('./routes/imagerouter');
+const imageRouter = require('./routes/data/ImageRoute');
 app.use('/upload/image', imageRouter);
 
 const pdfRouter = require('./routes/data/PdfRouter');
