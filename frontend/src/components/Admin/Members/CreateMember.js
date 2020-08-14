@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
-import ImageUploader from './ImageUploader';
+import UploadProfilePic from './UploadProfilePic';
 
 class CreateMember extends React.Component {
     constructor(props) {
@@ -14,6 +14,8 @@ class CreateMember extends React.Component {
             name: '',
             designation: '',
             shortDescription: '',
+            imgPath: '',
+            imageUploaded: false
         }
     }
     componentDidMount() {
@@ -22,6 +24,11 @@ class CreateMember extends React.Component {
 
     handleMemberAdd = (e) => {
         e.preventDefault();
+        if(!this.state.imageUploaded)
+        {
+            alert("Please upload Profile Picture")
+            return
+        }
         const member = {
             name: this.state.name,
             designation: this.state.designation,
@@ -29,7 +36,8 @@ class CreateMember extends React.Component {
             linkedinLink: this.state.linkedinLink,
             facebookLink: this.state.facebookLink,
             emailid: this.state.emailid,
-            githubLink: this.state.githubLink
+            githubLink: this.state.githubLink,
+            imgPath: this.state.imgPath
         }
         axios.post(`/api/memberdata/`, member)
             .then(res => {
@@ -40,7 +48,9 @@ class CreateMember extends React.Component {
                     linkedinLink: '',
                     facebookLink: '',
                     emailid: '',
-                    githubLink: ''
+                    githubLink: '',
+                    imgPath: '',
+                    imageUploaded: false
                 });
                 this.props.UpdateState();
                 alert("Event Created");
@@ -60,7 +70,7 @@ class CreateMember extends React.Component {
         return (
             <div className="col-lg-6 col-md-12">
                 <div className="display-4 align-content-center">Add New Member</div>
-                <form className="col-6 align-content-center" onSubmit={this.handleMemberAdd}>
+                <form className="col-12 align-content-center" onSubmit={this.handleMemberAdd}>
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
                         <input type="text" required={true} className="form-control" name="name" onChange={this.changeHandler} placeholder="Name of new member" value={this.state.name} />
@@ -90,8 +100,9 @@ class CreateMember extends React.Component {
                         <input type="text" required={true} className="form-control" name="facebookLink" onChange={this.changeHandler} value={this.state.facebookLink} placeholder="Describe briefly" />
                     </div>
                     <div>
-                        <ImageUploader />
-                    </div>
+                        <label htmlFor="event">Upload Profile Picture</label>
+                        {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadProfilePic setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> } 
+                        </div>
                     <button type="submit" className="btn btn-primary">Add Member</button>
                 </form>
             </div>

@@ -3,7 +3,7 @@ const router = express.Router();
 const Member = require('../models/Members/Member.model');
 
 router.get('/', async (req, res) => {
-    const members = await Member.find().sort({ order: 'ascen' });
+    const members = await Member.find().sort({ order: 1 });
     res.json(members);
 });
 
