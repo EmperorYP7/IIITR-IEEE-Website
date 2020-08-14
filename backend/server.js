@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-//const fileUpload = require('express-fileupload');
 const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -16,8 +15,8 @@ app.use(cors());
 
 //-------------API Routes--------------
 
-const eventRouter = require('./routes/EventRoute');
-app.use('/api/eventdata', eventRouter);
+//const eventRouter = require('./routes/EventRoute');
+//app.use('/api/eventdata', eventRouter);
 
 const memberRouter = require('./routes/MemberRoute');
 app.use('/api/memberdata', memberRouter);
@@ -26,7 +25,9 @@ app.use('/api/memberdata', memberRouter);
 
 //-----------------Upload Routes--------------------
 
-const imageRouter = require('./routes/data/ImageRoute');
+//const imageRouter = require('./routes/data/ImageRoute');
+//app.use('/upload/image', imageRouter);
+const imageRouter = require('./routes/imagerouter');
 app.use('/upload/image', imageRouter);
 
 const pdfRouter = require('./routes/data/PdfRouter');
