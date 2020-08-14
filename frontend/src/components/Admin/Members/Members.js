@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Container, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import './Members.css'
-import CreateMember from './CreateMember'
+import './Members.css';
+import CreateMember from './CreateMember';
 
 class Members extends React.Component {
     constructor(props) {

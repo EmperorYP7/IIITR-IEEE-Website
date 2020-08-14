@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
+import ImageUploader from './ImageUploader';
 
 class CreateMember extends React.Component {
     constructor(props) {
@@ -87,6 +88,9 @@ class CreateMember extends React.Component {
                     <div className="form-group">
                         <label htmlFor="facebookLink">Facebook Link</label>
                         <input type="text" required={true} className="form-control" name="facebookLink" onChange={this.changeHandler} value={this.state.facebookLink} placeholder="Describe briefly" />
+                    </div>
+                    <div>
+                        <ImageUploader />
                     </div>
                     <button type="submit" className="btn btn-primary">Add Member</button>
                 </form>

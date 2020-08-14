@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
+import ImageUploader from './ImageUploader';
 import "react-datepicker/dist/react-datepicker.css";
 
 class CreateEvent extends React.Component {
@@ -47,7 +48,8 @@ class CreateEvent extends React.Component {
                     eventDate: new Date(),
                     location: '',
                     gcalender: '',
-                    gmaps: ''
+                    gmaps: '',
+                    imgPath: ''
                 });
                 this.props.UpdateState();
                 alert("Event Created");
@@ -73,6 +75,7 @@ class CreateEvent extends React.Component {
         return (
             <div className="col-lg-6 col-md-12">
                 <div className="display-4 align-content-center">Create New Event</div>
+                <ImageUploader />
                 <form className="col-6 align-content-center" onSubmit={this.handleEventSubmit}>
                     <div className="form-group">
                         <label htmlFor="title">Title</label>
@@ -105,6 +108,9 @@ class CreateEvent extends React.Component {
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
+                <div className='container mt-4'>
+                        <ImageUploader />
+                </div>
             </div>
         );
     }

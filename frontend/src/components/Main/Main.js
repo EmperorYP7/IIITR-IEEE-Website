@@ -8,6 +8,7 @@ import Gallery from './Gallery/Gallery';
 import Members from './Members/Members';
 import Resources from './Resources/Resources';
 import Footer from './Footer/Footer';
+import NotFound from './NotFound/NotFound';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -22,9 +23,10 @@ function Main() {
             <Route path="/" exact component={Home} />
             <Route path="/events" exact component={EventList} />
             <Route path="/events/:slug" exact urlString ={`/events/:slug`} component={Event} />
-            <Route path="/gallery" component={Gallery} />
-            <Route path="/members" component={Members} />
-            <Route path="/resources" component={Resources} />
+            <Route path="/gallery" exact component={Gallery} />
+            <Route path="/members" exact component={Members} />
+            <Route path="/resources" exact component={Resources} />
+            <Route path="/" component={NotFound} />
         </Switch>
           </div>
       <Footer />

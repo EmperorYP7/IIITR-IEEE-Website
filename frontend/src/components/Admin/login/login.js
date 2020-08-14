@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './login.css'
+import './login.css';
 import ReactDOM from 'react-dom';
 import Events from '../Events/Events';
 import Members from '../Members/Members';
@@ -13,21 +13,24 @@ class Login extends Component {
 
         this.state = {
             user: "",
-            password: "",
+            pass: "",
             user1: "21232f297a57a5a743894a0e4a801fc3",
             pass1 : "4f63e2a7118502d8eae77ecdd4eaf66f",
             auth : 0
         }
     }
 
-    login = (e) => {e.preventDefault();
+    login = (e) => {
+        e.preventDefault();
         const md5   = require("blueimp-md5");
-        //console.log(this.state.user,this.state.user1,this.state.pass,this.state.pass1);
         //console.log((this.state.pass1).localeCompare( (this.state.pass)));
+        //const parsedUser = this.md5(this.state.user);
         this.state.user = md5(this.state.user);
         this.state.pass = md5(this.state.pass);
-        if( (this.state.pass1).localeCompare( (this.state.pass))=== 0 && (this.state.user1).localeCompare( (this.state.user))=== 0){
-            this.state.auth = 1;
+
+        console.log(this.state.user,this.state.user1,this.state.pass,this.state.pass1);
+        if(((this.state.pass1).localeCompare((this.state.pass)) === 0) && ((this.state.user1).localeCompare((this.state.user)) === 0)){
+            this.setState({auth : 1});
             ReactDOM.render(<hr/>, document.getElementById('FillHere1'));
             ReactDOM.render(<hr/>, document.getElementById('FillHere3'));
             ReactDOM.render(<Events/>, document.getElementById('FillHere2'));
@@ -57,7 +60,8 @@ class Login extends Component {
     }
 
     render() {
-        return (<div>
+        return (
+        <div>
             <div className="col-lg-6 col-md-12">
                 <div className="display-4 align-content-center">Admin Login</div><br/><br/>
                 <form className="col-6 align-content-center" onSubmit={this.login}>
@@ -71,14 +75,13 @@ class Login extends Component {
                     </div>
                     <button type="submit" className="btn btn-primary">Log In</button>
                 </form>
-
             </div>
-            <div id="FillHere1">.</div>
-            <div id="FillHere2">.</div>
-                <div id="FillHere3">.</div>
-                <div id="FillHere4">.</div>
+            <div id="FillHere1"></div>
+            <div id="FillHere2"></div>
+            <div id="FillHere3"></div>
+            <div id="FillHere4"></div>
 
-                </div>
+        </div>
         );
     }
 }
