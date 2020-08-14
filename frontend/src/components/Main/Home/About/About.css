@@ -13,9 +13,6 @@ text-align: center;
   text-align: justify;
 }
 
-.bg-nmg {
-  background-color: #f2f2f4;
-}
 .hori-line{
 border:none;
 margin: 100px auto;
@@ -40,7 +37,6 @@ text-align: center;
 .deck-box{
   margin: auto;
   text-align: justify;
-  background-color: #f2f2f4;
 }
 
 .cart-title {
@@ -104,7 +100,7 @@ z-index: 2;
 .bg:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
- 
+
 .icon-lightblue {
   color: #cdf0f7;
 }

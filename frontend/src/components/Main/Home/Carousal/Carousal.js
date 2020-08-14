@@ -9,8 +9,9 @@ class Carousal extends React.Component {
 
     render() {
         return (
-          <div className="container-fluid bg-nmg">
-            <Carousel className="image">
+          <div className="container-fluid my-5">
+            <h2 className="text-center">Testimonials</h2><hr></hr>
+            <Carousel className="image my-0">
               <Carousel.Item >
                 <img
                   className="d-block w-100"

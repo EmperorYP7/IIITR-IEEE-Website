@@ -25,13 +25,14 @@ app.use('/api/memberdata', memberRouter);
 
 //-----------------Upload Routes--------------------
 
-const imageRouter = require('./routes/data/ImageRoute');
+const imageRouter = require('./routes/data/ImageRouter');
 app.use('/upload/image', imageRouter);
 
 const pdfRouter = require('./routes/data/PdfRouter');
 app.use('/upload/pdf', pdfRouter);
 
 //--------------------------------------------------
+
 app.listen(port, () => {
     console.log(`Server started on port : ${port}`)
 });
