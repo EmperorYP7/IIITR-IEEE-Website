@@ -24,6 +24,9 @@ app.use('/api/memberdata', memberRouter);
 const resourceRouter = require('./routes/ResourceRouter');
 app.use('/api/resourcedata', resourceRouter);
 
+const galleryRouter = require('./routes/GalleryRoute');
+app.use('/api/gallerydata',galleryRouter);
+
 //-------------------------------------
 
 //-----------------Upload Routes--------------------

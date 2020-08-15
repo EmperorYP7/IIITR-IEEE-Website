@@ -7,7 +7,7 @@ import Pandey2 from './images/pikachu.png';
 import Pandey3 from './images/vaporeon.png';
 
 
-class Members extends Component {
+class Gallery extends Component {
 
     render() {
         return (<div>
@@ -149,4 +149,4 @@ class Members extends Component {
     }
 }
 
-export default Members;
+export default Gallery;

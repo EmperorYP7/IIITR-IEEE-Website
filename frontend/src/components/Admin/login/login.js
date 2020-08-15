@@ -3,6 +3,7 @@ import './login.css';
 import ReactDOM from 'react-dom';
 import Events from '../Events/Events';
 import Members from '../Members/Members';
+import Gallery from '../Gallery/Gallery';
 
 class Login extends Component {
     constructor(props) {
@@ -25,16 +26,16 @@ class Login extends Component {
         const md5   = require("blueimp-md5");
         //console.log((this.state.pass1).localeCompare( (this.state.pass)));
         //const parsedUser = this.md5(this.state.user);
-        this.state.user = md5(this.state.user);
-        this.state.pass = md5(this.state.pass);
+        // this.state.user = md5(this.state.user);
+        // this.state.pass = md5(this.state.pass);
 
         console.log(this.state.user,this.state.user1,this.state.pass,this.state.pass1);
-        if(((this.state.pass1).localeCompare((this.state.pass)) === 0) && ((this.state.user1).localeCompare((this.state.user)) === 0)){
+        if(((this.state.pass1).localeCompare(md5(this.state.pass)) === 0) && ((this.state.user1).localeCompare(md5(this.state.user)) === 0)){
             this.setState({auth : 1});
             ReactDOM.render(<hr/>, document.getElementById('FillHere1'));
-            ReactDOM.render(<hr/>, document.getElementById('FillHere3'));
+            ReactDOM.render(<Gallery/>, document.getElementById('FillHere4'));
             ReactDOM.render(<Events/>, document.getElementById('FillHere2'));
-            ReactDOM.render(<Members/>, document.getElementById('FillHere4'));
+            ReactDOM.render(<Members/>, document.getElementById('FillHere3'));
         }
         else{
             ReactDOM.render(<h1>Wrong Username or Password</h1>, document.getElementById('FillHere1'));

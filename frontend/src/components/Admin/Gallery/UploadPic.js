@@ -21,13 +21,13 @@ class UploadProfilePic extends React.Component {
 
     onSubmit = async e => {
         e.preventDefault();
-        this.props.setImagePath(`../../../../../backend/uploads/images/members/${this.state.filename}`);  //Path may change with the file structure
+        this.props.setImagePath(`../../../../../backend/uploads/images/gallery/${this.state.filename}`);  //Path may change with the file structure
 
         const formData = new FormData();
-        formData.append('member', this.state.file);
+        formData.append('gallery', this.state.file);
 
         try {
-            const res = await axios.post('/upload/image/member', formData, {
+            const res = await axios.post('/upload/image/gallery', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
@@ -52,7 +52,7 @@ class UploadProfilePic extends React.Component {
     
     render(){
         return(
-            <form onSubmit={this.onSubmit} encType="multipart/form-data" id='form'>
+            <form onSubmit={this.onSubmit} enctype="multipart/form-data" id='form'>
                 <div className='custom-file mb-4 row'>
                     <div className="col-9">
                         <input type="file" name="member" required={true} onChange={this.changeHandler} placeholder="Upload Profile Pic" className='custom-file-input' />
