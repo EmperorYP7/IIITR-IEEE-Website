@@ -3,7 +3,7 @@ const router = express.Router();
 const Resource = require('../models/Resources/Resource.model');
 
 router.get('/', async (req, res) => {
-    const resources = await Resource.find().sort({ order: 1 });
+    const resources = await Resource.find().sort({ createdAt: 'desc' });
     res.json(resources);
 });
 

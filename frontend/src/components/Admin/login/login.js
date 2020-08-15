@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Events from '../Events/Events';
 import Members from '../Members/Members';
 import Notices from '../Notices/Notices';
+import Resources from '../Resources/Resources';
 import Gallery from '../Gallery/Gallery';
 
 class Login extends Component {
@@ -35,9 +36,10 @@ class Login extends Component {
             this.setState({auth : 1});
             ReactDOM.render(<hr/>, document.getElementById('FillHere1'));
             ReactDOM.render(<Events/>, document.getElementById('FillHere2'));
-            ReactDOM.render(<Notices/>, document.getElementById('FillHere3'))
+            ReactDOM.render(<Notices/>, document.getElementById('FillHere3'));
             ReactDOM.render(<Members/>, document.getElementById('FillHere4'));
             ReactDOM.render(<Gallery/>, document.getElementById('FillHere5'));
+            ReactDOM.render(<Resources/>, document.getElementById('FillHere6'));
         }
         else{
             ReactDOM.render(<h1>Wrong Username or Password</h1>, document.getElementById('FillHere1'));
@@ -84,6 +86,7 @@ class Login extends Component {
             <div id="FillHere3"></div>
             <div id="FillHere4"></div>
             <div id="FillHere5"></div>
+            <div id="FillHere6"></div>
 
         </div>
         );

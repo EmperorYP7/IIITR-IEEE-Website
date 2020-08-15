@@ -6,11 +6,6 @@ const resourceSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    order: {
-        type: Number,
-        required: true,
-        default: 0
-    },
     shortDescription: {
         required: true,
         type: String,
