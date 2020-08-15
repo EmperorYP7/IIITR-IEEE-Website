@@ -3,6 +3,7 @@ import './login.css';
 import ReactDOM from 'react-dom';
 import Events from '../Events/Events';
 import Members from '../Members/Members';
+import Notices from '../Notices/Notices';
 import Gallery from '../Gallery/Gallery';
 
 class Login extends Component {
@@ -33,9 +34,10 @@ class Login extends Component {
         if(((this.state.pass1).localeCompare(md5(this.state.pass)) === 0) && ((this.state.user1).localeCompare(md5(this.state.user)) === 0)){
             this.setState({auth : 1});
             ReactDOM.render(<hr/>, document.getElementById('FillHere1'));
-            ReactDOM.render(<Gallery/>, document.getElementById('FillHere4'));
             ReactDOM.render(<Events/>, document.getElementById('FillHere2'));
-            ReactDOM.render(<Members/>, document.getElementById('FillHere3'));
+            ReactDOM.render(<Notices/>, document.getElementById('FillHere3'))
+            ReactDOM.render(<Members/>, document.getElementById('FillHere4'));
+            ReactDOM.render(<Gallery/>, document.getElementById('FillHere5'));
         }
         else{
             ReactDOM.render(<h1>Wrong Username or Password</h1>, document.getElementById('FillHere1'));
@@ -81,6 +83,7 @@ class Login extends Component {
             <div id="FillHere2"></div>
             <div id="FillHere3"></div>
             <div id="FillHere4"></div>
+            <div id="FillHere5"></div>
 
         </div>
         );

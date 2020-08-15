@@ -21,6 +21,9 @@ app.use('/api/eventdata', eventRouter);
 const memberRouter = require('./routes/MemberRoute');
 app.use('/api/memberdata', memberRouter);
 
+const noticeRouter = require('./routes/NoticeRouter');
+app.use('/api/noticedata', noticeRouter);
+
 const resourceRouter = require('./routes/ResourceRouter');
 app.use('/api/resourcedata', resourceRouter);
 

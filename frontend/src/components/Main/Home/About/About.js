@@ -4,7 +4,7 @@ import './About.css';
 // import logo from './ieee.jpg';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
-import NoticeBoard from '../Notice/Notice';
+import NoticeBoard from '../Notice/NoticeBoard';
 class About extends React.Component {
 
 render () {

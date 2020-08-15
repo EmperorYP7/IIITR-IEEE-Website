@@ -7,7 +7,14 @@ const multer = require('multer');
 
 const storage3 = multer.diskStorage({
     destination: (req, file, cb) => cb(null, './backend/uploads/pdf/resources'),
-    filename: (req, file, cb) => cb(null, file.originalname)
+    filename: (req, file, cb) => cb(null, file.originalname),
+    fileFilter: (req, file, cb) => {
+      const ext = path.extname(file.originalname);
+      if(ext !== '.pdf') {
+        return cb(new Error('only pdfs are allowed'))
+      }
+      cb(null, true)
+    }
 });
 
 const upload3 = multer({ storage: storage3 })
@@ -25,8 +32,15 @@ router.post('/resource', upload3.single('resource'), (req, res) => {
 //---------------------------------Notice Upload---------------------------------
 
 const storage4 = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, './backend/uploads/pdf/notice'),
-  filename: (req, file, cb) => cb(null, file.originalname)
+  destination: (req, file, cb) => cb(null, './backend/uploads/pdf/notices'),
+  filename: (req, file, cb) => cb(null, file.originalname),
+  fileFilter: (req, file, cb) => {
+    const ext = path.extname(file.originalname);
+    if(ext !== '.pdf') {
+      return cb(new Error('only pdfs are allowed'))
+    }
+    cb(null, true)
+  }
 });
 
 const upload4 = multer({ storage: storage4 })
