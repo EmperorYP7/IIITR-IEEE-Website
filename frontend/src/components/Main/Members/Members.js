@@ -5,6 +5,7 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Button from 'react-bootstrap/Button';
+import RingLoader from './AwesomeComponent';
 // import { Link } from 'react-router-dom';
 import Pandey from './images/pandey.jpeg';
 
@@ -19,6 +20,12 @@ class Members extends Component {
         axios.get(`/api/memberdata`)
             .then(res => {
                 this.setState({ members: res.data });
+if(res.data>0){
+this.setState({loaded:true});
+}
+else{
+this.setState({loaded:true});
+}
             })
             .catch(err => console.log("Error" + err));
     }
@@ -52,6 +59,9 @@ class Members extends Component {
 
             );
         });
+if(this.state.loaded){
+
+
         return (
                 <div className="container">
                     <div className="row justify-content-center">
@@ -67,6 +77,14 @@ class Members extends Component {
                     </div>
                 </div>
         );
+}
+else{
+if(!this.state.loaded){
+return(
+<div className="loader"><RingLoader message="Hold Tight!" /></div>
+);
+}
+}
     }
 }
 

@@ -36,6 +36,12 @@ class Event extends Component {
                     event: res.data
                 });
                 this.ExtractDate();
+if(res.data>0){
+this.setState({loaded:true});
+}
+else{
+this.setState({loaded:true});
+}
             })
             .catch(err => console.log("Error : " + err));
     }
@@ -61,6 +67,7 @@ class Event extends Component {
     }
 
     render(){
+
         return (
 <div className=" container about-event">
              <div className="row">
@@ -78,7 +85,7 @@ class Event extends Component {
                         {this.state.event.location}
                     </div>
                     <div>
-                        <a rel="noopener noreferrer" className="google-button"target="_blank" rel="noopener noreferrer" href={`${this.state.event.gcalender}`}><img border="0" alt="Google Calender" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
+                        <a rel="noopener noreferrer" className="google-button"target="_blank"  href={`${this.state.event.gcalender}`}><img border="0" alt="Google Calender" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
                     </div>
                     <div>
                         <iframe title="gmaps" src={this.state.event.gmaps} width="600" height="450" frameBorder="0" style={{border:0}} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
@@ -86,7 +93,8 @@ class Event extends Component {
             </div>
 </div>
         );
-    }
+
+  }
 }
 
 export default Event;
