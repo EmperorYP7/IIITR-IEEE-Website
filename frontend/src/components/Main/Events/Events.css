@@ -5,7 +5,28 @@ margin: 0 auto 80px auto;
 padding: 40px;
 
 }
+.CircleLoader{
+margin: 10px auto;
+padding-top: 200px;
+padding-bottom: 250px;
+margin-left: 50%;
+}
+.loading-text{
+font-size: 1.5rem;
+text-align: left;
+margin-left: -25px;
+margin-top: 25px;
+font-weight: 800;
+color: #085B72;
+font-family: 'Montserrat';
 
+}
+.loader{
+padding-top: 0;
+margin-top: 0px;
+opacity: 0.6;
+height: 100%;
+}
 
 .card-title{
   color: #1b262c;
@@ -18,6 +39,7 @@ font-weight: bold;
 font-family: 'Roboto Slab';
 
 }
+
 
 .card-text{
   font-family: 'Montserrat';
