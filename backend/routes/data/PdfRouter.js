@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 
+
+//------------------------Resource Upload--------------------------
+
 const storage3 = multer.diskStorage({
     destination: (req, file, cb) => cb(null, './backend/uploads/pdf/resources'),
     filename: (req, file, cb) => cb(null, file.originalname)
@@ -16,6 +19,11 @@ router.post('/resource', upload3.single('resource'), (req, res) => {
   }
 });
 
+//-----------------------------------------------------------------
+
+
+//---------------------------------Notice Upload---------------------------------
+
 const storage4 = multer.diskStorage({
   destination: (req, file, cb) => cb(null, './backend/uploads/pdf/notice'),
   filename: (req, file, cb) => cb(null, file.originalname)
@@ -29,5 +37,7 @@ try {
   res.send(400);
 }
 });
+
+//--------------------------------------------------------------------------------
 
 module.exports = router;

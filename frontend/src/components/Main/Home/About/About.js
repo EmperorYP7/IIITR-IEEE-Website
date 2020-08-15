@@ -4,6 +4,7 @@ import './About.css';
 // import logo from './ieee.jpg';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
+import NoticeBoard from '../Notice/Notice';
 class About extends React.Component {
 
 render () {
@@ -21,22 +22,7 @@ return (
         </div>
       </div>
       <div className="col-12 col-sm-4 pt-3">
-        <div className="box noticeboard morespacing">
-          <h3 className="about">Notice</h3><hr></hr>
-          <div className="col-12 pad">
-          <ul className="text-white scroll-up">
-          <li><a href="https://">IEEE in Development<span className="text-danger">[New]</span></a></li>
-          <li><a href="https://">IEEE in Development<span className="text-danger">[New]</span></a></li>
-          <li><a href="https://">IEEE in Development<span className="text-danger">[New]</span></a></li>
-          <li><a href="https://">Announcement</a></li>
-          <li><a href="https://">Work in Progress</a></li>
-          <li><a href="https://">We Can and We will!</a></li>
-          <li><a href="https://">Announcement</a></li>
-          <li><a href="https://">Work in Progress</a></li>
-          <li><a href="https://">We Can and We will!</a></li>
-          </ul>
-          </div>
-        </div>
+        <NoticeBoard />
       </div>
 
   <hr></hr>

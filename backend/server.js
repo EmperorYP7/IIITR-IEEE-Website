@@ -21,6 +21,9 @@ app.use('/api/eventdata', eventRouter);
 const memberRouter = require('./routes/MemberRoute');
 app.use('/api/memberdata', memberRouter);
 
+const resourceRouter = require('./routes/ResourceRouter');
+app.use('/api/resourcedata', resourceRouter);
+
 //-------------------------------------
 
 //-----------------Upload Routes--------------------
