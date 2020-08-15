@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import './EventLink.css';
 
 class Event extends Component {
 
@@ -32,12 +33,12 @@ class Event extends Component {
             .then(res => {
                 this.setState({
                     ...this.state,
-                    event: res.data 
+                    event: res.data
                 });
                 this.ExtractDate();
             })
             .catch(err => console.log("Error : " + err));
-    }   
+    }
 
     ExtractDate() {
             const completeDate = new Date(this.state.event.eventDate);
@@ -49,7 +50,7 @@ class Event extends Component {
             const month = months[completeDate.getMonth()];
             console.log(month)
             const year = completeDate.getFullYear();
-            
+
             const hour = completeDate.getHours();
             const minute = completeDate.getMinutes();
 
@@ -61,27 +62,29 @@ class Event extends Component {
 
     render(){
         return (
+<div className=" container about-event">
              <div className="row">
-                    <div className="col-12 display-2">
+                    <div className="col-12 event-title">
                         {this.state.event.title}
                     </div>
-                    <div className="col-12 text">
+                    <div className="col-12  event-desc">
                         {this.state.event.description}
                     </div>
-                    <div className="col-12 text-body">
-                        <p>{this.state.Dinaank}</p>
-                        <p>{this.state.Time}</p>     
+                    <div className="col-12  event-date">
+                        <p><i class="far calendar fa-calendar-alt"></i>{this.state.Dinaank}</p>
+                        <p><i class="far clock fa-clock"></i>{this.state.Time}</p>
                     </div>
-                    <div>
+                    <div className="col-12 location">
                         {this.state.event.location}
                     </div>
                     <div>
-                        <a rel="noopener noreferrer" target="_blank" href={`${this.state.event.gcalender}`}><img border="0" alt="Google Calender" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
+                        <a rel="noopener noreferrer" className="google-button"target="_blank" href={`${this.state.event.gcalender}`}><img border="0" alt="Google Calender" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
                     </div>
                     <div>
                         <iframe title="gmaps" src={this.state.event.gmaps} width="600" height="450" frameBorder="0" style={{border:0}} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
                     </div>
             </div>
+</div>
         );
     }
 }

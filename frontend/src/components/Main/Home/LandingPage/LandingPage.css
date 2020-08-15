@@ -15,23 +15,6 @@ text-align: center;
   font-weight: 600;
 } */
 
-.about-head {
-  font-size: 50px;
-  color: #1ebad6;
-  font-family: 'Roboto Slab';
-  font-weight: 400;
-}
-
-.about-content {
-  margin-top: 30px;
-
-  padding-top: 50px;
-  text-align: justify;
-  color: #fff;
-  font-size: 1.2rem;
-  font-family: 'Montserrat';
-}
-
 .toggle-down {
   color: #1ebad6;
   font-size: 100px;
@@ -41,7 +24,7 @@ text-align: center;
   /* The image used */
   /* background-image: url("./leaves.jpeg"); */
   /* background-image: url("./background.jpg"); */
-  background-image: url("./electronics.jpg");
+  background-image: url("./background.jpg");
   /* Add the blur effect */
    /* filter: blur(8px);
   -webkit-filter: blur(8px); */
@@ -159,7 +142,7 @@ margin: auto auto;
 	text-align: justify;
 }
 .title h1  {
-  color: #fff;
+  color: #000;
   font-weight:700;
   font-size:4rem;
   /* margin: auto; */
@@ -199,6 +182,7 @@ padding: 60px 40px 50px 40px;
 
  }
 @media(max-width:576px) {
+
 	.outer-outer-ring {
 		width:340px;
 		height: 340px;
