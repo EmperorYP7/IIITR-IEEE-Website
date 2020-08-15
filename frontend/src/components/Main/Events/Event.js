@@ -78,7 +78,7 @@ class Event extends Component {
                         {this.state.event.location}
                     </div>
                     <div>
-                        <a rel="noopener noreferrer" className="google-button"target="_blank" href={`${this.state.event.gcalender}`}><img border="0" alt="Google Calender" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
+                        <a rel="noopener noreferrer" className="google-button"target="_blank" rel="noopener noreferrer" href={`${this.state.event.gcalender}`}><img border="0" alt="Google Calender" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
                     </div>
                     <div>
                         <iframe title="gmaps" src={this.state.event.gmaps} width="600" height="450" frameBorder="0" style={{border:0}} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
