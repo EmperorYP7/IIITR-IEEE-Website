@@ -13,7 +13,12 @@ class CreateMember extends React.Component {
         this.state = {
             name: '',
             designation: '',
+            order: 0,
             shortDescription: '',
+            linkedinLink: '',
+            facebookLink: '',
+            emailid: '',
+            githubLink: '',
             imgPath: '',
             imageUploaded: false
         }
@@ -31,6 +36,7 @@ class CreateMember extends React.Component {
         }
         const member = {
             name: this.state.name,
+            order: this.state.order,
             designation: this.state.designation,
             shortDescription: this.state.shortDescription,
             linkedinLink: this.state.linkedinLink,
@@ -43,6 +49,7 @@ class CreateMember extends React.Component {
             .then(res => {
                 this.setState({
                     name: '',
+                    order: 0,
                     designation: '',
                     shortDescription: '',
                     linkedinLink: '',
@@ -53,7 +60,7 @@ class CreateMember extends React.Component {
                     imageUploaded: false
                 });
                 this.props.UpdateState();
-                alert("Event Created");
+                alert("Member Added");
             })
             .catch(err => {
                 console.log(err);
@@ -99,12 +106,12 @@ class CreateMember extends React.Component {
                         <label htmlFor="facebookLink">Facebook Link</label>
                         <input type="text" required={true} className="form-control" name="facebookLink" onChange={this.changeHandler} value={this.state.facebookLink} placeholder="Describe briefly" />
                     </div>
+                    <button type="submit" className="btn btn-primary">Add Member</button>
+                </form>
                     <div>
                         <label htmlFor="event">Upload Profile Picture</label>
                         {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadProfilePic setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> } 
-                        </div>
-                    <button type="submit" className="btn btn-primary">Add Member</button>
-                </form>
+                    </div>
             </div>
         );
     }
