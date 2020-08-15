@@ -23,8 +23,8 @@ class Footer extends Component {
       </div>
       <div className="modal-body">
         <div className="container">
-        <div className="row row-content justify-content-center"> 
-            <div className="col-12 text-center"><h2>Full Stack</h2><hr></hr></div> 
+        <div className="row row-content justify-content-center">
+            <div className="col-12 text-center"><h2>Full Stack</h2><hr></hr></div>
             <div className="col-12 col-lg-6">
                 <div className="media">
                     <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
@@ -56,8 +56,8 @@ class Footer extends Component {
                 </div>
             </div>
         </div>
-        <div className="row row-content justify-content-center"> 
-            <div className="col-12 text-center"><h2>Front-End</h2><hr></hr></div> 
+        <div className="row row-content justify-content-center">
+            <div className="col-12 text-center"><h2>Front-End</h2><hr></hr></div>
             <div className="col-12  col-lg-6 my-3">
             <div className="media">
                     <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
@@ -89,8 +89,8 @@ class Footer extends Component {
                 </div>
             </div>
         </div>
-        <div className="row row-content align-items-center"> 
-            <div className="col-12 text-center"><h2>Back-end</h2><hr></hr></div> 
+        <div className="row row-content align-items-center">
+            <div className="col-12 text-center"><h2>Back-end</h2><hr></hr></div>
             <div className="col-12  col-lg-6">
             <div className="media">
                     <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
@@ -132,7 +132,7 @@ class Footer extends Component {
 </div>
     <footer className="footer pb-0">
         <div className="container">
-            <div className="row"> 
+            <div className="row">
                 <div className="col-12 col-md-6 ">
                     <div className="text-center ">
                         <h5>Connect with us</h5><hr></hr>
@@ -142,34 +142,34 @@ class Footer extends Component {
                         <a className=" btn text-white" rel="noopener noreferrer" href="https://"><i className="fab fa-instagram fa-2x"></i></a>
                         <a className=" btn text-white" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info"><i className="fas fa-envelope fa-2x"></i></a>
                     </div>
-                </div>            
+                </div>
                 <div className="col-12 col-md-6 text-center addr">
                     <h5>Our Address</h5><hr></hr>
                     <address>
                         <ul className="list-unstyled">
-                            <li>Sirkha Toli, Kali Nagar, Namkum, </li>
-                            <li>Ranchi, Jharkhand 834010</li>
-                            <li>Tel : 123-24578</li>
-                            <li>Mail : <a rel="noopener noreferrer" href="mailto:iiitranchi@contact.info">iiitranchi@contact.info</a></li>
+                            <li className="institute-address">Sirkha Toli, Kali Nagar, Namkum, </li>
+                            <li className="institute-address">Ranchi, Jharkhand 834010</li>
+                            <li className="institute-address">Tel : 123-24578</li>
+                            <li className="institute-address">Mail : <a className="footer-a" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info">iiitranchi@contact.info</a></li>
                         </ul>
-                        
-                        
-                        
+
+
+
                         <br></br>
 		            </address>
                 </div>
             </div>
         </div>
         <div className="container-fluid">
-            <div className="row justify-content-center mt-5 mb-0 pt-3"> 
+            <div className="row justify-content-center mt-5 mb-0 pt-3">
                 <div  className="col-2 col-sm-1 ">
                     <button id="dev" className=" btn text-white " data-toggle="modal" data-target="#exampleModal"><i className="fas fa-laptop-code fa-2x"></i><span>Developers</span></button>
-                 </div>   
-                    
+                 </div>
+
                  <div className="col-6 col-sm-10 text-center">
                      <hr></hr>
-                     <Link to="/admin">
-                        <p className="text-white">Web Team IIITRanchi © Copyright 2020 </p>
+                     <Link className="footer-a" to="/admin">
+                        <p className="text-white ">Web Team IIITRanchi © Copyright 2020 </p>
                      </Link>
                  </div>
                  <div className="col-2 col-sm-1">
@@ -177,8 +177,8 @@ class Footer extends Component {
                 </div>
             </div>
            </div>
-           
-        
+
+
     </footer>
             </div>
         );

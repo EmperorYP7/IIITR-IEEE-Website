@@ -4,6 +4,9 @@
     padding: 20px 0px 20px 0px;
     color: #ddd;
 }
+.institute-address{
+color:#fff;
+}
 hr { display: block;
     width:60%;
     overflow: hidden;
@@ -48,4 +51,7 @@ span {
   }
 .list-unstyled{
 color: #fff;
+}
+.footer-a:hover{
+color:#fff;
 }
