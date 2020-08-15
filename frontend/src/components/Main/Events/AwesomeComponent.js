@@ -7,11 +7,12 @@ import './Events.css';
 
 const AwesomeComponent = (props) => {
     return (
+    <div className='CircleLoader'>
 
 
-      <div className='CircleLoader'>
 
         <HashLoader
+
           size={70}
           color={'#085B72'}
         />

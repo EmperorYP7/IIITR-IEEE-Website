@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Resources.css';
-import RingLoader from './AwesomeComponent';
+import HashLoader from './AwesomeComponent';
 import axios from 'axios';
 
 class Resources extends Component {
@@ -92,7 +92,7 @@ if(this.state.loaded){
 else{
 if(!this.state.loaded){
 return(
-  <div className="loader"><RingLoader message="Hold Tight!" /></div>
+  <div className="loader"><HashLoader message="Hold Tight!" /></div>
 
 )
 }

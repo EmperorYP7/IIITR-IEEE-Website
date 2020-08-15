@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import './Events.css';
-import RingLoader from './AwesomeComponent';
+import HashLoader from './AwesomeComponent';
 import { Link } from 'react-router-dom';
 
 class EventList extends Component {
@@ -73,7 +73,7 @@ if(this.state.loaded){
 else{
 if(!this.state.loaded){
 return(
-<div className="loader"><RingLoader message="Hold Tight!" /></div>
+<div className="loader"><HashLoader message="Hold Tight!" /></div>
 );
 }
 }

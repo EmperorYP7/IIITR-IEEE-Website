@@ -5,7 +5,7 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Button from 'react-bootstrap/Button';
-import RingLoader from './AwesomeComponent';
+import HashLoader from './AwesomeComponent';
 // import { Link } from 'react-router-dom';
 import Pandey from './images/pandey.jpeg';
 
@@ -81,7 +81,7 @@ if(this.state.loaded){
 else{
 if(!this.state.loaded){
 return(
-<div className="loader"><RingLoader message="Hold Tight!" /></div>
+<div className="loader"><HashLoader message="Hold Tight!" /></div>
 );
 }
 }
