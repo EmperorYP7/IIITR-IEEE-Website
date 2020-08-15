@@ -52,7 +52,7 @@ class UplaodImage extends React.Component {
     
     render(){
         return(
-            <form onSubmit={this.onSubmit} enctype="multipart/form-data" id='form'>
+            <form onSubmit={this.onSubmit} encType="multipart/form-data" id='form'>
                 <div className='custom-file mb-4 row'>
                     <div className="col-9">
                         <input type="file" name="event" required={true} onChange={this.changeHandler} placeholder="Upload event poster" className='custom-file-input' />
