@@ -33,27 +33,16 @@ class Members extends Component {
     fetchImage = (member) => {
         const imageName = member.imgPath;
         const url = `http://localhost:5000/upload/image/member/${imageName}`;
-
-        axios.get(url, {responseType: 'blob'})
-        .then(res => {
-                console.log(res.data);
-                // const file = new File( res.data, { type: "image/png" } );
-                // const imageUrl = URL.createObjectURL(file);
-                // console.log("Image URL: "+imageUrl);
-                var blob = new Blob( res.data );
-                const urlCreator = window.URL || window.webkitURL;
-                const imageUrl = urlCreator.createObjectURL( blob );
-                return(
-                    <Card.Img variant="top" className="img" src={imageUrl} alt="trial" /> 
-                )
-            })
-        .catch(err => console.log("Error Fetching File : " + err));
-    }
+        return(
+                <Card.Img variant="top" className="img" src={url} alt="trial" /> 
+            )
+        }
+        //.catch(err => console.log("Error Fetching File : " + err));
 
     render() {
         const showMember = this.state.members.map((member) => {
             return (
-                <div >
+                <div>
                     <Card>
                         {this.fetchImage(member)}
                         <div className="img-overlay col-12 hide">
@@ -76,7 +65,6 @@ class Members extends Component {
                         </Card.Footer>
                     </Card>
                 </div>
-
             );
         });
         if (this.state.loaded) {

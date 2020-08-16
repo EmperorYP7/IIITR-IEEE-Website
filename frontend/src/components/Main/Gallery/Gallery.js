@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Gallery.css';
 import axios from 'axios';
+import HashLoader from './AwesomeComponent';
 const imageim = require.context('../../../../../backend/uploads/images/gallery/', true);
 
 class Gallery extends Component {
@@ -14,19 +15,27 @@ class Gallery extends Component {
         axios.get(`/api/gallerydata`)
             .then(res => {
                 this.setState({ images: res.data });
-                var albumnames = [];
-                for(const v in this.state.images){
-                    albumnames.push(v.album);}
-                albumnames = albumnames.filter((v, i, a) => a.indexOf(v) === i); 
-                this.setState({albumsp:albumnames});
-
+                if(res.data>0){
+                    this.setState({loaded:true});
+                }
+                else{
+                    this.setState({
+                        loaded:true
+                    });
+                }
+                //var albumnames = [];
+                //for(const v in this.state.images){
+                //    albumnames.push(v.album);}
+                //albumnames = albumnames.filter((v, i, a) => a.indexOf(v) === i); 
+                //this.setState({albumsp:albumnames});
             })
             .catch(err => console.log("Error" + err));
     }
     
-    render() {  console.log("images",this.state.images);
+    render() {  
+                console.log("images",this.state.images);
                 console.log("slbum",this.state.albumsp);
-
+        if(this.state.loaded) {
         return (<div>
             <div className="container">
                     <div className="row justify-content-center">
@@ -39,6 +48,14 @@ class Gallery extends Component {
                     {this.state.images.map((images) =>{return(<img className="card-img-top" src={imageim('./'+images.imgPath.substring(images.imgPath.lastIndexOf('/')+1))} alt="Image" id = "image"/>);})}
             </div>
         );
+        }
+        else {
+            if(!this.state.loaded) {
+                return(
+                        <div className="loader"><HashLoader message="Hold Tight!" /></div>
+                    );
+                }
+        }
     }
 }
 

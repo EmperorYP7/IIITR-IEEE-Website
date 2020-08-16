@@ -29,7 +29,7 @@ class NoticeBoard extends React.Component {
                 <div className="col-12 pad">
                     <ul className="text-white scroll-up">
                         {this.state.notices.map( notice =>
-                        <li key={notice._id}><a rel="noopener noreferrer" href={`${notice.pdfPath}`} target="_blank">{notice.name}<span className="text-danger">[New]</span></a></li>
+                        <li key={notice._id}><a rel="noopener noreferrer" href={"http://localhost:5000/"+`${notice.pdfPath}`} target="_blank">{notice.name}<span className="text-danger">[New]</span></a></li>
                         )}
                     </ul>
                 </div>

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const { Router } = require('express');
+
 //--------------------------------------------------------- Member Image -------------------------------------------------------------------------
 
 const storage1 = multer.diskStorage({
@@ -29,7 +29,7 @@ router.post('/member', upload1.single('member'), (req, res) => {
 router.get('/member/:file(*)', (req, res) => {
     const file = req.params.file;
     const absPath = path.resolve(__dirname+'../../../uploads/images/members/'+`${file}`);   
-    res.set({'Content-Type': 'image/png'});
+    res.set({'Content-Type': 'image/png', 'Content-Type': 'image/jpg', 'Content-Type': 'image/jpeg'});
     res.sendFile(absPath);
 })
 
@@ -56,6 +56,13 @@ router.post('/event', upload2.single('event'), (req, res) => {
     }
 });
 
+router.get('/event/:file(*)', (req, res) => {
+  const file = req.params.file;
+  const absPath = path.resolve(__dirname+'../../../uploads/images/events/'+`${file}`);
+  res.set({'Content-Type': 'image/png', 'Content-Type': 'image/jpg', 'Content-Type': 'image/jpeg'});
+  res.sendFile(absPath);
+});
+
 //--------------------------------------------------------- Carousal Images -------------------------------------------------------------------------
 
 const storage5 = multer.diskStorage({
@@ -72,6 +79,13 @@ router.post('/home/carousal', upload5.single('carousal'), (req, res) => {
   }
 });
 
+router.get('/home/carousal/:file(*)', (req, res) => {
+  const file = req.params.file;
+  const absPath = path.resolve(__dirname+'../../../uploads/images/home/carousal/'+`${file}`);
+  res.set({'Content-Type': 'image/png', 'Content-Type': 'image/jpg', 'Content-Type': 'image/jpeg'});
+  res.sendFile(absPath);
+});
+
 //------------------------------------------------------------ Gallery -------------------------------------------------------------------------
 
 const storage6 = multer.diskStorage({
@@ -86,6 +100,13 @@ router.post('/gallery', upload6.array('gallery'), (req, res) => {
   }catch(err) {
     res.send(400);
   }
+});
+
+router.get('/gallery/:file(*)', (req, res) => {
+  const file = req.params.file;
+  const absPath = path.resolve(__dirname+'../../../uploads/images/gallery/'+`${file}`);
+  res.set({'Content-Type': 'image/png', 'Content-Type': 'image/jpg', 'Content-Type': 'image/jpeg'});
+  res.sendFile(absPath);
 });
 
 module.exports = router;

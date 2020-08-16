@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 
-
 //------------------------Resource Upload--------------------------
 
 const storage3 = multer.diskStorage({
@@ -25,6 +24,13 @@ router.post('/resource', upload3.single('resource'), (req, res) => {
     res.send(400);
   }
 });
+
+router.get('/resource/:file', (req, res) => {
+  const file = req.params.file;
+  const absPath = path.resolve(__dirname+'../../../uploads/pdf/resources/'+`${file}`);   
+  res.set({'Content-Type': 'pdf'});
+  res.sendFile(absPath);
+})
 
 //-----------------------------------------------------------------
 
@@ -51,6 +57,13 @@ try {
   res.send(400);
 }
 });
+
+router.get('/notice/:file(*)', (req, res) => {
+  const file = req.params.file;
+  const absPath = path.resolve(__dirname+'../../../uploads/pdf/notices/'+`${file}`);   
+  res.set({'Content-Type': 'pdf'});
+  res.sendFile(absPath);
+})
 
 //--------------------------------------------------------------------------------
 
