@@ -2,11 +2,12 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const { Router } = require('express');
 //--------------------------------------------------------- Member Image -------------------------------------------------------------------------
 
 const storage1 = multer.diskStorage({
     destination: (req, file, cb) => cb(null, './backend/uploads/images/members'),
-    filename: (req, file, cb) => cb(null , file.originalname + path.extname(file.originalname)),
+    filename: (req, file, cb) => cb(null , file.originalname),
     fileFilter: (req, file, cb) => {
       const ext = path.extname(file.originalname);
       if(ext !== '.png' && ext !== '.jpg' && ext !== '.gif' && ext !== '.jpeg') {
@@ -24,6 +25,13 @@ router.post('/member', upload1.single('member'), (req, res) => {
       res.status(400).send(err);
     }
   });
+
+router.get('/member/:file(*)', (req, res) => {
+    const file = req.params.file;
+    const absPath = path.resolve(__dirname+'../../../uploads/images/members/'+`${file}`);   
+    res.set({'Content-Type': 'image/png'});
+    res.sendFile(absPath);
+})
 
 //--------------------------------------------------------- Event Image -------------------------------------------------------------------------
 

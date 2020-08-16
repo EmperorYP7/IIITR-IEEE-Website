@@ -113,12 +113,12 @@ class CreateEvent extends React.Component {
                             <label htmlFor="gmaps">Google Maps embed link</label>
                             <input type="text" required={true} className="form-control" name="gmaps" onChange={this.changeHandler} value={this.state.gmaps} placeholder="Another input placeholder" />
                         </div>
+                        <button type="submit" className="btn btn-primary">Submit and Create Event</button>
+                    </form>
                         <div>
                             <label htmlFor="event">Upload Event Poster</label>
                             {this.state.imageUploaded ? <p>Image uploaded</p> : <UplaodImage setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> } 
                         </div>
-                        <button type="submit" className="btn btn-primary">Submit and Create Event</button>
-                    </form>
             </div>
         );
     }

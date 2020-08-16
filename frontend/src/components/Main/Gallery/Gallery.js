@@ -1,149 +1,42 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Gallery.css';
-import Pandey from './images/pandey.jpeg';
-import Pandey1 from './images/eeve.jpg';
-import Pandey2 from './images/pikachu.png';
-import Pandey3 from './images/vaporeon.png';
-
+import axios from 'axios';
+const imageim = require.context('../../../../../backend/uploads/images/gallery/', true);
 
 class Gallery extends Component {
+    constructor(props)
+    {
+        super(props);
+        this.state = {images: [],albumsp:[]};
+    }
+    componentDidMount() {
+        axios.get(`/api/gallerydata`)
+            .then(res => {
+                this.setState({ images: res.data });
+                var albumnames = [];
+                for(const v in this.state.images){
+                    albumnames.push(v.album);}
+                albumnames = albumnames.filter((v, i, a) => a.indexOf(v) === i); 
+                this.setState({albumsp:albumnames});
 
-    render() {
+            })
+            .catch(err => console.log("Error" + err));
+    }
+    
+    render() {  console.log("images",this.state.images);
+                console.log("slbum",this.state.albumsp);
+
         return (<div>
-
-                <div className="container">
+            <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-12 text-center album-header">
-                            <h2>Album1</h2>
+                        <h2>Gallery</h2>
                             <hr></hr>
                         </div>
                     </div>
                     </div>
-                    <div id = "scroller">
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-
-                    </div>
-
-
-                    <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-12 text-center album-header">
-                            <h2>Album2</h2>
-                            <hr></hr>
-                        </div>
-                    </div>
-                    </div>
-                    <div id = "scroller">
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey1} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey2} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey3} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey3} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey2} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey2} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey1} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey1} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey1} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey2} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey3} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey3} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey2} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey1} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-
-                    </div>
-
-                    <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-12 text-center album-header">
-                            <h2>Album3</h2>
-                            <hr></hr>
-                        </div>
-                    </div>
-                    </div>
-                    <div id = "scroller">
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey1} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey2} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey3} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey1} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey2} alt="Yash pandey" id = "image"/>
-                        </div>
-                        <div className = "slide">
-                            <img className="card-img-top" src={Pandey3} alt="Yash pandey" id = "image"/>
-                        </div>
-
-                    </div>
+                    {this.state.images.map((images) =>{return(<img className="card-img-top" src={imageim('./'+images.imgPath.substring(images.imgPath.lastIndexOf('/')+1))} alt="Image" id = "image"/>);})}
             </div>
         );
     }
