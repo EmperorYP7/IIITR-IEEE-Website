@@ -72,7 +72,9 @@ background-color:#1EBAD6;
 .card:hover .overlay {
   opacity: 1;
 }
-
+.society-card-footer{
+background-color: #008CBA;
+}
 .text {
   color: white;
   font-size: 20px;

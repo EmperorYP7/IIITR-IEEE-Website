@@ -52,7 +52,7 @@ class Society extends React.Component {
       return (
 
         <Card>
-          
+
           <Card.Img variant="top" className="img" src={card.image} />
           <div class="overlay">
     <div class="text"><Card.Body>
@@ -62,8 +62,8 @@ class Society extends React.Component {
             </Card.Text>
           </Card.Body></div>
   </div>
-          
-          <Card.Footer>
+
+          <Card.Footer className="society-card-footer">
           <Card.Title>{card.name}</Card.Title>
           </Card.Footer>
         </Card>
