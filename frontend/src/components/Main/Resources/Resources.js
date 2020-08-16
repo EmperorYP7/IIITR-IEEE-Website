@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Resources.css';
+import HashLoader from './AwesomeComponent';
 import axios from 'axios';
 
 class Resources extends Component {
@@ -18,11 +19,18 @@ class Resources extends Component {
     axios.get('/api/resourcedata/')
         .then(res => {
           this.setState({ resources: res.data });
+if(res.data>0){
+this.setState({loaded:true});
+}
+else{
+this.setState({loaded:true});
+}
         })
         .catch(err => console.log("Error" + err));
   }
 
     render() {
+if(this.state.loaded){
         return (
             <div className="container ">
                 <div className="row resources-container">
@@ -80,6 +88,15 @@ class Resources extends Component {
 
             </div>
         );
+}
+else{
+if(!this.state.loaded){
+return(
+  <div className="loader"><HashLoader message="Hold Tight!" /></div>
+
+)
+}
+}
     }
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import './Events.css';
+import HashLoader from './AwesomeComponent';
 import { Link } from 'react-router-dom';
 
 class EventList extends Component {
@@ -18,12 +19,22 @@ class EventList extends Component {
        axios.get(`/api/eventdata/`)
             .then(res => {
                 this.setState({ events: res.data });
-            })
-            .catch(err => console.log("Error" + err));
+                if(res.data>0){
+                this.setState({loaded:true});
+                }
+else{
+this.setState({
+loaded:true
+});
+}
+            });
+
     }
 
     render() {
+if(this.state.loaded){
         return (
+
 
             <div >
             <div className="col-12 text-center event-header">
@@ -57,7 +68,15 @@ class EventList extends Component {
 
 </div>
 </div>
-        );
+      );
+}
+else{
+if(!this.state.loaded){
+return(
+<div className="loader"><HashLoader message="Hold Tight!" /></div>
+);
+}
+}
     }
 }
 
