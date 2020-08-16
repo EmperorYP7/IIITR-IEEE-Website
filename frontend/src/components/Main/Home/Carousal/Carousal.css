@@ -13,6 +13,27 @@ width:20%;
 } */
 
 
+.fill {
+  background: url("./images/leaves.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.quote {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  
+}
+.quotes {
+  font-size: 50px;
+  color: #fff;
+}
+.light-wt {
+  font-weight: normal;
+  font-size: large;
+}
 
 @media(max-width: 600px){
   .image{
