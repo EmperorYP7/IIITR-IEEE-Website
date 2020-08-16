@@ -7,62 +7,82 @@ import CardColumns from 'react-bootstrap/CardColumns';
 import Button from 'react-bootstrap/Button';
 import HashLoader from './AwesomeComponent';
 // import { Link } from 'react-router-dom';
-import Pandey from './images/pandey.jpeg';
+// import Pandey from './images/pandey.jpeg';
 
 class Members extends Component {
 
     constructor(props) {
         super(props);
-
+        this.fetchImage = this.fetchImage.bind(this);
         this.state = { members: [] };
     }
     componentDidMount() {
         axios.get(`/api/memberdata`)
             .then(res => {
                 this.setState({ members: res.data });
-if(res.data>0){
-this.setState({loaded:true});
-}
-else{
-this.setState({loaded:true});
-}
+                if (res.data > 0) {
+                    this.setState({ loaded: true });
+                }
+                else {
+                    this.setState({ loaded: true });
+                }
             })
             .catch(err => console.log("Error" + err));
+    }
+
+    fetchImage = (member) => {
+        const imageName = member.imgPath;
+        const url = `http://localhost:5000/upload/image/member/${imageName}`;
+
+        axios.get(url, {responseType: 'blob'})
+        .then(res => {
+                console.log(res.data);
+                // const file = new File( res.data, { type: "image/png" } );
+                // const imageUrl = URL.createObjectURL(file);
+                // console.log("Image URL: "+imageUrl);
+                var blob = new Blob( res.data );
+                const urlCreator = window.URL || window.webkitURL;
+                const imageUrl = urlCreator.createObjectURL( blob );
+                return(
+                    <Card.Img variant="top" className="img" src={imageUrl} alt="trial" /> 
+                )
+            })
+        .catch(err => console.log("Error Fetching File : " + err));
     }
 
     render() {
         const showMember = this.state.members.map((member) => {
             return (
                 <div >
-                <Card>
-                    <Card.Img variant="top" className="img" src={Pandey} />
-                    <div className="img-overlay col-12 hide">
-                        <a className=" btn text-white" rel="noopener noreferrer" href={member.linkedinLink} target="_blank"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-white" rel="noopener noreferrer" href={member.githubLink} target="_blank"><i className="fab fa-github-square fa-2x"></i></a>
-                        <a className=" btn text-white" rel="noopener noreferrer" href={member.emailid} target="_blank"><i className="fas fa-envelope fa-2x"></i></a>
-                        <a className=" btn text-white" rel="noopener noreferrer" href={member.facebookLink} target="_blank"><i className="fab fa-instagram fa-2x"></i></a>
-                    </div>
-                    <Card.Body className="card-body">
-                        <Card.Title>{member.name}</Card.Title>
-                        <Card.Subtitle className="text-muted">{member.designation}</Card.Subtitle>
-                        <Card.Text>
-                        {member.shortDescription}{' '}
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">
-                        <Button className="button ">Read More</Button> {/* Link needs to be added*/}
-                        </small>
-                    </Card.Footer>
-                </Card>
+                    <Card>
+                        {this.fetchImage(member)}
+                        <div className="img-overlay col-12 hide">
+                            <a className=" btn text-white" rel="noopener noreferrer" href={member.linkedinLink} target="_blank"><i className="fab fa-linkedin fa-2x"></i></a>
+                            <a className=" btn text-white" rel="noopener noreferrer" href={member.githubLink} target="_blank"><i className="fab fa-github-square fa-2x"></i></a>
+                            <a className=" btn text-white" rel="noopener noreferrer" href={member.emailid} target="_blank"><i className="fas fa-envelope fa-2x"></i></a>
+                            <a className=" btn text-white" rel="noopener noreferrer" href={member.facebookLink} target="_blank"><i className="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                        <Card.Body className="card-body">
+                            <Card.Title>{member.name}</Card.Title>
+                            <Card.Subtitle className="text-muted">{member.designation}</Card.Subtitle>
+                            <Card.Text>
+                                {member.shortDescription}{' '}
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <small className="text-muted">
+                                <Button className="button ">Read More</Button> {/* Link needs to be added*/}
+                            </small>
+                        </Card.Footer>
+                    </Card>
                 </div>
 
             );
         });
-if(this.state.loaded){
+        if (this.state.loaded) {
 
 
-        return (
+            return (
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-12 text-center member-header">
@@ -70,21 +90,21 @@ if(this.state.loaded){
                             <hr></hr>
                         </div>
                         <div className="col-12">
-                        <CardColumns className="card-group row justify-content-center">
-                            {showMember}
-                        </CardColumns>
+                            <CardColumns className="card-group row justify-content-center">
+                                {showMember}
+                            </CardColumns>
                         </div>
                     </div>
                 </div>
-        );
-}
-else{
-if(!this.state.loaded){
-return(
-<div className="loader"><HashLoader message="Hold Tight!" /></div>
-);
-}
-}
+            );
+        }
+        else {
+            if (!this.state.loaded) {
+                return (
+                    <div className="loader"><HashLoader message="Hold Tight!" /></div>
+                );
+            }
+        }
     }
 }
 

@@ -21,7 +21,7 @@ class UploadProfilePic extends React.Component {
 
     onSubmit = async e => {
         e.preventDefault();
-        this.props.setImagePath(`../../../../../backend/uploads/images/members/${this.state.filename}`);  //Path may change with the file structure
+        this.props.setImagePath(`${this.state.filename}`);  //Path may change with the file structure
 
         const formData = new FormData();
         formData.append('member', this.state.file);
