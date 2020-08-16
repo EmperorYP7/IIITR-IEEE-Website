@@ -14,11 +14,11 @@ class Gallery extends Component {
         axios.get(`/api/gallerydata`)
             .then(res => {
                 this.setState({ images: res.data });
-                var albumnames = [];
+                /*var albumnames = [];
                 for(const v in this.state.images){
                     albumnames.push(v.album);}
                 albumnames = albumnames.filter((v, i, a) => a.indexOf(v) === i); 
-                this.setState({albumsp:albumnames});
+                this.setState({albumsp:albumnames});*/
 
             })
             .catch(err => console.log("Error" + err));
