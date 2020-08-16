@@ -58,12 +58,12 @@ try {
 }
 });
 
-router.get('/notice/:file(*)', (req, res) => {
+router.get('/notice/:file', (req, res) => {
   const file = req.params.file;
-  const absPath = path.resolve(__dirname+'../../../uploads/pdf/notices/'+`${file}`);   
+  const absPath = path.resolve(__dirname+`../../../uploads/pdf/notices/${file}`);
   res.set({'Content-Type': 'pdf'});
   res.sendFile(absPath);
-})
+});
 
 //--------------------------------------------------------------------------------
 

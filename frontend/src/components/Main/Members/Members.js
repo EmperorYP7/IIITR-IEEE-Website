@@ -68,8 +68,6 @@ class Members extends Component {
             );
         });
         if (this.state.loaded) {
-
-
             return (
                 <div className="container">
                     <div className="row justify-content-center">

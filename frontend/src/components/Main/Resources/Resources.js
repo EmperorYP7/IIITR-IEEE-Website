@@ -19,18 +19,18 @@ class Resources extends Component {
     axios.get('/api/resourcedata/')
         .then(res => {
           this.setState({ resources: res.data });
-if(res.data>0){
-this.setState({loaded:true});
-}
-else{
-this.setState({loaded:true});
-}
+          if(res.data>0){
+          this.setState({loaded:true});
+          }
+          else{
+          this.setState({loaded:true});
+          }
         })
         .catch(err => console.log("Error" + err));
   }
 
     render() {
-if(this.state.loaded){
+    if(this.state.loaded){
         return (
             <div className="container ">
                 <div className="row resources-container">
@@ -49,7 +49,7 @@ if(this.state.loaded){
       <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
         <ul>
           {this.state.resources.map( resource =>
-          <li>{resource.name}<br/><a rel="noopener noreferrer" href={`${resource.pdfPath}`} target="_blank">Research Paper</a><br/><br/></li>
+          <li>{resource.name}<br/><a rel="noopener noreferrer" href={`http://localhost:5000/upload/pdf/resource/${resource.pdfPath}`} target="_blank">Research Paper</a><br/><br/></li>
           )}
         </ul>
       </div>

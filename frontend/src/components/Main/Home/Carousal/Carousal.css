@@ -1,18 +1,25 @@
- .image{
 
-width:60%;
-margin: 120px auto 100px auto;
+.fill {
+  background: url("./images/leaves.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
-/* .hori-line{
-border:none;
-margin: 100px auto;
-border-top-style: dotted;
-color: #f0f0f0;
-border-width: 5px;
-width:20%;
-} */
-
-
+.quote {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  
+}
+.quotes {
+  font-size: 50px;
+  color: #fff;
+}
+.light-wt {
+  font-weight: normal;
+  font-size: large;
+}
 
 @media(max-width: 600px){
   .image{

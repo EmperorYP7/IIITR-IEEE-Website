@@ -37,7 +37,7 @@ router.get('/member/:file(*)', (req, res) => {
 
 const storage2 = multer.diskStorage({
     destination: (req, file, cb) => cb(null, './backend/uploads/images/events'),
-    filename: (req, file, cb) => cb(null , file.originalname + path.extname(file.originalname)),
+    filename: (req, file, cb) => cb(null , file.originalname),
     fileFilter: (req, file, cb) => {
       const ext = path.extname(file.originalname);
       if(ext !== '.png' && ext !== '.jpg' && ext !== '.gif' && ext !== '.jpeg') {
@@ -56,10 +56,10 @@ router.post('/event', upload2.single('event'), (req, res) => {
     }
 });
 
-router.get('/event/:file(*)', (req, res) => {
+router.get('/event/:file', (req, res) => {
   const file = req.params.file;
   const absPath = path.resolve(__dirname+'../../../uploads/images/events/'+`${file}`);
-  res.set({'Content-Type': 'image/png', 'Content-Type': 'image/jpg', 'Content-Type': 'image/jpeg'});
+  res.set({'Content-Type': 'image/jpg'});
   res.sendFile(absPath);
 });
 

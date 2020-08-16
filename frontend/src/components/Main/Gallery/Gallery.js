@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Gallery.css';
 import axios from 'axios';
 import HashLoader from './AwesomeComponent';
-const imageim = require.context('../../../../../backend/uploads/images/gallery/', true);
 
 class Gallery extends Component {
     constructor(props)
@@ -31,6 +30,14 @@ class Gallery extends Component {
             })
             .catch(err => console.log("Error" + err));
     }
+
+    fetchImage = (image) => {
+        const imageName = image.imgPath;
+        const url = `http://localhost:5000/upload/image/gallery/${imageName}`;
+        return(
+            <img className="card-img-top" src={url} alt="Image" id = {image._id} />
+            )
+    }
     
     render() {  
                 console.log("images",this.state.images);
@@ -45,7 +52,7 @@ class Gallery extends Component {
                         </div>
                     </div>
                     </div>
-                    {this.state.images.map((images) =>{return(<img className="card-img-top" src={imageim('./'+images.imgPath.substring(images.imgPath.lastIndexOf('/')+1))} alt="Image" id = "image"/>);})}
+                    {this.state.images.map((image) => this.fetchImage(image))}
             </div>
         );
         }
