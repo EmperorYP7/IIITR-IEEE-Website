@@ -30,13 +30,18 @@ class Gallery extends React.Component {
         this.UpdateState();
     }
 
-    onImageDelete = (_id) => {
-        axios.delete(`/api/gallerydata/${_id}`)
+    onImageDelete = (image) => {
+        axios.delete(`/api/gallerydata/${image._id}`)
             .then(res => {
                 alert("Image Removed!");
                 this.UpdateState();
             })
+        axios.delete(`/upload/image/gallery/${image.imgPath}`)
+        .then(  res => {
+            console.log(res.data);
+        })
     }
+
 
     render() {
         return (
@@ -46,16 +51,16 @@ class Gallery extends React.Component {
                     <Container>
                         <ListGroup>
                             <TransitionGroup className="member-list">
-                                {this.state.images.map(({ _id, imgPath }) => (
-                                    <CSSTransition key={_id} timeout={600} classNames='fade'>
+                                {this.state.images.map((image) => (
+                                    <CSSTransition key={image._id} timeout={600} classNames='fade'>
                                         <ListGroupItem>
                                             <div className="row list-item">
-                                                <div className="col-11">
-                                                    {imgPath}
+                                                <div className="col-10">
+                                                    <img src={`http://localhost:5000/upload/image/gallery/${image.imgPath}`} alt="Image" id = {image._id} height="100rem" />
                                                 </div>
-                                                <div className="col-1">
+                                                <div className="col-2">
                                                     <Button className='remove-btn' color='danger' size='sm'
-                                                        onClick={this.onImageDelete.bind(this, _id)} >
+                                                        onClick={this.onImageDelete.bind(this, image)} >
                                                         <i className="fa fa-trash" aria-hidden="true"> Remove</i>
                                                     </Button>
                                                 </div>

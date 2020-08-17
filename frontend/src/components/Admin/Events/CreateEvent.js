@@ -44,7 +44,6 @@ class CreateEvent extends React.Component {
             gmaps: this.state.gmaps,
             imgPath: this.state.imgPath
         }
-        console.log(event);
         axios.post(`/api/eventdata/`, event)
             .then(res => {
                 console.log(res);
