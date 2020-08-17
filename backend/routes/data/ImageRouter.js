@@ -109,7 +109,7 @@ router.post('/home/carousal', upload5.single('carousal'), (req, res) => {
 router.get('/home/carousal/:file(*)', (req, res) => {
   const file = req.params.file;
   const absPath = path.resolve(__dirname+'../../../uploads/images/home/carousal/'+`${file}`);
-  res.set({'Content-Type': 'image/png', 'Content-Type': 'image/jpg', 'Content-Type': 'image/jpeg'});
+  res.set({'Content-Type': ['image/png', 'image/jpg', 'image/jpeg']});
   res.sendFile(absPath);
 });
 
