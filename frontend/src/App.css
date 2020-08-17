@@ -1,0 +1,35 @@
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+::-webkit-scrollbar-track {
+
+    /* box-shadow: inset 0 0 5px red;  */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #3B3A4A;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1eabd6;
+  }
+
+.App{
+
+ background-color: #FFFFFF;
+
+}
+ @media(max-width:600px){
+   .App{
+
+    background-color: #FFFFFF;
+     margin-left: 0;
+   margin-right: 0;
+   }
+}

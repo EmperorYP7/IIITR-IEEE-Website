@@ -1,0 +1,35 @@
+#scroller{
+    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-right: 25px;
+    height: 350px;
+    overflow: scroll;
+    background-color: #ffffff;
+    overflow: scroll;
+    white-space:nowrap;
+}
+.imgGal{
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 25px;
+  box-shadow: 4px 4px 4px #000000 ;
+}
+#scroller .slide {
+    display: inline-block;
+}
+
+::-webkit-scrollbar {
+/* <<<<<<< HEAD */
+    height: 3px;
+  }
+
+.album-header{
+padding-top: 80px;
+margin-bottom: 50px;
+color: #000;
+}
+/* ======= */
+    /* height: 5px;
+  }
+>>>>>>> 71fa8847f3957d4627e5a0202649613f6542b348 */

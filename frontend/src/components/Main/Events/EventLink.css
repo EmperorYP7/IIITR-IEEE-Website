@@ -1,0 +1,34 @@
+.event-title{
+padding-top: 100px;
+padding-bottom: 30px;
+font-size: 2rem;
+font-family: 'Roboto Slab';
+
+}
+.event-desc{
+text-align: justify;
+font-size: 1.3rem;
+font-family: 'Montserrat';
+margin-bottom: 40px;
+color: #000;
+}
+.event-date{
+
+}
+.calendar{
+margin-right: 5px;
+}
+.clock{
+margin-right: 5px;
+}
+
+.location{
+  font-family: 'Montserrat';
+font-size: 1.5rem;
+
+}
+.google-button{
+padding-left: 15px;
+padding-right: 15px;
+font-size: 2rem;
+}

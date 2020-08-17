@@ -1,0 +1,45 @@
+{
+  "name": "iiitr-ieee-website",
+  "version": "1.0.0",
+  "description": "\"Website for IIITR IEEE Student Branch\" ",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmperorYP7/IIITR-IEEE-Website.git"
+  },
+  "author": "\"WebDev Team IIITR\"",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmperorYP7/IIITR-IEEE-Website/issues"
+  },
+  "homepage": "https://github.com/EmperorYP7/IIITR-IEEE-Website#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.0",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.10",
+    "gridfs-stream": "^1.1.1",
+    "marked": "^1.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.27",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.2.0",
+    "react-bootstrap": "^1.3.0",
+    "react-router-dom": "^5.2.0",
+    "slugify": "^1.4.5"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}

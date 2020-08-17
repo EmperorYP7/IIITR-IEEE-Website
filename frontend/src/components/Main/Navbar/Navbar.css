@@ -1,0 +1,52 @@
+*{
+    scroll-behavior: smooth;
+}
+
+.nav-item {
+  color: #000;
+    font-family: 'Roboto';
+
+}
+.bgrnd{
+background-color: #fff;
+}
+.navbar-brand {
+    font-family: 'Montserrat';
+}
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: white;
+}
+.navbar-light .icon-bar {
+    color: white;
+    border-color: white;
+}
+.nav-item:hover{
+    color: #1ebad6;
+}
+
+.active{
+    color: #1ebad6;
+    transition: ease 1s;
+    font-weight: bold;
+}
+.icon-bar{
+color: #fff;
+}
+
+
+#navLink {
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.logo {
+    width: 120px;
+    height: 30px;
+    margin:0px;
+    padding-left: 30px;
+}
+@media(max-width:576px){
+    .logo {
+        padding-left: 0px;
+    }
+}

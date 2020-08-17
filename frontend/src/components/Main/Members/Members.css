@@ -1,0 +1,44 @@
+
+
+.card {
+    width: 100%;
+    margin: 10px auto 10px auto;
+    overflow: hidden;
+}
+.card-body{
+padding-top: 10px;
+}
+.img{
+margin: 0;
+}
+.member-header{
+padding-top: 80px;
+margin-bottom: 50px;
+color: #000;
+}
+/* .deck{
+
+margin: 30px 100px;
+} */
+.img-overlay {
+
+    left: auto;
+    right:auto;
+    bottom:48px;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+}
+.hide {
+    visibility: hidden;
+  }
+
+.card-img-top:hover + .hide {
+    visibility: visible;
+    transition: ease 0.5s;
+  }
+.hide:hover {
+    visibility: visible;
+  }
+.listgroup{
+  list-style-type: none;
+}

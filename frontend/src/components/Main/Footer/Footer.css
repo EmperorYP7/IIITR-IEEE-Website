@@ -1,0 +1,75 @@
+.footer{
+    background-color: #3B3A4A;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+    color: #ddd;
+}
+.institute-address{
+color:#fff;
+}
+hr { display: block;
+    width:60%;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+.col-sm-10 hr {
+    width:100%
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color: #ddd;
+}
+#dev {
+    position: absolute;bottom: 0px; left: 0px;
+}
+span {
+    font-size:x-small;
+}
+#up {
+    position: absolute;bottom: 0px; right: 0px;
+}
+.small-image{
+    widows: 200px;
+    height: 200px;
+}
+.close {
+    top: 42px;
+    right: 17px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+
+}
+@media (max-width: 767px) {
+  .addr {
+      margin-top: 30px;
+  }
+
+  }
+.list-unstyled{
+color: #fff;
+}
+.footer-a:hover{
+color:#fff;
+}
+
+#iconer {
+    transition: ease 0.5s;
+}
+
+#iconer:hover {
+    color: #1eabd6;
+    transform: translate(0, -1px);
+}
+
+
+#college-link {
+    color: #f2f2f4;
+}
+
+#to-top:hover {
+    color: #1eabd6;
+}

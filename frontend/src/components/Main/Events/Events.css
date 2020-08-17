@@ -1,0 +1,90 @@
+.event-box{
+width: 100%;
+
+margin: 0 auto 80px auto;
+padding: 40px;
+
+}
+
+.loading-text{
+font-size: 1.5rem;
+text-align: left;
+margin-left: -25px;
+margin-top: 25px;
+font-weight: 800;
+color: #085B72;
+font-family: 'Montserrat';
+
+}
+
+.loader{
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0.8;
+height: 100%;
+}
+
+.card-title{
+  color: #1b262c;
+
+font-size: 2rem;
+margin-top: 10px;
+margin-left: 0;
+margin-bottom: 20px;
+font-weight: bold;
+font-family: 'Roboto Slab';
+
+}
+
+
+.card-text{
+  font-family: 'Montserrat';
+font-size: 1.1rem;
+
+}
+.card-date{
+margin-bottom: 10px;
+}
+.cards{
+  text-align: justify;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.event-card{
+
+
+  background-color: #fff;
+/*
+border-style: groove;
+border-width: thick; */
+}
+.event-button{
+background-color: #0099cc;
+border-color: #0099cc;
+}
+.event-header{
+
+margin-top: 0px;
+margin-bottom: 50px;
+padding-top: 100px;
+color: #000;
+
+}
+.event-logo{
+margin: 10px 5px 10px 0;
+color: #000;
+}
+.header{
+padding-top: auto;
+font-size: 2.5rem;
+}
+.list{
+
+margin: auto;
+padding: 30px 20px 50px 20px;
+}
+ul{
+padding-left: 0;
+}
