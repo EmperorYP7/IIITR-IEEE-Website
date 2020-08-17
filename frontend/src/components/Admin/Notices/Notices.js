@@ -59,7 +59,7 @@ class Notices extends React.Component {
                                                     {notice.name}
                                                 </div>
                                                 <div className="col-1">
-                                                    <Button className='remove-btn' color='danger' size='sm'
+                                                    <Button className='remove-btn btn btn-danger' color='danger' size='sm'
                                                         onClick={this.onNoticeDelete.bind(this, notice)} >
                                                         <i className="fa fa-trash" aria-hidden="true"> Delete  </i>
                                                     </Button>
@@ -68,11 +68,11 @@ class Notices extends React.Component {
                                         </ListGroupItem>
                                     </CSSTransition>
                                 ))}
-                            </TransitionGroup> 
-                        </ListGroup> 
+                            </TransitionGroup>
+                        </ListGroup>
                     </Container>
                 </div>
-            
+
                 <CreateNotice UpdateState ={this.UpdateState} />
 
             </div>

@@ -18,7 +18,7 @@ class CreateResource extends React.Component {
         }
     }
     componentDidMount() {
-        
+
     }
 
     handleResourceAdd = (e) => {
@@ -68,11 +68,11 @@ class CreateResource extends React.Component {
                         <label htmlFor="shortDescription">Short Description</label>
                         <input type="text" required={true} className="form-control" name="shortDescription" onChange={this.changeHandler} value={this.state.shortDescription} placeholder="Describe briefly" />
                     </div>
-                    <button type="submit" className="btn btn-primary">Add resource</button>
+                    <button type="submit" className="btn btn-success">Add resource</button>
                 </form>
                 <div>
                     <label htmlFor="resource">Upload PDF</label>
-                    {this.state.pdfUploaded ? <p>PDF uploaded</p> : <UploadPDF setPdfPath={ path => this.setState({pdfPath: path, pdfUploaded: true}) }/> } 
+                    {this.state.pdfUploaded ? <p>PDF uploaded</p> : <UploadPDF setPdfPath={ path => this.setState({pdfPath: path, pdfUploaded: true}) }/> }
                 </div>
             </div>
         );

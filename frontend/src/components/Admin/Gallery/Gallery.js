@@ -56,10 +56,10 @@ class Gallery extends React.Component {
                                         <ListGroupItem>
                                             <div className="row list-item">
                                                 <div className="col-10">
-                                                    <img src={`http://localhost:5000/upload/image/gallery/${image.imgPath}`} alt="Image" id = {image._id} height="100rem" />
+                                                    <img src={`http://localhost:5000/upload/image/gallery/${image.imgPath}`} alt="img" id = {image._id} height="100rem" />
                                                 </div>
                                                 <div className="col-2">
-                                                    <Button className='remove-btn' color='danger' size='sm'
+                                                    <Button className='remove-btn btn btn-danger' color='danger' size='sm'
                                                         onClick={this.onImageDelete.bind(this, image)} >
                                                         <i className="fa fa-trash" aria-hidden="true"> Remove</i>
                                                     </Button>
@@ -68,11 +68,11 @@ class Gallery extends React.Component {
                                         </ListGroupItem>
                                     </CSSTransition>
                                 ))}
-                            </TransitionGroup> 
-                        </ListGroup> 
+                            </TransitionGroup>
+                        </ListGroup>
                     </Container>
                 </div>
-            
+
                 <CreateImage UpdateState ={this.UpdateState} />
 
             </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import tushar from "./tushar.png";
 import yash from "./yash.jpeg";
 
@@ -171,7 +171,7 @@ class Footer extends Component {
                      <hr></hr>
 
                         <p className="text-white ">Web Team IIITRanchi © Copyright 2020 </p>
-                    
+
                  </div>
                  <div className="col-2 col-sm-1">
                     <a id="up" className=" btn text-white " rel="noopener noreferrer" href="#scrollup"><i className="fas fa-chevron-circle-up fa-2x" id="to-top" onClick={window.scrollTo({top:0,behavior:'smooth'})}></i><br></br><span>Back to Top</span></a>

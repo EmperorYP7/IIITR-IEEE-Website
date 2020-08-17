@@ -32,7 +32,7 @@ class UploadPDF extends React.Component {
                 },
             });
             this.props.setPdfPath(`${this.state.filename}`);
-        } 
+        }
         catch (err) {
             if (err.response.status === 500) {
             alert('There was a problem with the server');
@@ -49,7 +49,7 @@ class UploadPDF extends React.Component {
             filename: e.target.files[0].name
         });
     }
-    
+
     render(){
         return(
             <form onSubmit={this.onSubmit} encType="multipart/form-data" id='form'>
@@ -61,7 +61,7 @@ class UploadPDF extends React.Component {
                         </label>
                     </div>
                     <div className="col-3">
-                        <input type='submit' value='Upload' className='btn btn-primary' />
+                        <input type='submit' value='Upload' className='btn btn-success' />
                     </div>
                 </div>
             </form>

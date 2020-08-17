@@ -55,11 +55,11 @@ class Members extends React.Component {
                                     <CSSTransition key={member._id} timeout={600} classNames='fade'>
                                         <ListGroupItem>
                                             <div className="row list-item">
-                                                <div className="col-11">
+                                                <div className="col-10">
                                                     {member.name}
                                                 </div>
-                                                <div className="col-1">
-                                                    <Button className='remove-btn' color='danger' size='sm'
+                                                <div className="col-2 ">
+                                                    <Button className='remove-btn btn btn-danger' color='danger' size='sm'
                                                         onClick={this.onMemberDelete.bind(this, member)} >
                                                         <i className="fa fa-trash" aria-hidden="true"> Remove</i>
                                                     </Button>
@@ -68,11 +68,11 @@ class Members extends React.Component {
                                         </ListGroupItem>
                                     </CSSTransition>
                                 ))}
-                            </TransitionGroup> 
-                        </ListGroup> 
+                            </TransitionGroup>
+                        </ListGroup>
                     </Container>
                 </div>
-            
+
                 <CreateMember UpdateState ={this.UpdateState} />
 
             </div>

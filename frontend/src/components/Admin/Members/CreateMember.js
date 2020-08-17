@@ -24,7 +24,7 @@ class CreateMember extends React.Component {
         }
     }
     componentDidMount() {
-        
+
     }
 
     handleMemberAdd = (e) => {
@@ -106,11 +106,11 @@ class CreateMember extends React.Component {
                         <label htmlFor="facebookLink">Facebook Link</label>
                         <input type="text" required={true} className="form-control" name="facebookLink" onChange={this.changeHandler} value={this.state.facebookLink} placeholder="Describe briefly" />
                     </div>
-                    <button type="submit" className="btn btn-primary">Add Member</button>
+                    <button type="submit" className="btn btn-success">Add Member</button>
                 </form>
                     <div>
                         <label htmlFor="event">Upload Profile Picture</label>
-                        {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadProfilePic setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> } 
+                        {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadProfilePic setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> }
                     </div>
             </div>
         );

@@ -59,7 +59,7 @@ class Resources extends React.Component {
                                                     {resource.name}
                                                 </div>
                                                 <div className="col-1">
-                                                    <Button className='remove-btn' color='danger' size='sm'
+                                                    <Button className='remove-btn btn btn-danger' color='danger' size='sm'
                                                         onClick={this.onResourceDelete.bind(this, resource)} >
                                                         <i className="fa fa-trash" aria-hidden="true">Delete</i>
                                                     </Button>
@@ -68,11 +68,11 @@ class Resources extends React.Component {
                                         </ListGroupItem>
                                     </CSSTransition>
                                 ))}
-                            </TransitionGroup> 
-                        </ListGroup> 
+                            </TransitionGroup>
+                        </ListGroup>
                     </Container>
                 </div>
-            
+
                 <Createresource UpdateState ={this.UpdateState} />
 
             </div>

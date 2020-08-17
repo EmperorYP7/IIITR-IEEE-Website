@@ -60,7 +60,7 @@ class Events extends React.Component {
                                                     {event.title}
                                                 </div>
                                                 <div className="col-1">
-                                                    <Button className='remove-btn' color='danger' size='sm'
+                                                    <Button className='remove-btn btn btn-danger' color='danger' size='sm'
                                                         onClick={this.onEventDelete.bind(this, event)} >
                                                         <i className="fa fa-trash" aria-hidden="true"> Delete  </i>
                                                     </Button>
@@ -69,11 +69,11 @@ class Events extends React.Component {
                                         </ListGroupItem>
                                     </CSSTransition>
                                 ))}
-                            </TransitionGroup> 
-                        </ListGroup> 
+                            </TransitionGroup>
+                        </ListGroup>
                     </Container>
                 </div>
-            
+
                 <CreateEvent UpdateState ={this.UpdateState} />
 
             </div>

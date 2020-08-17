@@ -17,7 +17,7 @@ class CreateImage extends React.Component {
         }
     }
     componentDidMount() {
-        
+
     }
 
     handleImageAdd = (e) => {
@@ -61,11 +61,11 @@ class CreateImage extends React.Component {
                         <label htmlFor="name">Album</label>
                         <input type="text" required={true} className="form-control" name="album" onChange={this.changeHandler} placeholder="Album Name" value={this.state.album} />
                     </div>
-                    <button type="submit" className="btn btn-primary">Add Image</button>
+                    <button type="submit" className="btn btn-success">Add Image</button>
                 </form>
                     <div>
                         <label htmlFor="event">Upload Image</label>
-                        {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadPic setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> } 
+                        {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadPic setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> }
                     </div>
             </div>
         );

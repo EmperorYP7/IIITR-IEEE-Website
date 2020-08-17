@@ -4,7 +4,6 @@ import './Society.css';
 // import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
-import Button from 'react-bootstrap/Button';
 import { CARDS } from './societycards';
 
 

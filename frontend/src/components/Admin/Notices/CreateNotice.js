@@ -18,7 +18,7 @@ class CreateNotice extends React.Component {
         }
     }
     componentDidMount() {
-        
+
     }
 
     handleNoticeAdd = (e) => {
@@ -68,11 +68,11 @@ class CreateNotice extends React.Component {
                         <label htmlFor="shortDescription">Short Description</label>
                         <input type="text" required={true} className="form-control" name="shortDescription" onChange={this.changeHandler} value={this.state.shortDescription} placeholder="Describe briefly" />
                     </div>
-                    <button type="submit" className="btn btn-primary">Add notice</button>
+                    <button type="submit" className="btn btn-success">Add notice</button>
                 </form>
                 <div>
                     <label htmlFor="notice">Upload PDF</label>
-                    {this.state.pdfUploaded ? <p>PDF uploaded</p> : <UploadPDF setPdfPath={ path => this.setState({pdfPath: path, pdfUploaded: true}) }/> } 
+                    {this.state.pdfUploaded ? <p>PDF uploaded</p> : <UploadPDF setPdfPath={ path => this.setState({pdfPath: path, pdfUploaded: true}) }/> }
                 </div>
             </div>
         );
