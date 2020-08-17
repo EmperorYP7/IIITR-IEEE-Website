@@ -25,7 +25,7 @@ class Gallery extends Component {
                 //var albumnames = [];
                 //for(const v in this.state.images){
                 //    albumnames.push(v.album);}
-                //albumnames = albumnames.filter((v, i, a) => a.indexOf(v) === i); 
+                //albumnames = albumnames.filter((v, i, a) => a.indexOf(v) === i);
                 //this.setState({albumsp:albumnames});
             })
             .catch(err => console.log("Error" + err));
@@ -35,11 +35,11 @@ class Gallery extends Component {
         const imageName = image.imgPath;
         const url = `http://localhost:5000/upload/image/gallery/${imageName}`;
         return(
-            <img className="card-img-top" src={url} alt="Image" id = {image._id} />
+            <img className="card-img-top" src={url} alt="loading" id = {image._id} />
             )
     }
-    
-    render() {  
+
+    render() {
                 console.log("images",this.state.images);
                 console.log("slbum",this.state.albumsp);
         if(this.state.loaded) {

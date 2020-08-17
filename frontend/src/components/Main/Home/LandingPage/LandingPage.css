@@ -141,10 +141,8 @@ margin: auto auto;
 	background-color: rgba(255,255,255,0);
 	box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
-.title{
-	text-align: justify;
-}
-.title h1  {
+
+.heading {
   color: #000;
   font-weight:700;
   font-size:4rem;
@@ -163,7 +161,7 @@ padding: 60px 40px 50px 40px;
 
 
 
- @media (min-width: 992px) and (max-width: 1199px){
+ /* @media (min-width: 992px) and (max-width: 1199px){
 	 .title h1 {
 		font-weight:600;
 		font-size:80px;
@@ -183,20 +181,29 @@ padding: 60px 40px 50px 40px;
 	   text-align: center;
 	}
 
- }
+ } */
+
 @media(max-width:576px) {
 
+.leaves{
+padding-left: 0;
+padding-right: 0;
+}
+.anime{
+  padding-left: 15px;
+  padding-right: 3px;
+}
 	.outer-outer-ring {
-		width:340px;
-		height: 340px;
+		width:315px;
+		height: 315px;
 	}
 	.outer-ring {
-		width:320px;
-		height:320px;
+		width:295px;
+		height:295px;
 	}
 	.circle-container,.circle, .front , .back {
-		width: 300px;
-		height: 300px;
+		width: 275px;
+		height: 275px;
 	}
 	.landercard {
 		padding:40px 0 40px 12px;
@@ -205,13 +212,12 @@ padding: 60px 40px 50px 40px;
 		top:-7px;
 		left: -7px;
 	}
-	.title h1 {
+	.heading {
 		font-weight:400;
-		font-size:40px;
+		font-size:2rem;
 		padding-top:40px;
 		padding-bottom: 20px;
 		text-align: center;
 	 }
 
 }
-
