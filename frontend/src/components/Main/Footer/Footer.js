@@ -168,9 +168,9 @@ class Footer extends Component {
 
                  <div className="col-6 col-sm-10 text-center">
                      <hr></hr>
-                     <Link className="footer-a" to="/admin">
+
                         <p className="text-white ">Web Team IIITRanchi © Copyright 2020 </p>
-                     </Link>
+                    
                  </div>
                  <div className="col-2 col-sm-1">
                     <a id="up" className=" btn text-white " rel="noopener noreferrer" href="#scrollup"><i className="fas fa-chevron-circle-up fa-2x" onClick={window.scrollTo({top:0,behavior:'smooth'})}></i><br></br><span>Back to Top</span></a>
