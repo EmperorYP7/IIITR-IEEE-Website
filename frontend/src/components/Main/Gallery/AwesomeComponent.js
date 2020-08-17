@@ -1,6 +1,5 @@
 import React from 'react';
 import { HashLoader } from 'react-spinners';
-// import { css } from "@emotion/core";
 import './Gallery.css';
 
 

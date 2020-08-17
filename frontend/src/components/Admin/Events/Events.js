@@ -31,12 +31,16 @@ class Events extends React.Component {
         this.UpdateState();
     }
 
-    onEventDelete = (_id) => {
-        axios.delete(`/api/eventdata/${_id}`)
+    onEventDelete = (event) => {
+        axios.delete(`/api/eventdata/${event._id}`)
             .then(res => {
                 alert("Event Deleted!");
                 this.UpdateState();
             })
+        axios.delete(`/upload/image/event/${event.imgPath}`)
+        .then(  res => {
+            console.log(res.data);
+        })
     }
 
     render() {
@@ -48,16 +52,16 @@ class Events extends React.Component {
                     <Container>
                         <ListGroup>
                             <TransitionGroup className="event-list">
-                                {this.state.events.map(({ _id, title }) => (
-                                    <CSSTransition key={_id} timeout={600} classNames='fade'>
+                                {this.state.events.map((event) => (
+                                    <CSSTransition key={event._id} timeout={600} classNames='fade'>
                                         <ListGroupItem>
                                             <div className="row list-item">
                                                 <div className="col-10">
-                                                    {title}
+                                                    {event.title}
                                                 </div>
                                                 <div className="col-1">
                                                     <Button className='remove-btn' color='danger' size='sm'
-                                                        onClick={this.onEventDelete.bind(this, _id)} >
+                                                        onClick={this.onEventDelete.bind(this, event)} >
                                                         <i className="fa fa-trash" aria-hidden="true"> Delete  </i>
                                                     </Button>
                                                 </div>

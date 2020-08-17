@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
 
 //--------------------------------------------------------- Member Image -------------------------------------------------------------------------
 
@@ -33,6 +34,19 @@ router.get('/member/:file(*)', (req, res) => {
     res.sendFile(absPath);
 })
 
+router.delete('/member/:file(*)', (req, res) => {
+    const file = req.params.file;
+    const absPath = path.resolve(__dirname+'../../../uploads/images/members/'+`${file}`);   
+
+    fs.unlink(absPath, function(err) {
+      if (err) {
+        res.send(`error while deleting file ${file} ` + err);
+      } else {
+        res.send(`Successfully deleted the file ${file} `);
+      }
+    })
+})
+
 //--------------------------------------------------------- Event Image -------------------------------------------------------------------------
 
 const storage2 = multer.diskStorage({
@@ -62,6 +76,19 @@ router.get('/event/:file', (req, res) => {
   res.set({'Content-Type': 'image/jpg'});
   res.sendFile(absPath);
 });
+
+router.delete('/event/:file(*)', (req, res) => {
+  const file = req.params.file;
+  const absPath = path.resolve(__dirname+'../../../uploads/images/events/'+`${file}`);   
+
+  fs.unlink(absPath, function(err) {
+    if (err) {
+      res.send(`error while deleting file ${file} ` + err);
+    } else {
+      res.send(`Successfully deleted the file ${file} `);
+    }
+  })
+})
 
 //--------------------------------------------------------- Carousal Images -------------------------------------------------------------------------
 
@@ -108,5 +135,20 @@ router.get('/gallery/:file(*)', (req, res) => {
   res.set({'Content-Type': 'image/png', 'Content-Type': 'image/jpg', 'Content-Type': 'image/jpeg'});
   res.sendFile(absPath);
 });
+
+router.delete('/gallery/:file(*)', (req, res) => {
+  const file = req.params.file;
+  const absPath = path.resolve(__dirname+'../../../uploads/images/gallery/'+`${file}`);   
+
+  fs.unlink(absPath, function(err) {
+    if (err) {
+      res.send(`error while deleting file ${file} ` + err);
+    } else {
+      res.send(`Successfully deleted the file ${file} `);
+    }
+  })
+})
+
+//------------------------------------------------------------------------------------------------------------------------------------
 
 module.exports = router;

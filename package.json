@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.34",
+    "awesome-component": "0.0.1",
     "blueimp-md5": "^2.17.0",
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
