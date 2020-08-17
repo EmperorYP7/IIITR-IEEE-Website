@@ -30,12 +30,16 @@ class Resources extends React.Component {
         this.UpdateState();
     }
 
-    onResourceDelete = (_id) => {
-        axios.delete(`/api/resourcedata/${_id}`)
+    onResourceDelete = (resource) => {
+        axios.delete(`/api/resourcedata/${resource._id}`)
             .then(res => {
                 alert("Resource Deleted!");
                 this.UpdateState();
             })
+        axios.delete(`/upload/pdf/resource/${resource.pdfPath}`)
+        .then(  res => {
+            console.log(res.data);
+        })
     }
 
     render() {
@@ -47,16 +51,16 @@ class Resources extends React.Component {
                     <Container>
                         <ListGroup>
                             <TransitionGroup className="resource-list">
-                                {this.state.resources.map(({ _id, name }) => (
-                                    <CSSTransition key={_id} timeout={600} classNames='fade'>
+                                {this.state.resources.map((resource) => (
+                                    <CSSTransition key={resource._id} timeout={600} classNames='fade'>
                                         <ListGroupItem>
                                             <div className="row list-item">
                                                 <div className="col-10">
-                                                    {name}
+                                                    {resource.name}
                                                 </div>
                                                 <div className="col-1">
                                                     <Button className='remove-btn' color='danger' size='sm'
-                                                        onClick={this.onResourceDelete.bind(this, _id)} >
+                                                        onClick={this.onResourceDelete.bind(this, resource)} >
                                                         <i className="fa fa-trash" aria-hidden="true">Delete</i>
                                                     </Button>
                                                 </div>

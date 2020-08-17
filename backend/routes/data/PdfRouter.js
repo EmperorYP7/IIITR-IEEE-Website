@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
 
-
-//------------------------Resource Upload--------------------------
+//-----------------------------------------------------------Resource -----------------------------------------------------------------
 
 const storage3 = multer.diskStorage({
     destination: (req, file, cb) => cb(null, './backend/uploads/pdf/resources'),
@@ -34,10 +34,20 @@ router.get('/resource/:file(*)', (req, res) => {
   res.sendFile(absPath);
 });
 
-//-----------------------------------------------------------------
+router.delete('/resource/:file(*)', (req, res) => {
+  const file = req.params.file;
+  const absPath = path.resolve(__dirname+'../../../uploads/pdf/resources/'+`${file}`);   
 
+  fs.unlink(absPath, function(err) {
+    if (err) {
+      res.send(`error while deleting file ${file} ` + err);
+    } else {
+      res.send(`Successfully deleted the file ${file} `);
+    }
+  })
+})
 
-//---------------------------------Notice Upload---------------------------------
+//------------------------------------------------------------------Notice -----------------------------------------------------------
 
 const storage4 = multer.diskStorage({
   destination: (req, file, cb) => cb(null, './backend/uploads/pdf/notices'),
@@ -67,6 +77,19 @@ router.get('/notice/:file(*)', (req, res) => {
   res.sendFile(absPath);
 });
 
-//--------------------------------------------------------------------------------
+router.delete('/notice/:file(*)', (req, res) => {
+  const file = req.params.file;
+  const absPath = path.resolve(__dirname+'../../../uploads//pdf/notices/'+`${file}`);   
+
+  fs.unlink(absPath, function(err) {
+    if (err) {
+      res.send(`error while deleting file ${file} ` + err);
+    } else {
+      res.send(`Successfully deleted the file ${file} `);
+    }
+  })
+})
+
+//----------------------------------------------------------------------------------------------------------------------------------
 
 module.exports = router;

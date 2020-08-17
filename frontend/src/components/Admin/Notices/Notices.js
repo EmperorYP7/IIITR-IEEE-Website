@@ -30,12 +30,16 @@ class Notices extends React.Component {
         this.UpdateState();
     }
 
-    onNoticeDelete = (_id) => {
-        axios.delete(`/api/noticedata/${_id}`)
+    onNoticeDelete = (notice) => {
+        axios.delete(`/api/noticedata/${notice._id}`)
             .then(res => {
                 alert("notice Deleted!");
                 this.UpdateState();
             })
+        axios.delete(`/upload/pdf/notice/${notice.pdfPath}`)
+        .then(  res => {
+            console.log(res.data);
+        })
     }
 
     render() {
@@ -47,16 +51,16 @@ class Notices extends React.Component {
                     <Container>
                         <ListGroup>
                             <TransitionGroup className="notice-list">
-                                {this.state.notices.map(({ _id, name }) => (
-                                    <CSSTransition key={_id} timeout={600} classNames='fade'>
+                                {this.state.notices.map((notice) => (
+                                    <CSSTransition key={notice._id} timeout={600} classNames='fade'>
                                         <ListGroupItem>
                                             <div className="row list-item">
                                                 <div className="col-10">
-                                                    {name}
+                                                    {notice.name}
                                                 </div>
                                                 <div className="col-1">
                                                     <Button className='remove-btn' color='danger' size='sm'
-                                                        onClick={this.onNoticeDelete.bind(this, _id)} >
+                                                        onClick={this.onNoticeDelete.bind(this, notice)} >
                                                         <i className="fa fa-trash" aria-hidden="true"> Delete  </i>
                                                     </Button>
                                                 </div>
