@@ -35,7 +35,7 @@ class EventList extends Component {
         const d1= Date.parse(event.eventDate.substring(0,10));
         const d2=Date.parse(date);
         var countPast=0;
-        if (d1 > d2) {
+        if (d1 < d2) {
             countPast+=1;
             return(
                 <div className="cards " >
@@ -67,7 +67,7 @@ class EventList extends Component {
         const d1= Date.parse(event.eventDate.substring(0,10));
         const d2=Date.parse(date);
         var countUpcomming=0;
-        if (d1 < d2) {
+        if (d1 > d2) {
             countUpcomming+=1;
             return(
                 <div className="cards " >
