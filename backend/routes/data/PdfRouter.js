@@ -27,12 +27,12 @@ router.post('/resource', upload3.single('resource'), (req, res) => {
   }
 });
 
-router.get('/resource/:file', (req, res) => {
+router.get('/resource/:file(*)', (req, res) => {
   const file = req.params.file;
   const absPath = path.resolve(__dirname+'../../../uploads/pdf/resources/'+`${file}`);   
-  res.set({'Content-Type': 'pdf'});
+  res.set({'Content-Type': 'application/pdf'});
   res.sendFile(absPath);
-})
+});
 
 //-----------------------------------------------------------------
 
@@ -52,7 +52,7 @@ const storage4 = multer.diskStorage({
 });
 
 const upload4 = multer({ storage: storage4 })
-router.post('/notice', upload3.single('notice'), (req, res) => {
+router.post('/notice', upload4.single('notice'), (req, res) => {
 try {
   res.send(req.file);
 }catch(err) {
@@ -60,10 +60,10 @@ try {
 }
 });
 
-router.get('/notice/:file', (req, res) => {
+router.get('/notice/:file(*)', (req, res) => {
   const file = req.params.file;
   const absPath = path.resolve(__dirname+`../../../uploads/pdf/notices/${file}`);
-  res.set({'Content-Type': 'pdf'});
+  res.set({'Content-Type': 'application/pdf'});
   res.sendFile(absPath);
 });
 
