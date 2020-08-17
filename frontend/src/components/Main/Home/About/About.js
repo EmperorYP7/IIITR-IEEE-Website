@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './About.css';
-// import logo from './ieee.jpg';
+
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import NoticeBoard from '../Notice/NoticeBoard';

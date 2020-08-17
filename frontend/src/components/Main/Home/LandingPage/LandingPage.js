@@ -8,8 +8,10 @@ class LandingPage extends Component {
 
     render() {
         return (
-          <div className="row  leaves mb-0 mt-0" id="parallax">
-          <div className=" col-lg-6 anime">
+
+      <div className="row  leaves " id="parallax">
+
+          <div className=" col-lg-5 anime">
           <div className="circle-container">
           	<div className="outer-ring"></div>
 
@@ -27,14 +29,15 @@ class LandingPage extends Component {
           	</div>
           </div>
           </div>
-          <div className=" col-lg-6">
+          <div className=" col-lg-7">
             <div className="title ">
-            <h1 className="heading">IEEE IIIT Ranchi
+            <h1 className="heading"> IEEE IIIT Ranchi
             Student Branch </h1>
             </div>
 
           </div>
-          </div>
+    </div>
+
 
 
 
