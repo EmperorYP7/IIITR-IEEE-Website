@@ -9,13 +9,11 @@
     overflow: scroll;
     white-space:nowrap;
 }
-#image{
-    height: 300px;
-    width:auto;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 25px;
-    box-shadow: 4px 4px 4px #000000 ;
+.imgGal{
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 25px;
+  box-shadow: 4px 4px 4px #000000 ;
 }
 #scroller .slide {
     display: inline-block;

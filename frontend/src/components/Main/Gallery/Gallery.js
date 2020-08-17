@@ -34,8 +34,7 @@ class Gallery extends Component {
     fetchImage = (image) => {
         const imageName = image.imgPath;
         const url = `http://localhost:5000/upload/image/gallery/${imageName}`;
-        return(
-            <img className="card-img-top" src={url} alt="loading" id = {image._id} />
+        return(<img className = "imgGal" height="300px" width="auto"  src={url} alt="loading" id = {image._id} />
             )
     }
 
