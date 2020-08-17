@@ -50,20 +50,20 @@ class Society extends React.Component {
     const show = this.state.cards.map((card) => {
       return (
 
-        <Card>
+        <Card key={card.id}>
 
           <Card.Img variant="top" className="img" src={card.image} />
-          <div class="overlay">
-    <div class="text"><Card.Body>
-            <Card.Title>{card.name}</Card.Title>
-            <Card.Text>
-              {card.shortdescription}{' '}
-            </Card.Text>
-          </Card.Body></div>
-  </div>
+          <div className="overlay">
+            <div className="text"><Card.Body>
+              <Card.Title>{card.name}</Card.Title>
+              <Card.Text>
+                {card.shortdescription}{' '}
+              </Card.Text>
+            </Card.Body></div>
+          </div>
 
           <Card.Footer className="society-card-footer">
-          <Card.Title>{card.name}</Card.Title>
+            <Card.Title>{card.name}</Card.Title>
           </Card.Footer>
         </Card>
 

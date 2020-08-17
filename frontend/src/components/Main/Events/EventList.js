@@ -42,7 +42,7 @@ class EventList extends Component {
                                     <div   className="card  event-card">
                                         <div className="card-body event-card-body">
                                             <h5 className="card-title">{event.title} </h5>
-                        <h6 className="card-date"><i class="fas fa-1x event-logo fa-calendar-check"></i> {event.eventDate.substring(0,10)}</h6>
+                        <h6 className="card-date"><i className="fas fa-1x event-logo fa-calendar-check"></i> {event.eventDate.substring(0,10)}</h6>
                                             <p className="card-text">{event.shortDescription}</p>
                                             <Link to={`/events/${event.slug}`}>
                                                 <button className="btn event-button btn-dark">Read More</button>
@@ -74,7 +74,7 @@ class EventList extends Component {
                                     <div   className="card  event-card">
                                         <div className="card-body event-card-body">
                                             <h5 className="card-title">{event.title} </h5>
-                        <h6 className="card-date"><i class="fas fa-1x event-logo fa-calendar-check"></i> {event.eventDate.substring(0,10)}</h6>
+                        <h6 className="card-date"><i className="fas fa-1x event-logo fa-calendar-check"></i> {event.eventDate.substring(0,10)}</h6>
                                             <p className="card-text">{event.shortDescription}</p>
                                             <Link to={`/events/${event.slug}`}>
                                                 <button className="btn event-button btn-dark">Read More</button>

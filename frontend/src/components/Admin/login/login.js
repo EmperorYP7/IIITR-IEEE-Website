@@ -30,8 +30,6 @@ class Login extends Component {
         //const parsedUser = this.md5(this.state.user);
         // this.state.user = md5(this.state.user);
         // this.state.pass = md5(this.state.pass);
-
-        console.log(this.state.user,this.state.user1,this.state.pass,this.state.pass1);
         if(((this.state.pass1).localeCompare(md5(this.state.pass)) === 0) && ((this.state.user1).localeCompare(md5(this.state.user)) === 0)){
             this.setState({auth : 1});
             ReactDOM.render(<hr/>, document.getElementById('FillHere1'));
@@ -44,7 +42,6 @@ class Login extends Component {
         else{
             ReactDOM.render(<h1>Wrong Username or Password</h1>, document.getElementById('FillHere1'));
         }
-        console.log("SUCCESS",this.state.auth);
 
     }
     componentDidMount() {

@@ -27,7 +27,7 @@ class UploadProfilePic extends React.Component {
         formData.append('member', this.state.file);
 
         try {
-            const res = await axios.post('/upload/image/member', formData, {
+            await axios.post('/upload/image/member', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },

@@ -7,7 +7,7 @@ function Navbar() {
     const [active, setActive] = useState('Home');
         return (
             <nav className="navbar navbar-expand-md fixed-right navbar-light bgrnd py-3"  id="scrollup">
-                 <Link to ="/" className="navbar-brand"><img src={IEEElogo} className="logo"></img></Link>
+                <Link to ="/" className="navbar-brand"><img src={IEEElogo} alt="IEEE" className="logo"></img></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon "></span>
                 </button>

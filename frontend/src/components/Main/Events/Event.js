@@ -51,13 +51,11 @@ class Event extends Component {
 
     ExtractDate() {
             const completeDate = new Date(this.state.event.eventDate);
-            console.log(completeDate)
             const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const day =  days[completeDate.getDay()];
             const date = completeDate.getDate();
             const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             const month = months[completeDate.getMonth()];
-            console.log(month)
             const year = completeDate.getFullYear();
             const hour = completeDate.getHours();
             const minute = completeDate.getMinutes();
@@ -84,8 +82,8 @@ class Event extends Component {
                         {this.state.event.description}
                     </div>
                     <div className="col-12  event-date">
-                        <p><i class="far calendar fa-calendar-alt"></i>{this.state.Dinaank}</p>
-                        <p><i class="far clock fa-clock"></i>{this.state.Time}</p>
+                        <p><i className="far calendar fa-calendar-alt"></i>{this.state.Dinaank}</p>
+                        <p><i className="far clock fa-clock"></i>{this.state.Time}</p>
                     </div>
                     <div className="col-12 location">
                         {this.state.event.location}

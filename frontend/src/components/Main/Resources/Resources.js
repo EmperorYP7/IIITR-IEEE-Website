@@ -49,7 +49,7 @@ class Resources extends Component {
       <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
         <ul>
           {this.state.resources.map( resource =>
-          <li>{resource.name}<br/><a rel="noopener noreferrer" href={`http://localhost:5000/upload/pdf/resource/${resource.pdfPath}`} target="_blank">Research Paper</a><br/><br/></li>
+          <li key={resource._id}>{resource.name}<br/><a rel="noopener noreferrer" href={`http://localhost:5000/upload/pdf/resource/${resource.pdfPath}`} target="_blank">Research Paper</a><br/><br/></li>
           )}
         </ul>
       </div>
