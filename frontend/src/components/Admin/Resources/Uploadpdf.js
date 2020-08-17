@@ -31,8 +31,7 @@ class UploadPDF extends React.Component {
                     'Content-Type': 'multipart/form-data'
                 },
             });
-            this.props.setPdfPath(`../../../../../backend/uploads/pdf/resources/${this.state.filename}`);
-            console.log('Reached 35' + this.props.path);
+            this.props.setPdfPath(`${this.state.filename}`);
         } 
         catch (err) {
             if (err.response.status === 500) {

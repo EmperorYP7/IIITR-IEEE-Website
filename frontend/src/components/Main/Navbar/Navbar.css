@@ -39,3 +39,14 @@ color: #fff;
     text-decoration: none;
     font-size: 1.1em;
 }
+.logo {
+    width: 120px;
+    height: 30px;
+    margin:0px;
+    padding-left: 30px;
+}
+@media(max-width:576px){
+    .logo {
+        padding-left: 0px;
+    }
+}

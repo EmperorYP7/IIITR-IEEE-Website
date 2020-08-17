@@ -31,8 +31,8 @@ class CreateMember extends React.Component {
         e.preventDefault();
         if(!this.state.imageUploaded)
         {
-            alert("Please upload Profile Picture")
-            return
+            alert("Please upload Profile Picture");
+            return;
         }
         const member = {
             name: this.state.name,

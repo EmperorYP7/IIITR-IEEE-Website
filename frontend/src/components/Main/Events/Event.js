@@ -18,7 +18,8 @@ class Event extends Component {
                 eventDate: '',
                 location: '',
                 gcalender: '',
-                gmaps: ''
+                gmaps: '',
+                imgPath: ''
             },
             Dinaank : '',
             Time: ''
@@ -36,12 +37,12 @@ class Event extends Component {
                     event: res.data
                 });
                 this.ExtractDate();
-if(res.data>0){
-this.setState({loaded:true});
-}
-else{
-this.setState({loaded:true});
-}
+                if(res.data>0){
+                this.setState({loaded:true});
+                }
+                else{
+                this.setState({loaded:true});
+                }
             })
             .catch(err => console.log("Error : " + err));
     }
@@ -56,7 +57,6 @@ this.setState({loaded:true});
             const month = months[completeDate.getMonth()];
             console.log(month)
             const year = completeDate.getFullYear();
-
             const hour = completeDate.getHours();
             const minute = completeDate.getMinutes();
 
@@ -70,7 +70,10 @@ this.setState({loaded:true});
 
         return (
 <div className=" container about-event">
-             <div className="row">
+            <div className="row">
+                    <div>
+                        <img className="card-img-top" src={`http://localhost:5000/upload/image/event/${this.state.event.imgPath}`} alt="Image" id = {this.state.event._id} />
+                    </div>
                     <div className="col-12 event-title">
                         {this.state.event.title}
                     </div>
