@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import HashLoader from './AwesomeComponent';
+
 import './EventLink.css';
 
 class Event extends Component {
@@ -67,6 +69,7 @@ class Event extends Component {
     }
 
     render(){
+      if(this.state.loaded){
 
         return (
 <div className=" container about-event">
@@ -96,6 +99,14 @@ class Event extends Component {
             </div>
 </div>
         );
+}
+else {
+    if(!this.state.loaded) {
+        return(
+                <div className="loader"><HashLoader message="Hold Tight!" /></div>
+            );
+        }
+}
 
   }
 }
