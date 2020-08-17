@@ -55,3 +55,21 @@ color: #fff;
 .footer-a:hover{
 color:#fff;
 }
+
+#iconer {
+    transition: ease 0.5s;
+}
+
+#iconer:hover {
+    color: #1eabd6;
+    transform: translate(0, -1px);
+}
+
+
+#college-link {
+    color: #f2f2f4;
+}
+
+#to-top:hover {
+    color: #1eabd6;
+}

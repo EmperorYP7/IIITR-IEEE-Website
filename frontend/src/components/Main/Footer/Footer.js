@@ -136,17 +136,18 @@ class Footer extends Component {
                 <div className="col-12 col-md-6 ">
                     <div className="text-center ">
                         <h5>Connect with us</h5><hr></hr>
-                        <a className=" btn text-white" rel="noopener noreferrer" href="https://"><i className="fab fa-facebook-square fa-2x"></i></a>
-                        <a className=" btn text-white" rel="noopener noreferrer" href="https://"><i className="fab fa-twitter-square fa-2x"></i></a>
-                        <a className=" btn text-white" rel="noopener noreferrer" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-white" rel="noopener noreferrer" href="https://"><i className="fab fa-instagram fa-2x"></i></a>
-                        <a className=" btn text-white" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info"><i className="fas fa-envelope fa-2x"></i></a>
+                        <a className=" btn text-white" rel="noopener noreferrer" href="https://"><i id="iconer" className="fab fa-facebook-square fa-2x"></i></a>
+                        <a className=" btn text-white" rel="noopener noreferrer" href="https://"><i id="iconer" className="fab fa-twitter-square fa-2x"></i></a>
+                        <a className=" btn text-white" rel="noopener noreferrer" href="https://"><i id="iconer" className="fab fa-linkedin fa-2x"></i></a>
+                        <a className=" btn text-white" rel="noopener noreferrer" href="https://"><i id="iconer" className="fab fa-instagram fa-2x"></i></a>
+                        <a className=" btn text-white" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info"><i id="iconer" className="fas fa-envelope fa-2x"></i></a>
                     </div>
                 </div>
                 <div className="col-12 col-md-6 text-center addr">
                     <h5>Our Address</h5><hr></hr>
                     <address>
                         <ul className="list-unstyled">
+                            <li className="institute-address"><a id="college-link" href="http://iiitranchi.ac.in/">Indian Institute of Information Technology, Ranchi</a></li>
                             <li className="institute-address">Sirkha Toli, Kali Nagar, Namkum, </li>
                             <li className="institute-address">Ranchi, Jharkhand 834010</li>
                             <li className="institute-address">Tel : 123-24578</li>
@@ -173,7 +174,7 @@ class Footer extends Component {
                      </Link>
                  </div>
                  <div className="col-2 col-sm-1">
-                    <a id="up" className=" btn text-white " rel="noopener noreferrer" href="#scrollup"><i className="fas fa-chevron-circle-up fa-2x" onClick={window.scrollTo({top:0,behavior:'smooth'})}></i><br></br><span>Back to Top</span></a>
+                    <a id="up" className=" btn text-white " rel="noopener noreferrer" href="#scrollup"><i className="fas fa-chevron-circle-up fa-2x" id="to-top" onClick={window.scrollTo({top:0,behavior:'smooth'})}></i><br></br><span>Back to Top</span></a>
                 </div>
             </div>
            </div>
