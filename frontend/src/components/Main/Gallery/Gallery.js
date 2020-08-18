@@ -13,6 +13,17 @@ class Gallery extends Component {
         axios.get(`/api/gallerydata`)
             .then(res => {
                 this.setState({ images: res.data });
+                const result = [];
+                    const map = new Map();
+                    for (const item of res.data) {
+                    if(!map.has(item.album)){
+                    map.set(item.album, true);
+                    result.push({
+                    album: item.album,
+                });
+                }
+                this.setState({albumsp:result});
+                }
                 if (res.data > 0) {
                     this.setState({ loaded: true });
                 }
@@ -25,28 +36,30 @@ class Gallery extends Component {
             .catch(err => console.log("Error" + err));
     }
 
-    fetchImage = (image) => {}
+
 
     render() {
-        if (this.state.loaded) {
+        if (this.state.loaded) {//console.log(this.state.albumsp);
             return (
                 <div>
-                    {this.state.images.map((image) => {
-                            let filtered = this.state.images.filter(t=>t.album === image.album);
-                            console.log("IMAGES",this.state.images);
-                            console.log("ALBUM",filtered);
-                            return(<div className="container">
+                    {
+                    this.state.albumsp.map((album123) => {
+                        //console.log(album123);
+                            let filtered = this.state.images.filter(t=>t.album === album123.album);
+                            //console.log("IMAGES",this.state.images);
+                            //console.log("ALBUM",filtered);
+                            return(<div className="container" key={album123.album} id={album123.album}>
                                     <div className="row justify-content-center">
                                         <div className="col-12 text-center album-header">
-                                            <h2>{image.album}</h2>
+                                            <h2>{album123.album}</h2>
                                             <hr></hr>
                                             <div id = "scroller">{
                                             filtered.map((filtered) => {
-                                            console.log("GOT",filtered);
+                                            //console.log("GOT",filtered);
                                             const imageName = filtered.imgPath;
                                             const url = `http://localhost:5000/upload/image/gallery/${imageName}`;
-                                            console.log("THIS IS A FK'N URL",url);
-                                            return (<img className="imgGal" height="300px" width="auto" src={url} alt="loading" id={image._id} key={image._id}/>);})}
+                                            //console.log("THIS IS A FK'N URL",url);
+                                            return (<img className="imgGal" height="300px" width="auto" src={url} alt="loading" id={filtered._id} key={filtered._id}/>);})}
                                     </div></div>
                         </div>
                     </div>);})}
