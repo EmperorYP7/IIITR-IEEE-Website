@@ -1,0 +1,13 @@
+.login {
+    margin-top:5%;
+    padding:60px 30px 10px 30px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius:20px;
+}
+.login-button {
+    border-radius: 18px;
+    left:auto;
+    right:auto;
+    width: 150px;
+}
+

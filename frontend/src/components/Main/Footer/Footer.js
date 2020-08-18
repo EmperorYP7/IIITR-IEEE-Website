@@ -32,8 +32,8 @@ class Footer extends Component {
                 </p>
                 <footer className="blockquote-footer">
                   <small className="text-muted">
-                    Someone famous in
-                    <cite title="Source Title">Source Title</cite>
+                    {developer.mutedText}
+                    {/* <cite title="Source Title">Source Title</cite> */}
                   </small>
                 </footer>
                 <a className=" btn text-dark dev-icon" rel="noopener noreferrer" href={developer.linkedin}>

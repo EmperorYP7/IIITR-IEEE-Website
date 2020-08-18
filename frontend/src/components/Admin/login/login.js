@@ -32,7 +32,7 @@ class Login extends Component {
         // this.state.pass = md5(this.state.pass);
         if(((this.state.pass1).localeCompare(md5(this.state.pass)) === 0) && ((this.state.user1).localeCompare(md5(this.state.user)) === 0)){
             this.setState({auth : 1});
-            ReactDOM.render(<hr/>, document.getElementById('FillHere1'));
+            ReactDOM.render(<div><h1 className="text-center">Admin Portal</h1><hr></hr></div>, document.getElementById('FillHere0'));
             ReactDOM.render(<Events/>, document.getElementById('FillHere2'));
             ReactDOM.render(<Notices/>, document.getElementById('FillHere3'));
             ReactDOM.render(<Members/>, document.getElementById('FillHere4'));
@@ -40,7 +40,9 @@ class Login extends Component {
             ReactDOM.render(<Resources/>, document.getElementById('FillHere6'));
         }
         else{
-            ReactDOM.render(<h1>Wrong Username or Password</h1>, document.getElementById('FillHere1'));
+            ReactDOM.render(<div class="alert alert-danger mt-3" role="alert">
+            Wrong username or Password !!
+          </div>, document.getElementById('alert'));
         }
 
     }
@@ -64,9 +66,14 @@ class Login extends Component {
     render() {
         return (
         <div>
-            <div className="col-lg-6 col-md-12">
-                <div className="display-4 align-content-center">Admin Login</div><br/><br/>
-                <form className="col-6 align-content-center" onSubmit={this.login}>
+            
+            <div id="FillHere0">
+            <div id="alert"></div>
+            <div className="container ">
+                <div className="row justify-content-md-center">
+                    <div className="col-12 col-lg-5 col-md-8 login">
+                    <div className="text-center h1">Admin Login</div><hr></hr>
+                <form className="align-content-center" onSubmit={this.login}>
                     <div className="form-group">
                         <label htmlFor="name">Username</label>
                         <input type="text" required={true} className="form-control" name="user" onChange={this.changeHandler} placeholder="Enter username" value={this.state.user} />
@@ -75,8 +82,16 @@ class Login extends Component {
                         <label htmlFor="designation">Password</label>
                         <input type="password" className="form-control" name="pass" onChange={this.changeHandler} value={this.state.pass} placeholder="Enter password" />
                     </div>
-                    <button type="submit" className="btn btn-primary">Log In</button>
+                    <div className="text-center"><button type="submit" className="btn btn-primary login-button">Log In</button></div>
+                    
                 </form>
+                <p className="text-muted text-center mt-5 ">Web Team IIITRanchi © Copyright 2020
+              </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
             </div>
             <div id="FillHere1"></div>
             <div id="FillHere2"></div>
