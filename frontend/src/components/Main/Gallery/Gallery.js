@@ -25,25 +25,32 @@ class Gallery extends Component {
             .catch(err => console.log("Error" + err));
     }
 
-    fetchImage = (image) => {
-        const imageName = image.imgPath;
-        const url = `http://localhost:5000/upload/image/gallery/${imageName}`;
-        return (<img className="imgGal" height="300px" width="auto" src={url} alt="loading" id={image._id} key={image._id}/>)
-    }
+    fetchImage = (image) => {}
 
     render() {
         if (this.state.loaded) {
             return (
                 <div>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-12 text-center album-header">
-                                <h2>Gallery</h2>
-                                <hr></hr>
-                            </div>
+                    {this.state.images.map((image) => {
+                            let filtered = this.state.images.filter(t=>t.album === image.album);
+                            console.log("IMAGES",this.state.images);
+                            console.log("ALBUM",filtered);
+                            return(<div className="container">
+                                    <div className="row justify-content-center">
+                                        <div className="col-12 text-center album-header">
+                                            <h2>{image.album}</h2>
+                                            <hr></hr>
+                                            <div id = "scroller">{
+                                            filtered.map((filtered) => {
+                                            console.log("GOT",filtered);
+                                            const imageName = filtered.imgPath;
+                                            const url = `http://localhost:5000/upload/image/gallery/${imageName}`;
+                                            console.log("THIS IS A FK'N URL",url);
+                                            return (<img className="imgGal" height="300px" width="auto" src={url} alt="loading" id={image._id} key={image._id}/>);})}
+                                    </div></div>
                         </div>
-                    </div>
-                    {this.state.images.map((image) => this.fetchImage(image))}
+                    </div>);})}
+
                 </div>
             );
         }
