@@ -22,7 +22,7 @@ class Footer extends Component {
       <div className="row">
         <div className="col-lg-12 dev-info col-md-12">
 
-            <Card.Img className="img" variant="top" src={developer.img}/>
+            <Card.Img className="img dev-img" variant="top" src={developer.img}/>
 
               <Card.Title>{developer.name}</Card.Title>
 
