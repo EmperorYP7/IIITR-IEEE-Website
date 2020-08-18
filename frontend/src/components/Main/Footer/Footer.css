@@ -73,3 +73,17 @@ color:#fff;
 #to-top:hover {
     color: #1eabd6;
 }
+@media(max-width:576px){
+    .small-image{
+        widows: 100px;
+        height: 100px;
+    }
+    .developer-name {
+        font-size: 1.5em;;
+    }
+    .dev-icon {
+        font-size: 0.7em;
+        padding:5px;
+        margin:0px;
+    }
+}

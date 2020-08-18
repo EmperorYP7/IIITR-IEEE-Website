@@ -4,11 +4,40 @@ import './Footer.css';
 // import { Link } from 'react-router-dom';
 import tushar from "./tushar.png";
 import yash from "./yash.jpeg";
+import {DEVELOPERS} from './DevelopersList';
 
 
 class Footer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
 
+          developers: DEVELOPERS
+        }
+      }
+   
     render() {
+        const print = this.state.developers.map((developer) => {
+            return (
+      
+                <div className="col-12 col-lg-6">
+                <div className="media">
+                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
+                            src={developer.img} alt={developer.name}></img>
+                    <div className="media-body">
+                        <h2 className="mt-2 developer-name">{developer.name}
+                        </h2>
+                        <p className="d-none d-sm-block">{developer.intro}</p>
+                        <br></br>
+                        <a className=" btn text-dark dev-icon" rel="noopener noreferrer" href={developer.linkedin}><i className="fab fa-linkedin fa-2x"></i></a>
+                        <a className=" btn text-dark dev-icon" rel="noopener noreferrer" href={developer.github}><i className="fab fa-github fa-2x"></i></a>
+                        <a className=" btn text-dark dev-icon" rel="noopener noreferrer" href={"mailto:"+developer.mail}><i className="fas fa-envelope fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+      
+            );
+          });
         return (
             <div>
                 {/* <!-- Modal --> */}
@@ -24,103 +53,7 @@ class Footer extends Component {
       <div className="modal-body">
         <div className="container">
         <div className="row row-content justify-content-center">
-            <div className="col-12 text-center"><h2>Full Stack</h2><hr></hr></div>
-            <div className="col-12 col-lg-6">
-                <div className="media">
-                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
-                            src={yash} alt="YASH PANDEY"></img>
-                    <div className="media-body">
-                        <h2 className="mt-2">Yash Pandey
-                        </h2>
-                        <p className="d-none d-sm-block">They call me the GitHub guy. Open source developer. MLSA 2020. Game engines and application development.</p>
-                        <br></br>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://www.linkedin.com/in/yash-p-1793b185/"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://github.com/EmperorYP7"><i className="fab fa-github fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="mailto:yash.btech.cs19@iiitranchi.ac.in"><i className="fas fa-envelope fa-2x"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div className="col-12 col-lg-6 my-">
-            <div className="media">
-                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
-                            src={tushar} alt="YASH PANDEY"></img>
-                    <div className="media-body">
-                        <h2 className="mt-2">YASH PANDEY
-                        </h2>
-                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
-                        <br></br>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://"><i className="fab fa-github fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info"><i className="fas fa-envelope fa-2x"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="row row-content justify-content-center">
-            <div className="col-12 text-center"><h2>Front-End</h2><hr></hr></div>
-            <div className="col-12  col-lg-6 my-3">
-            <div className="media">
-                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
-                            src={tushar} alt="YASH PANDEY"></img>
-                    <div className="media-body">
-                        <h2 className="mt-2">YASH PANDEY
-                        </h2>
-                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
-                        <br></br>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://"><i className="fab fa-github fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info"><i className="fas fa-envelope fa-2x"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div className="col-12 col-lg-6 my-3">
-            <div className="media">
-                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
-                            src={tushar} alt="YASH PANDEY"></img>
-                    <div className="media-body">
-                        <h2 className="mt-2">YASH PANDEY
-                        </h2>
-                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
-                        <br></br>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://"><i className="fab fa-github fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info"><i className="fas fa-envelope fa-2x"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="row row-content align-items-center">
-            <div className="col-12 text-center"><h2>Back-end</h2><hr></hr></div>
-            <div className="col-12  col-lg-6">
-            <div className="media">
-                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
-                            src={tushar} alt="YASH PANDEY"></img>
-                    <div className="media-body">
-                        <h2 className="mt-2">YASH PANDEY
-                        </h2>
-                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
-                        <br></br>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://"><i className="fab fa-github fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info"><i className="fas fa-envelope fa-2x"></i></a>
-                    </div>
-            </div>
-            </div>
-            <div className="col-12 col-lg-6">
-            <div className="media">
-                    <img className="d-flex mr-3 img-thumbnail align-self-center small-image"
-                            src={tushar} alt="YASH PANDEY"></img>
-                    <div className="media-body">
-                        <h2 className="mt-2">YASH PANDEY
-                        </h2>
-                        <p className="d-none d-sm-block">Musician/ Coder/ Blogger/ Youtube/ Developer/ Influencer/ Football /TT / Dancer/ Playboy/ Mumbaikar</p>
-                        <br></br>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://"><i className="fab fa-linkedin fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="https://"><i className="fab fa-github fa-2x"></i></a>
-                        <a className=" btn text-dark" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info"><i className="fas fa-envelope fa-2x"></i></a>
-                    </div>
-            </div>
-            </div>
+       {print}
         </div>
         </div>
       </div>

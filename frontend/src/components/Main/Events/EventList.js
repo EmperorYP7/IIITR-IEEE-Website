@@ -34,9 +34,8 @@ class EventList extends Component {
         date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
         const d1= Date.parse(event.eventDate.substring(0,10));
         const d2=Date.parse(date);
-        var countPast=0;
         if (d1 < d2) {
-            countPast+=1;
+          
             return(
                 <div className="cards " >
                                     <div   className="card  event-card">
@@ -52,12 +51,6 @@ class EventList extends Component {
                                 </div>
             );
         }
-        if(countPast===0){
-            return(
-                <p className="text-center">No Events available</p>
-            )
-        }
-
 
 
     }
@@ -66,9 +59,8 @@ class EventList extends Component {
         date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
         const d1= Date.parse(event.eventDate.substring(0,10));
         const d2=Date.parse(date);
-        var countUpcomming=0;
         if (d1 > d2) {
-            countUpcomming+=1;
+            
             return(
                 <div className="cards " >
                                     <div   className="card  event-card">
@@ -83,11 +75,6 @@ class EventList extends Component {
                                     </div>
                                 </div>
             );
-        }
-        if(countUpcomming===0){
-            return(
-                <p className="text-center">No Events available</p>
-            )
         }
 
 
@@ -99,9 +86,8 @@ class EventList extends Component {
         date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
         const d1= Date.parse(event.eventDate.substring(0,10));
         const d2=Date.parse(date);
-        var countRun=0;
         if (d1 === d2) {
-            countRun+=1;
+            this.setState({countRun:1});
             return(
                 <div className="cards " >
                                     <div   className="card  event-card">
@@ -117,12 +103,6 @@ class EventList extends Component {
                                 </div>
             );
         }
-        if(countRun===0){
-            return(
-                <p className="text-center">No Events available</p>
-            )
-        }
-        
 
 
 
@@ -139,17 +119,28 @@ class EventList extends Component {
                         <hr ></hr>
                     </div>
                     <div className="event-box" >
+                    <h2 className="text-center">Running Events</h2><hr></hr>
                         {this.state.events.map( event =>
                             <div key={event._id}>
-                                 <h2 className="text-center">Running Events</h2><hr></hr>
                                {this.running(event)}
-                               <h2 className="text-center">Upcoming Events</h2><hr></hr>
+                            </div>
+                        )}
+                   
+                    <h2 className="text-center">Upcoming Events</h2><hr></hr>
+                        {this.state.events.map( event =>
+                            <div key={event._id}>
                                {this.upcoming(event)}
-                                <h2 className="text-center">Past Events</h2><hr></hr>
+                            </div>
+                        )}
+
+                    <h2 className="text-center">Past Events</h2><hr></hr>
+                        {this.state.events.map( event =>
+                            <div key={event._id}>
                                {this.past(event)}
                             </div>
                         )}
-                    </div>
+                    
+                </div>
                 </div>
             );
         }
