@@ -71,7 +71,7 @@ class CreateResource extends React.Component {
                     <button type="submit" className="btn btn-success">Add resource</button>
                 </form>
                 <div>
-                    <label htmlFor="resource">Upload PDF</label>
+                    <label htmlFor="resource" className="upload-event-poster">Upload PDF</label>
                     {this.state.pdfUploaded ? <p>PDF uploaded</p> : <UploadPDF setPdfPath={ path => this.setState({pdfPath: path, pdfUploaded: true}) }/> }
                 </div>
             </div>

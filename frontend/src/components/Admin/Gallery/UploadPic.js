@@ -53,14 +53,14 @@ class UploadProfilePic extends React.Component {
     render(){
         return(
             <form onSubmit={this.onSubmit} encType="multipart/form-data" id='form'>
-                <div className='custom-file mb-4 row'>
+                <div className='custom-file upload-row  row'>
                     <div className="col-9">
                         <input type="file" name="member" required={true} onChange={this.changeHandler} placeholder="Upload Profile Pic" className='custom-file-input' />
                         <label className='custom-file-label' htmlFor='customFile'>
                             {this.state.filename}
                         </label>
                     </div>
-                    <div className="col-3">
+                    <div className="upload-button col-3">
                         <input type='submit' value='Upload' className='btn btn-success' />
                     </div>
                 </div>

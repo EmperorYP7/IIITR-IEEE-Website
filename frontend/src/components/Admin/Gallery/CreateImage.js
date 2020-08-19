@@ -64,7 +64,7 @@ class CreateImage extends React.Component {
                     <button type="submit" className="btn btn-success">Add Image</button>
                 </form>
                     <div>
-                        <label htmlFor="event">Upload Image</label>
+                        <label htmlFor="event" className="upload-event-poster">Upload Image</label>
                         {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadPic setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> }
                     </div>
             </div>

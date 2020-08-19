@@ -4,6 +4,7 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import UplaodImage from './UploadImage';
+import './CreateEvent';
 
 class CreateEvent extends React.Component {
     constructor(props) {
@@ -115,7 +116,7 @@ class CreateEvent extends React.Component {
                         <button type="submit" className="btn btn-success">Submit and Create Event</button>
                     </form>
                         <div>
-                            <label htmlFor="event">Upload Event Poster</label>
+                            <label htmlFor="event" className="upload-event-poster">Upload Event Poster</label>
                             {this.state.imageUploaded ? <p>Image uploaded</p> : <UplaodImage setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> }
                         </div>
             </div>

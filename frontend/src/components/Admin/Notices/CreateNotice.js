@@ -71,7 +71,7 @@ class CreateNotice extends React.Component {
                     <button type="submit" className="btn btn-success">Add notice</button>
                 </form>
                 <div>
-                    <label htmlFor="notice">Upload PDF</label>
+                    <label htmlFor="notice" className="upload-event-poster">Upload PDF</label>
                     {this.state.pdfUploaded ? <p>PDF uploaded</p> : <UploadPDF setPdfPath={ path => this.setState({pdfPath: path, pdfUploaded: true}) }/> }
                 </div>
             </div>

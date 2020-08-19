@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './CreateEvent.css';
 import axios from 'axios';
 
 class UplaodImage extends React.Component {
@@ -53,18 +54,21 @@ class UplaodImage extends React.Component {
     render(){
         return(
             <form onSubmit={this.onSubmit} encType="multipart/form-data" id='form'>
-                <div className='custom-file mb-4 row'>
+              <div className="custom-file upload-row row">
+
                     <div className="col-9">
                         <input type="file" name="event" required={true} onChange={this.changeHandler} placeholder="Upload event poster" className='custom-file-input' />
                         <label className='custom-file-label' htmlFor='customFile'>
                             {this.state.filename}
                         </label>
                     </div>
-                    <div className="col-3">
+                    <div className="col-3 upload-button">
                         <input type='submit' value='Upload' className='btn btn-success' />
                     </div>
-                </div>
-            </form>
+          </div>
+        </form>
+
+
         )
     }
 }

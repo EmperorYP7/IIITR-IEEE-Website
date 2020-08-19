@@ -70,12 +70,10 @@ padding: 70px 40px 40px 40px;
 
 .circle-container:hover .outer-ring {
 	transform: rotate3d(45, 0, 0, 180deg);
-	transition: linear 0.5s;
 }
 
 .circle-container:hover .outer-outer-ring {
 	transform: rotate3d(0, 45, 0, 180deg);
-	transition: linear 0.5s;
 }
 
 .circle-container, .front, .back {

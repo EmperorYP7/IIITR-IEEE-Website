@@ -109,7 +109,7 @@ class CreateMember extends React.Component {
                     <button type="submit" className="btn btn-success">Add Member</button>
                 </form>
                     <div>
-                        <label htmlFor="event">Upload Profile Picture</label>
+                        <label htmlFor="event" className="upload-event-poster">Upload Profile Picture</label>
                         {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadProfilePic setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> }
                     </div>
             </div>
