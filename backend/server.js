@@ -27,6 +27,9 @@ app.use('/api/noticedata', noticeRouter);
 const resourceRouter = require('./routes/ResourceRouter');
 app.use('/api/resourcedata', resourceRouter);
 
+const conferenceRouter = require('./routes/conferenceRouter');
+app.use('/api/conferencedata', conferenceRouter);
+
 const galleryRouter = require('./routes/GalleryRoute');
 app.use('/api/gallerydata',galleryRouter);
 

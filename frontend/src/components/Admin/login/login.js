@@ -6,6 +6,8 @@ import Members from '../Members/Members';
 import Notices from '../Notices/Notices';
 import Resources from '../Resources/Resources';
 import Gallery from '../Gallery/Gallery';
+import Conference from '../Resources/Conference';
+
 
 class Login extends Component {
     constructor(props) {
@@ -38,6 +40,8 @@ class Login extends Component {
             ReactDOM.render(<Members/>, document.getElementById('FillHere4'));
             ReactDOM.render(<Gallery/>, document.getElementById('FillHere5'));
             ReactDOM.render(<Resources/>, document.getElementById('FillHere6'));
+            ReactDOM.render(<Conference/>, document.getElementById('FillHere7'));
+
         }
         else{
             ReactDOM.render(<div class="alert alert-danger mt-3" role="alert">
@@ -99,6 +103,8 @@ class Login extends Component {
             <div id="FillHere4"></div>
             <div id="FillHere5"></div>
             <div id="FillHere6"></div>
+            <div id="FillHere7"></div>
+
 
         </div>
         );

@@ -10,7 +10,8 @@ class Resources extends Component {
   {
     super(props);
     this.state = {
-      resources: []
+      resources: [],
+      conferences: []
     }
   }
 
@@ -27,6 +28,17 @@ class Resources extends Component {
           }
         })
         .catch(err => console.log("Error" + err));
+  axios.get('/api/conferencedata/')
+        .then(res => {
+          this.setState({ conferences: res.data });
+          if(res.data>0){
+          this.setState({loaded:true});
+          }
+          else{
+          this.setState({loaded:true});
+          }
+        })
+        .catch(err => console.log("Error" + err));    
   }
 
     render() {
@@ -54,14 +66,9 @@ class Resources extends Component {
         </ul>
       </div>
       <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><ul>
-        <li>14th annual meet at Shimla point.<br/><br/></li>
-        <li>Seminar organised based on signals and systems.<br/><br/></li>
-        <li>2nd Official SB meet under IEEE<br/><br/></li>
-        <li>Anti AI takeover summit organised .<br/><br/></li>
-        <li>14th annual meet at Shimla point.<br/><br/></li>
-        <li>Seminar organised based on signals and systems.<br/><br/></li>
-        <li>2nd Official SB meet under IEEE<br/><br/></li>
-        <li>Anti AI takeover summit organised .</li></ul><br/><br/></div>
+      {this.state.conferences.map( conferences =>
+          <li key={conferences._id}>{conferences.name}<br/><a rel="noopener noreferrer" href={`${conferences.link}`} target="_blank">{conferences.link}</a><br/><br/></li>
+          )}</ul><br/><br/></div>
       <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><ul>
         <li><a rel="noopener noreferrer" href="https://">Hackathon organised by IEEE SB</a><br/><br/></li>
         <li><a rel="noopener noreferrer" href="https://">Coding competition organised by computer society , IEEE SB</a><br/><br/></li>

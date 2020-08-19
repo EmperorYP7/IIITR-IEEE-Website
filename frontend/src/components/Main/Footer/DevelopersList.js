@@ -31,16 +31,15 @@ export const DEVELOPERS =
           github:'https://github.com/EmperorYP7',
           mail:'yash.btech.cs19@iiitranchi.ac.in'
          },
-        {
-        id: 3,
-        name:'Rishav',
-        intro: 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged',
-        img:'assets/images/rishabh.jpeg',
-        mutedText : 'Someone famous in',
-        linkedin: 'https://',
-        github:'https://',
-        mail:'https://'
-       },
+         {
+          id: 3,
+          name:'Rishav Mazumdar',
+          intro: 'Junior Developer. Python Enthusiast.',
+          img:'assets/images/rishabh.jpeg',
+          linkedin: 'https://in.linkedin.com/in/rishav-mazumdar-38b869192/',
+          github:'https://github.com/RishavMz',
+          mail:'mailto:rishav.btech.ec19@iiitranchi.ac.in'
+         },
 
        {
         id: 4,
