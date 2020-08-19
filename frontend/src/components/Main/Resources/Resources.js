@@ -70,23 +70,14 @@ class Resources extends Component {
           <li key={conferences._id}>{conferences.name}<br/><a rel="noopener noreferrer" href={`${conferences.link}`} target="_blank">{conferences.link}</a><br/><br/></li>
           )}</ul><br/><br/></div>
       <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><ul>
-        <li><a rel="noopener noreferrer" href="https://">Hackathon organised by IEEE SB</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">Coding competition organised by computer society , IEEE SB</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">Anti AI takeover summit organised in which AI took over us.</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">Some random event took place, IDK short of ideas</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">Hackathon organised by IEEE SB</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">Coding competition organised by computer society , IEEE SB</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">Anti AI takeover summit organised in which AI took over us.</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">Some random event took place, IDK short of ideas</a><br/><br/></li></ul></div>
+        <li><a rel="noopener noreferrer" target = "_blank" href="https://www.ieee.org">IEEE</a><br/><br/></li>
+        <li><a rel="noopener noreferrer" target = "_blank" href="https://www.ieee.org">IEEE Xplore</a><br/><br/></li>
+        <li><a rel="noopener noreferrer" target = "_blank" href="https://www.ieee.org/membership/join/index.html?WT.mc_id=hc_join">Join IEEE</a><br/><br/></li>
+        <li><a rel="noopener noreferrer" target = "_blank" href="https://standards.ieee.org/?_ga=2.144225589.1899340415.1597844769-1998724759.1594983260">IEEE Standards Association</a><br/><br/></li>
+        <li><a rel="noopener noreferrer" target = "_blank" href="https://spectrum.ieee.org/">IEEE Spectrum</a><br/><br/></li>
+        <li><a rel="noopener noreferrer" target = "_blank" href="https://www.iiitranchi.ac.in">IIIT Ranchi</a><br/><br/></li></ul></div>
       <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"><ul>
-        <li><a rel="noopener noreferrer" href="https://">IEEE</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">IEEE SB</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">IEEE Xplore</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">IEEE link</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">IEEE link</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">IEEE link</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">IIIT Ranchi</a><br/><br/></li>
-        <li><a rel="noopener noreferrer" href="https://">Home</a><br/><br/></li></ul></div>
+        <li><a rel="noopener noreferrer" target = "_blank" href="https://www.google.com">Google</a><br/><br/></li></ul></div>
     </div>
 
 </div>

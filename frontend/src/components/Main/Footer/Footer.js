@@ -19,7 +19,7 @@ class Footer extends Component {
   render() {
     const show = this.state.developers.map((developer) => {
       return (
-      <div className="row">
+      <div className="row" key ={developer.id} id={developer.id}>
         <div className="col-lg-12 dev-info col-md-12">
 
             <Card.Img className="img dev-img" variant="top" src={developer.img}/>
