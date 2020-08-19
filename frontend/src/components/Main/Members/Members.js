@@ -5,7 +5,7 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Button from 'react-bootstrap/Button';
-import HashLoader from './AwesomeComponent';
+import HashLoader from '../AwesomeComponent';
 // import { Link } from 'react-router-dom';
 // import Pandey from './images/pandey.jpeg';
 
@@ -34,7 +34,7 @@ class Members extends Component {
         const imageName = member.imgPath;
         const url = `http://localhost:5000/upload/image/member/${imageName}`;
         return(
-                <Card.Img variant="top" className="img" src={url} alt="trial" /> 
+                <Card.Img variant="top" className="img" src={url} alt="trial" />
             )
         }
         //.catch(err => console.log("Error Fetching File : " + err));

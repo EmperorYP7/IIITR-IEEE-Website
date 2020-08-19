@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import './Events.css';
-import HashLoader from './AwesomeComponent';
+import HashLoader from '../AwesomeComponent';
 import { Link } from 'react-router-dom';
 
 class EventList extends Component {
@@ -35,7 +35,7 @@ class EventList extends Component {
         const d1= Date.parse(event.eventDate.substring(0,10));
         const d2=Date.parse(date);
         if (d1 < d2) {
-          
+
             return(
                 <div className="cards " >
                                     <div   className="card  event-card">
@@ -60,7 +60,7 @@ class EventList extends Component {
         const d1= Date.parse(event.eventDate.substring(0,10));
         const d2=Date.parse(date);
         if (d1 > d2) {
-            
+
             return(
                 <div className="cards " >
                                     <div   className="card  event-card">
@@ -125,7 +125,7 @@ class EventList extends Component {
                                {this.running(event)}
                             </div>
                         )}
-                   
+
                     <h2 className="text-center">Upcoming Events</h2><hr></hr>
                         {this.state.events.map( event =>
                             <div key={event._id}>
@@ -139,7 +139,7 @@ class EventList extends Component {
                                {this.past(event)}
                             </div>
                         )}
-                    
+
                 </div>
                 </div>
             );

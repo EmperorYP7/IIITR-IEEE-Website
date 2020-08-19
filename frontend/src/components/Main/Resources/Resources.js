@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Resources.css';
-import HashLoader from './AwesomeComponent';
+import HashLoader from '../AwesomeComponent';
 import axios from 'axios';
 
 class Resources extends Component {
@@ -38,7 +38,7 @@ class Resources extends Component {
           this.setState({loaded:true});
           }
         })
-        .catch(err => console.log("Error" + err));    
+        .catch(err => console.log("Error" + err));
   }
 
     render() {

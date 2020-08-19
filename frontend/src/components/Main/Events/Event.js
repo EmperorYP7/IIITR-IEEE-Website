@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import HashLoader from './AwesomeComponent';
+import HashLoader from '../AwesomeComponent';
 
 import './EventLink.css';
 

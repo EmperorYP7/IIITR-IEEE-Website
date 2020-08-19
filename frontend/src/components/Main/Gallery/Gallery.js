@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Gallery.css';
 import axios from 'axios';
-import HashLoader from './AwesomeComponent';
+import HashLoader from '../AwesomeComponent';
 
 class Gallery extends Component {
     constructor(props) {
