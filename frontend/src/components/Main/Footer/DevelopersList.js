@@ -33,7 +33,7 @@ export const DEVELOPERS =
       {
         id: 3,
         name:'Rishav Mazumdar',
-        intro: 'Junior Developer. Python Enthusiast.',
+        intro: 'Web Developer , Python Enthusiast.',
         img:'assets/images/rishabh.jpeg',
         linkedin: 'https://in.linkedin.com/in/rishav-mazumdar-38b869192/',
         github:'https://github.com/RishavMz',
