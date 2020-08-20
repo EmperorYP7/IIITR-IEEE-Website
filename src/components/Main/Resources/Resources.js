@@ -17,7 +17,7 @@ class Resources extends Component {
 
   componentDidMount()
   {
-    axios.get('/api/resourcedata/')
+    axios.get('http://ieeemock2.azurewebsites.net/api/resourcedata/')
         .then(res => {
           this.setState({ resources: res.data });
           if(res.data>0){
@@ -28,7 +28,7 @@ class Resources extends Component {
           }
         })
         .catch(err => console.log("Error" + err));
-  axios.get('/api/conferencedata/')
+  axios.get('http://ieeemock2.azurewebsites.net/api/conferencedata/')
         .then(res => {
           this.setState({ conferences: res.data });
           if(res.data>0){

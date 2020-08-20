@@ -26,7 +26,7 @@ class UploadPDF extends React.Component {
         formData.append('resource', this.state.file);
 
         try {
-            await axios.post('/upload/pdf/resource', formData, {
+            await axios.post('http://ieeemock2.azurewebsites.net/upload/pdf/resource', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },

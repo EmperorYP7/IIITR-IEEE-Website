@@ -15,7 +15,7 @@ class Notices extends React.Component {
     }
 
     UpdateState = () => {
-        axios.get(`/api/noticedata/`)
+        axios.get(`http://ieeemock2.azurewebsites.net/api/noticedata/`)
         .then(res => {
             this.setState({
                 ...this.state,
@@ -31,12 +31,12 @@ class Notices extends React.Component {
     }
 
     onNoticeDelete = (notice) => {
-        axios.delete(`/api/noticedata/${notice._id}`)
+        axios.delete(`http://ieeemock2.azurewebsites.net/api/noticedata/${notice._id}`)
             .then(res => {
                 alert("notice Deleted!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/pdf/notice/${notice.pdfPath}`)
+        axios.delete(`http://ieeemock2.azurewebsites.net/upload/pdf/notice/${notice.pdfPath}`)
         .then(  res => {
             console.log(res.data);
         })

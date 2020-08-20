@@ -15,7 +15,7 @@ class Gallery extends React.Component {
     }
 
     UpdateState = () => {
-        axios.get(`/api/gallerydata/`)
+        axios.get(`http://ieeemock2.azurewebsites.net/api/gallerydata/`)
         .then(res => {
             this.setState({
                 ...this.state,
@@ -31,12 +31,12 @@ class Gallery extends React.Component {
     }
 
     onImageDelete = (image) => {
-        axios.delete(`/api/gallerydata/${image._id}`)
+        axios.delete(`http://ieeemock2.azurewebsites.net/api/gallerydata/${image._id}`)
             .then(res => {
                 alert("Image Removed!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/image/gallery/${image.imgPath}`)
+        axios.delete(`http://ieeemock2.azurewebsites.net/upload/image/gallery/${image.imgPath}`)
         .then(  res => {
             console.log(res.data);
         })

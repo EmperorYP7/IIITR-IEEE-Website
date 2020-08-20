@@ -15,7 +15,7 @@ class NoticeBoard extends React.Component {
 
     componentDidMount()
     {
-        axios.get('/api/noticedata/')
+        axios.get('http://ieeemock2.azurewebsites.net/api/noticedata/')
             .then(res => {
                 this.setState({ notices: res.data });
             })

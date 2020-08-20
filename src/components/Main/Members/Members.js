@@ -4,7 +4,6 @@ import './Members.css';
 import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
-import Button from 'react-bootstrap/Button';
 import HashLoader from '../AwesomeComponent';
 // import { Link } from 'react-router-dom';
 // import Pandey from './images/pandey.jpeg';
@@ -17,7 +16,7 @@ class Members extends Component {
         this.state = { members: [] };
     }
     componentDidMount() {
-        axios.get(`/api/memberdata`)
+        axios.get(`http://ieeemock2.azurewebsites.net/api/memberdata`)
             .then(res => {
                 this.setState({ members: res.data });
                 if (res.data > 0) {
@@ -58,11 +57,6 @@ class Members extends Component {
                                 {member.shortDescription}{' '}
                             </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">
-                                <Button className="button ">Read More</Button> {/* Link needs to be added*/}
-                            </small>
-                        </Card.Footer>
                     </Card>
                 </div>
             );

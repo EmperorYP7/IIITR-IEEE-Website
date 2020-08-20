@@ -30,7 +30,7 @@ class Event extends Component {
     componentDidMount() {
         const string = this.props.location.pathname;
         const slug = string.substring(8)
-        axios.get(`/api/eventdata/${slug}`)
+        axios.get(`http://ieeemock2.azurewebsites.net/api/eventdata/${slug}`)
             .then(res => {
                 this.setState({
                     ...this.state,
@@ -88,6 +88,12 @@ class Event extends Component {
                             </div>
                             <div className="col-12 location">
                                 {this.state.event.location}
+                            </div>
+                            <div>
+                            <a target="_blank" rel="noopener noreferrer" href={`${this.state.event.gcalender}`}><img border="0" alt="Google Calender" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
+                            </div>
+                            <div>
+                                {/*<iframe src={`${this.state.event.gmaps}`} title={`${this.state.event._id}`} width="auto" height="auto" frameBorder="0" style={`border:0;`} allowFullscreen={true} aria-hidden="false" tabIndex="0"></iframe>*/}
                             </div>
                         </div>
                     ):(

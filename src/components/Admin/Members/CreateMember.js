@@ -45,7 +45,7 @@ class CreateMember extends React.Component {
             githubLink: this.state.githubLink,
             imgPath: this.state.imgPath
         }
-        axios.post(`/api/memberdata/`, member)
+        axios.post(`http://ieeemock2.azurewebsites.net/api/memberdata/`, member)
             .then(res => {
                 this.setState({
                     name: '',

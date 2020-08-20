@@ -16,7 +16,7 @@ class Events extends React.Component {
     }
 
     UpdateState = () => {
-        axios.get(`/api/eventdata/`)
+        axios.get(`http://ieeemock2.azurewebsites.net/api/eventdata/`)
         .then(res => {
             this.setState({
                 ...this.state,
@@ -32,12 +32,12 @@ class Events extends React.Component {
     }
 
     onEventDelete = (event) => {
-        axios.delete(`/api/eventdata/${event._id}`)
+        axios.delete(`http://ieeemock2.azurewebsites.net/api/eventdata/${event._id}`)
             .then(res => {
                 alert("Event Deleted!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/image/event/${event.imgPath}`)
+        axios.delete(`http://ieeemock2.azurewebsites.net/upload/image/event/${event.imgPath}`)
         .then(  res => {
             console.log(res.data);
         })

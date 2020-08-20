@@ -33,7 +33,7 @@ class CreateResource extends React.Component {
             shortDescription: this.state.shortDescription,
             pdfPath: this.state.pdfPath
         }
-        axios.post(`/api/resourcedata/`, resource)
+        axios.post(`http://ieeemock2.azurewebsites.net/api/resourcedata/`, resource)
             .then(res => {
                 this.setState({
                     name: '',

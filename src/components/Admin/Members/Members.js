@@ -16,7 +16,7 @@ class Members extends React.Component {
     }
 
     UpdateState = () => {
-        axios.get(`/api/memberdata/`)
+        axios.get(`http://ieeemock2.azurewebsites.net/api/memberdata/`)
         .then(res => {
             this.setState({
                 ...this.state,
@@ -32,12 +32,12 @@ class Members extends React.Component {
     }
 
     onMemberDelete = (member) => {
-        axios.delete(`/api/memberdata/${member._id}`)
+        axios.delete(`http://ieeemock2.azurewebsites.net/api/memberdata/${member._id}`)
             .then(res => {
                 alert("Member Removed!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/image/member/${member.imgPath}`)
+        axios.delete(`http://ieeemock2.azurewebsites.net/upload/image/member/${member.imgPath}`)
             .then(  res => {
                 console.log(res.data);
             })

@@ -4,7 +4,7 @@ export const DEVELOPERS =
         id: 0,
         name:'Yash Pandey',
         intro: 'The GitHub Guy. Opensource Developer. ',
-        img:'assets/images/yash.jpeg',
+        img:'/assets/images/yash.jpeg',
         mutedText : 'MERN stack web developer',
         linkedin: 'https://www.linkedin.com/in/yash-p-1793b185/',
         github:'https://github.com/EmperorYP7',
@@ -25,7 +25,7 @@ export const DEVELOPERS =
         name:'Tushar Jain',
         intro: 'It has survived not only five centuries,  unchanged',
         mutedText : 'MERN stack web developer',
-        img:'assets/images/tushar.png',
+        img:'/assets/images/tushar.png',
         linkedin: 'https://www.linkedin.com/in/tushar-jain-4b2ab219b/',
         github:'https://github.com/tusharjain0022',
         mail:'tusharjain.btech.cs19@iiitranchi.ac.in'
@@ -34,7 +34,7 @@ export const DEVELOPERS =
         id: 3,
         name:'Rishav Mazumdar',
         intro: 'Web Developer , Python Enthusiast.',
-        img:'assets/images/rishabh.jpeg',
+        img:'/assets/images/rishabh.jpeg',
         linkedin: 'https://in.linkedin.com/in/rishav-mazumdar-38b869192/',
         github:'https://github.com/RishavMz',
         mail:'rishav.btech.ec19@iiitranchi.ac.in'

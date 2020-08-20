@@ -15,7 +15,7 @@ class Resources extends React.Component {
     }
 
     UpdateState = () => {
-        axios.get(`/api/resourcedata/`)
+        axios.get(`http://ieeemock2.azurewebsites.net/api/resourcedata/`)
         .then(res => {
             this.setState({
                 ...this.state,
@@ -31,12 +31,12 @@ class Resources extends React.Component {
     }
 
     onResourceDelete = (resource) => {
-        axios.delete(`/api/resourcedata/${resource._id}`)
+        axios.delete(`http://ieeemock2.azurewebsites.net/api/resourcedata/${resource._id}`)
             .then(res => {
                 alert("Resource Deleted!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/pdf/resource/${resource.pdfPath}`)
+        axios.delete(`http://ieeemock2.azurewebsites.net/upload/pdf/resource/${resource.pdfPath}`)
         .then(  res => {
             console.log(res.data);
         })

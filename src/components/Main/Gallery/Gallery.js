@@ -10,7 +10,7 @@ class Gallery extends Component {
         this.state = { images: [], albumsp: [] };
     }
     componentDidMount() {
-        axios.get(`/api/gallerydata`)
+        axios.get(`http://ieeemock2.azurewebsites.net/api/gallerydata`)
             .then(res => {
                 this.setState({ images: res.data });
                 const result = [];
