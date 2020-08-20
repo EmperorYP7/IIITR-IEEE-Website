@@ -4,8 +4,12 @@
     padding: 20px 0px 20px 0px;
     color: #ddd;
 }
-.card{
-    height: 90vh;
+@media (min-width:34em) {
+    .deck > .card
+    {   height: 55vh;
+        flex-wrap: wrap;
+        flex: initial; 
+    }
 }
 .modal-content{
 width: 80%;

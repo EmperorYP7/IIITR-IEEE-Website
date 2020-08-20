@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
 // import { Link } from 'react-router-dom';
-import CardColumns from 'react-bootstrap/CardColumns';
-import Card from 'react-bootstrap/Card';
+//import CardColumns from 'react-bootstrap/CardColumns';
+//import Card from 'react-bootstrap/Card';
 
 import {DEVELOPERS} from './DevelopersList';
 
@@ -18,7 +18,7 @@ class Footer extends Component {
   render() {
     const show = this.state.developers.map((developer) => {
       return (
-        <div className="card col-lg-4 col-md-6 col-sm-6 container">
+        <div className="card col-lg-4 col-md-6 col-sm-6 container" id={developer.id} key={developer.id}>
           <img src={`${developer.img}`} className="card-img-top img-fluid dev-img" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{developer.name}</h5>
