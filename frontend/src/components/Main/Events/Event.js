@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import HashLoader from '../AwesomeComponent';
-
+import NotFound from '../NotFound/NotFound';
 import './EventLink.css';
 
 class Event extends Component {
 
-    constructor(props)
-    {
+    constructor(props) {
         super(props);
         this.ExtractDate = this.ExtractDate.bind(this);
 
@@ -23,13 +22,12 @@ class Event extends Component {
                 gmaps: '',
                 imgPath: ''
             },
-            Dinaank : '',
+            Dinaank: '',
             Time: ''
         };
     }
 
-    componentDidMount()
-    {
+    componentDidMount() {
         const string = this.props.location.pathname;
         const slug = string.substring(8)
         axios.get(`/api/eventdata/${slug}`)
@@ -38,75 +36,75 @@ class Event extends Component {
                     ...this.state,
                     event: res.data
                 });
-                this.ExtractDate();
-                if(res.data>0){
-                this.setState({loaded:true});
+                if (res.data !== null)
+                    this.ExtractDate();
+                if (res.data > 0) {
+                    this.setState({ loaded: true });
                 }
-                else{
-                this.setState({loaded:true});
+                else {
+                    this.setState({ loaded: true });
                 }
             })
-            .catch(err => console.log("Error : " + err));
+            .catch(err => {
+                console.log(err);
+                this.setState({ loaded: true })
+            });
     }
 
     ExtractDate() {
-            const completeDate = new Date(this.state.event.eventDate);
-            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            const day =  days[completeDate.getDay()];
-            const date = completeDate.getDate();
-            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            const month = months[completeDate.getMonth()];
-            const year = completeDate.getFullYear();
-            const hour = completeDate.getHours();
-            const minute = completeDate.getMinutes();
+        const completeDate = new Date(this.state.event.eventDate);
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const day = days[completeDate.getDay()];
+        const date = completeDate.getDate();
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const month = months[completeDate.getMonth()];
+        const year = completeDate.getFullYear();
+        const hour = completeDate.getHours();
+        const minute = completeDate.getMinutes();
 
-            this.setState({
-                Dinaank : "Date: " +day+ ", " +date+ " " +month+ ", " +year,
-                Time : "Time: "+hour+":"+minute
-            })
+        this.setState({
+            Dinaank: "Date: " + day + ", " + date + " " + month + ", " + year,
+            Time: "Time: " + hour + ":" + minute
+        })
     }
-
-    render(){
-      if(this.state.loaded){
-
+    render() {
+        if (this.state.loaded) {
         return (
-<div className=" container about-event">
-            <div className="row">
-                    <div className="container">
-                        <img className="card-img-top" src={`http://ieeemock2.azurewebsites.net/upload/image/event/${this.state.event.imgPath}`} alt="img" id = {this.state.event._id} />
-                    </div>
-                    <div className="col-12 event-title">
-                        {this.state.event.title}
-                    </div>
-                    <div className="col-12  event-desc">
-                        {this.state.event.description}
-                    </div>
-                    <div className="col-12  event-date">
-                        <p><i className="far calendar fa-calendar-alt"></i>{this.state.Dinaank}</p>
-                        <p><i className="far clock fa-clock"></i>{this.state.Time}</p>
-                    </div>
-                    <div className="col-12 location">
-                        {this.state.event.location}
-                    </div>
-                    <div>
-                        <a rel="noopener noreferrer" className="google-button"target="_blank"  href={`${this.state.event.gcalender}`}><img border="0" alt="Google Calender" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
-                    </div>
-                    <div className="conatiner">
-                        <iframe title="gmaps" src={this.state.event.gmaps} width="600" height="450" frameBorder="0" style={{border:0}} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
-                    </div>
-            </div>
-</div>
-        );
-}
-else {
-    if(!this.state.loaded) {
-        return(
-                <div className="loader"><HashLoader message="Hold Tight!" /></div>
-            );
+                <div className=" container about-event">
+                    {this.state.event !== null ? (
+                        <div className="row">
+                            <div className="container">
+                                <img className="card-img-top" src={`http://ieeemock2.azurewebsites.net/upload/image/event/${this.state.event.imgPath}`} alt="img" id={this.state.event._id} />
+                            </div>
+                            <div className="col-12 event-title">
+                                {this.state.event.title}
+                            </div>
+                            <div className="col-12  event-desc">
+                                {this.state.event.description}
+                            </div>
+                            <div className="col-12  event-date">
+                                <p><i className="far calendar fa-calendar-alt"></i>{this.state.Dinaank}</p>
+                                <p><i className="far clock fa-clock"></i>{this.state.Time}</p>
+                            </div>
+                            <div className="col-12 location">
+                                {this.state.event.location}
+                            </div>
+                        </div>
+                    ):(
+                        <NotFound />
+                    )}
+                </div>
+                )
         }
-}
+        else {
+            if (!this.state.loaded) {
+                return (
+                    <div className="loader"><HashLoader message="Hold Tight!" /></div>
+                );
+            }
+        }
 
-  }
+    }
 }
 
 export default Event;
