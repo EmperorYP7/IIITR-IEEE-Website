@@ -11,7 +11,8 @@ class EventList extends Component {
     {
         super(props);
 
-        this.state = { events : [] };
+        this.state = { events : [],
+        countRun : 0 };
     }
 
     componentDidMount()
@@ -82,10 +83,10 @@ class EventList extends Component {
     }
 
     running(event) {
-        const today = new Date(),
-        date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-        const d1= Date.parse(event.eventDate.substring(0,10));
-        const d2=Date.parse(date);
+        const today = new Date(Date.now);
+        const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        const d1 = Date.parse(event.eventDate.substring(0,10));
+        const d2 = Date.parse(date);
         if (d1 === d2) {
             this.setState({countRun:1});
             return(
@@ -93,7 +94,7 @@ class EventList extends Component {
                                     <div   className="card  event-card">
                                         <div className="card-body event-card-body">
                                             <h5 className="card-title">{event.title} </h5>
-                        <h6 className="card-date"><i class="fas fa-1x event-logo fa-calendar-check"></i> {event.eventDate.substring(0,10)}</h6>
+                        <h6 className="card-date"><i className="fas fa-1x event-logo fa-calendar-check"></i> {event.eventDate.substring(0,10)}</h6>
                                             <p className="card-text">{event.shortDescription}</p>
                                             <Link to={`/events/${event.slug}`}>
                                                 <button className="btn event-button btn-dark">Read More</button>

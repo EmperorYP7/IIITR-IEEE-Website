@@ -44,7 +44,7 @@ class Login extends Component {
 
         }
         else{
-            ReactDOM.render(<div class="alert alert-danger mt-3" role="alert">
+            ReactDOM.render(<div className="alert alert-danger mt-3" role="alert">
             Wrong username or Password !!
           </div>, document.getElementById('alert'));
         }

@@ -19,38 +19,26 @@ class Footer extends Component {
   render() {
     const show = this.state.developers.map((developer) => {
       return (
-      <div className="row" key ={developer.id} id={developer.id}>
-        <div className="col-lg-12 dev-info col-md-12">
-
-            <Card.Img className="img dev-img" variant="top" src={developer.img}/>
-
-              <Card.Title>{developer.name}</Card.Title>
-
-              <blockquote className="blockquote mb-0 card-body">
-                <p>
-                  {developer.intro}
-                </p>
-                <footer className="blockquote-footer">
-                  <small className="text-muted">
-                    {developer.mutedText}
-                    {/* <cite title="Source Title">Source Title</cite> */}
-                  </small>
-                </footer>
-                <a className=" btn text-dark dev-icon" rel="noopener noreferrer" href={developer.linkedin}>
+        <div className="card col-lg-4 col-md-6 col-sm-6 container">
+          <img src={`${developer.img}`} className="card-img-top img-fluid dev-img" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">{developer.name}</h5>
+            <p className="card-text">{developer.intro}</p>
+            <p className="card-text"><small className="text-muted">{developer.mutedText}</small></p>
+            <div className="row">
+                <a className="col-4 btn text-dark dev-icon" rel="noopener noreferrer" href={developer.linkedin}>
                   <i className="fab fa-linkedin fa-2x"></i>
                 </a>
-                <a className=" btn text-dark dev-icon" rel="noopener noreferrer" href={developer.github}>
+                <a className="col-4 btn text-dark dev-icon" rel="noopener noreferrer" href={developer.github}>
                   <i className="fab fa-github fa-2x"></i>
                 </a>
-                <a className=" btn text-dark dev-icon" rel="noopener noreferrer" href={"mailto:" + developer.mail}>
+                <a className="col-4 btn text-dark dev-icon" rel="noopener noreferrer" href={"mailto:" + developer.mail}>
                   <i className="fas fa-envelope fa-2x"></i>
                 </a>
-
-              </blockquote>
-
+            </div>
+          </div>
         </div>
-<hr></hr>
-      </div>);
+      );
     });
     return (<div>
       {/* <!-- Modal --> */}
@@ -58,24 +46,20 @@ class Footer extends Component {
         <div className="modal-dialog modal-xl">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="col-12 modal-title text-center" id="exampleModalLabel">DEVELOPERS</h5>
+              <h5 className="col-12 modal-title text-center" id="exampleModalLabel">Developers</h5>
               <button type="button" className="close text-center" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">
                   <i className="fas fa-times fa-2x"></i>
                 </span>
               </button>
             </div>
-            <div className="modal-body">
-
-              <CardColumns className="dev-col">
-
+            <div className="modal-body container-fluid">
+              <div className="row conatiner">
                 {show}
-              </CardColumns>
-
+              </div>
             </div>
             <div className="modal-footer">
-              <p className="text-dark col-12 text-center">Web Team IIITRanchi © Copyright 2020
-              </p>
+              <p className="text-dark col-12 text-center">Web Team IIITRanchi © Copyright 2020</p>
             </div>
           </div>
         </div>
