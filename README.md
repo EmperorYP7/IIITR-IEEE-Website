@@ -1,40 +1,68 @@
-# Deploy development server on your machine
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Run the following command sequentially to get a proper setup.
+## Available Scripts
 
-1. Open the command prompt or terminal in the root directory of the repository.
-Then run the command :
+In the project directory, you can run:
 
-`npm install` 
+### `npm start`
 
-Wait till all dependencies are installed.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-2. `cd frontend`
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-3. `npm install`
+### `npm test`
 
-Wait till all dependencies are installed.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-4. `cd ..`
+### `npm run build`
 
-5. `cd backend` (same for the backend)
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-6. `npm install`
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-Wait till all dependencies are installed.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-7. `cd ..` and then `npm run dev`
+### `npm run eject`
 
-This will run the Express server at `localhost:4000` and the React development server
-at `localhost:3000` concurrently. API calls will be directed to and from port 5000.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-8. Enjoy!
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Yea I know its all hyped up, but for now the back-end is not at all in working condition.
-So, go ahead and tinker with the frontend! :smile:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-P.s. added React routing. Please style it because the Navbar is ugly af.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Note the Navbar is transparent already.
+## Learn More
 
-package.json is the file which contains information about dependencies.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
