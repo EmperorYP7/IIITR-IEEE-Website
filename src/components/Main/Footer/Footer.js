@@ -25,13 +25,13 @@ class Footer extends Component {
             <p className="card-text">{developer.intro}</p>
             <p className="card-text"><small className="text-muted">{developer.mutedText}</small></p>
             <div className="row card-footer">
-                <a className="col-4 btn text-dark dev-icon" rel="noopener noreferrer" href={developer.linkedin}>
+                <a className="col-4 btn text-dark dev-icon" rel="noopener noreferrer" href={developer.linkedin} target="_blank">
                   <i className="fab fa-linkedin fa-2x"></i>
                 </a>
-                <a className="col-4 btn text-dark dev-icon" rel="noopener noreferrer" href={developer.github}>
+                <a className="col-4 btn text-dark dev-icon" rel="noopener noreferrer" href={developer.github} target="_blank">
                   <i className="fab fa-github fa-2x"></i>
                 </a>
-                <a className="col-4 btn text-dark dev-icon" rel="noopener noreferrer" href={"mailto:" + developer.mail}>
+                <a className="col-4 btn text-dark dev-icon" rel="noopener noreferrer" href={"mailto:" + developer.mail} target="_blank">
                   <i className="fas fa-envelope fa-2x"></i>
                 </a>
             </div>
