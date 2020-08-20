@@ -4,6 +4,9 @@
     padding: 20px 0px 20px 0px;
     color: #ddd;
 }
+.card{
+    height: 90vh;
+}
 .modal-content{
 width: 80%;
 margin-left: auto;

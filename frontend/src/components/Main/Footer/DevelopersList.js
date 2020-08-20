@@ -15,12 +15,12 @@ export const DEVELOPERS =
         name:'Hari Om Yadav',
         intro: ' essentially unchanged',
         mutedText : 'Someone famous in',
-        img:'assets/images/hariom.jpeg',
+        img:'/assets/images/hariom.jpeg',
         linkedin: 'https://',
         github:'https://',
         mail:'https://'
        },
-        {
+      {
         id: 2,
         name:'Tushar Jain',
         intro: 'It has survived not only five centuries,  unchanged',
@@ -37,7 +37,7 @@ export const DEVELOPERS =
         img:'assets/images/rishabh.jpeg',
         linkedin: 'https://in.linkedin.com/in/rishav-mazumdar-38b869192/',
         github:'https://github.com/RishavMz',
-        mail:'mailto:rishav.btech.ec19@iiitranchi.ac.in'
+        mail:'rishav.btech.ec19@iiitranchi.ac.in'
       },
 
        {
@@ -48,7 +48,7 @@ export const DEVELOPERS =
         mutedText : 'Someone famous in',
         linkedin: 'https://',
         github:'https://',
-        mail:'https://'
+        mail:'ashish.btech.cs19@iiitranhi.ac.in'
        },
        {
         id: 5,

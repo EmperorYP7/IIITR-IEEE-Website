@@ -11,7 +11,6 @@ class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
       developers: DEVELOPERS
     }
   }
@@ -25,7 +24,7 @@ class Footer extends Component {
             <h5 className="card-title">{developer.name}</h5>
             <p className="card-text">{developer.intro}</p>
             <p className="card-text"><small className="text-muted">{developer.mutedText}</small></p>
-            <div className="row">
+            <div className="row card-footer">
                 <a className="col-4 btn text-dark dev-icon" rel="noopener noreferrer" href={developer.linkedin}>
                   <i className="fab fa-linkedin fa-2x"></i>
                 </a>
@@ -42,7 +41,7 @@ class Footer extends Component {
     });
     return (<div>
       {/* <!-- Modal --> */}
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal vw-100 fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-xl">
           <div className="modal-content">
             <div className="modal-header">
