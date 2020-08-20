@@ -32,7 +32,7 @@ class Members extends Component {
 
     fetchImage = (member) => {
         const imageName = member.imgPath;
-        const url = `http://localhost:5000/upload/image/member/${imageName}`;
+        const url = `http://ieeemock2.azurewebsites.net/upload/image/member/${imageName}`;
         return(
                 <Card.Img variant="top" className="img" src={url} alt="trial" />
             )

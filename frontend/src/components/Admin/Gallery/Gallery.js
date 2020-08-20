@@ -56,7 +56,7 @@ class Gallery extends React.Component {
                                         <ListGroupItem>
                                             <div className="row list-item">
                                                 <div className="col-10">
-                                                    <img src={`http://localhost:5000/upload/image/gallery/${image.imgPath}`} alt="img" id = {image._id} height="100rem" />
+                                                    <img src={`http://ieeemock2.azurewebsites.net/upload/image/gallery/${image.imgPath}`} alt="img" id = {image._id} height="100rem" />
                                                 </div>
                                                 <div className="col-2">
                                                     <Button className='remove-btn btn btn-danger' color='danger' size='sm'

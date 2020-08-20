@@ -73,7 +73,7 @@ class Event extends Component {
 <div className=" container about-event">
             <div className="row">
                     <div className="container">
-                        <img className="card-img-top" src={`http://localhost:5000/upload/image/event/${this.state.event.imgPath}`} alt="img" id = {this.state.event._id} />
+                        <img className="card-img-top" src={`http://ieeemock2.azurewebsites.net/upload/image/event/${this.state.event.imgPath}`} alt="img" id = {this.state.event._id} />
                     </div>
                     <div className="col-12 event-title">
                         {this.state.event.title}

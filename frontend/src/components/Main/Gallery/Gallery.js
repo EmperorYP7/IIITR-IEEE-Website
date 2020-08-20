@@ -57,7 +57,7 @@ class Gallery extends Component {
                                             filtered.map((filtered) => {
                                             //console.log("GOT",filtered);
                                             const imageName = filtered.imgPath;
-                                            const url = `http://localhost:5000/upload/image/gallery/${imageName}`;
+                                            const url = `http://ieeemock2.azurewebsites.net/upload/image/gallery/${imageName}`;
                                             //console.log("THIS IS A FK'N URL",url);
                                             return (<img className="imgGal" height="300px" width="auto" src={url} alt="loading" id={filtered._id} key={filtered._id}/>);})}
                                     </div></div>
