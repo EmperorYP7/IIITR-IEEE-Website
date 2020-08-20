@@ -43,11 +43,11 @@ export const DEVELOPERS =
        {
         id: 4,
         name:'Ashish Chaurasia',
-        intro: 'It has survived not only five centuries, but also the leap ',
-        img:'',
-        mutedText : 'Someone famous in',
-        linkedin: 'https://',
-        github:'https://',
+        intro: 'Will update soon',
+        img:'assets/images/ashish.jpg',
+        mutedText : 'MERN stack web developer (Specialised in backend)',
+        linkedin: 'https://www.linkedin.com/in/ashish-chourasia-943a06191/',
+        github:'https://github.com/sleepysleep/',
         mail:'ashish.btech.cs19@iiitranhi.ac.in'
        },
        {
