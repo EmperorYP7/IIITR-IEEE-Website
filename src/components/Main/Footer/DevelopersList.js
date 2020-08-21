@@ -44,7 +44,7 @@ export const DEVELOPERS =
         id: 4,
         name:'Ashish Chaurasia',
         intro: 'Will update soon',
-        img:'assets/images/ashish.jpg',
+        img:'/assets/images/ashish.jpg',
         mutedText : 'MERN stack web developer (Specialised in backend)',
         linkedin: 'https://www.linkedin.com/in/ashish-chourasia-943a06191/',
         github:'https://github.com/sleepysleep/',
@@ -53,12 +53,12 @@ export const DEVELOPERS =
        {
         id: 5,
         name:'Shubham Kushwaha',
-        intro: '',
-        img:'',
+        intro: 'Graphic Designer',
+        img:'/assets/images/shubham.jpeg',
         mutedText : 'Someone famous in',
-        linkedin: 'https://',
-        github:'https://',
-        mail:'https://'
+        linkedin: 'https://www.linkedin.com/in/ericliclair/',
+        github:'https://github.com/EricLiclair',
+        mail:'eric.liclair@gmail.com'
        }
 
 
