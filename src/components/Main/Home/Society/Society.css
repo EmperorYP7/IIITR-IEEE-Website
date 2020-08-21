@@ -1,7 +1,13 @@
-.img{
-height: 250px;
-width: auto;
+.img-society{
+height: auto;
+width: 100%;
 text-align: center;
+}
+.img{
+  height:250px;
+  width:auto;
+  text-align: center;
+
 }
 .deck{
 margin: 30px 30px 70px 30px;
@@ -72,9 +78,20 @@ background-color:#1EBAD6;
 .card:hover .overlay {
   opacity: 1;
 }
-.society-card-footer{
-background-color: #008CBA;
+@media only screen and (max-width:500px){
+  .society-card-footer{
+    background-color: #008CBA;
+    height: 250px;
+    }
 }
+@media only screen and (min-width:500px){
+  .society-card-footer{
+    background-color: #008CBA;
+    height: 100%;
+   }
+}
+
+
 .text {
   color: white;
   font-size: 20px;

@@ -52,7 +52,7 @@ class Society extends React.Component {
 
         <Card key={card.id}>
 
-          <Card.Img variant="top" className="img" src={card.image} />
+          <Card.Img variant="top" className="img-society" src={card.image} />
           <div className="overlay">
             <div className="text"><Card.Body>
               <Card.Title>{card.name}</Card.Title>
