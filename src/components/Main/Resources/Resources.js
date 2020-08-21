@@ -17,7 +17,7 @@ class Resources extends Component {
 
   componentDidMount()
   {
-    axios.get('https://ieeemock2.azurewebsites.net/api/resourcedata/')
+    axios.get('/api/resourcedata/')
         .then(res => {
           this.setState({ resources: res.data });
           if(res.data>0){
@@ -28,7 +28,7 @@ class Resources extends Component {
           }
         })
         .catch(err => console.log("Error" + err));
-  axios.get('https://ieeemock2.azurewebsites.net/api/conferencedata/')
+  axios.get('/api/conferencedata/')
         .then(res => {
           this.setState({ conferences: res.data });
           if(res.data>0){
@@ -46,22 +46,22 @@ class Resources extends Component {
         return (
             <div className="container ">
                 <div className="row resources-container">
-                    <div className="col-12 resources-header text-center"><h2>RESOURCES</h2><hr></hr></div>
-
-  <div className="col-4 col-sm-3">
-    <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div className="col-12 resources-header text-center "><h2>RESOURCES</h2><hr></hr></div>
+  
+  <div className="col-12 col-sm-3">
+    <div className="nav flex-column nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <a className="nav-link active" id="v-pills-home-tab" data-toggle="pill" rel="noopener noreferrer" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><b>RESEARCH</b></a>
       <a className="nav-link" id="v-pills-profile-tab" data-toggle="pill" rel="noopener noreferrer" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><b>CONFERENCE</b></a>
       <a className="nav-link" id="v-pills-messages-tab" data-toggle="pill" rel="noopener noreferrer" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><b>LINKS</b></a>
       <a className="nav-link" id="v-pills-settings-tab" data-toggle="pill" rel="noopener noreferrer" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><b>MORE LINKS</b></a>
     </div>
-  </div>
-  <div className="col-8 col-sm-9">
-    <div className="tab-content" id="v-pills-tabContent">
+  </div><hr className="d-sm-none"></hr>
+  <div className="col-12 col-sm-9">
+    <div className="tab-content links mx-auto" id="v-pills-tabContent">
       <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
         <ul>
           {this.state.resources.map( resource =>
-          <li key={resource._id}>{resource.name}<br/><a rel="noopener noreferrer" href={`https://ieeemock2.azurewebsites.net/upload/pdf/resource/${resource.pdfPath}`} target="_blank">Research Paper</a><br/><br/></li>
+          <li key={resource._id}>{resource.name}<br/><a rel="noopener noreferrer" href={`http://ieeemock2.azurewebsites.net/upload/pdf/resource/${resource.pdfPath}`} target="_blank">Research Paper</a><br/><br/></li>
           )}
         </ul>
       </div>
