@@ -1,7 +1,7 @@
 .resources-header{
-padding-top: 100px;
+padding-top: 50px;
 color: #222831;
-margin-bottom: 100px;
+margin-bottom: 20px;
 }
 .resources-container{
 margin-bottom: 150px;
@@ -40,4 +40,13 @@ color: #222831;
 .nav-pills .nav-link.active{
   background-color: #4f8a8b;
   padding: 10px 10px;
+}
+@media(max-width:576px){
+  .links {
+    margin:0px;
+    padding: 10px;
+    overflow:auto;
+    width:100%;
+    text-align: center;
+  }
 }
