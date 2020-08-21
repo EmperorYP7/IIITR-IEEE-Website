@@ -1,7 +1,13 @@
-.img{
-height: 250px;
-width: auto;
+.img-society{
+height: auto;
+width: 100%;
 text-align: center;
+}
+.img{
+  height:250px;
+  width:auto;
+  text-align: center;
+
 }
 .deck{
 margin: 30px 30px 70px 30px;
@@ -74,6 +80,8 @@ background-color:#1EBAD6;
 }
 .society-card-footer{
 background-color: #008CBA;
+height: 100%;
+min-height: 300px;
 }
 .text {
   color: white;
