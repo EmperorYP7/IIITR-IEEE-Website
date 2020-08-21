@@ -11,6 +11,16 @@ padding-top: 10px;
 .img{
 margin: 0;
 }
+.imgsoc{
+  height:320px;
+  width:320px;
+  align-content: center;
+}
+.member-card-body{
+  padding-top: 10px;
+  max-width: 320px;
+  height: auto;
+}
 .member-header{
 padding-top: 80px;
 margin-bottom: 50px;
