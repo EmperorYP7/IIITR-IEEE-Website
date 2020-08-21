@@ -89,6 +89,9 @@ background-color:#1EBAD6;
     background-color: #008CBA;
     height: 100%;
    }
+   .card{
+     min-height: 420px;
+   }
 }
 
 
