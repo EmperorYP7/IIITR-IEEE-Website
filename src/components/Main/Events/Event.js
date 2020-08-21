@@ -30,7 +30,7 @@ class Event extends Component {
     componentDidMount() {
         const string = this.props.location.pathname;
         const slug = string.substring(8)
-        axios.get(`http://ieeemock2.azurewebsites.net/api/eventdata/${slug}`)
+        axios.get(`https://ieeemock2.azurewebsites.net/api/eventdata/${slug}`)
             .then(res => {
                 this.setState({
                     ...this.state,
@@ -74,7 +74,7 @@ class Event extends Component {
                     {this.state.event !== null ? (
                         <div className="row">
                             <div className="container">
-                                <img className="card-img-top" src={`http://ieeemock2.azurewebsites.net/upload/image/event/${this.state.event.imgPath}`} alt="img" id={this.state.event._id} />
+                                <img className="card-img-top" src={`https://ieeemock2.azurewebsites.net/upload/image/event/${this.state.event.imgPath}`} alt="img" id={this.state.event._id} />
                             </div>
                             <div className="col-12 event-title">
                                 {this.state.event.title}

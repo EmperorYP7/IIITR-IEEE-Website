@@ -17,7 +17,7 @@ class EventList extends Component {
 
     componentDidMount()
     {
-       axios.get(`http://ieeemock2.azurewebsites.net/api/eventdata/`)
+       axios.get(`https://ieeemock2.azurewebsites.net/api/eventdata/`)
             .then(res => {
                 this.setState({ events: res.data });
                 if(res.data>0){

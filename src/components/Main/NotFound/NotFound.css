@@ -1,0 +1,36 @@
+.error-msg{
+margin-top: 40px;
+font-size: 4rem;
+}
+.url-msg{
+font-size: 2rem;
+}
+.err-img{
+text-align: right;
+margin:10px auto 10px auto;
+}
+img{
+height:300px;
+}
+
+@media(max-width:600px){
+
+.error-context{
+  padding-left: 10px;
+
+}
+  .error-msg{
+  margin-top: 40px;
+  font-size: 2rem;
+  }
+  .url-msg{
+  font-size: 1rem;
+  }
+  .err-img{
+  text-align: center;
+  margin:10px auto 10px auto;
+  }
+  img{
+  height:200px;
+  }
+}
