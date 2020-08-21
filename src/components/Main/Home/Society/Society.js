@@ -25,10 +25,10 @@ class Society extends React.Component {
   rendersociety(card) {
     if (card != null) {
       return (
-        <div className="box mb-5">
+        <div className="box ">
           <div className="col-lg-12 col-md-12">
-            <h3>{card.name} </h3>
-            <p>
+            <h3 >{card.name} </h3>
+            <p >
 
               {card.fulldescription}
 
@@ -54,16 +54,16 @@ class Society extends React.Component {
 
           <Card.Img variant="top" className="img-society" src={card.image} />
           <div className="overlay">
-            <div className="text"><Card.Body>
+            <div className="society-card"><Card.Body>
               <Card.Title>{card.name}</Card.Title>
-              <Card.Text>
+              <Card.Text className="society-desc">
                 {card.shortdescription}{' '}
               </Card.Text>
             </Card.Body></div>
           </div>
 
           <Card.Footer className="society-card-footer">
-            <Card.Title>{card.name}</Card.Title>
+            <Card.Title className="society-name">{card.name}</Card.Title>
           </Card.Footer>
         </Card>
 
@@ -71,9 +71,9 @@ class Society extends React.Component {
     });
     return (
 
-      <div className="container-fluid bg-nmg mx-0 my-0" >
-        <h2 className="text-center">Societies under IEEESB</h2><hr></hr>
-        <CardColumns className="deck">
+      <div className="container-fluid" >
+        <h2 className="col-head">Societies under IEEESB</h2><hr></hr>
+        <CardColumns className="deck card-col">
 
           {show}
         </CardColumns>

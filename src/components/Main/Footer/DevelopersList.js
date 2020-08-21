@@ -13,8 +13,8 @@ export const DEVELOPERS =
        {
         id: 1,
         name:'Hari Om Yadav',
-        intro: ' essentially unchanged',
-        mutedText : 'Someone famous in',
+        intro: 'This pen is nerdy!',
+        mutedText : 'Developer, Open Source Contributor',
         img:'/assets/images/hariom.jpeg',
         linkedin: 'https://',
         github:'https://',
@@ -34,6 +34,7 @@ export const DEVELOPERS =
         id: 3,
         name:'Rishav Mazumdar',
         intro: 'Web Developer , Python Enthusiast.',
+        mutedText : 'MERN stack web developer',
         img:'/assets/images/rishabh.jpeg',
         linkedin: 'https://in.linkedin.com/in/rishav-mazumdar-38b869192/',
         github:'https://github.com/RishavMz',
@@ -53,12 +54,12 @@ export const DEVELOPERS =
        {
         id: 5,
         name:'Shubham Kushwaha',
-        intro: '',
-        img:'',
-        mutedText : 'Someone famous in',
-        linkedin: 'https://',
-        github:'https://',
-        mail:'https://'
+        intro: 'Graphic Designer',
+        img:'/assets/images/shubham.jpeg',
+        mutedText : 'Someone famous in her heart (xD)',
+        linkedin: 'https://www.linkedin.com/in/ericliclair/',
+       github:'https://github.com/EricLiclair',
+       mail:'eric.liclair@gmail.com'
        }
 
 

@@ -4,11 +4,14 @@
     padding: 20px 0px 20px 0px;
     color: #ddd;
 }
+.modal-title{
+font-size: 2rem;
+}
 @media (min-width:34em) {
     .deck > .card
     {   height: 55vh;
         flex-wrap: wrap;
-        flex: initial; 
+        flex: initial;
     }
 }
 .modal-content{
@@ -105,6 +108,9 @@ span {
   }
 .dev-desc{
 text-align: justify;
+}
+.dev-title{
+font-size: 1.5rem;
 }
 }
 .list-unstyled{

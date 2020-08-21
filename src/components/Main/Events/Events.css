@@ -5,7 +5,35 @@ margin: 0 auto 80px auto;
 padding: 40px;
 
 }
+.event-img{
+margin-top: 40px;
+width: 70%;
+height: auto;
+}
+.event-title{
+padding-top: 20px;
+padding-bottom: 30px;
+font-size: 3rem;
+font-family: 'Roboto Slab';
+}
+.event-desc{
+text-align: justify;
+font-size: 1.3rem;
+font-family: 'Montserrat';
+margin-bottom: 40px;
+color: #000;
+}
 
+.event-logo{
+margin: 10px 5px 10px 0;
+color: #000;
+}
+.google-cal{
+margin-top: 0;
+width:200px;
+height: auto;
+padding-left: 10px;
+}
 .loading-text{
 font-size: 1.5rem;
 text-align: left;
@@ -25,66 +53,29 @@ opacity: 0.8;
 height: 100%;
 }
 
-.card-title{
-  color: #1b262c;
-
-font-size: 2rem;
-margin-top: 10px;
-margin-left: 0;
-margin-bottom: 20px;
-font-weight: bold;
-font-family: 'Roboto Slab';
-
-}
-
-
-.card-text{
-  font-family: 'Montserrat';
-font-size: 1.1rem;
-
-}
-.card-date{
-margin-bottom: 10px;
-}
-.cards{
-  text-align: justify;
-
+@media(max-width:600px){
+  .event-img{
   margin-top: 40px;
+  width: 100%;
+  height: auto;
+  }
+  .event-title{
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 2rem;
+  font-family: 'Roboto Slab';
+  }
+  .event-desc{
+  text-align: justify;
+  font-size: 1.1rem;
+  font-family: 'Montserrat';
   margin-bottom: 40px;
-}
-.event-card{
-
-
-  background-color: #fff;
-/*
-border-style: groove;
-border-width: thick; */
-}
-.event-button{
-background-color: #0099cc;
-border-color: #0099cc;
-}
-.event-header{
-
-margin-top: 0px;
-margin-bottom: 50px;
-padding-top: 100px;
-color: #000;
-
-}
-.event-logo{
-margin: 10px 5px 10px 0;
-color: #000;
-}
-.header{
-padding-top: auto;
-font-size: 2.5rem;
-}
-.list{
-
-margin: auto;
-padding: 30px 20px 50px 20px;
-}
-ul{
-padding-left: 0;
+  color: #000;
+  }
+  .google-cal{
+  margin-top: 0;
+  width:160px;
+  height: auto;
+  padding-left: 10px;
+  }
 }

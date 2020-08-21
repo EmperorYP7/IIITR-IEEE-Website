@@ -1,27 +1,4 @@
-.img-society{
-height: auto;
-width: 100%;
-text-align: center;
-}
-.img{
-  height:250px;
-  width:auto;
-  text-align: center;
-
-}
-.deck{
-margin: 30px 30px 70px 30px;
-}
-.content{
-width: 100px;
-}
-
-#popover-basic{
-height: auto;
-width: auto;
-}
-
-.button{
+col-head.button{
 
 background-color: #1EBAD6;
 border-color: #1EBAD6;
@@ -34,17 +11,22 @@ background-color: #3B3A4A;
 .button:active{
 background-color:#1EBAD6;
 }
-
-
-
-
-
 .box {
   border-style: solid;
   border-width: 2px;
   border-color: black;
+margin-top: 0;
+margin-bottom: 0;
+padding-top: 0;
+padding-bottom: 0;
 
 }
+
+.content{
+width: 100px;
+}
+
+
 .close {
   cursor: pointer;
   position: absolute;
@@ -54,13 +36,38 @@ background-color:#1EBAD6;
   transform: translate(0%, -50%);
 }
 
-.close:hover {background: #bbb;}
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
+.close:hover {
+
+background: #bbb;
 }
 
+
+
+.card:hover .overlay {
+  opacity: 1;
+}
+.deck{
+margin: 30px 30px 70px 30px;
+}
+.img-society{
+height: auto;
+width: 100%;
+text-align: center;
+}
+hr{
+margin-top: 16px;
+margin-bottom: 50px;
+}
+.img-society{
+margin-top: 0;
+margin-bottom: 0;
+}
+.img{
+  height:250px;
+  width:auto;
+  text-align: center;
+
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -74,20 +81,41 @@ background-color:#1EBAD6;
   background-color: #008CBA;
   overflow: auto;
 }
-
-.card:hover .overlay {
-  opacity: 1;
+.col-head{
+text-align: center;
+font-weight: 700;
+font-size: 2.5rem;
 }
-@media only screen and (max-width:500px){
+.society-desc{
+font-weight: 700;
+
+}
+@media(max-width:600px){
+  .deck{
+  margin: 30px 0 70px 0;
+  }
   .society-card-footer{
     background-color: #008CBA;
-    height: 250px;
+    height: auto;
+    }
+    .society-desc{
+    font-weight: 700;
+    font-size:1.5rem;
+    }
+    .col-head{
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
     }
 }
+
 @media only screen and (min-width:500px){
   .society-card-footer{
+  padding-top: 0;
     background-color: #008CBA;
-    height: 100%;
+    height: auto;
+
+
    }
 }
 

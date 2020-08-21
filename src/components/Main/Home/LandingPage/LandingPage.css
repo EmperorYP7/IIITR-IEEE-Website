@@ -223,7 +223,7 @@ padding-right: 0;
 
 }
 
-@media(max-width:999px){
+/* @media(max-width:999px){
 
 .heading{
 font-size: 2rem;
@@ -231,4 +231,4 @@ text-align: justify;
 padding: 70 40 40 100;
 margin: auto auto;
 }
-}
+} */

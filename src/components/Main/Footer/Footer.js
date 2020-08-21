@@ -45,7 +45,7 @@ class Footer extends Component {
         <div className="modal-dialog modal-xl">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="col-12 modal-title text-center" id="exampleModalLabel">Developers</h5>
+              <h5 className="col-12 modal-title text-center  dev-title" id="exampleModalLabel">Developers</h5>
               <button type="button" className="close text-center" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">
                   <i className="fas fa-times fa-2x"></i>
@@ -110,7 +110,7 @@ class Footer extends Component {
           </div>
         </div>
         <div className="container-fluid">
-          <div className="row justify-content-center mt-5 mb-0 pt-3">
+          <div className="row justify-content-center  mb-0">
             <div className="col-2 col-sm-1 ">
               <button id="dev" className=" btn text-white " data-toggle="modal" data-target="#exampleModal">
                 <i className="fas fa-laptop-code fa-2x"></i>

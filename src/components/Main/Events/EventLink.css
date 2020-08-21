@@ -1,18 +1,26 @@
-.event-title{
-padding-top: 100px;
-padding-bottom: 30px;
-font-size: 2rem;
-font-family: 'Roboto Slab';
+.card-text{
+  font-family: 'Montserrat';
+font-size: 1.1rem;
 
 }
-.event-desc{
-text-align: justify;
-font-size: 1.3rem;
-font-family: 'Montserrat';
-margin-bottom: 40px;
-color: #000;
+.card-date{
+margin-bottom: 10px;
 }
-.event-date{
+.cards{
+  text-align: justify;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.card-title{
+  color: #1b262c;
+
+font-size: 2rem;
+margin-top: 10px;
+margin-left: 0;
+margin-bottom: 20px;
+font-weight: bold;
+font-family: 'Roboto Slab';
 
 }
 .calendar{
@@ -21,14 +29,48 @@ margin-right: 5px;
 .clock{
 margin-right: 5px;
 }
+.event-button{
+background-color: #0099cc;
+border-color: #0099cc;
+}
 
-.location{
-  font-family: 'Montserrat';
-font-size: 1.5rem;
+.event-card{
+  background-color: #fff;
+
+}
+.event-header{
+
+margin-top: 0px;
+margin-bottom: 50px;
+padding-top: 100px;
+color: #000;
+
+}
+.event-date{
 
 }
 .google-button{
 padding-left: 15px;
 padding-right: 15px;
 font-size: 2rem;
+}
+.header{
+padding-top: auto;
+font-size: 2.5rem;
+}
+
+
+.location{
+  font-family: 'Montserrat';
+font-size: 1.5rem;
+
+}
+
+.list{
+
+margin: auto;
+padding: 30px 20px 50px 20px;
+}
+ul{
+padding-left: 0;
 }
