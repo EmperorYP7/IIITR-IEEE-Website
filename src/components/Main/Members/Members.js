@@ -33,7 +33,7 @@ class Members extends Component {
         const imageName = member.imgPath;
         const url = `https://ieeemock2.azurewebsites.net/upload/image/member/${imageName}`;
         return(
-                <Card.Img variant="top" className="img-fluid img" src={url} alt="trial" />
+                <Card.Img variant="top" className="img-fluid imgsoc img" src={url} alt="trial" />
             )
         }
         //.catch(err => console.log("Error Fetching File : " + err));
@@ -50,7 +50,7 @@ class Members extends Component {
                             <a className=" btn text-white" rel="noopener noreferrer" href={member.emailid} target="_blank"><i className="fas fa-envelope fa-2x"></i></a>
                             <a className=" btn text-white" rel="noopener noreferrer" href={member.facebookLink} target="_blank"><i className="fab fa-instagram fa-2x"></i></a>
                         </div>
-                        <Card.Body className="card-body">
+                        <Card.Body className="member-card-body">
                             <Card.Title>{member.name}</Card.Title>
                             <Card.Subtitle className="text-muted">{member.designation}</Card.Subtitle>
                             <Card.Text>
