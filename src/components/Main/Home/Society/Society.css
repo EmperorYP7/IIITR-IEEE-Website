@@ -78,11 +78,20 @@ background-color:#1EBAD6;
 .card:hover .overlay {
   opacity: 1;
 }
-.society-card-footer{
-background-color: #008CBA;
-height: 100%;
-min-height: 300px;
+@media only screen and (max-width:500px){
+  .society-card-footer{
+    background-color: #008CBA;
+    height: 250px;
+    }
 }
+@media only screen and (min-width:500px){
+  .society-card-footer{
+    background-color: #008CBA;
+    height: 100%;
+   }
+}
+
+
 .text {
   color: white;
   font-size: 20px;
