@@ -32,6 +32,16 @@ margin: 30px 100px;
     visibility: hidden;
   }
 
+  .imgsoc{
+    height:320px;
+    width:320px;
+    align-content: center;
+  }
+  .member-card-body{
+    padding-top: 10px;
+    max-width: 320px;
+    height: auto;
+  }
 .card-img-top:hover + .hide {
     visibility: visible;
     transition: ease 0.5s;
