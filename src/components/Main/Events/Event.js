@@ -4,6 +4,7 @@ import axios from 'axios';
 import HashLoader from '../AwesomeComponent';
 import NotFound from '../NotFound/NotFound';
 import './EventLink.css';
+import gcalendar from './gc-logo.png'
 
 class Event extends Component {
 
@@ -74,7 +75,7 @@ class Event extends Component {
                     {this.state.event !== null ? (
                         <div className="row">
                             <div className="container">
-                                <img className="card-img-top" src={`https://ieeemock2.azurewebsites.net/upload/image/event/${this.state.event.imgPath}`} alt="img" id={this.state.event._id} />
+                                <img className="card-img-top img-fluid" src={`https://ieeemock2.azurewebsites.net/upload/image/event/${this.state.event.imgPath}`} alt="img" id={this.state.event._id} />
                             </div>
                             <div className="col-12 event-title">
                                 {this.state.event.title}
@@ -90,7 +91,7 @@ class Event extends Component {
                                 {this.state.event.location}
                             </div>
                             <div>
-                            <a target="_blank" rel="noopener noreferrer" href={`${this.state.event.gcalender}`}><img border="0" alt="Google Calender" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif" /></a>
+                            <a target="_blank" rel="noopener noreferrer" href={`${this.state.event.gcalender}`}><img border="0" className="img-fluid" alt="Google Calendar" src={`${gcalendar}`} /></a>
                             </div>
                             <div>
                                 {/*<iframe src={`${this.state.event.gmaps}`} title={`${this.state.event._id}`} width="auto" height="auto" frameBorder="0" style={`border:0;`} allowFullscreen={true} aria-hidden="false" tabIndex="0"></iframe>*/}
