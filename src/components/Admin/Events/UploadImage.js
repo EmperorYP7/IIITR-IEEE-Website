@@ -28,7 +28,7 @@ class UplaodImage extends React.Component {
         formData.append('event', this.state.file);
 
         try {
-            await axios.post('http://ieeemock2.azurewebsites.net/upload/image/event', formData, {
+            await axios.post('https://ieeemock2.azurewebsites.net/upload/image/event', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },

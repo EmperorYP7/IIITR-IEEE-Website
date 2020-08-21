@@ -16,7 +16,7 @@ class Members extends Component {
         this.state = { members: [] };
     }
     componentDidMount() {
-        axios.get(`http://ieeemock2.azurewebsites.net/api/memberdata`)
+        axios.get(`https://ieeemock2.azurewebsites.net/api/memberdata`)
             .then(res => {
                 this.setState({ members: res.data });
                 if (res.data > 0) {
@@ -31,9 +31,9 @@ class Members extends Component {
 
     fetchImage = (member) => {
         const imageName = member.imgPath;
-        const url = `http://ieeemock2.azurewebsites.net/upload/image/member/${imageName}`;
+        const url = `https://ieeemock2.azurewebsites.net/upload/image/member/${imageName}`;
         return(
-                <Card.Img variant="top" className="img" src={url} alt="trial" />
+                <Card.Img variant="top" className="img-fluid img" src={url} alt="trial" />
             )
         }
         //.catch(err => console.log("Error Fetching File : " + err));

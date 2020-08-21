@@ -15,7 +15,7 @@ class Conference extends React.Component {
     }
 
     UpdateState = () => {
-        axios.get(`http://ieeemock2.azurewebsites.net/api/conferencedata/`)
+        axios.get(`https://ieeemock2.azurewebsites.net/api/conferencedata/`)
         .then(res => {
             this.setState({
                 ...this.state,
@@ -31,7 +31,7 @@ class Conference extends React.Component {
     }
 
     onConferenceDelete = (conference) => {
-        axios.delete(`http://ieeemock2.azurewebsites.net/api/conferencedata/${conference._id}`)
+        axios.delete(`https://ieeemock2.azurewebsites.net/api/conferencedata/${conference._id}`)
             .then(res => {
                 alert("Conference Deleted!");
                 this.UpdateState();

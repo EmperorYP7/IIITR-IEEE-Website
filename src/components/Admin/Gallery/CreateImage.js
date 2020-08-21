@@ -31,7 +31,7 @@ class CreateImage extends React.Component {
             album: this.state.album,
             imgPath: this.state.imgPath
         }
-        axios.post(`http://ieeemock2.azurewebsites.net/api/gallerydata/`, image)
+        axios.post(`https://ieeemock2.azurewebsites.net/api/gallerydata/`, image)
             .then(res => {
                 this.setState({
                     album: '',

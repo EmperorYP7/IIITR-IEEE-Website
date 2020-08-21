@@ -27,7 +27,7 @@ class UploadProfilePic extends React.Component {
         formData.append('gallery', this.state.file);
 
         try {
-            await axios.post('http://ieeemock2.azurewebsites.net/upload/image/gallery', formData, {
+            await axios.post('https://ieeemock2.azurewebsites.net/upload/image/gallery', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },

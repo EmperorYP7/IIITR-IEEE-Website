@@ -15,7 +15,7 @@ class Gallery extends React.Component {
     }
 
     UpdateState = () => {
-        axios.get(`http://ieeemock2.azurewebsites.net/api/gallerydata/`)
+        axios.get(`https://ieeemock2.azurewebsites.net/api/gallerydata/`)
         .then(res => {
             this.setState({
                 ...this.state,
@@ -31,12 +31,12 @@ class Gallery extends React.Component {
     }
 
     onImageDelete = (image) => {
-        axios.delete(`http://ieeemock2.azurewebsites.net/api/gallerydata/${image._id}`)
+        axios.delete(`https://ieeemock2.azurewebsites.net/api/gallerydata/${image._id}`)
             .then(res => {
                 alert("Image Removed!");
                 this.UpdateState();
             })
-        axios.delete(`http://ieeemock2.azurewebsites.net/upload/image/gallery/${image.imgPath}`)
+        axios.delete(`https://ieeemock2.azurewebsites.net/upload/image/gallery/${image.imgPath}`)
         .then(  res => {
             console.log(res.data);
         })
@@ -56,7 +56,7 @@ class Gallery extends React.Component {
                                         <ListGroupItem>
                                             <div className="row list-item">
                                                 <div className="col-10">
-                                                    <img src={`http://ieeemock2.azurewebsites.net/upload/image/gallery/${image.imgPath}`} alt="img" id = {image._id} height="100rem" />
+                                                    <img src={`https://ieeemock2.azurewebsites.net/upload/image/gallery/${image.imgPath}`} alt="img" id = {image._id} height="100rem" />
                                                 </div>
                                                 <div className="col-2">
                                                     <Button className='remove-btn btn btn-danger' color='danger' size='sm'

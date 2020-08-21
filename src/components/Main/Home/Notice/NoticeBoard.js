@@ -15,7 +15,7 @@ class NoticeBoard extends React.Component {
 
     componentDidMount()
     {
-        axios.get('http://ieeemock2.azurewebsites.net/api/noticedata/')
+        axios.get('https://ieeemock2.azurewebsites.net/api/noticedata/')
             .then(res => {
                 this.setState({ notices: res.data });
             })
@@ -29,7 +29,7 @@ class NoticeBoard extends React.Component {
                 <div className="col-12 pad">
                     <ul className="text-white scroll-up">
                         {this.state.notices.map( notice =>
-                        <li key={notice._id}><a rel="noopener noreferrer" href={`http://ieeemock2.azurewebsites.net/upload/pdf/notice/${notice.pdfPath}`} target="_blank">{notice.name}<span className="text-danger">[New]</span></a></li>
+                        <li key={notice._id}><a rel="noopener noreferrer" href={`https://ieeemock2.azurewebsites.net/upload/pdf/notice/${notice.pdfPath}`} target="_blank">{notice.name}<span className="text-danger">[New]</span></a></li>
                         )}
                     </ul>
                 </div>

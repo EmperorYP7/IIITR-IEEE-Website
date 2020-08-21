@@ -93,7 +93,7 @@ class Footer extends Component {
               <address>
                 <ul className="list-unstyled">
                   <li className="institute-address">
-                    <a id="college-link" href="http://iiitranchi.ac.in/">Indian Institute of Information Technology, Ranchi</a>
+                    <a id="college-link" href="https://iiitranchi.ac.in/">Indian Institute of Information Technology, Ranchi</a>
                   </li>
                   <li className="institute-address">Sirkha Toli, Kali Nagar, Namkum,
                   </li>
