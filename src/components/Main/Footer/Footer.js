@@ -58,7 +58,7 @@ class Footer extends Component {
               </div>
             </div>
             <div className="modal-footer">
-              <p className="text-dark col-12 text-center">Web Team IIITRanchi © Copyright 2020</p>
+              <p className="text-dark col-12 text-center">WebDev Team IEEESB IIITRanchi© Copyright 2020</p>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ class Footer extends Component {
                   <li className="institute-address">Ranchi, Jharkhand 834010</li>
                   <li className="institute-address">Tel : 123-24578</li>
                   <li className="institute-address">Mail :
-                    <a className="footer-a" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info">iiitranchi@contact.info</a>
+                    <a className="footer-a white-link" rel="noopener noreferrer" href="mailto:iiitranchi@contact.info">iiitranchi@contact.info</a>
                   </li>
                 </ul>
 
@@ -119,9 +119,23 @@ class Footer extends Component {
             </div>
 
             <div className="col-6 col-sm-10 text-center">
+              <div className="row mb-0">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"> <a className="white-link"  href="https://www.ieee.org/">IEEE.org</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="white-link" href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Xplore Digital Library</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="white-link" href="https://standards.ieee.org/">IEEE Standards</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="white-link" href="https://www.ieee.org/membership/join/index.html">IEEE Membership</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="white-link" href="https://spectrum.ieee.org/">IEEE Spectrum</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"> <a className="white-link"  href="https://www.ieee.org/sitemap.html">More sites</a></div>
+              </div>
+             
+              
+              
+              
+              
+             
               <hr></hr>
 
-              <p className="text-white ">Web Team IIITRanchi © Copyright 2020
+              <p className="text-white ">WebDev Team IEEESB IIITRanchi © Copyright 2020
               </p>
 
             </div>

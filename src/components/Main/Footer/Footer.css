@@ -7,6 +7,9 @@
 .modal-title{
 font-size: 2rem;
 }
+.white-link {
+ color:white;
+}
 @media (min-width:34em) {
     .deck > .card
     {   height: 55vh;
