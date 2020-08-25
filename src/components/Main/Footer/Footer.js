@@ -120,12 +120,12 @@ class Footer extends Component {
 
             <div className="col-6 col-sm-10 text-center">
               <div className="row mb-0">
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"> <a className="white-link"  href="https://www.ieee.org/">IEEE.org</a></div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="white-link" href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Xplore Digital Library</a></div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="white-link" href="https://standards.ieee.org/">IEEE Standards</a></div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="white-link" href="https://www.ieee.org/membership/join/index.html">IEEE Membership</a></div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="white-link" href="https://spectrum.ieee.org/">IEEE Spectrum</a></div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"> <a className="white-link"  href="https://www.ieee.org/sitemap.html">More sites</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"> <a className="footer-a white-link"  href="https://www.ieee.org/">IEEE.org</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="footer-a white-link" href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Xplore Digital Library</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="footer-a white-link" href="https://standards.ieee.org/">IEEE Standards</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="footer-a white-link" href="https://www.ieee.org/membership/join/index.html">IEEE Membership</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"><a className="footer-a white-link" href="https://spectrum.ieee.org/">IEEE Spectrum</a></div>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-2 text-center  w-100"> <a className="footer-a white-link"  href="https://www.ieee.org/sitemap.html">More sites</a></div>
               </div>
              
               
