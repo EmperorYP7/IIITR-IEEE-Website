@@ -66,7 +66,7 @@ class Members extends Component {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-12 text-center member-header">
-                            <h2>Member</h2>
+                            <h2>Members</h2>
                             <hr></hr>
                         </div>
                         <div className="col-12">
