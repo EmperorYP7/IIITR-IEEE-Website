@@ -1615,10 +1615,10 @@
     "@babel/runtime" "^7.11.2"
     "@testing-library/dom" "^7.24.2"
 
-"@testing-library/user-event@^12.1.3":
-  version "12.1.3"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.1.3.tgz#0b19022f4e59596563f3f53293d67b3ab2c394f3"
-  integrity sha512-U6tpKWbBMvqt8tIF77crr9VyP1W+yxK+c48xH5rvYwmT4MER5jvWAFqNzkn542Bt3qeDCn0aqwb0Pv+3mDbLtw==
+"@testing-library/user-event@^12.1.7":
+  version "12.1.7"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.1.7.tgz#67a81ee04e81b4abca8931804655d364fbb93c10"
+  integrity sha512-wuJiPqSQTVIHsYuumv1PAOBjblSrYA5vyN1nkUDF5HgfuWGz44jQsO22u7PQNkuACGYJE4eU0sybX8CzsySv+Q==
   dependencies:
     "@babel/runtime" "^7.10.2"
 
@@ -2638,10 +2638,10 @@ bluebird@^3.5.5:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
 
-blueimp-md5@^2.17.0:
-  version "2.17.0"
-  resolved "https://registry.yarnpkg.com/blueimp-md5/-/blueimp-md5-2.17.0.tgz#f4fcac088b115f7b4045f19f5da59e9d01b1bb96"
-  integrity sha512-x5PKJHY5rHQYaADj6NwPUR2QRCUVSggPzrUKkeENpj871o9l9IefJbO2jkT5UvYykeOK9dx0VmkIo6dZ+vThYw==
+blueimp-md5@^2.18.0:
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/blueimp-md5/-/blueimp-md5-2.18.0.tgz#1152be1335f0c6b3911ed9e36db54f3e6ac52935"
+  integrity sha512-vE52okJvzsVWhcgUHOv+69OG3Mdg151xyn41aVQN/5W5S+S43qZhxECtYLAEHMSFWX6Mv5IZrzj3T5+JqXfj5Q==
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.4.0:
   version "4.11.9"
@@ -8919,10 +8919,10 @@ react-bootstrap@^1.3.0:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
-react-datepicker@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-3.1.3.tgz#4bde7aae405deab72a6c102b95a6a0749b7df759"
-  integrity sha512-4KbdWWAxa/AZJIDhQZwiBpZE9hCYZ4/gTVstdo9WEpFCsfh69xHklB/FZrR95mgkIU7ecU36V2eCuGgIO+ci0A==
+react-datepicker@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-3.2.2.tgz#cd5351ab1bba0b34412dd11db3169801f8f8b2ef"
+  integrity sha512-/3D6hfhXcCNCbO8LICuQeoNDItWFyitGo+aLcsi0tAyJLtCInamYRwPIXhsEF+N6/qWim1yNyr71mqjj4YEBmg==
   dependencies:
     classnames "^2.2.6"
     date-fns "^2.0.1"
