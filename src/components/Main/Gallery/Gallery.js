@@ -10,7 +10,7 @@ class Gallery extends Component {
         this.state = { images: [], albumsp: [] };
     }
     componentDidMount() {
-        axios.get(`https://ieeemock2.azurewebsites.net/api/gallerydata`)
+        axios.get(`/api/gallerydata`)
             .then(res => {
                 this.setState({ images: res.data });
                 const result = [];
@@ -57,7 +57,7 @@ class Gallery extends Component {
                                             filtered.map((filtered) => {
                                             //console.log("GOT",filtered);
                                             const imageName = filtered.imgPath;
-                                            const url = `https://ieeemock2.azurewebsites.net/upload/image/gallery/${imageName}`;
+                                            const url = `/upload/image/gallery/${imageName}`;
                                             //console.log("THIS IS A FK'N URL",url);
                                             return (<img className="imgGal" height="300px" width="auto" src={url} alt="loading" id={filtered._id} key={filtered._id}/>);})}
                                     </div></div>

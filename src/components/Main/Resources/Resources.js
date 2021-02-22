@@ -17,7 +17,7 @@ class Resources extends Component {
 
   componentDidMount()
   {
-    axios.get('https://ieeemock2.azurewebsites.net/api/resourcedata/')
+    axios.get('/api/resourcedata/')
         .then(res => {
           this.setState({ resources: res.data });
           if(res.data>0){
@@ -28,7 +28,7 @@ class Resources extends Component {
           }
         })
         .catch(err => console.log("Error" + err));
-  axios.get('https://ieeemock2.azurewebsites.net/api/conferencedata/')
+  axios.get('/api/conferencedata/')
         .then(res => {
           this.setState({ conferences: res.data });
           if(res.data>0){
@@ -61,7 +61,7 @@ class Resources extends Component {
       <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
         <ul>
           {this.state.resources.map( resource =>
-          <li key={resource._id}>{resource.name}<br/><a rel="noopener noreferrer" href={`https://ieeemock2.azurewebsites.net/upload/pdf/resource/${resource.pdfPath}`} target="_blank">Research Paper</a><br/><br/></li>
+          <li key={resource._id}>{resource.name}<br/><a rel="noopener noreferrer" href={`/upload/pdf/resource/${resource.pdfPath}`} target="_blank">Research Paper</a><br/><br/></li>
           )}
         </ul>
       </div>

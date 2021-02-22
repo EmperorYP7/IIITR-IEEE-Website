@@ -33,7 +33,7 @@ class CreateNotice extends React.Component {
             shortDescription: this.state.shortDescription,
             pdfPath: this.state.pdfPath
         }
-        axios.post(`http://ieeemock2.azurewebsites.net/api/noticedata/`, notice)
+        axios.post(`/api/noticedata/`, notice)
             .then(res => {
                 this.setState({
                     name: '',

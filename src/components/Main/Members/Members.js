@@ -16,7 +16,7 @@ class Members extends Component {
         this.state = { members: [] };
     }
     componentDidMount() {
-        axios.get(`https://ieeemock2.azurewebsites.net/api/memberdata`)
+        axios.get(`/api/memberdata`)
             .then(res => {
                 this.setState({ members: res.data });
                 if (res.data > 0) {
@@ -31,7 +31,7 @@ class Members extends Component {
 
     fetchImage = (member) => {
         const imageName = member.imgPath;
-        const url = `https://ieeemock2.azurewebsites.net/upload/image/member/${imageName}`;
+        const url = `/upload/image/member/${imageName}`;
         return(
           <Card.Img variant="top" className="img-fluid imgsoc img" src={url} alt="trial" />
             )
