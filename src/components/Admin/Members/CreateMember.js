@@ -20,6 +20,7 @@ class CreateMember extends React.Component {
             emailid: '',
             githubLink: '',
             imgPath: '',
+            imgName: '',
             imageUploaded: false
         }
     }
@@ -110,7 +111,7 @@ class CreateMember extends React.Component {
                 </form>
                     <div>
                         <label htmlFor="event" className="upload-event-poster">Upload Profile Picture</label>
-                        {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadProfilePic setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> }
+                    {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadProfilePic setImagePath={(path) => this.setState({ imgPath: path, imageUploaded: true })} setImageName={ (name) => this.setState({ imgName: name })}/> }
                     </div>
             </div>
         );

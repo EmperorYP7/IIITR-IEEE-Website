@@ -42,6 +42,10 @@ const eventSchema = new mongoose.Schema({
         type: String,
         trim:true
     },
+    imgName: {
+        type: String,
+        trim: true
+    },
     slug: {
         type: String,
         required: true,

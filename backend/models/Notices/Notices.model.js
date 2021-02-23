@@ -20,6 +20,11 @@ const noticeSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
+    },
+    pdfName: {
+        type: String,
+        required: true,
+        trim: true
     }
 });
   

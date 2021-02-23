@@ -1,73 +1,149 @@
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const multers3 = require('multer-s3');
+const S3 = require('aws-sdk/clients/s3');
+
+const s3 = new S3({
+  apiVersion: process.env.AWS_API_VERSION,
+  region: process.env.AWS_REGION,
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  },
+});
+
+// For checking the filetype for member image
+function checkFileType( file, filetypes, cb ) {
+  // Check ext
+  const extname = filetypes.test( path.extname( file.originalname ).toLowerCase());
+  // Check mime
+  const mimetype = filetypes.test(file.mimetype);
+  if (mimetype && extname) {
+    return cb( null, true );
+  } else {
+    cb( `Error: ${filetypes} Only!` );
+  }
+}
 
 //--------------------------------------------------------- Member Image -------------------------------------------------------------------------
 
-const storage1 = multer.diskStorage({
-    destination: (req, file, cb) => cb(null, './backend/uploads/images/members'),
-    filename: (req, file, cb) => cb(null , file.originalname),
-    fileFilter: (req, file, cb) => {
-      const ext = path.extname(file.originalname);
-      if(ext !== '.png' && ext !== '.jpg' && ext !== '.gif' && ext !== '.jpeg') {
-        return cb(new Error('only images are allowed'))
-      }
-      cb(null, true)
-    }
-});
 
-const upload1 = multer({ storage: storage1 })
-router.post('/member', upload1.single('member'), (req, res) => {
-    try {
-      res.send(req.file);
-    }catch(err) {
-      res.status(400).send(err);
+// Creating upload object for member image
+const MemberImgUpload = multer({
+  storage: multers3({
+    s3: s3,
+    bucket: process.env.AWS_BUCKET_NAME,
+    acl: 'public-read',
+    key: function (req, file, cb) {
+      cb(null, path.basename( file.originalname, path.extname( file.originalname ) ) + '-' + Date.now() + path.extname( file.originalname ) )
     }
-  });
+  }),
+  limits: { fileSize: 10000000 }, // In bytes: 10000000 bytes = 10 MB
+  fileFilter: function (req, file, cb) {
+    const filetypes = /jpeg|jpg|png|gif/;
+    checkFileType( file, filetypes, cb );
+  }
+}).single('member');
+
+
+// POST route for uploading image to member on S3
+router.post('/member', (req, res) => {
+  MemberImgUpload(req, res, (error) => {
+    console.log( 'requestOkokok', req.file );
+    console.log( 'error', error );
+    if( error ){
+     console.log( 'errors', error );
+     res.status(400).json( { error: error } );
+    } else {
+     if( req.file === undefined ){
+      console.log( 'Error: No File Selected!' );
+      res.json( 'Error: No File Selected' );
+     } else {
+        const imageName = req.file.key;
+        const imageLocation = req.file.location;
+        res.json({
+          imgName: imageName,
+          imgPath: imageLocation
+        });
+     }
+  }
+ });
+});
 
 router.get('/member/:file(*)', (req, res) => {
     const file = req.params.file;
-    const absPath = path.resolve(__dirname+'../../../uploads/images/members/'+`${file}`);   
     res.set({'Content-Type': 'image/png', 'Content-Type': 'image/jpg', 'Content-Type': 'image/jpeg'});
-    res.sendFile(absPath);
+    res.sendFile(file);
 })
 
 router.delete('/member/:file(*)', (req, res) => {
-    const file = req.params.file;
-    const absPath = path.resolve(__dirname+'../../../uploads/images/members/'+`${file}`);   
-
-    fs.unlink(absPath, function(err) {
-      if (err) {
-        res.send(`error while deleting file ${file} ` + err);
-      } else {
-        res.send(`Successfully deleted the file ${file} `);
-      }
-    })
+  const file = req.params.file;
+  const params = {
+    Bucket: process.env.AWS_BUCKET_NAME,
+    Delete: {
+      Object: file,
+      Quiet: false
+    }
+  };
+  s3.deleteObject(params, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.status(400).json({ error: err });
+    }
+    else {
+      console.log("Deleted successfully!");
+    }
+  });
+  res.json({
+    message: 'image deleted',
+  });
 })
 
 //--------------------------------------------------------- Event Image -------------------------------------------------------------------------
 
-const storage2 = multer.diskStorage({
-    destination: (req, file, cb) => cb(null, './backend/uploads/images/events'),
-    filename: (req, file, cb) => cb(null , file.originalname),
-    fileFilter: (req, file, cb) => {
-      const ext = path.extname(file.originalname);
-      if(ext !== '.png' && ext !== '.jpg' && ext !== '.gif' && ext !== '.jpeg') {
-        return cb(new Error('only images are allowed'))
-      }
-      cb(null, true)
+// Creating upload object for member image
+const EventImgUpload = multer({
+  storage: multers3({
+    s3: s3,
+    bucket: process.env.AWS_BUCKET_NAME,
+    acl: 'public-read',
+    key: function (req, file, cb) {
+      cb(null, path.basename( file.originalname, path.extname( file.originalname ) ) + '-' + Date.now() + path.extname( file.originalname ) )
     }
-});
+  }),
+  limits: { fileSize: 10000000 }, // In bytes: 10000000 bytes = 10 MB
+  fileFilter: function (req, file, cb) {
+    const filetypes = /jpeg|jpg|png|gif/;
+    checkFileType( file, filetypes, cb );
+  }
+}).single('event');
 
-const upload2 = multer({ storage: storage2 })
-router.post('/event', upload2.single('event'), (req, res) => {
-    try {
-      res.send(req.file);
-    }catch(err) {
-      res.status(400).send(err);
-    }
+// POST route for uploading image to event on S3
+router.post('/event', (req, res) => {
+  EventImgUpload(req, res, (error) => {
+    console.log( 'requestOkokok', req.file );
+    console.log( 'error', error );
+    if( error ){
+     console.log( 'errors', error );
+     res.status(400).json( { error: error } );
+    } else {
+     if( req.file === undefined ){
+      console.log( 'Error: No File Selected!' );
+      res.json( 'Error: No File Selected' );
+     } else {
+        const imageName = req.file.key;
+        const imageLocation = req.file.location;
+        res.json({
+          imgName: imageName,
+          imgPath: imageLocation
+        });
+     }
+  }
+ });
 });
 
 router.get('/event/:file', (req, res) => {

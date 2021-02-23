@@ -31,7 +31,7 @@ class Members extends Component {
 
     fetchImage = (member) => {
         const imageName = member.imgPath;
-        const url = `/upload/image/member/${imageName}`;
+        const url = `${imageName}`;
         return(
           <Card.Img variant="top" className="img-fluid imgsoc img" src={url} alt="trial" />
             )

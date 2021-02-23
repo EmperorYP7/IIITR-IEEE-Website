@@ -41,6 +41,7 @@ const imageRouter = require('./routes/data/ImageRouter');
 app.use('/upload/image', imageRouter);
 
 const pdfRouter = require('./routes/data/PdfRouter');
+const bodyParser = require('body-parser');
 app.use('/upload/pdf', pdfRouter);
 
 //--------------------------------------------------

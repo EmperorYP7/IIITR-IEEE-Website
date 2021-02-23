@@ -37,7 +37,7 @@ class Members extends React.Component {
                 alert("Member Removed!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/image/member/${member.imgPath}`)
+        axios.delete(`/upload/image/member/${member.imgName}`)
             .then(  res => {
                 console.log(res.data);
             })
