@@ -21,6 +21,7 @@ router.post('/', async (req, res) =>{
     newResource.order = req.body.order;
     newResource.shortDescription = req.body.shortDescription;
     newResource.pdfPath = req.body.pdfPath;
+    newResource.pdfName = req.body.pdfName;
 
     newResource.save()
         .then(() => res.json('Resource added!'))

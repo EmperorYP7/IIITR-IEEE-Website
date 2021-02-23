@@ -36,7 +36,7 @@ class Gallery extends React.Component {
                 alert("Image Removed!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/image/gallery/${image.imgPath}`)
+        axios.delete(`/upload/image/gallery/${image.imgName}`)
         .then(  res => {
             console.log(res.data);
         })
@@ -56,7 +56,7 @@ class Gallery extends React.Component {
                                         <ListGroupItem>
                                             <div className="row list-item">
                                                 <div className="col-10">
-                                                    <img src={`/upload/image/gallery/${image.imgPath}`} alt="img" id = {image._id} height="100rem" />
+                                                    <img src={`${image.imgPath}`} alt="img" id = {image._id} height="100rem" />
                                                 </div>
                                                 <div className="col-2">
                                                     <Button className='remove-btn btn btn-danger' color='danger' size='sm'

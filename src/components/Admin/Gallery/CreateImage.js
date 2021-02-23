@@ -13,6 +13,7 @@ class CreateImage extends React.Component {
         this.state = {
             album: '',
             imgPath: '',
+            imgName: '',
             imageUploaded: false
         }
     }
@@ -29,13 +30,15 @@ class CreateImage extends React.Component {
         }
         const image = {
             album: this.state.album,
-            imgPath: this.state.imgPath
+            imgPath: this.state.imgPath,
+            imgName: this.state.imgName
         }
         axios.post(`/api/gallerydata/`, image)
             .then(res => {
                 this.setState({
                     album: '',
                     imgPath: '',
+                    imgName: '',
                     imageUploaded: false
                 });
                 this.props.UpdateState();
@@ -65,7 +68,7 @@ class CreateImage extends React.Component {
                 </form>
                     <div>
                         <label htmlFor="event" className="upload-event-poster">Upload Image</label>
-                        {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadPic setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> }
+                    {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadPic setImagePath={path => this.setState({ imgPath: path, imageUploaded: true })} setImageName={ (name) => this.setState({ imgName: name })} /> }
                     </div>
             </div>
         );

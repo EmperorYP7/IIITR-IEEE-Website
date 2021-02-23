@@ -56,8 +56,8 @@ class Gallery extends Component {
                                             <div id = "scroller">{
                                             filtered.map((filtered) => {
                                             //console.log("GOT",filtered);
-                                            const imageName = filtered.imgPath;
-                                            const url = `/upload/image/gallery/${imageName}`;
+                                            const imagePath = filtered.imgPath;
+                                            const url = `${imagePath}`;
                                             //console.log("THIS IS A FK'N URL",url);
                                             return (<img className="imgGal" height="300px" width="auto" src={url} alt="loading" id={filtered._id} key={filtered._id}/>);})}
                                     </div></div>

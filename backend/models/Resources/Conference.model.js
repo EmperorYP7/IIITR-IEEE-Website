@@ -10,7 +10,6 @@ const conferenceSchema = new mongoose.Schema({
         type: String,
         trim: true
     }
-    
 });
   
 module.exports = new mongoose.model('Conference', conferenceSchema);

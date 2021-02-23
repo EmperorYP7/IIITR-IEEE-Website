@@ -19,6 +19,7 @@ router.post('/', async (req, res) =>{
     const newGallery = new Gallery();
     newGallery.album = req.body.album;
     newGallery.imgPath = req.body.imgPath;
+    newGallery.imgName = req.body.imgName;
     newGallery.save()
         .then(() => res.json('Image added!'))
         .catch(err => res.status(400).json('Error: '+ err));

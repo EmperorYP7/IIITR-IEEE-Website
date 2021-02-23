@@ -3,10 +3,10 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const fs = require('fs');
 const multers3 = require('multer-s3');
 const S3 = require('aws-sdk/clients/s3');
 
+// Setting up S3 bucket
 const s3 = new S3({
   apiVersion: process.env.AWS_API_VERSION,
   region: process.env.AWS_REGION,
@@ -84,10 +84,7 @@ router.delete('/member/:file(*)', (req, res) => {
   const file = req.params.file;
   const params = {
     Bucket: process.env.AWS_BUCKET_NAME,
-    Delete: {
-      Object: file,
-      Quiet: false
-    }
+    Key: file
   };
   s3.deleteObject(params, (err, data) => {
     if (err) {
@@ -101,7 +98,7 @@ router.delete('/member/:file(*)', (req, res) => {
   res.json({
     message: 'image deleted',
   });
-})
+});
 
 //--------------------------------------------------------- Event Image -------------------------------------------------------------------------
 
@@ -148,82 +145,97 @@ router.post('/event', (req, res) => {
 
 router.get('/event/:file', (req, res) => {
   const file = req.params.file;
-  const absPath = path.resolve(__dirname+'../../../uploads/images/events/'+`${file}`);
   res.set({'Content-Type': 'image/jpg'});
-  res.sendFile(absPath);
+  res.sendFile(file);
 });
 
 router.delete('/event/:file(*)', (req, res) => {
   const file = req.params.file;
-  const absPath = path.resolve(__dirname+'../../../uploads/images/events/'+`${file}`);   
-
-  fs.unlink(absPath, function(err) {
+  const params = {
+    Bucket: process.env.AWS_BUCKET_NAME,
+    Key: file
+  };
+  s3.deleteObject(params, (err, data) => {
     if (err) {
-      res.send(`error while deleting file ${file} ` + err);
-    } else {
-      res.send(`Successfully deleted the file ${file} `);
+      console.log(err);
+      res.status(400).json({ error: err });
     }
-  })
-})
-
-//--------------------------------------------------------- Carousal Images -------------------------------------------------------------------------
-
-const storage5 = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, './backend/uploads/images/home/carousal'),
-  filename: (req, file, cb) => cb(null, file.originalname)
-});
-
-const upload5 = multer({ storage: storage5 })
-router.post('/home/carousal', upload5.single('carousal'), (req, res) => {
-  try {
-    res.send(req.file);
-  }catch(err) {
-    res.send(400);
-  }
-});
-
-router.get('/home/carousal/:file(*)', (req, res) => {
-  const file = req.params.file;
-  const absPath = path.resolve(__dirname+'../../../uploads/images/home/carousal/'+`${file}`);
-  res.set({'Content-Type': ['image/png', 'image/jpg', 'image/jpeg']});
-  res.sendFile(absPath);
+    else {
+      console.log("Deleted successfully!");
+    }
+  });
+  res.json({
+    message: 'image deleted',
+  });
 });
 
 //------------------------------------------------------------ Gallery -------------------------------------------------------------------------
 
-const storage6 = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, './backend/uploads/images/gallery'),
-  filename: (req, file, cb) => cb(null, file.originalname)
-});
-
-const upload6 = multer({ storage: storage6 })
-router.post('/gallery', upload6.array('gallery'), (req, res) => {
-  try {
-    res.send(req.file);
-  }catch(err) {
-    res.send(400);
+const GalleryImgUpload = multer({
+  storage: multers3({
+    s3: s3,
+    bucket: process.env.AWS_BUCKET_NAME,
+    acl: 'public-read',
+    key: function (req, file, cb) {
+      cb(null, path.basename( file.originalname, path.extname( file.originalname ) ) + '-' + Date.now() + path.extname( file.originalname ) )
+    }
+  }),
+  limits: { fileSize: 10000000 }, // In bytes: 10000000 bytes = 10 MB
+  fileFilter: function (req, file, cb) {
+    const filetypes = /jpeg|jpg|png|gif/;
+    checkFileType( file, filetypes, cb );
   }
+}).single('gallery');
+
+
+
+router.post('/gallery', (req, res) => {
+  GalleryImgUpload(req, res, (error) => {
+    console.log( 'requestOkokok', req.file );
+    console.log( 'error', error );
+    if( error ){
+     console.log( 'errors', error );
+     res.status(400).json( { error: error } );
+    } else {
+     if( req.file === undefined ){
+      console.log( 'Error: No File Selected!' );
+      res.json( 'Error: No File Selected' );
+     } else {
+        const imageName = req.file.key;
+        const imageLocation = req.file.location;
+        res.json({
+          imgName: imageName,
+          imgPath: imageLocation
+        });
+     }
+  }
+ });
 });
 
 router.get('/gallery/:file(*)', (req, res) => {
-  const file = req.params.file;
-  const absPath = path.resolve(__dirname+'../../../uploads/images/gallery/'+`${file}`);
   res.set({'Content-Type': 'image/png', 'Content-Type': 'image/jpg', 'Content-Type': 'image/jpeg'});
-  res.sendFile(absPath);
+  res.json({ path: req.params.file });
 });
 
 router.delete('/gallery/:file(*)', (req, res) => {
   const file = req.params.file;
-  const absPath = path.resolve(__dirname+'../../../uploads/images/gallery/'+`${file}`);   
-
-  fs.unlink(absPath, function(err) {
+  const params = {
+    Bucket: process.env.AWS_BUCKET_NAME,
+    Key: file
+  };
+  s3.deleteObject(params, (err, data) => {
     if (err) {
-      res.send(`error while deleting file ${file} ` + err);
-    } else {
-      res.send(`Successfully deleted the file ${file} `);
+      console.log(err);
+      res.status(400).json({ error: err });
     }
-  })
-})
+    else {
+      console.log("Deleted successfully!");
+    }
+  });
+  res.json({
+    message: 'image deleted',
+  });
+});
 
 //------------------------------------------------------------------------------------------------------------------------------------
 

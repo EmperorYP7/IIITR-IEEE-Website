@@ -44,9 +44,10 @@ class CreateMember extends React.Component {
             facebookLink: this.state.facebookLink,
             emailid: this.state.emailid,
             githubLink: this.state.githubLink,
-            imgPath: this.state.imgPath
+            imgPath: this.state.imgPath,
+            imgName: this.state.imgName
         }
-        axios.post(`/api/memberdata/`, member)
+        axios.post(`http://localhost:5000/api/memberdata/`, member)
             .then(res => {
                 this.setState({
                     name: '',

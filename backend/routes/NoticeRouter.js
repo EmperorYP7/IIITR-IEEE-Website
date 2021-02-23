@@ -20,6 +20,7 @@ router.post('/', async (req, res) =>{
     newNotice.name = req.body.name;
     newNotice.shortDescription = req.body.shortDescription;
     newNotice.pdfPath = req.body.pdfPath;
+    newNotice.pdfName = req.body.pdfName;
 
     newNotice.save()
         .then(() => res.json('Notice added!'))

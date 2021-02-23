@@ -27,6 +27,7 @@ router.post('/', async (req, res) =>{
     newMember.emailid = req.body.emailid;
     newMember.facebookLink = req.body.facebookLink;
     newMember.imgPath = req.body.imgPath;
+    newMember.imgName = req.body.imgName;
 
     newMember.save()
         .then(() => res.json('Member added!'))

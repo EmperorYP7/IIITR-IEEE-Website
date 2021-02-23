@@ -40,6 +40,7 @@ router.post('/', async (req, res) =>{
     newEvent.gcalender = req.body.gcalender;
     newEvent.gmaps = req.body.gmaps;
     newEvent.imgPath = req.body.imgPath;
+    newEvent.imgName = req.body.imgName;
 
     newEvent.save()
         .then(() => res.json('Event added!'))
@@ -56,6 +57,7 @@ function eventCreate()
         event.eventDate = Date.parse(req.body.eventDate);
         event.location = req.body.location;
         event.imgPath = req.body.imgPath;
+        event.imgName = req.body.imgName;
         await event.save()
             .then(() =>  res.json(event))
             .catch(err => {
