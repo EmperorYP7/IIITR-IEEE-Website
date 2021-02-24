@@ -38,7 +38,7 @@ const ResourcePdfUpload = multer({
     bucket: process.env.AWS_BUCKET_NAME,
     acl: 'public-read',
     key: function (req, file, cb) {
-      cb(null, path.basename( file.originalname, path.extname( file.originalname ) ) + '-' + Date.now() + path.extname( file.originalname ) )
+      cb(null, path.basename( 'upload/image/resource' + file.originalname, path.extname( file.originalname ) ) + '-' + Date.now() + path.extname( file.originalname ) )
     }
   }),
   limits: { fileSize: 100000000 }, // In bytes: 100000000 bytes = 100 MB

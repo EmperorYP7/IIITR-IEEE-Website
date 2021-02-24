@@ -75,7 +75,7 @@ class Event extends Component {
                     {this.state.event !== null ? (
                         <div className="row">
                             <div className="container">
-                                <img className="card-img-top event-img" src={`/upload/image/event/${this.state.event.imgPath}`} alt="img" id={this.state.event._id} />
+                                <img className="card-img-top event-img" src={`${this.state.event.imgPath}`} alt="img" id={this.state.event._id} />
                             </div>
                             <div className="col-12 event-title">
                                 {this.state.event.title}

@@ -1,17 +1,18 @@
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const app = express();
-const cors = require('cors');
 const mongoose = require('mongoose');
 const port = 5000 || process.env.PORT;
+
+app.use(express.json());
+app.use(cors());
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 const db = mongoose.connection;
 db.on('error', (error) => console.log(error));
 db.once('open', () => console.log('Connected to MongoDB!'));
 
-app.use(express.json());
-app.use(cors());
 
 //-------------API Routes--------------
 
@@ -41,7 +42,6 @@ const imageRouter = require('./routes/data/ImageRouter');
 app.use('/upload/image', imageRouter);
 
 const pdfRouter = require('./routes/data/PdfRouter');
-const bodyParser = require('body-parser');
 app.use('/upload/pdf', pdfRouter);
 
 //--------------------------------------------------

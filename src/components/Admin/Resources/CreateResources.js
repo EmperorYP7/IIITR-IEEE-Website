@@ -14,6 +14,7 @@ class CreateResource extends React.Component {
             name: '',
             shortDescription: '',
             pdfPath: '',
+            pdfName: '',
             pdfUploaded: false
         }
     }
@@ -38,6 +39,7 @@ class CreateResource extends React.Component {
                 this.setState({
                     name: '',
                     pdfPath: '',
+                    pdfName: '',
                     shortDescription: '',
                     pdfUploaded: false
                 });
@@ -72,7 +74,7 @@ class CreateResource extends React.Component {
                 </form>
                 <div>
                     <label htmlFor="resource" className="upload-event-poster">Upload PDF</label>
-                    {this.state.pdfUploaded ? <p>PDF uploaded</p> : <UploadPDF setPdfPath={ path => this.setState({pdfPath: path, pdfUploaded: true}) }/> }
+                    {this.state.pdfUploaded ? <p>PDF uploaded</p> : <UploadPDF setPdfPath={path => this.setState({ pdfPath: path, pdfUploaded: true })} setPdfName={ (name) => this.setState({ pdfName: name }) }/> }
                 </div>
             </div>
         );

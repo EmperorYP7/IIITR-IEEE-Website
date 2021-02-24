@@ -14,6 +14,7 @@ class CreateNotice extends React.Component {
             name: '',
             shortDescription: '',
             pdfPath: '',
+            pdfName: '',
             pdfUploaded: false
         }
     }
@@ -31,13 +32,15 @@ class CreateNotice extends React.Component {
         const notice = {
             name: this.state.name,
             shortDescription: this.state.shortDescription,
-            pdfPath: this.state.pdfPath
+            pdfPath: this.state.pdfPath,
+            pdfName: this.state.pdfName
         }
         axios.post(`/api/noticedata/`, notice)
             .then(res => {
                 this.setState({
                     name: '',
                     pdfPath: '',
+                    pdfName: '',
                     shortDescription: '',
                     pdfUploaded: false
                 });
@@ -72,7 +75,7 @@ class CreateNotice extends React.Component {
                 </form>
                 <div>
                     <label htmlFor="notice" className="upload-event-poster">Upload PDF</label>
-                    {this.state.pdfUploaded ? <p>PDF uploaded</p> : <UploadPDF setPdfPath={ path => this.setState({pdfPath: path, pdfUploaded: true}) }/> }
+                    {this.state.pdfUploaded ? <p>PDF uploaded</p> : <UploadPDF setPdfPath={path => this.setState({ pdfPath: path, pdfUploaded: true })} setPdfName={ (name) => this.setState({ pdfName: name }) }/> }
                 </div>
             </div>
         );
