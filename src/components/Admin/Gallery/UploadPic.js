@@ -2,7 +2,7 @@ import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
-export default function UploadProfilePic(props) {
+export default function UploadPic(props) {
 
     const [state, setState] = useState({
         file: '',

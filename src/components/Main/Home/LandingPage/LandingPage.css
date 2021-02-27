@@ -12,23 +12,16 @@ text-align: center;
 text-align: justify;
 }
 .heading {
-  color: #000;
+  color: #293f4f;
   font-weight:700;
   font-size:4.3rem;
   /* margin: auto; */
-  font-family: 'Recursive', sans-serif;
-padding: 70px 40px 40px 40px;
-
+  font-family: 'montserrat', sans-serif;
+  text-shadow: 1px 1px 4px #00000086;
+  padding: 70px 40px 40px 40px;
   text-align:right ;
-
 }
 
-/* .head-quote {
-  font-size: 70px;
-  color: #1ebad6;
-  font-family: 'Roboto Slab';
-  font-weight: 600;
-} */
 
 .toggle-down {
   color: #1ebad6;
@@ -36,19 +29,11 @@ padding: 70px 40px 40px 40px;
   font-family: 'Roboto';
 }
 .leaves {
-  /* The image used */
-  /* background-image: url("./leaves.jpeg"); */
-  /* background-image: url("./background.jpg"); */
   background-image: url("./background.jpg");
-  /* Add the blur effect */
-   /* filter: blur(8px);
-  -webkit-filter: blur(8px); */
-
-  /* Full height */
   height: 650px;
 
   /* Center and scale the image nicely */
-     background-attachment: fixed;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -66,14 +51,30 @@ padding: 70px 40px 40px 40px;
 .circle-container:hover .circle {
 	transform: rotate3d(45, 45, 0, 180deg);
 	transition: linear 0.5s;
+	-webkit-transform: rotate3d(45, 45, 0, 180deg);
+	-moz-transform: rotate3d(45, 45, 0, 180deg);
+	-ms-transform: rotate3d(45, 45, 0, 180deg);
+	-o-transform: rotate3d(45, 45, 0, 180deg);
+	-webkit-transition: linear 0.5s;
+	-moz-transition: linear 0.5s;
+	-ms-transition: linear 0.5s;
+	-o-transition: linear 0.5s;
 }
 
 .circle-container:hover .outer-ring {
 	transform: rotate3d(45, 0, 0, 180deg);
+	-webkit-transform: rotate3d(45, 0, 0, 180deg);
+	-moz-transform: rotate3d(45, 0, 0, 180deg);
+	-ms-transform: rotate3d(45, 0, 0, 180deg);
+	-o-transform: rotate3d(45, 0, 0, 180deg);
 }
 
 .circle-container:hover .outer-outer-ring {
 	transform: rotate3d(0, 45, 0, 180deg);
+	-webkit-transform: rotate3d(0, 45, 0, 180deg);
+	-moz-transform: rotate3d(0, 45, 0, 180deg);
+	-ms-transform: rotate3d(0, 45, 0, 180deg);
+	-o-transform: rotate3d(0, 45, 0, 180deg);
 }
 
 .circle-container, .front, .back {
@@ -86,11 +87,15 @@ padding: 70px 40px 40px 40px;
 	transition: 0.5s;
 	transform-style: preserve-3d;
 	transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
 }
 
 .circle {
-  text-align: center;
-margin-left: auto ;
+  	text-align: center;
+	margin-left: auto ;
 	position: relative;
 	width: 400px;
 	height: 400px;
@@ -99,6 +104,7 @@ margin-left: auto ;
 .front, .back {
 	border-radius: 50%;
 	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	position: absolute;
 	top: 0px;
@@ -120,9 +126,13 @@ margin: auto auto;
 
 .back {
 	transform: rotate3d(45,45,0,180deg);
-  background-color: #fff;
-  display: block;
+	background-color: #fff;
+	display: block;
 	margin: auto auto;
+	-webkit-transform: rotate3d(45,45,0,180deg);
+	-moz-transform: rotate3d(45,45,0,180deg);
+	-ms-transform: rotate3d(45,45,0,180deg);
+	-o-transform: rotate3d(45,45,0,180deg);
 }
 
 .back-logo {
@@ -184,7 +194,7 @@ margin: auto auto;
 
  } */
 
-@media(max-width:576px) {
+@media(max-width:992px ) {
 
 .leaves{
 padding-left: 0;

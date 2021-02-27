@@ -28,7 +28,7 @@ class Resources extends Component {
           }
         })
         .catch(err => console.log("Error" + err));
-  axios.get('/api/conferencedata/')
+  axios.get('https://ieeemock2.azurewebsites.net/api/conferencedata/')
         .then(res => {
           this.setState({ conferences: res.data });
           if(res.data>0){
@@ -50,8 +50,8 @@ class Resources extends Component {
 
 <div className="col-12 col-sm-3">
   <div className="nav flex-column nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a className="nav-link active" id="v-pills-home-tab" data-toggle="pill" rel="noopener noreferrer" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><b>RESEARCH</b></a>
-      <a className="nav-link" id="v-pills-profile-tab" data-toggle="pill" rel="noopener noreferrer" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><b>CONFERENCE</b></a>
+      <a className="nav-link active" id="v-pills-home-tab" data-toggle="pill" rel="noopener noreferrer" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><b>CONFERENCE</b></a>
+      <a className="nav-link" id="v-pills-profile-tab" data-toggle="pill" rel="noopener noreferrer" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><b>RESEARCH</b></a>
       <a className="nav-link" id="v-pills-messages-tab" data-toggle="pill" rel="noopener noreferrer" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><b>LINKS</b></a>
       <a className="nav-link" id="v-pills-settings-tab" data-toggle="pill" rel="noopener noreferrer" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><b>MORE LINKS</b></a>
     </div>
@@ -61,7 +61,7 @@ class Resources extends Component {
       <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
         <ul>
           {this.state.resources.map( resource =>
-          <li key={resource._id}>{resource.name}<br/><a rel="noopener noreferrer" href={`/upload/pdf/resource/${resource.pdfPath}`} target="_blank">Research Paper</a><br/><br/></li>
+          <li key={resource._id}>{resource.name}<br/><a rel="noopener noreferrer" href={`/upload/pdf/resource/${resource.pdfPath}`} target="_blank">Conference Papers</a><br/><br/></li>
           )}
         </ul>
       </div>

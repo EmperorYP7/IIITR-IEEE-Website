@@ -1,6 +1,6 @@
 
 .fill {
-  background: url("./images/leaves.jpeg");
+  background: linear-gradient(30deg, #9f9fa8, #008cba);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

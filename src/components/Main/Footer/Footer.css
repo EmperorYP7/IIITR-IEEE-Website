@@ -10,13 +10,13 @@ font-size: 2rem;
 .white-link {
  color:white;
 }
-@media (min-width:34em) {
+/* @media (min-width:34em) {
     .deck > .card
-    {   height: 55vh;
+    {   height: auto;
         flex-wrap: wrap;
         flex: initial;
     }
-}
+} */
 .modal-content{
 width: 80%;
 margin-left: auto;

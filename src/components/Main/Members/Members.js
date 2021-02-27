@@ -4,6 +4,7 @@ import './Members.css';
 import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
+import Director from './director.jpg';
 import HashLoader from '../AwesomeComponent';
 // import { Link } from 'react-router-dom';
 // import Pandey from './images/pandey.jpeg';
@@ -47,7 +48,7 @@ class Members extends Component {
                         <div className="img-overlay col-12 hide">
                             <a className=" btn text-white" rel="noopener noreferrer" href={member.linkedinLink} target="_blank"><i className="fab fa-linkedin fa-2x"></i></a>
                             <a className=" btn text-white" rel="noopener noreferrer" href={member.githubLink} target="_blank"><i className="fab fa-github-square fa-2x"></i></a>
-                            <a className=" btn text-white" rel="noopener noreferrer" href={member.emailid} target="_blank"><i className="fas fa-envelope fa-2x"></i></a>
+                            <a className=" btn text-white" rel="noopener noreferrer" href={`mailto:${member.emailid}`} target="_blank"><i className="fas fa-envelope fa-2x"></i></a>
                             <a className=" btn text-white" rel="noopener noreferrer" href={member.facebookLink} target="_blank"><i className="fab fa-instagram fa-2x"></i></a>
                         </div>
                         <Card.Body className="membercard-body">
@@ -71,6 +72,29 @@ class Members extends Component {
                         </div>
                         <div className="col-12">
                             <CardColumns className="card-group row justify-content-center">
+                            <div>
+                    <Card>
+                    <Card.Img variant="top" className="img-fluid imgsoc img" src={Director} alt="dir-sir" />
+                        <div className="img-overlay col-12 hide">
+                            <a className=" btn text-white" rel="noopener noreferrer" href="https://www.linkedin.com/in/vishnu-priye-0347bb65" target="_blank"><i className="fab fa-linkedin fa-2x"></i></a>
+                            <a className=" btn text-white" rel="noopener noreferrer" href="/members" target="_blank"><i className="fab fa-github-square fa-2x"></i></a>
+                            <a className=" btn text-white" rel="noopener noreferrer" href="mailto:vishnupriye@iitism.ac.in" target="_blank"><i className="fas fa-envelope fa-2x"></i></a>
+                            <a className=" btn text-white" rel="noopener noreferrer" href="/members" target="_blank"><i className="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                        <Card.Body className="membercard-body">
+                            <Card.Title>Prof. Vishnu Priye </Card.Title>
+                            <Card.Subtitle className="text-muted">Faculty Advisor</Card.Subtitle>
+                            <Card.Text>
+                            Director, IIIT Ranchi
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+                            </CardColumns>
+                        </div>
+
+                        <div className="col-12">
+                            <CardColumns className="card-group row justify-content-center">
                                 {showMember}
                             </CardColumns>
                         </div>
@@ -81,7 +105,7 @@ class Members extends Component {
         else {
             if (!this.state.loaded) {
                 return (
-                    <div className="loader"><HashLoader message="Hold Tight!" /></div>
+                    <div className="loader justify-content-center"><HashLoader message="Hold Tight!" /></div>
                 );
             }
         }

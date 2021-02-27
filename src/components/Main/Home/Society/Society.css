@@ -50,32 +50,26 @@ background: #bbb;
 margin: 30px 30px 70px 30px;
 }
 .img-society{
-height: auto;
+height: 250px;
 width: 100%;
 text-align: center;
+margin-top: 0;
+margin-bottom: 0;
 }
 hr{
 margin-top: 16px;
 margin-bottom: 50px;
 }
-.img-society{
-margin-top: 0;
-margin-bottom: 0;
-}
-.img{
-  height:250px;
-  width:auto;
-  text-align: center;
 
-}
+
 .overlay {
   position: absolute;
   top: 0;
   bottom:0;
   left: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
@@ -89,13 +83,28 @@ font-size: 2.5rem;
 .society-desc{
 font-weight: 700;
 
+
 }
+.society-card{
+height: auto;
+}
+.society-card-footer{
+padding-top: 0;
+padding-bottom: 15px;
+  background-color: #4394B3;
+  height: auto;
+
+  }
+.society-name.Card-Title{
+font-size: 1.4rem;
+}
+
 @media(max-width:600px){
   .deck{
   margin: 30px 0 70px 0;
   }
   .society-card-footer{
-    background-color: #008CBA;
+    background-color: #4394B3;
     height: auto;
     }
     .society-desc{
@@ -109,16 +118,13 @@ font-weight: 700;
     }
 }
 
-@media only screen and (min-width:500px){
+/* @media(min-width:1300px){
   .society-card-footer{
-  padding-top: 0;
-    background-color: #008CBA;
+    background-color: #4394B3;
     height: auto;
-
-
-   }
-}
-
+    font-size: 0.5rem;
+    }
+} */
 
 .text {
   color: white;

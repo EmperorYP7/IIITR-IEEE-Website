@@ -114,6 +114,7 @@ class Footer extends Component {
             <div className="col-2 col-sm-1 ">
               <button id="dev" className=" btn text-white " data-toggle="modal" data-target="#exampleModal">
                 <i className="fas fa-laptop-code fa-2x"></i>
+                <br></br>
                 <span>Developers</span>
               </button>
             </div>

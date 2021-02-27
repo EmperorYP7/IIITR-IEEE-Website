@@ -25,7 +25,7 @@ class NoticeBoard extends React.Component {
     render() {
         return (
             <div className="box noticeboard morespacing">
-                <h3 className="about">Notice</h3><hr></hr>
+                <h3 className="about mt-2">Notice</h3><hr></hr>
                 <div className="col-12 pad">
                     <ul className="text-white scroll-up">
                         {this.state.notices.map( notice =>

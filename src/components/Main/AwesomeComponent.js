@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashLoader } from 'react-spinners';
-
+import './AwesomeComponent.css';
 
 
 const AwesomeComponent = (props) => {

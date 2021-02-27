@@ -17,7 +17,9 @@ return (
     <div className="row    my-0" >
       <div className="col-12 col-sm-8  pt-3 ">
         <div className="box boxup">
-        <p className="lead"><span className="about text-center mb-4">Student Branch </span> An IEEE Student Branch provides opportunities to meet and learn from fellow IEEE Student and Graduate Student Members and engage with professional IEEE members locally. An active IEEE Student Branch can be one of the most positive elements of your academic career, offering programs, activities, and professional networking opportunities that build critical skills outside of the classroom. IEEE currently has Student Branches at thousands of universities and colleges in hundreds of countries throughout the world.
+        <p className="lead"><span className="about text-center mb-4">IEEE- Student Branch </span> is the most constructive group of any institute that boosts the growth of the Students and thereby the Institution. It helps in keeping an unequivocal atmosphere around the campus and inspire the Students to indulge themselves in Technical as well as Research activities.
+IEEESB of Indian Institute of Information Technology Ranchi was established in 2020 by 12 enthusiastic engineering undergrads. The branch was guided by Prof. Vishnu Priye (Director of IIIT Ranchi).
+IEEESB comprise the Student Members who work under the guidance of a Faculty Advisor. The Branch is managed by a branch committee that beholds Chairman, Vice Chairman, Secretary and a Treasurer.
         </p>
         </div>
       </div>

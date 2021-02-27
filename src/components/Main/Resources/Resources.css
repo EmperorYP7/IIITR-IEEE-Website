@@ -22,6 +22,7 @@ a{
   color: #4f8a8b;
 }
 .tab-content{
+height: auto;
 padding-left: 80px;
   font-family: 'Montserrat';
 

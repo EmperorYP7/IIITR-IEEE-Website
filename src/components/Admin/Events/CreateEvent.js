@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import UplaodImage from './UploadImage';
+import UploadImage from './UploadImage';
 import './CreateEvent';
 
 class CreateEvent extends React.Component {
@@ -21,6 +21,7 @@ class CreateEvent extends React.Component {
             gmaps: '',
             gcalender: '',
             imgPath: '',
+            imgName: '',
             imageUploaded: false
         };
     }
@@ -43,7 +44,8 @@ class CreateEvent extends React.Component {
             location: this.state.location,
             gcalender: this.state.gcalender,
             gmaps: this.state.gmaps,
-            imgPath: this.state.imgPath
+            imgPath: this.state.imgPath,
+            imgName: this.state.imgName
         }
         axios.post(`/api/eventdata/`, event)
             .then(res => {
@@ -57,6 +59,7 @@ class CreateEvent extends React.Component {
                     gcalender: '',
                     gmaps: '',
                     imgPath: '',
+                    imgName: '',
                     imageUploaded: false
                 });
                 this.props.UpdateState();
@@ -117,7 +120,7 @@ class CreateEvent extends React.Component {
                     </form>
                         <div>
                             <label htmlFor="event" className="upload-event-poster">Upload Event Poster</label>
-                            {this.state.imageUploaded ? <p>Image uploaded</p> : <UplaodImage setImagePath={ path => this.setState({imgPath: path, imageUploaded: true}) }/> }
+                            {this.state.imageUploaded ? <p>Image uploaded</p> : <UploadImage setImagePath={ path => this.setState({imgPath: path, imageUploaded: true})} setImageName={ (name) => this.setState({ imgName: name })}/> }
                         </div>
             </div>
         );

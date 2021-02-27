@@ -16,9 +16,9 @@ export const DEVELOPERS =
         intro: 'This pen is nerdy!',
         mutedText : 'Developer, Open Source Contributor',
         img:'/assets/images/hariom.jpeg',
-        linkedin: 'https://',
-        github:'https://',
-        mail:'https://'
+        linkedin: 'https://www.linkedin.com/in/hari-om-yadav-ab923a195',
+        github:'https://github.com/hariom1625',
+        mail:'hariomyadav16383@gmail.com'
        },
       {
         id: 2,
