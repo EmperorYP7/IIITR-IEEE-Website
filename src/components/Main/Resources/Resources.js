@@ -28,7 +28,7 @@ class Resources extends Component {
           }
         })
         .catch(err => console.log("Error" + err));
-  axios.get('https://ieeemock2.azurewebsites.net/api/conferencedata/')
+  axios.get('/api/conferencedata/')
         .then(res => {
           this.setState({ conferences: res.data });
           if(res.data>0){
