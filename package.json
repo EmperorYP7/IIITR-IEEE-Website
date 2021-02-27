@@ -9,7 +9,7 @@
     "aos": "^2.3.4",
     "axios": "^0.21.1",
     "blueimp-md5": "^2.18.0",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-bootstrap": "^1.4.3",
