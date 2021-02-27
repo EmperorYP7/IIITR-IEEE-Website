@@ -95,7 +95,7 @@ class Event extends Component {
                             </div>
                             <br />
                             <div>
-                                <iframe src={`${this.state.event.gmaps}`} title={`${this.state.event._id}`} width="600" height="450" style={{ border: 0 }} allowfullscreen="true" loading="lazy"></iframe>
+                                <iframe src={`${this.state.event.gmaps}`} title={`${this.state.event._id}`} width="500" height="350" style={{ border: 0 }} allowfullscreen="true" loading="lazy"></iframe>
                             </div>
                         </div>
                     ):(
