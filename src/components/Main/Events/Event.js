@@ -91,10 +91,11 @@ class Event extends Component {
                                 {this.state.event.location}
                             </div>
                             <div>
-                              <a target="_blank" rel="noopener noreferrer" href={`${this.state.event.gcalender}`}><img border="0" className="img-fluid google-cal" alt="Google Calendar" src={`${gcalendar}`} /></a>
+                                <a target="_blank" rel="noopener noreferrer" href={`${this.state.event.gcalender}`}><img border="0" className="img-fluid google-cal" alt="Google Calendar" src={`${gcalendar}`} /></a>
                             </div>
+                            <br />
                             <div>
-                                {/*<iframe src={`${this.state.event.gmaps}`} title={`${this.state.event._id}`} width="auto" height="auto" frameBorder="0" style={`border:0;`} allowFullscreen={true} aria-hidden="false" tabIndex="0"></iframe>*/}
+                                <iframe src={`${this.state.event.gmaps}`} title={`${this.state.event._id}`} width="600" height="450" style={{ border: 0 }} allowfullscreen="true" loading="lazy"></iframe>
                             </div>
                         </div>
                     ):(
