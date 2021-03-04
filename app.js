@@ -24,12 +24,16 @@ app.use(cors());
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 const db = mongoose.connection;
 db.on('error', (error) => console.log(error));
-db.once('open', () => console.log('Connected to MongoDB!'));
 
 // --------------Index routes--------------
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+// --------------Admin routes--------------
+
+const adminRouter = require("./routes/admin");
+app.use("/auth", adminRouter);
 
 //-------------API Routes--------------
 

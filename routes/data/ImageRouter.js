@@ -5,6 +5,7 @@ const multer = require('multer');
 const path = require('path');
 const multers3 = require('multer-s3');
 const S3 = require('aws-sdk/clients/s3');
+const auth = require("../../utils/auth");
 
 // Setting up S3 bucket
 const s3 = new S3({
@@ -51,7 +52,7 @@ const MemberImgUpload = multer({
 
 
 // POST route for uploading image to member on S3
-router.post('/member', (req, res) => {
+router.post('/member', auth, (req, res) => {
   MemberImgUpload(req, res, (error) => {
     console.log( 'requestOkokok', req.file );
     console.log( 'error', error );
@@ -80,7 +81,7 @@ router.get('/member/:file(*)', (req, res) => {
     res.sendFile(file);
 })
 
-router.delete('/member/:file(*)', (req, res) => {
+router.delete('/member/:file(*)', auth, (req, res) => {
   const file = req.params.file;
   const params = {
     Bucket: process.env.AWS_BUCKET_NAME,
@@ -120,7 +121,7 @@ const EventImgUpload = multer({
 }).single('event');
 
 // POST route for uploading image to event on S3
-router.post('/event', (req, res) => {
+router.post('/event', auth, (req, res) => {
   EventImgUpload(req, res, (error) => {
     console.log( 'requestOkokok', req.file );
     console.log( 'error', error );
@@ -149,7 +150,7 @@ router.get('/event/:file', (req, res) => {
   res.sendFile(file);
 });
 
-router.delete('/event/:file(*)', (req, res) => {
+router.delete('/event/:file(*)', auth, (req, res) => {
   const file = req.params.file;
   const params = {
     Bucket: process.env.AWS_BUCKET_NAME,
@@ -189,7 +190,7 @@ const GalleryImgUpload = multer({
 
 
 
-router.post('/gallery', (req, res) => {
+router.post('/gallery', auth, (req, res) => {
   GalleryImgUpload(req, res, (error) => {
     console.log( 'requestOkokok', req.file );
     console.log( 'error', error );
@@ -217,7 +218,7 @@ router.get('/gallery/:file(*)', (req, res) => {
   res.json({ path: req.params.file });
 });
 
-router.delete('/gallery/:file(*)', (req, res) => {
+router.delete('/gallery/:file(*)', auth, (req, res) => {
   const file = req.params.file;
   const params = {
     Bucket: process.env.AWS_BUCKET_NAME,

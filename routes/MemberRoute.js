@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Member = require('../models/Members/Member.model');
+const auth = require("../utils/auth");
 
 router.get('/', async (req, res) => {
     const members = await Member.find().sort({ order: 1 });
@@ -8,14 +9,14 @@ router.get('/', async (req, res) => {
 });
 
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
     await Member.findByIdAndDelete(req.params.id)
                 .then(response => res.json("Success"))
                 .catch(err => res.json(err));
 });
 
 
-router.post('/', async (req, res) =>{
+router.post('/', auth, async (req, res) =>{
     const newMember = new Member();
 
     newMember.name = req.body.name;

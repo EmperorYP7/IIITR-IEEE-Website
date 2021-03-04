@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Event = require('../models/Events/Event.model');
+const auth = require("../utils/auth");
 
 router.get('/', async (req, res) => {
     const events = await Event.find().sort({ createdAt: 'desc' });
@@ -12,13 +13,13 @@ router.get('/new', (req, res) => {
     res.json(event);
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
     await Event.findByIdAndDelete(req.params.id)
                 .then(response => res.json("Success"))
                 .catch(err => res.json(err));
 });
 
-router.put('/:slug', async (req, res, next) => {
+router.put('/:slug', auth, async (req, res, next) => {
     req.event = await Event.findOne({ slug: req.params.slug });
     next();
 }, eventCreate());
@@ -29,7 +30,7 @@ router.get('/:slug', async (req, res) => {
                             .catch(error => { res.json("Error: "+ error)});
 });
 
-router.post('/', async (req, res) =>{
+router.post('/', auth, async (req, res) =>{
     const newEvent = new Event();
 
     newEvent.title = req.body.title;

@@ -5,6 +5,7 @@ const multer = require('multer');
 const path = require('path');
 const S3 = require('aws-sdk/clients/s3');
 const multers3 = require('multer-s3');
+const auth = require("../utils/auth");
 
 // Setting up S3 bucket
 const s3 = new S3({
@@ -48,7 +49,7 @@ const ResourcePdfUpload = multer({
   }
 }).single('resource');
 
-router.post('/resource', (req, res) => {
+router.post('/resource', auth, (req, res) => {
   ResourcePdfUpload(req, res, (error) => {
     console.log( 'requestOkokok', req.file );
     console.log( 'error', error );
@@ -75,7 +76,7 @@ router.get('/resource/:file(*)', (req, res) => {
   res.sendFile(file);
 });
 
-router.delete('/resource/:file(*)', (req, res) => {
+router.delete('/resource/:file(*)', auth, (req, res) => {
   const file = req.params.file;
   const params = {
     Bucket: process.env.AWS_BUCKET_NAME,
@@ -114,7 +115,7 @@ const NoticePdfUpload = multer({
   }
 }).single('notice');
 
-router.post('/notice', (req, res) => {
+router.post('/notice', auth, (req, res) => {
   NoticePdfUpload(req, res, (error) => {
     console.log( 'requestOkokok', req.file );
     console.log( 'error', error );
@@ -141,7 +142,7 @@ router.get('/notice/:file(*)', (req, res) => {
   res.sendFile(file);
 });
 
-router.delete('/notice/:file(*)', (req, res) => {
+router.delete('/notice/:file(*)', auth, (req, res) => {
   const file = req.params.file;
   const params = {
     Bucket: process.env.AWS_BUCKET_NAME,

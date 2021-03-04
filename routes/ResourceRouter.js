@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Resource = require('../models/Resources/Resource.model');
+const auth = require("../utils/auth");
 
 router.get('/', async (req, res) => {
     const resources = await Resource.find().sort({ createdAt: 'desc' });
@@ -8,13 +9,13 @@ router.get('/', async (req, res) => {
 });
 
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
     await Resource.findByIdAndDelete(req.params.id)
                 .then(response => res.json("Success"))
                 .catch(err => res.json(err));
 });
 
-router.post('/', async (req, res) =>{
+router.post('/', auth, async (req, res) =>{
     const newResource = new Resource();
 
     newResource.name = req.body.name;
