@@ -5,7 +5,7 @@ const multer = require('multer');
 const path = require('path');
 const S3 = require('aws-sdk/clients/s3');
 const multers3 = require('multer-s3');
-const auth = require("../utils/auth");
+const auth = require("../../utils/auth");
 
 // Setting up S3 bucket
 const s3 = new S3({
