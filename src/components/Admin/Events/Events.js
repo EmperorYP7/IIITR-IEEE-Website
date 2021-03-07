@@ -32,12 +32,16 @@ class Events extends React.Component {
     }
 
     onEventDelete = (event) => {
-        axios.delete(`/api/eventdata/${event._id}`)
+        axios.delete(`/api/eventdata/${event._id}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(res => {
                 alert("Event Deleted!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/image/event/${event.imgPath}`)
+        axios.delete(`/upload/image/event/${event.imgPath}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
         .then(  res => {
             console.log(res.data);
         })

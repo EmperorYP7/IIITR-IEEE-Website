@@ -31,12 +31,16 @@ class Resources extends React.Component {
     }
 
     onResourceDelete = (resource) => {
-        axios.delete(`/api/resourcedata/${resource._id}`)
+        axios.delete(`/api/resourcedata/${resource._id}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(res => {
                 alert("Resource Deleted!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/pdf/resource/${resource.pdfPath}`)
+        axios.delete(`/upload/pdf/resource/${resource.pdfPath}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
         .then(  res => {
             console.log(res.data);
         })

@@ -31,7 +31,9 @@ class Conference extends React.Component {
     }
 
     onConferenceDelete = (conference) => {
-        axios.delete(`/api/conferencedata/${conference._id}`)
+        axios.delete(`/api/conferencedata/${conference._id}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(res => {
                 alert("Conference Deleted!");
                 this.UpdateState();

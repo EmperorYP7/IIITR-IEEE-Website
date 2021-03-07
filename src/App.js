@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Main from './components/Main/Main';
 import Admin from './components/Admin/Admin';
+import ProtectedRoute from "./components/Admin/ProtectedRoute/ProtectedRoute";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/admin" exact component={Admin} />
+          <ProtectedRoute path="/admin" exact component={Admin} />
           <Route path="/" component={Main} />
         </Switch>
       </Router>

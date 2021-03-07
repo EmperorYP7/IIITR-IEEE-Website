@@ -24,7 +24,11 @@ class CreateConference extends React.Component {
             name: this.state.name,
             link: this.state.link
         }
-        axios.post(`/api/conferencedata/`, conference)
+        axios.post(`/api/conferencedata/`, conference, {
+            headers: {
+                authorization: `Bearer ${window.localStorage.getItem("token")}`,
+            },
+        })
             .then(res => {
                 this.setState({
                     name: '',

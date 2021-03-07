@@ -47,7 +47,9 @@ class CreateMember extends React.Component {
             imgPath: this.state.imgPath,
             imgName: this.state.imgName
         }
-        axios.post(`http://localhost:5000/api/memberdata/`, member)
+        axios.post(`/api/memberdata/`, member, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(res => {
                 this.setState({
                     name: '',

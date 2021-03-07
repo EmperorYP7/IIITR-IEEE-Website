@@ -34,7 +34,9 @@ class CreateResource extends React.Component {
             shortDescription: this.state.shortDescription,
             pdfPath: this.state.pdfPath
         }
-        axios.post(`/api/resourcedata/`, resource)
+        axios.post(`/api/resourcedata/`, resource, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(res => {
                 this.setState({
                     name: '',

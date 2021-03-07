@@ -33,7 +33,9 @@ class CreateImage extends React.Component {
             imgPath: this.state.imgPath,
             imgName: this.state.imgName
         }
-        axios.post(`/api/gallerydata/`, image)
+        axios.post(`/api/gallerydata/`, image, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(res => {
                 this.setState({
                     album: '',

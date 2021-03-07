@@ -32,12 +32,16 @@ class Members extends React.Component {
     }
 
     onMemberDelete = (member) => {
-        axios.delete(`/api/memberdata/${member._id}`)
+        axios.delete(`/api/memberdata/${member._id}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(res => {
                 alert("Member Removed!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/image/member/${member.imgName}`)
+        axios.delete(`/upload/image/member/${member.imgName}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(  res => {
                 console.log(res.data);
             })

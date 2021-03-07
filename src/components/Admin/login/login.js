@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Input from "./input";
-import "./loginform.css";
-import Notify from '../../Notify';
+import Notify from '../Notify';
+import "./login.css";
 import { ToastContainer } from "react-toastify";
 
 function LoginForm(props) {
@@ -52,12 +52,12 @@ function LoginForm(props) {
         pass: `${account.password}`,
     };
     axios
-      .post(`${process.env.REACT_APP_API || ''}/admin/login`, payload)
+      .post(`/auth/login`, payload)
       .then((result) => {
 				window.localStorage.setItem("token", result.data.accessToken);
 				Notify("Login successful, Redirecting . . .", "success");
 				setTimeout(() => {
-					props.history.push("/admin");
+					props.history.push("/auth");
 				}, 3000);
       })
       .catch((err) => {
@@ -67,7 +67,7 @@ function LoginForm(props) {
   };
 
   return (
-    <div className="text-white pt-5 admin-login">
+    <div className="text-white pt-5 login">
       <h1 className="text-center">Admin Login</h1>
       <br></br>
       <div className="container adm-form pt-4 pd-4">
@@ -79,7 +79,7 @@ function LoginForm(props) {
             value={account.username}
             onChange={handleChange}
             type="text"
-            readOnly={true}
+            readOnly={false}
           />
           <Input
             errors={errors.password}

@@ -31,12 +31,16 @@ class Notices extends React.Component {
     }
 
     onNoticeDelete = (notice) => {
-        axios.delete(`/api/noticedata/${notice._id}`)
+        axios.delete(`/api/noticedata/${notice._id}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(res => {
                 alert("notice Deleted!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/pdf/notice/${notice.pdfName}`)
+        axios.delete(`/upload/pdf/notice/${notice.pdfName}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
         .then(  res => {
             console.log(res.data);
         })

@@ -31,12 +31,16 @@ class Gallery extends React.Component {
     }
 
     onImageDelete = (image) => {
-        axios.delete(`/api/gallerydata/${image._id}`)
+        axios.delete(`/api/gallerydata/${image._id}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(res => {
                 alert("Image Removed!");
                 this.UpdateState();
             })
-        axios.delete(`/upload/image/gallery/${image.imgName}`)
+        axios.delete(`/upload/image/gallery/${image.imgName}`, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
         .then(  res => {
             console.log(res.data);
         })

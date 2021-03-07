@@ -47,7 +47,11 @@ class CreateEvent extends React.Component {
             imgPath: this.state.imgPath,
             imgName: this.state.imgName
         }
-        axios.post(`/api/eventdata/`, event)
+        axios.post(`/api/eventdata/`, event, {
+            headers: {
+                authorization: `Bearer ${window.localStorage.getItem("token")}`,
+            },
+        })
             .then(res => {
                 console.log(res);
                 this.setState({

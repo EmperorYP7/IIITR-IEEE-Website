@@ -35,7 +35,9 @@ class CreateNotice extends React.Component {
             pdfPath: this.state.pdfPath,
             pdfName: this.state.pdfName
         }
-        axios.post(`/api/noticedata/`, notice)
+        axios.post(`/api/noticedata/`, notice, {
+            headers: {authorization: `Bearer ${window.localStorage.getItem("token")}`,}
+        })
             .then(res => {
                 this.setState({
                     name: '',
