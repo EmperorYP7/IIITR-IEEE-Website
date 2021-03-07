@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const adminSchema = new mongoose.Schema({
   hash: {
@@ -26,11 +27,12 @@ const adminSchema = new mongoose.Schema({
 
 const checkPassword = async function (pass) {
   return new Promise((resolve, reject) => {
-    if(pass !== this.hash){
+    bcrypt.compare(pass, this.hash).then((result) => {
+      if (result) {
+        resolve(true);
+      }
       reject(err);
-    }
-    resolve(true);
-  
+    });
   });
 };
 
