@@ -11,6 +11,12 @@ status = 200
 force = true
 
 [[redirects]]
+from = "/auth/*"
+to = "https://ieeesbbackend.herokuapp.com/auth/:splat"
+status = 200
+force = true
+
+[[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
