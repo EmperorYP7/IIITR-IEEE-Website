@@ -1,8 +1,8 @@
 {
-  "name": "iiitr-ieee-website",
+  "name": "iiitr-ieee-backend",
   "version": "1.0.0",
-  "description": "\"Website for IIITR IEEE Student Branch\" ",
-  "main": "server.js",
+  "description": "\"Backend for IIITR IEEE Student Branch Website\" ",
+  "main": "./bin/www",
   "scripts": {
     "start": "node ./bin/www"
   },
