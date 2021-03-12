@@ -3,6 +3,7 @@
 ![IEEE SB logo](./public/assets/images/ieee.svg)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b1700a3d-0f38-40a8-b7e6-8ad4cbb008b9/deploy-status)](https://app.netlify.com/sites/iiitieee/deploys)
+[![Front-end CI](https://github.com/EmperorYP7/IIITR-IEEE-Website/actions/workflows/node.js.yml/badge.svg)](https://github.com/EmperorYP7/IIITR-IEEE-Website/actions/workflows/node.js.yml)
 
 This is the official repository for the IEEE Student Branch of the Indian Institute of 
 Information Technology, Ranchi. The source code for this website is patented
