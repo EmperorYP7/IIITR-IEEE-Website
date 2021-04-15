@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/",
+            "destination": "https://ieeesbbackend.herokuapp.com/"
+        }
+    ]
+}
