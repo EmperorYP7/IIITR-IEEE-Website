@@ -20,3 +20,4 @@ Team of IIIT Ranchi including the following individuals:
 1. [Tushar Jain](https://github.com/tusharjain0022)
 1. [Rishav Muzumdar](https://github.com/RishavMz)
 1. [Ashish Manoj Chourasia](https://github.com/sleepysleep)
+1. [Shubham Kushwaha](https://github.com/EricLiclair)
