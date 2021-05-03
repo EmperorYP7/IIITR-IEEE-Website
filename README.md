@@ -18,6 +18,6 @@ Team of IIIT Ranchi including the following individuals:
 1. [Yash Pandey](https://github.com/EmperorYP7)
 1. [Hari Om Yadav](https://github.com/hariom1625)
 1. [Tushar Jain](https://github.com/tusharjain0022)
-1. [Rishav Muzumdar](https://github.com/RishavMz)
+1. [Rishav Mazumdar](https://github.com/RishavMz)
 1. [Ashish Manoj Chourasia](https://github.com/sleepysleep)
 1. [Shubham Kushwaha](https://github.com/EricLiclair)
